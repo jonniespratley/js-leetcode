@@ -674,6 +674,7 @@ var minSubArrayLen = function(s, nums) {
     }
     return ret === Infinity ? 0 : ret
 };
+minSubArrayLen(7, [2,3,1,2,4,3]);
 ```
 
 
