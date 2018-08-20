@@ -31,6 +31,28 @@ root.right.right = new TreeNode(6);
 //const preOrder = preorderTraversal(root);
 //console.log(preOrder)
 
+/*
+Build Tree from Post-order / In-order
+Let us see the process of constructing tree from in[] = {4, 8, 2, 5, 1, 6, 3, 7} and post[] = {8, 4, 5, 2, 6, 7, 3, 1}
+1) We first find the last node in post[]. The last node is “1”, we know this value is root as root always appear in the end of postorder traversal.
+2) We search “1” in in[] to find left and right subtrees of root. Everything on left of “1” in in[] is in left subtree and everything on right is in right subtree.
+
+         1
+       /    \
+[4,8,2,5]   [6,3,7]
+
+3) We recurse the above process for following two.
+….b) Recurse for in[] = {6,3,7} and post[] = {6,7,3}
+……. Make the created tree as right child of root.
+….a) Recurse for in[] = {4,8,2,5} and post[] = {8,4,5,2}.
+……. Make the created tree as left child of root.
+
+One important observation is, we recursively call for right subtree before left subtree as we decrease index of postorder index whenever we create a new node. 
+ */
+
+
+
+
 
 
 /**
@@ -270,3 +292,103 @@ console.log(numIslands([
     [0, 0, 1, 0, 0],
     [0, 0, 0, 1, 1]
 ])); //3
+
+
+
+/**
+ * Definition for a binary tree node.
+ * function TreeNode(val) {
+ *     this.val = val;
+ *     this.left = this.right = null;
+ * }
+ */
+/**
+ * @param {TreeNode} root
+ * @return {number[]}
+ */
+
+
+
+var postorderTraversal = function (root) {
+    let answer = [];
+    let queue = [root]
+    let s2 = [];
+    while (queue.length > 0) {
+        let currentNode = queue.pop();
+        s2.push(currentNode.val);
+        if (currentNode.right) {
+            queue.push(currentNode.right)
+        }
+        if (currentNode.left) {
+            queue.push(currentNode.left)
+        }
+    }
+    while (s2.length) {
+        answer.push(s2.pop());
+    }
+
+    return answer;
+};
+
+
+let tree1 = new TreeNode('a');
+//tree1.left = new TreeNode(null);
+tree1.right = new TreeNode('b');
+tree1.right.left = new TreeNode('c');
+
+console.log(postorderTraversal(tree1));
+
+
+
+let arr = [1, 3, 2, 2, 5, -1, 8, -4];
+
+function findSum(array, k) {
+    let start = 0;
+    let end = array.length - 1;
+    while (start <= end) {
+        let sum = array[start] + array[end];
+        console.log(start);
+        if (sum === k) {
+            console.log(("Found sum for " + array[start] + " and " + array[end]))
+            start++;
+            end--;
+        } else if (sum < k) {
+            start++;
+        } else {
+            end--;
+        }
+        console.log(sum);
+    }
+}
+
+findSum(arr, 4);
+
+var fruits = ["apple", "banana", "grapes"];
+
+// Plain for loop
+for (var i = 0; i < fruits.length; i++){
+    console.log(fruits[i]);
+}
+    
+
+
+// for/in loop iterates over the properties of an object
+for (x in fruits){
+    console.log("property: " + x + ", value: " + fruits[x]);
+}
+    
+
+
+// while loop
+var i = 0;
+while (i < fruits.length) {
+    console.log(fruits[i]);
+    i++;
+}
+
+// Do/while loop
+i = 0;
+do {
+    console.log(fruits[i]);
+    i++;
+} while (i < fruits.length)
