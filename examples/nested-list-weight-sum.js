@@ -52,66 +52,7 @@ function bubbleSort2(array) {
 //console.log(bubbleSort([7, 2, 4, 5, 9, 8, 1, 3, 6]));
 
 
-//imperative:
-const mergeArrays_ = function (arrays) {
-    let count = arrays.length;
-    let newArray = [];
-    let k = 0;
-    for (let i = 0; i < count; i++) {
-        for (let j = 0; j < arrays[i].length; j++) {
-            newArray[k++] = arrays[i][j];
-        }
-    }
-    return newArray;
-};
-console.log(mergeArrays_([
-    [1, 2, 3],
-    [4, 5],
-    [6]
-]));
-
-// function-oriented
-const mergeArrays = (...arrays) => [].concat(...arrays); 
-//console.log(mergeArrays([1, 2, 3], [4, 5], [6])); 
 
 
 
 
-/**
- * 
-
- ## Single Number
-Given a non-empty array of integers, every element appears twice except for one. Find that single one.
-
-> Note: Your algorithm should have a linear runtime complexity O(n). 
-
-#### Example 1:
-
-```
-Input: [2,2,1]
-Output: 1
-```
-
-#### Example 2:
-
-```
-Input: [4,1,2,1,2]
-Output: 4
-```
-*/
-/**
- * @param {number[]} nums
- * @return {number}
- */
-var singleNumber = function(nums) {
-    for (let i = 0; i < nums.length; i++) {
-        let n1 = nums[i];
-        if (nums.indexOf(n1) === nums.lastIndexOf(n1)) {
-            return n1;
-        }
-    }
-};
-
-console.log(singleNumber([2, 2, 1]));
-//console.log(singleNumber([4,1,2,1,2]));
-console.log(singleNumber([1,1,1,1,1,5]));

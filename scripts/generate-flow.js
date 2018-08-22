@@ -1,21 +1,42 @@
+const fs = require('fs');
+const path = require('path');
 const glob = require('glob');
 const js2flowchart = require('js2flowchart');
-const fs = require('fs');
 const {convertCodeToFlowTree, convertFlowTreeToSvg, createPresentationGenerator} = js2flowchart;
 
-glob('./flowcharts/*.js', (err, files) => {
-    files.forEach((file, i) => {
-        
-        const code = fs.readFileSync(file, 'utf8');
-        const flowTree = convertCodeToFlowTree(code);
-        const svg = convertFlowTreeToSvg(flowTree);
+function generateSvgs(){
+    glob('./examples/*.js', (err, files) => {
+        files.forEach((file, i) => {
+            const code = fs.readFileSync(file, 'utf8');
+            const flowTree = convertCodeToFlowTree(code);
+            const svg = convertFlowTreeToSvg(flowTree);
+            let filename = path.basename(file.replace('.js', '.svg'));
+            fs.writeFileSync(`flowcharts/${filename}`, svg);
 
-        //const presentationGenerator = createPresentationGenerator(code);
-        //const slides = presentationGenerator.buildSlides();//array of SVGs
-
-        //console.log(svg);
-        fs.writeFileSync(`${file}.svg`, svg);
-        console.log(`${i} - ${file} => ${file}.svg`);
+            console.log(`${i} - ${file} => ${filename}`);
+        });
     });
-    
-});
+}
+
+function cleanSvgs(){
+    glob('./flowcharts/*.svg', (err, files) => {
+        files.forEach((file, i) => {
+            console.log('Remove', file);
+            fs.unlinkSync(file);
+        });
+        
+    });
+}
+
+
+const action = process.argv[2];
+switch(action){
+    case 'clean': 
+        cleanSvgs();
+    break;
+    case 'generate': 
+        generateSvgs();
+    break;
+}
+
+console.log(process.argv);

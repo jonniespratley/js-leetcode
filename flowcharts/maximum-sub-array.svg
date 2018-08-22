@@ -1,0 +1,681 @@
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+                width="582" height="1612">
+                
+            <g>
+                <rect x="50" y="80"
+            width="268.4" height="30"
+            style="fill:#a5d6a7; stroke:#444; stroke-width:1" />
+                    
+                <line x1="60" y1="80" x2="60" y2="110"
+                style="fill:#a5d6a7; stroke:#444; stroke-width:1" />
+                <line x1="308.4" y1="80" x2="308.4" y2="110"
+                style="fill:#a5d6a7; stroke:#444; stroke-width:1" />
+             
+                <title>maxSubArray = function(nums)</title>
+            <text x="75" y="100"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="75" y="100">maxSubArray = function(nums)</tspan>
+            </text>
+                
+            </g>
+                <g>
+                   <rect x="87" y="128.5"
+            width="342" height="30"
+            rx="3" ry="3"
+            style="fill:#90caf9; stroke:#444; stroke-width:1" />
+                   <title>let max_so_far = Number.MIN_SAFE_INTEGER</title>
+            <text x="102" y="148.5"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="102" y="148.5">let max_so_far = Number.MIN_SAFE_INTEGER</tspan>
+            </text>
+                   
+                   
+                </g>
+                <g>
+                   <rect x="87" y="177"
+            width="209.4" height="30"
+            rx="3" ry="3"
+            style="fill:#90caf9; stroke:#444; stroke-width:1" />
+                   <title>let max_ending_here = 0</title>
+            <text x="102" y="197"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="102" y="197">let max_ending_here = 0</tspan>
+            </text>
+                   
+                   
+                </g>
+                <g>
+                   <rect x="87" y="225.5"
+            width="201.6" height="30"
+            rx="3" ry="3"
+            style="fill:#90caf9; stroke:#444; stroke-width:1" />
+                   <title>let size = nums.length</title>
+            <text x="102" y="245.5"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="102" y="245.5">let size = nums.length</tspan>
+            </text>
+                   
+                   
+                </g><g>
+            <rect x="117" y="289"
+            width="153.6" height="30"
+            rx="3" ry="3"
+            style="fill:#ce93d8; stroke:#444; stroke-width:1" />                
+            <polygon points="87,304 117,274 147,304 117,334"
+            style="fill:#ce93d8; stroke:#444; stroke-width:1" />
+            <title>(size === 1)</title>
+            <text x="162" y="309"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="162" y="309">(size === 1)</tspan>
+            </text>
+            
+            <text x="109.2" y="309"
+        font-family="monospace" font-size="13" fill="#222">if</text> <text x="124.8" y="335.95"
+        font-family="monospace" font-size="13" fill="#222">+</text> 
+        </g>
+            <g>
+                <rect x="137" y="344"
+            width="139.2" height="30"
+            rx="3" ry="3"
+            style="fill:#90caf9; stroke:#444; stroke-width:1" />
+                
+                <line x1="276.2" y1="354" x2="281.2" y2="354"
+                style="fill:#a5d6a7; stroke:#444; stroke-width:1" />
+                
+                <line x1="276.2" y1="364" x2="281.2" y2="364"
+                style="fill:#a5d6a7; stroke:#444; stroke-width:1" />
+
+                <path d="M281.2, 348 L297.2, 359 L281.2, 370 Z" 
+        fill="#a5d6a7" stroke="#444" stroke-width="1" />
+                             
+                <title>return nums[0]</title>
+            <text x="152" y="364"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="152" y="364">return nums[0]</tspan>
+            </text>
+                
+            </g><g>
+
+            <rect x="117" y="429"
+            width="153.6" height="30"
+            rx="3" ry="3"
+            style="fill:#b39ddb; stroke:#444; stroke-width:1" />
+            <polygon points="87,444 117,414 147,444 117,474"
+            style="fill:#b39ddb; stroke:#444; stroke-width:1" />
+                
+            <title>index &lt; size</title>
+            <text x="162" y="449"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="162" y="449">index &lt; size</tspan>
+            </text>
+            
+            <text x="105.3" y="449"
+        font-family="monospace" font-size="13" fill="#222">for</text>
+        </g>
+                <g>
+                   <rect x="137" y="484"
+            width="84.6" height="30"
+            rx="3" ry="3"
+            style="fill:#90caf9; stroke:#444; stroke-width:1" />
+                   <title>index++</title>
+            <text x="152" y="504"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="152" y="504">index++</tspan>
+            </text>
+                   
+                   
+                </g>
+                <g>
+                   <rect x="137" y="532.5"
+            width="209.4" height="30"
+            rx="3" ry="3"
+            style="fill:#90caf9; stroke:#444; stroke-width:1" />
+                   <title>const num = nums[index]</title>
+            <text x="152" y="552.5"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="152" y="552.5">const num = nums[index]</tspan>
+            </text>
+                   
+                   
+                </g>
+                <g>
+                   <rect x="137" y="581"
+            width="334.2" height="30"
+            rx="3" ry="3"
+            style="fill:#90caf9; stroke:#444; stroke-width:1" />
+                   <title>max_ending_here = max_ending_here + num</title>
+            <text x="152" y="601"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="152" y="601">max_ending_here = max_ending_here + num</tspan>
+            </text>
+                   
+                   
+                </g><g>
+            <rect x="167" y="644.5"
+            width="239.39999999999998" height="30"
+            rx="3" ry="3"
+            style="fill:#ce93d8; stroke:#444; stroke-width:1" />                
+            <polygon points="137,659.5 167,629.5 197,659.5 167,689.5"
+            style="fill:#ce93d8; stroke:#444; stroke-width:1" />
+            <title>(max_ending_here &lt; num)</title>
+            <text x="212" y="664.5"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="212" y="664.5">(max_ending_here &lt; num)</tspan>
+            </text>
+            
+            <text x="159.2" y="664.5"
+        font-family="monospace" font-size="13" fill="#222">if</text> <text x="174.8" y="691.45"
+        font-family="monospace" font-size="13" fill="#222">+</text> 
+        </g>
+                <g>
+                   <rect x="187" y="699.5"
+            width="193.79999999999998" height="30"
+            rx="3" ry="3"
+            style="fill:#90caf9; stroke:#444; stroke-width:1" />
+                   <title>max_ending_here = num</title>
+            <text x="202" y="719.5"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="202" y="719.5">max_ending_here = num</tspan>
+            </text>
+                   
+                   
+                </g><g>
+            <rect x="167" y="764.5"
+            width="294" height="30"
+            rx="3" ry="3"
+            style="fill:#ce93d8; stroke:#444; stroke-width:1" />                
+            <polygon points="137,779.5 167,749.5 197,779.5 167,809.5"
+            style="fill:#ce93d8; stroke:#444; stroke-width:1" />
+            <title>(max_so_far &lt; max_ending_here)</title>
+            <text x="212" y="784.5"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="212" y="784.5">(max_so_far &lt; max_ending_here)</tspan>
+            </text>
+            
+            <text x="159.2" y="784.5"
+        font-family="monospace" font-size="13" fill="#222">if</text> <text x="174.8" y="811.45"
+        font-family="monospace" font-size="13" fill="#222">+</text> 
+        </g>
+                <g>
+                   <rect x="187" y="819.5"
+            width="248.4" height="30"
+            rx="3" ry="3"
+            style="fill:#90caf9; stroke:#444; stroke-width:1" />
+                   <title>max_so_far = max_ending_here</title>
+            <text x="202" y="839.5"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="202" y="839.5">max_so_far = max_ending_here</tspan>
+            </text>
+                   
+                   
+                </g>
+                <g>
+                   <rect x="137" y="869.5"
+            width="209.4" height="30"
+            rx="2" ry="2"
+            style="fill:#C5E1A5; stroke:#444; stroke-width:1" />
+                   <title>console.log(max_so_far)</title>
+            <text x="152" y="889.5"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="152" y="889.5">console.log(max_so_far)</tspan>
+            </text>
+                   
+                   
+                </g>
+            <g>
+                <rect x="87" y="918"
+            width="162.6" height="30"
+            rx="3" ry="3"
+            style="fill:#90caf9; stroke:#444; stroke-width:1" />
+                
+                <line x1="249.6" y1="928" x2="254.6" y2="928"
+                style="fill:#a5d6a7; stroke:#444; stroke-width:1" />
+                
+                <line x1="249.6" y1="938" x2="254.6" y2="938"
+                style="fill:#a5d6a7; stroke:#444; stroke-width:1" />
+
+                <path d="M254.6, 922 L270.6, 933 L254.6, 944 Z" 
+        fill="#a5d6a7" stroke="#444" stroke-width="1" />
+                             
+                <title>return max_so_far</title>
+            <text x="102" y="938"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="102" y="938">return max_so_far</tspan>
+            </text>
+                
+            </g>
+            <g>
+                <rect x="50" y="981.5"
+            width="276.2" height="30"
+            style="fill:#a5d6a7; stroke:#444; stroke-width:1" />
+                    
+                <line x1="60" y1="981.5" x2="60" y2="1011.5"
+                style="fill:#a5d6a7; stroke:#444; stroke-width:1" />
+                <line x1="316.2" y1="981.5" x2="316.2" y2="1011.5"
+                style="fill:#a5d6a7; stroke:#444; stroke-width:1" />
+             
+                <title>maxSubArray2 = function(nums)</title>
+            <text x="75" y="1001.5"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="75" y="1001.5">maxSubArray2 = function(nums)</tspan>
+            </text>
+                
+            </g><g>
+
+            <rect x="117" y="1065"
+            width="177" height="30"
+            rx="3" ry="3"
+            style="fill:#b39ddb; stroke:#444; stroke-width:1" />
+            <polygon points="87,1080 117,1050 147,1080 117,1110"
+            style="fill:#b39ddb; stroke:#444; stroke-width:1" />
+                
+            <title>i &lt; nums.length</title>
+            <text x="162" y="1085"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="162" y="1085">i &lt; nums.length</tspan>
+            </text>
+            
+            <text x="105.3" y="1085"
+        font-family="monospace" font-size="13" fill="#222">for</text>
+        </g>
+                <g>
+                   <rect x="137" y="1120"
+            width="53.4" height="30"
+            rx="3" ry="3"
+            style="fill:#90caf9; stroke:#444; stroke-width:1" />
+                   <title>i++</title>
+            <text x="152" y="1140"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="152" y="1140">i++</tspan>
+            </text>
+                   
+                   
+                </g>
+                <g>
+                   <rect x="137" y="1168.5"
+            width="420" height="30"
+            rx="3" ry="3"
+            style="fill:#90caf9; stroke:#444; stroke-width:1" />
+                   <title>nums[i] = Math.max(nums[i], nums[i] + nums[i - 1])</title>
+            <text x="152" y="1188.5"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="152" y="1188.5">nums[i] = Math.max(nums[i], nums[i] + nums[i - 1])</tspan>
+            </text>
+                   
+                   
+                </g>
+            <g>
+                <rect x="87" y="1217"
+            width="217.2" height="30"
+            rx="3" ry="3"
+            style="fill:#90caf9; stroke:#444; stroke-width:1" />
+                
+                <line x1="304.2" y1="1227" x2="309.2" y2="1227"
+                style="fill:#a5d6a7; stroke:#444; stroke-width:1" />
+                
+                <line x1="304.2" y1="1237" x2="309.2" y2="1237"
+                style="fill:#a5d6a7; stroke:#444; stroke-width:1" />
+
+                <path d="M309.2, 1221 L325.2, 1232 L309.2, 1243 Z" 
+        fill="#a5d6a7" stroke="#444" stroke-width="1" />
+                             
+                <title>return Math.max(...nums)</title>
+            <text x="102" y="1237"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="102" y="1237">return Math.max(...nums)</tspan>
+            </text>
+                
+            </g>
+                <g>
+                   <rect x="50" y="1265.5"
+            width="365.4" height="30"
+            rx="3" ry="3"
+            style="fill:#90caf9; stroke:#444; stroke-width:1" />
+                   <title>let input = [-2, 1, -3, 4, -1, 2, 1, -5, 4]</title>
+            <text x="65" y="1285.5"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="65" y="1285.5">let input = [-2, 1, -3, 4, -1, 2, 1, -5, 4]</tspan>
+            </text>
+                   
+                   
+                </g>
+                <g>
+                   <rect x="50" y="1314"
+            width="271.79999999999995" height="30"
+            rx="2" ry="2"
+            style="fill:#C5E1A5; stroke:#444; stroke-width:1" />
+                   <title>console.log(maxSubArray(input))</title>
+            <text x="65" y="1334"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="65" y="1334">console.log(maxSubArray(input))</tspan>
+            </text>
+                   
+                   
+                </g>
+                <g>
+                   <rect x="50" y="1362.5"
+            width="264" height="30"
+            rx="2" ry="2"
+            style="fill:#C5E1A5; stroke:#444; stroke-width:1" />
+                   <title>console.log(maxSubArray([-1]))</title>
+            <text x="65" y="1382.5"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="65" y="1382.5">console.log(maxSubArray([-1]))</tspan>
+            </text>
+                   
+                   
+                </g>
+                <g>
+                   <rect x="50" y="1411"
+            width="295.2" height="30"
+            rx="2" ry="2"
+            style="fill:#C5E1A5; stroke:#444; stroke-width:1" />
+                   <title>console.log(maxSubArray([-2, -1]))</title>
+            <text x="65" y="1431"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="65" y="1431">console.log(maxSubArray([-2, -1]))</tspan>
+            </text>
+                   
+                   
+                </g>
+                <g>
+                   <rect x="50" y="1459.5"
+            width="342" height="30"
+            rx="2" ry="2"
+            style="fill:#C5E1A5; stroke:#444; stroke-width:1" />
+                   <title>console.assert(maxSubArray([-1]) === -1)</title>
+            <text x="65" y="1479.5"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="65" y="1479.5">console.assert(maxSubArray([-1]) === -1)</tspan>
+            </text>
+                   
+                   
+                </g>
+                <g>
+                   <rect x="50" y="1508"
+            width="279.6" height="30"
+            rx="2" ry="2"
+            style="fill:#C5E1A5; stroke:#444; stroke-width:1" />
+                   <title>console.log(maxSubArray2(input))</title>
+            <text x="65" y="1528"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="65" y="1528">console.log(maxSubArray2(input))</tspan>
+            </text>
+                   
+                   
+                </g>
+                <g>
+                   <rect x="50" y="1556.5"
+            width="303" height="30"
+            rx="2" ry="2"
+            style="fill:#C5E1A5; stroke:#444; stroke-width:1" />
+                   <title>console.log(maxSubArray2([-2, -1]))</title>
+            <text x="65" y="1576.5"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="65" y="1576.5">console.log(maxSubArray2([-2, -1]))</tspan>
+            </text>
+                   
+                   
+                </g>
+            <g>
+               <rect x="25" y="13.75"
+            width="216.6" height="24"
+            style="fill:#fff59d; stroke:#444; stroke-width:1" />
+               <circle cx="25" cy="25" r="15"
+        style="fill:#fff59d; stroke:#444; stroke-width:1" />
+               <title>Program: source module</title>
+            <text x="55" y="30"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="55" y="30">Program: source module</tspan>
+            </text>
+            </g>
+            <g>
+               <path d="M25, 40 L25 91 Q25 95
+                29 95
+                L42 95 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M42, 92 L50, 95 L42, 98 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M68.5, 110 L68.5 139.5 Q68.5 143.5
+                72.5 143.5
+                L79 143.5 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M79, 140.5 L87, 143.5 L79, 146.5 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M68.5, 110 L68.5 188 Q68.5 192
+                72.5 192
+                L79 192 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M79, 189 L87, 192 L79, 195 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M68.5, 110 L68.5 236.5 Q68.5 240.5
+                72.5 240.5
+                L79 240.5 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M79, 237.5 L87, 240.5 L79, 243.5 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M68.5, 110 L68.5 300 Q68.5 304
+                72.5 304
+                L79 304 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M79, 301 L87, 304 L79, 307 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M117, 334 L117 355 Q117 359
+                121 359
+                L129 359 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M129, 356 L137, 359 L129, 362 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M68.5, 110 L68.5 440 Q68.5 444
+                72.5 444
+                L79 444 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M79, 441 L87, 444 L79, 447 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M117, 474 L117 495 Q117 499
+                121 499
+                L129 499 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M129, 496 L137, 499 L129, 502 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M117, 474 L117 543.5 Q117 547.5
+                121 547.5
+                L129 547.5 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M129, 544.5 L137, 547.5 L129, 550.5 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M117, 474 L117 592 Q117 596
+                121 596
+                L129 596 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M129, 593 L137, 596 L129, 599 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M117, 474 L117 655.5 Q117 659.5
+                121 659.5
+                L129 659.5 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M129, 656.5 L137, 659.5 L129, 662.5 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M167, 689.5 L167 710.5 Q167 714.5
+                171 714.5
+                L179 714.5 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M179, 711.5 L187, 714.5 L179, 717.5 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M117, 474 L117 775.5 Q117 779.5
+                121 779.5
+                L129 779.5 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M129, 776.5 L137, 779.5 L129, 782.5 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M167, 809.5 L167 830.5 Q167 834.5
+                171 834.5
+                L179 834.5 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M179, 831.5 L187, 834.5 L179, 837.5 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M117, 474 L117 880.5 Q117 884.5
+                121 884.5
+                L129 884.5 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M129, 881.5 L137, 884.5 L129, 887.5 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M346.4, 884.5 L487.2 884.5  Q491.2 884.5
+                491.2 880.5
+                L491.2 402 Q491.2 394
+                487.2 394
+                L125 394  Q117 394
+                117 398
+                L117 406"
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M114, 406 L117, 414 L120, 406 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M68.5, 110 L68.5 929 Q68.5 933
+                72.5 933
+                L79 933 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M79, 930 L87, 933 L79, 936 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M25, 40 L25 992.5 Q25 996.5
+                29 996.5
+                L42 996.5 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M42, 993.5 L50, 996.5 L42, 999.5 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M68.5, 1011.5 L68.5 1076 Q68.5 1080
+                72.5 1080
+                L79 1080 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M79, 1077 L87, 1080 L79, 1083 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M117, 1110 L117 1131 Q117 1135
+                121 1135
+                L129 1135 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M129, 1132 L137, 1135 L129, 1138 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M117, 1110 L117 1179.5 Q117 1183.5
+                121 1183.5
+                L129 1183.5 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M129, 1180.5 L137, 1183.5 L129, 1186.5 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M557, 1183.5 L573 1183.5  Q577 1183.5
+                577 1179.5
+                L577 1038 Q577 1030
+                573 1030
+                L125 1030  Q117 1030
+                117 1034
+                L117 1042"
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M114, 1042 L117, 1050 L120, 1042 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M68.5, 1011.5 L68.5 1228 Q68.5 1232
+                72.5 1232
+                L79 1232 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M79, 1229 L87, 1232 L79, 1235 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M25, 40 L25 1276.5 Q25 1280.5
+                29 1280.5
+                L42 1280.5 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M42, 1277.5 L50, 1280.5 L42, 1283.5 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M25, 40 L25 1325 Q25 1329
+                29 1329
+                L42 1329 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M42, 1326 L50, 1329 L42, 1332 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M25, 40 L25 1373.5 Q25 1377.5
+                29 1377.5
+                L42 1377.5 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M42, 1374.5 L50, 1377.5 L42, 1380.5 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M25, 40 L25 1422 Q25 1426
+                29 1426
+                L42 1426 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M42, 1423 L50, 1426 L42, 1429 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M25, 40 L25 1470.5 Q25 1474.5
+                29 1474.5
+                L42 1474.5 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M42, 1471.5 L50, 1474.5 L42, 1477.5 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M25, 40 L25 1519 Q25 1523
+                29 1523
+                L42 1523 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M42, 1520 L50, 1523 L42, 1526 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M25, 40 L25 1567.5 Q25 1571.5
+                29 1571.5
+                L42 1571.5 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M42, 1568.5 L50, 1571.5 L42, 1574.5 Z" 
+        fill="#333" />
+            </g>
+            </svg>
