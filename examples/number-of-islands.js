@@ -37,6 +37,7 @@ Output: 3
  */
 var numIslands = function (grid) {
     let count = 0;
+    
     const height = grid.length;
     const width = grid[0].length;
     const visited = Array(height * width).fill(false);
@@ -69,6 +70,9 @@ var numIslands = function (grid) {
 };
 
 
+console.log(numIslands([
+    []
+]));
 console.log(numIslands([
     [1, 1, 1, 0, 0],
     [0, 0, 1, 0, 0],
