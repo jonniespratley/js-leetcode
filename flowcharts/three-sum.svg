@@ -1,6 +1,6 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
-                width="1352" height="1406">
+                width="1352" height="1454">
                 
             <g>
                 <rect x="50" y="80"
@@ -402,6 +402,19 @@
             </text>
                 
             </g>
+                <g>
+                   <rect x="50" y="1399"
+            width="373.2" height="30"
+            rx="2" ry="2"
+            style="fill:#C5E1A5; stroke:#444; stroke-width:1" />
+                   <title>console.log(threeSum([-1, 0, 1, 2, -1, -4]))</title>
+            <text x="65" y="1419"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="65" y="1419">console.log(threeSum([-1, 0, 1, 2, -1, -4]))</tspan>
+            </text>
+                   
+                   
+                </g>
             <g>
                <rect x="25" y="13.75"
             width="216.6" height="24"
@@ -711,6 +724,14 @@
                 L79 1365.5 "
         style="fill:none; stroke:#444; stroke-width:1" />
                <path d="M79, 1362.5 L87, 1365.5 L79, 1368.5 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M25, 40 L25 1410 Q25 1414
+                29 1414
+                L42 1414 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M42, 1411 L50, 1414 L42, 1417 Z" 
         fill="#333" />
             </g>
             </svg>

@@ -1,48 +1,3 @@
-function swap(array, index1, index2) {
-    var aux = array[index1];
-    array[index1] = array[index2];
-    array[index2] = aux;
-    //[index1, index2] = [index2, index1]
-}
-
-function bubbleSort(array) {
-    let count = 0;
-    let length = array.length;
-    for (let i = 0; i < length; i++) {
-        for (let j = 0; j < length - 1; j++) {
-            if (array[j] > array[j + 1]) {
-                count++;
-                swap(array, j, j + 1);
-            }
-        }
-    }
-    console.log(count);
-    return array;
-}
-console.log(bubbleSort([4, 3, 2, 1]));
-
-function minSwaps(arr) {
-    let swaps = 0;
-    let i = 0;
-    let j = arr.length - 1;
-    for (; i < arr.length; i++) {
-        const n = arr[i];
-        for (; j >= i; j--) {
-            console.log(i, j)
-            const n2 = arr[j];
-            console.log(n, n2, n > n2)
-        }
-        console.log(n);
-    }
-    return swaps;
-}
-console.log(minSwaps([4, 3, 1, 2]));
-
-
-
-
-
-
 
 function minSwaps2(arr) {
     let answer = 0;
@@ -54,10 +9,6 @@ function minSwaps2(arr) {
     return answer % arr.length + 1;
 }
 console.log(minSwaps2([4, 3, 1, 2]));
-
-
-
-
 
 
 
