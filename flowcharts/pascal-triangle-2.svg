@@ -1,0 +1,248 @@
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+                width="606" height="580">
+                
+            <g>
+                <rect x="50" y="80"
+            width="323" height="30"
+            style="fill:#a5d6a7; stroke:#444; stroke-width:1" />
+                    
+                <line x1="60" y1="80" x2="60" y2="110"
+                style="fill:#a5d6a7; stroke:#444; stroke-width:1" />
+                <line x1="363" y1="80" x2="363" y2="110"
+                style="fill:#a5d6a7; stroke:#444; stroke-width:1" />
+             
+                <title>function pascalTriangle(lineNumber)</title>
+            <text x="75" y="100"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="75" y="100">function pascalTriangle(lineNumber)</tspan>
+            </text>
+                
+            </g>
+                <g>
+                   <rect x="87" y="128.5"
+            width="209.4" height="30"
+            rx="3" ry="3"
+            style="fill:#90caf9; stroke:#444; stroke-width:1" />
+                   <title>const currentLine = [1]</title>
+            <text x="102" y="148.5"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="102" y="148.5">const currentLine = [1]</tspan>
+            </text>
+                   
+                   
+                </g>
+                <g>
+                   <rect x="87" y="177"
+            width="326.4" height="30"
+            rx="3" ry="3"
+            style="fill:#90caf9; stroke:#444; stroke-width:1" />
+                   <title>const currentLineSize = lineNumber + 1</title>
+            <text x="102" y="197"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="102" y="197">const currentLineSize = lineNumber + 1</tspan>
+            </text>
+                   
+                   
+                </g><g>
+
+            <rect x="117" y="260.5"
+            width="262.79999999999995" height="30"
+            rx="3" ry="3"
+            style="fill:#b39ddb; stroke:#444; stroke-width:1" />
+            <polygon points="87,275.5 117,245.5 147,275.5 117,305.5"
+            style="fill:#b39ddb; stroke:#444; stroke-width:1" />
+                
+            <title>numIndex &lt; currentLineSize</title>
+            <text x="162" y="280.5"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="162" y="280.5">numIndex &lt; currentLineSize</tspan>
+            </text>
+            
+            <text x="105.3" y="280.5"
+        font-family="monospace" font-size="13" fill="#222">for</text>
+        </g>
+                <g>
+                   <rect x="137" y="315.5"
+            width="131.39999999999998" height="30"
+            rx="3" ry="3"
+            style="fill:#90caf9; stroke:#444; stroke-width:1" />
+                   <title>numIndex += 1</title>
+            <text x="152" y="335.5"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="152" y="335.5">numIndex += 1</tspan>
+            </text>
+                   
+                   
+                </g>
+                <g>
+                   <rect x="137" y="364"
+            width="443.4" height="30"
+            rx="3" ry="3"
+            style="fill:#90caf9; stroke:#444; stroke-width:1" />
+                   <title>currentLine[numIndex] = currentLine[numIndex - 1] * (lineNumber - numIndex + 1) / numIndex</title>
+            <text x="152" y="384"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="152" y="384">currentLine[numIndex] = currentLine[numIndex - 1] ...</tspan>
+            </text>
+                   
+                   
+                </g>
+            <g>
+                <rect x="87" y="412.5"
+            width="170.4" height="30"
+            rx="3" ry="3"
+            style="fill:#90caf9; stroke:#444; stroke-width:1" />
+                
+                <line x1="257.4" y1="422.5" x2="262.4" y2="422.5"
+                style="fill:#a5d6a7; stroke:#444; stroke-width:1" />
+                
+                <line x1="257.4" y1="432.5" x2="262.4" y2="432.5"
+                style="fill:#a5d6a7; stroke:#444; stroke-width:1" />
+
+                <path d="M262.4, 416.5 L278.4, 427.5 L262.4, 438.5 Z" 
+        fill="#a5d6a7" stroke="#444" stroke-width="1" />
+                             
+                <title>return currentLine</title>
+            <text x="102" y="432.5"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="102" y="432.5">return currentLine</tspan>
+            </text>
+                
+            </g>
+            <g>
+                <rect x="50" y="476"
+            width="260.6" height="30"
+            style="fill:#a5d6a7; stroke:#444; stroke-width:1" />
+                    
+                <line x1="60" y1="476" x2="60" y2="506"
+                style="fill:#a5d6a7; stroke:#444; stroke-width:1" />
+                <line x1="300.6" y1="476" x2="300.6" y2="506"
+                style="fill:#a5d6a7; stroke:#444; stroke-width:1" />
+             
+                <title>getRow = function(rowIndex)</title>
+            <text x="75" y="496"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="75" y="496">getRow = function(rowIndex)</tspan>
+            </text>
+                
+            </g>
+            <g>
+                <rect x="87" y="524.5"
+            width="271.79999999999995" height="30"
+            rx="3" ry="3"
+            style="fill:#90caf9; stroke:#444; stroke-width:1" />
+                
+                <line x1="358.79999999999995" y1="534.5" x2="363.79999999999995" y2="534.5"
+                style="fill:#a5d6a7; stroke:#444; stroke-width:1" />
+                
+                <line x1="358.79999999999995" y1="544.5" x2="363.79999999999995" y2="544.5"
+                style="fill:#a5d6a7; stroke:#444; stroke-width:1" />
+
+                <path d="M363.79999999999995, 528.5 L379.79999999999995, 539.5 L363.79999999999995, 550.5 Z" 
+        fill="#a5d6a7" stroke="#444" stroke-width="1" />
+                             
+                <title>return pascalTriangle(rowIndex)</title>
+            <text x="102" y="544.5"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="102" y="544.5">return pascalTriangle(rowIndex)</tspan>
+            </text>
+                
+            </g>
+            <g>
+               <rect x="25" y="13.75"
+            width="216.6" height="24"
+            style="fill:#fff59d; stroke:#444; stroke-width:1" />
+               <circle cx="25" cy="25" r="15"
+        style="fill:#fff59d; stroke:#444; stroke-width:1" />
+               <title>Program: source module</title>
+            <text x="55" y="30"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="55" y="30">Program: source module</tspan>
+            </text>
+            </g>
+            <g>
+               <path d="M25, 40 L25 91 Q25 95
+                29 95
+                L42 95 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M42, 92 L50, 95 L42, 98 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M68.5, 110 L68.5 139.5 Q68.5 143.5
+                72.5 143.5
+                L79 143.5 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M79, 140.5 L87, 143.5 L79, 146.5 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M68.5, 110 L68.5 188 Q68.5 192
+                72.5 192
+                L79 192 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M79, 189 L87, 192 L79, 195 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M68.5, 110 L68.5 271.5 Q68.5 275.5
+                72.5 275.5
+                L79 275.5 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M79, 272.5 L87, 275.5 L79, 278.5 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M117, 305.5 L117 326.5 Q117 330.5
+                121 330.5
+                L129 330.5 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M129, 327.5 L137, 330.5 L129, 333.5 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M117, 305.5 L117 375 Q117 379
+                121 379
+                L129 379 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M129, 376 L137, 379 L129, 382 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M580.4, 379 L596.4 379  Q600.4 379
+                600.4 375
+                L600.4 233.5 Q600.4 225.5
+                596.4 225.5
+                L125 225.5  Q117 225.5
+                117 229.5
+                L117 237.5"
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M114, 237.5 L117, 245.5 L120, 237.5 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M68.5, 110 L68.5 423.5 Q68.5 427.5
+                72.5 427.5
+                L79 427.5 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M79, 424.5 L87, 427.5 L79, 430.5 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M25, 40 L25 487 Q25 491
+                29 491
+                L42 491 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M42, 488 L50, 491 L42, 494 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M68.5, 506 L68.5 535.5 Q68.5 539.5
+                72.5 539.5
+                L79 539.5 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M79, 536.5 L87, 539.5 L79, 542.5 Z" 
+        fill="#333" />
+            </g>
+            </svg>

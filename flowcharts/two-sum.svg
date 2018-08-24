@@ -1,7 +1,118 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
-                width="252" height="80">
+                width="677" height="491">
                 
+            <g>
+                <rect x="50" y="80"
+            width="315.2" height="30"
+            style="fill:#a5d6a7; stroke:#444; stroke-width:1" />
+                    
+                <line x1="60" y1="80" x2="60" y2="110"
+                style="fill:#a5d6a7; stroke:#444; stroke-width:1" />
+                <line x1="355.2" y1="80" x2="355.2" y2="110"
+                style="fill:#a5d6a7; stroke:#444; stroke-width:1" />
+             
+                <title>twoSum = function(numbers, target)</title>
+            <text x="75" y="100"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="75" y="100">twoSum = function(numbers, target)</tspan>
+            </text>
+                
+            </g>
+                <g>
+                   <rect x="87" y="128.5"
+            width="139.2" height="30"
+            rx="3" ry="3"
+            style="fill:#90caf9; stroke:#444; stroke-width:1" />
+                   <title>let dict = {*}</title>
+            <text x="102" y="148.5"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="102" y="148.5">let dict = {*}</tspan>
+            </text>
+                   
+                   
+                </g><g>
+
+            <rect x="117" y="212"
+            width="153.6" height="30"
+            rx="3" ry="3"
+            style="fill:#b39ddb; stroke:#444; stroke-width:1" />
+            <polygon points="87,227 117,197 147,227 117,257"
+            style="fill:#b39ddb; stroke:#444; stroke-width:1" />
+                
+            <title>i in numbers</title>
+            <text x="162" y="232"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="162" y="232">i in numbers</tspan>
+            </text>
+            
+            <text x="105.3" y="232"
+        font-family="monospace" font-size="13" fill="#222">for</text>
+        </g><g>
+            <rect x="167" y="282"
+            width="286.2" height="30"
+            rx="3" ry="3"
+            style="fill:#ce93d8; stroke:#444; stroke-width:1" />                
+            <polygon points="137,297 167,267 197,297 167,327"
+            style="fill:#ce93d8; stroke:#444; stroke-width:1" />
+            <title>(target - numbers[i] in dict)</title>
+            <text x="212" y="302"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="212" y="302">(target - numbers[i] in dict)</tspan>
+            </text>
+            
+            <text x="159.2" y="302"
+        font-family="monospace" font-size="13" fill="#222">if</text> <text x="174.8" y="328.95"
+        font-family="monospace" font-size="13" fill="#222">+</text> 
+        </g>
+            <g>
+                <rect x="187" y="337"
+            width="443.4" height="30"
+            rx="3" ry="3"
+            style="fill:#90caf9; stroke:#444; stroke-width:1" />
+                
+                <line x1="630.4" y1="347" x2="635.4" y2="347"
+                style="fill:#a5d6a7; stroke:#444; stroke-width:1" />
+                
+                <line x1="630.4" y1="357" x2="635.4" y2="357"
+                style="fill:#a5d6a7; stroke:#444; stroke-width:1" />
+
+                <path d="M635.4, 341 L651.4, 352 L635.4, 363 Z" 
+        fill="#a5d6a7" stroke="#444" stroke-width="1" />
+                             
+                <title>return [dict[target - numbers[i]] + 1, Number(i) + 1]</title>
+            <text x="202" y="357"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="202" y="357">return [dict[target - numbers[i]] + 1, Number(i) +...</tspan>
+            </text>
+                
+            </g>
+                <g>
+                   <rect x="137" y="387"
+            width="248.4" height="30"
+            rx="3" ry="3"
+            style="fill:#90caf9; stroke:#444; stroke-width:1" />
+                   <title>dict[numbers[i]] = Number(i)</title>
+            <text x="152" y="407"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="152" y="407">dict[numbers[i]] = Number(i)</tspan>
+            </text>
+                   
+                   
+                </g>
+                <g>
+                   <rect x="50" y="435.5"
+            width="326.4" height="30"
+            rx="2" ry="2"
+            style="fill:#C5E1A5; stroke:#444; stroke-width:1" />
+                   <title>console.log(twoSum([2, 7, 11, 15], 9))</title>
+            <text x="65" y="455.5"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="65" y="455.5">console.log(twoSum([2, 7, 11, 15], 9))</tspan>
+            </text>
+                   
+                   
+                </g>
             <g>
                <rect x="25" y="13.75"
             width="216.6" height="24"
@@ -13,5 +124,73 @@
                 font-family="monospace" font-size="13" fill="#222">
                 <tspan x="55" y="30">Program: source module</tspan>
             </text>
+            </g>
+            <g>
+               <path d="M25, 40 L25 91 Q25 95
+                29 95
+                L42 95 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M42, 92 L50, 95 L42, 98 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M68.5, 110 L68.5 139.5 Q68.5 143.5
+                72.5 143.5
+                L79 143.5 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M79, 140.5 L87, 143.5 L79, 146.5 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M68.5, 110 L68.5 223 Q68.5 227
+                72.5 227
+                L79 227 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M79, 224 L87, 227 L79, 230 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M117, 257 L117 293 Q117 297
+                121 297
+                L129 297 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M129, 294 L137, 297 L129, 300 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M167, 327 L167 348 Q167 352
+                171 352
+                L179 352 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M179, 349 L187, 352 L179, 355 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M117, 257 L117 398 Q117 402
+                121 402
+                L129 402 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M129, 399 L137, 402 L129, 405 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M385.4, 402 L667.4 402  Q671.4 402
+                671.4 398
+                L671.4 185 Q671.4 177
+                667.4 177
+                L125 177  Q117 177
+                117 181
+                L117 189"
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M114, 189 L117, 197 L120, 189 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M25, 40 L25 446.5 Q25 450.5
+                29 450.5
+                L42 450.5 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M42, 447.5 L50, 450.5 L42, 453.5 Z" 
+        fill="#333" />
             </g>
             </svg>
