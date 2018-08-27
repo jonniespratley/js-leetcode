@@ -75,6 +75,8 @@ function rob3(nums) {
     return b;
 }
 
+
+
 /** 4) Iteration */
 // time O(n)
 // space O(1)
@@ -88,4 +90,20 @@ function rob(nums) {
     }
 
     return Math.max(a, b);
+}
+
+function rob4(nums){
+    let memo = [];
+    function _recursiveCall (i) {
+        if (i >= nums.length) return 0;
+        
+        if (memo[i] === undefined) {
+            memo[i] = Math.max(nums[i] + _recursiveCall(i + 2), _recursiveCall(i + 1));
+            return memo[i];
+        } else {
+            return memo[i];
+        }
+    }
+                        
+    return _recursiveCall(0);
 }

@@ -1,3 +1,14 @@
+// Given a linked list, remove the n-th node from the end of list and return its head.
+//
+// Example:
+// Given linked list: 1->2->3->4->5, and n = 2.
+// After removing the second node from the end, the linked list becomes 1->2->3->5.
+//
+// Note:
+// Given n will always be valid.
+//
+// Follow up:
+// Could you do this in one pass?
 /**
  * Definition for singly-linked list.
  * function ListNode(val) {
@@ -10,42 +21,18 @@
  * @param {number} n
  * @return {ListNode}
  */
-var removeNthFromEnd = function (head, n) {
-    if (!head) return head;
-
-    let p1 = head;
-    let p2 = head
+function removeNthFromEnd(head, n) {
+    let before = new ListNode(null); // for removing the only 1 node in list case
+    before.next = head;
+    let slow = before;
+    let fast = head;
     while (n--) {
-        if (p2 === null) return null
-        p2 = p2.next
+        fast = fast.next;
     }
-    while (p1 && p2.next) {
-        p1 = p1.next
-        p2 = p2.next
+    while (fast) {
+        slow = slow.next;
+        fast = fast.next;
     }
-    let removed = p1.next
-    p1.next = removed.next
-    removed.next = null
-    return head
-};
-
-const removeNthFromEnd2 = function (head, n) {
-    if (!head) return head;
-
-    let prev = head;
-    let curr = head.next;
-
-    while (curr) {
-        if (n > 0) {
-            n -= 1;
-        } else {
-            prev = prev.next;
-        }
-        curr = curr.next;
-    }
-
-    if (n === 1) return head.next;
-
-    prev.next = prev.next.next || null;
-    return head;
-};
+    slow.next = slow.next.next;
+    return before.next;
+}

@@ -1,4 +1,3 @@
-
 /**
  * Given an array of integers, find if the array contains any duplicates.
 
@@ -41,18 +40,14 @@ var containsDuplicate = function (nums) {
     return result;
 };
 
-var containsDuplicate2 = function (nums) {
-    var counter = {};
-    for (var i = 0; i < nums.length; i++) {
-        if (counter.hasOwnProperty(nums[i])) {
-            return true;
-        } else {
-            counter[nums[i]] = 1;
-        }
+function containsDuplicate2(nums) {
+    let obj = {};
+    for (let num of nums) {
+        if (obj[num]) return true;
+        obj[num] = true;
     }
-
     return false;
-};
+}
 
 console.time('containsDuplicate');
 console.log(containsDuplicate([9, 9, 1]));

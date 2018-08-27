@@ -33,7 +33,9 @@ var singleNumber = function(nums) {
         }
     }
 };
-
+function singleNumber(nums) {
+    return nums.reduce((sum, num) => sum ^ num);  // ^ is XOR
+  }
 console.log(singleNumber([2, 2, 1]));
 //console.log(singleNumber([4,1,2,1,2]));
 console.log(singleNumber([1,1,1,1,1,5]));
