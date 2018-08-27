@@ -1,0 +1,1492 @@
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+                width="666" height="3517">
+                
+            <g>
+                <rect x="50" y="80"
+            width="268.4" height="30"
+            style="fill:#a5d6a7; stroke:#444; stroke-width:1" />
+                    
+                <line x1="60" y1="80" x2="60" y2="110"
+                style="fill:#a5d6a7; stroke:#444; stroke-width:1" />
+                <line x1="308.4" y1="80" x2="308.4" y2="110"
+                style="fill:#a5d6a7; stroke:#444; stroke-width:1" />
+             
+                <title>setZeroes = function(matrix)</title>
+            <text x="75" y="100"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="75" y="100">setZeroes = function(matrix)</tspan>
+            </text>
+                
+            </g>
+                <g>
+                   <rect x="87" y="128.5"
+            width="201.6" height="30"
+            rx="3" ry="3"
+            style="fill:#90caf9; stroke:#444; stroke-width:1" />
+                   <title>let rowHasZero = false</title>
+            <text x="102" y="148.5"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="102" y="148.5">let rowHasZero = false</tspan>
+            </text>
+                   
+                   
+                </g>
+                <g>
+                   <rect x="87" y="177"
+            width="201.6" height="30"
+            rx="3" ry="3"
+            style="fill:#90caf9; stroke:#444; stroke-width:1" />
+                   <title>let colHasZero = false</title>
+            <text x="102" y="197"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="102" y="197">let colHasZero = false</tspan>
+            </text>
+                   
+                   
+                </g>
+                <g>
+                   <rect x="87" y="225.5"
+            width="131.39999999999998" height="30"
+            rx="3" ry="3"
+            style="fill:#90caf9; stroke:#444; stroke-width:1" />
+                   <title>let rows = []</title>
+            <text x="102" y="245.5"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="102" y="245.5">let rows = []</tspan>
+            </text>
+                   
+                   
+                </g>
+                <g>
+                   <rect x="87" y="274"
+            width="131.39999999999998" height="30"
+            rx="3" ry="3"
+            style="fill:#90caf9; stroke:#444; stroke-width:1" />
+                   <title>let cols = []</title>
+            <text x="102" y="294"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="102" y="294">let cols = []</tspan>
+            </text>
+                   
+                   
+                </g>
+            <g>
+                <rect x="87" y="337.5"
+            width="299.6" height="30"
+            style="fill:#a5d6a7; stroke:#444; stroke-width:1" />
+                    
+                <line x1="97" y1="337.5" x2="97" y2="367.5"
+                style="fill:#a5d6a7; stroke:#444; stroke-width:1" />
+                <line x1="376.6" y1="337.5" x2="376.6" y2="367.5"
+                style="fill:#a5d6a7; stroke:#444; stroke-width:1" />
+             
+                <title>function nullifyRow(matrix, row)</title>
+            <text x="112" y="357.5"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="112" y="357.5">function nullifyRow(matrix, row)</tspan>
+            </text>
+                
+            </g><g>
+
+            <rect x="154" y="421"
+            width="223.79999999999998" height="30"
+            rx="3" ry="3"
+            style="fill:#b39ddb; stroke:#444; stroke-width:1" />
+            <polygon points="124,436 154,406 184,436 154,466"
+            style="fill:#b39ddb; stroke:#444; stroke-width:1" />
+                
+            <title>index &lt; matrix.length</title>
+            <text x="199" y="441"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="199" y="441">index &lt; matrix.length</tspan>
+            </text>
+            
+            <text x="142.3" y="441"
+        font-family="monospace" font-size="13" fill="#222">for</text>
+        </g>
+                <g>
+                   <rect x="174" y="476"
+            width="84.6" height="30"
+            rx="3" ry="3"
+            style="fill:#90caf9; stroke:#444; stroke-width:1" />
+                   <title>index++</title>
+            <text x="189" y="496"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="189" y="496">index++</tspan>
+            </text>
+                   
+                   
+                </g>
+                <g>
+                   <rect x="174" y="524.5"
+            width="201.6" height="30"
+            rx="3" ry="3"
+            style="fill:#90caf9; stroke:#444; stroke-width:1" />
+                   <title>matrix[row][index] = 0</title>
+            <text x="189" y="544.5"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="189" y="544.5">matrix[row][index] = 0</tspan>
+            </text>
+                   
+                   
+                </g>
+            <g>
+                <rect x="87" y="588"
+            width="299.6" height="30"
+            style="fill:#a5d6a7; stroke:#444; stroke-width:1" />
+                    
+                <line x1="97" y1="588" x2="97" y2="618"
+                style="fill:#a5d6a7; stroke:#444; stroke-width:1" />
+                <line x1="376.6" y1="588" x2="376.6" y2="618"
+                style="fill:#a5d6a7; stroke:#444; stroke-width:1" />
+             
+                <title>function nullifyCol(matrix, col)</title>
+            <text x="112" y="608"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="112" y="608">function nullifyCol(matrix, col)</tspan>
+            </text>
+                
+            </g><g>
+
+            <rect x="154" y="671.5"
+            width="223.79999999999998" height="30"
+            rx="3" ry="3"
+            style="fill:#b39ddb; stroke:#444; stroke-width:1" />
+            <polygon points="124,686.5 154,656.5 184,686.5 154,716.5"
+            style="fill:#b39ddb; stroke:#444; stroke-width:1" />
+                
+            <title>index &lt; matrix.length</title>
+            <text x="199" y="691.5"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="199" y="691.5">index &lt; matrix.length</tspan>
+            </text>
+            
+            <text x="142.3" y="691.5"
+        font-family="monospace" font-size="13" fill="#222">for</text>
+        </g>
+                <g>
+                   <rect x="174" y="726.5"
+            width="84.6" height="30"
+            rx="3" ry="3"
+            style="fill:#90caf9; stroke:#444; stroke-width:1" />
+                   <title>index++</title>
+            <text x="189" y="746.5"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="189" y="746.5">index++</tspan>
+            </text>
+                   
+                   
+                </g>
+                <g>
+                   <rect x="174" y="775"
+            width="201.6" height="30"
+            rx="3" ry="3"
+            style="fill:#90caf9; stroke:#444; stroke-width:1" />
+                   <title>matrix[index][col] = 0</title>
+            <text x="189" y="795"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="189" y="795">matrix[index][col] = 0</tspan>
+            </text>
+                   
+                   
+                </g><g>
+
+            <rect x="117" y="858.5"
+            width="216" height="30"
+            rx="3" ry="3"
+            style="fill:#b39ddb; stroke:#444; stroke-width:1" />
+            <polygon points="87,873.5 117,843.5 147,873.5 117,903.5"
+            style="fill:#b39ddb; stroke:#444; stroke-width:1" />
+                
+            <title>j &lt; matrix[0].length</title>
+            <text x="162" y="878.5"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="162" y="878.5">j &lt; matrix[0].length</tspan>
+            </text>
+            
+            <text x="105.3" y="878.5"
+        font-family="monospace" font-size="13" fill="#222">for</text>
+        </g>
+                <g>
+                   <rect x="137" y="913.5"
+            width="53.4" height="30"
+            rx="3" ry="3"
+            style="fill:#90caf9; stroke:#444; stroke-width:1" />
+                   <title>j++</title>
+            <text x="152" y="933.5"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="152" y="933.5">j++</tspan>
+            </text>
+                   
+                   
+                </g><g>
+            <rect x="167" y="977"
+            width="216" height="30"
+            rx="3" ry="3"
+            style="fill:#ce93d8; stroke:#444; stroke-width:1" />                
+            <polygon points="137,992 167,962 197,992 167,1022"
+            style="fill:#ce93d8; stroke:#444; stroke-width:1" />
+            <title>(matrix[0][j] === 0)</title>
+            <text x="212" y="997"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="212" y="997">(matrix[0][j] === 0)</tspan>
+            </text>
+            
+            <text x="159.2" y="997"
+        font-family="monospace" font-size="13" fill="#222">if</text> <text x="174.8" y="1023.95"
+        font-family="monospace" font-size="13" fill="#222">+</text> 
+        </g>
+                <g>
+                   <rect x="187" y="1032"
+            width="162.6" height="30"
+            rx="3" ry="3"
+            style="fill:#90caf9; stroke:#444; stroke-width:1" />
+                   <title>rowHasZero = true</title>
+            <text x="202" y="1052"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="202" y="1052">rowHasZero = true</tspan>
+            </text>
+                   
+                   
+                </g>
+            <g>
+                <rect x="187" y="1080.5"
+            width="69" height="30"
+            rx="2" ry="2"
+            style="fill:#90caf9; stroke:#444; stroke-width:1" />
+                
+                <line x1="256" y1="1090.5" x2="261" y2="1090.5"
+                style="fill:#ce93d8; stroke:#444; stroke-width:1" />
+                
+                <line x1="256" y1="1100.5" x2="261" y2="1100.5"
+                style="fill:#ce93d8; stroke:#444; stroke-width:1" />
+
+                <path d="M261, 1081.5 L277, 1095.5 L261, 1109.5 Z" 
+        fill="#ce93d8" stroke="#444" stroke-width="1" />
+                             
+                <title>break</title>
+            <text x="202" y="1100.5"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="202" y="1100.5">break</tspan>
+            </text>
+                
+            </g><g>
+
+            <rect x="117" y="1165.5"
+            width="192.6" height="30"
+            rx="3" ry="3"
+            style="fill:#b39ddb; stroke:#444; stroke-width:1" />
+            <polygon points="87,1180.5 117,1150.5 147,1180.5 117,1210.5"
+            style="fill:#b39ddb; stroke:#444; stroke-width:1" />
+                
+            <title>i &lt; matrix.length</title>
+            <text x="162" y="1185.5"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="162" y="1185.5">i &lt; matrix.length</tspan>
+            </text>
+            
+            <text x="105.3" y="1185.5"
+        font-family="monospace" font-size="13" fill="#222">for</text>
+        </g>
+                <g>
+                   <rect x="137" y="1220.5"
+            width="53.4" height="30"
+            rx="3" ry="3"
+            style="fill:#90caf9; stroke:#444; stroke-width:1" />
+                   <title>i++</title>
+            <text x="152" y="1240.5"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="152" y="1240.5">i++</tspan>
+            </text>
+                   
+                   
+                </g><g>
+            <rect x="167" y="1284"
+            width="216" height="30"
+            rx="3" ry="3"
+            style="fill:#ce93d8; stroke:#444; stroke-width:1" />                
+            <polygon points="137,1299 167,1269 197,1299 167,1329"
+            style="fill:#ce93d8; stroke:#444; stroke-width:1" />
+            <title>(matrix[i][0] === 0)</title>
+            <text x="212" y="1304"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="212" y="1304">(matrix[i][0] === 0)</tspan>
+            </text>
+            
+            <text x="159.2" y="1304"
+        font-family="monospace" font-size="13" fill="#222">if</text> <text x="174.8" y="1330.95"
+        font-family="monospace" font-size="13" fill="#222">+</text> 
+        </g>
+                <g>
+                   <rect x="187" y="1339"
+            width="162.6" height="30"
+            rx="3" ry="3"
+            style="fill:#90caf9; stroke:#444; stroke-width:1" />
+                   <title>colHasZero = true</title>
+            <text x="202" y="1359"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="202" y="1359">colHasZero = true</tspan>
+            </text>
+                   
+                   
+                </g>
+            <g>
+                <rect x="187" y="1387.5"
+            width="69" height="30"
+            rx="2" ry="2"
+            style="fill:#90caf9; stroke:#444; stroke-width:1" />
+                
+                <line x1="256" y1="1397.5" x2="261" y2="1397.5"
+                style="fill:#ce93d8; stroke:#444; stroke-width:1" />
+                
+                <line x1="256" y1="1407.5" x2="261" y2="1407.5"
+                style="fill:#ce93d8; stroke:#444; stroke-width:1" />
+
+                <path d="M261, 1388.5 L277, 1402.5 L261, 1416.5 Z" 
+        fill="#ce93d8" stroke="#444" stroke-width="1" />
+                             
+                <title>break</title>
+            <text x="202" y="1407.5"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="202" y="1407.5">break</tspan>
+            </text>
+                
+            </g><g>
+
+            <rect x="117" y="1472.5"
+            width="192.6" height="30"
+            rx="3" ry="3"
+            style="fill:#b39ddb; stroke:#444; stroke-width:1" />
+            <polygon points="87,1487.5 117,1457.5 147,1487.5 117,1517.5"
+            style="fill:#b39ddb; stroke:#444; stroke-width:1" />
+                
+            <title>i &lt; matrix.length</title>
+            <text x="162" y="1492.5"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="162" y="1492.5">i &lt; matrix.length</tspan>
+            </text>
+            
+            <text x="105.3" y="1492.5"
+        font-family="monospace" font-size="13" fill="#222">for</text>
+        </g>
+                <g>
+                   <rect x="137" y="1527.5"
+            width="53.4" height="30"
+            rx="3" ry="3"
+            style="fill:#90caf9; stroke:#444; stroke-width:1" />
+                   <title>i++</title>
+            <text x="152" y="1547.5"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="152" y="1547.5">i++</tspan>
+            </text>
+                   
+                   
+                </g><g>
+
+            <rect x="167" y="1611"
+            width="216" height="30"
+            rx="3" ry="3"
+            style="fill:#b39ddb; stroke:#444; stroke-width:1" />
+            <polygon points="137,1626 167,1596 197,1626 167,1656"
+            style="fill:#b39ddb; stroke:#444; stroke-width:1" />
+                
+            <title>j &lt; matrix[0].length</title>
+            <text x="212" y="1631"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="212" y="1631">j &lt; matrix[0].length</tspan>
+            </text>
+            
+            <text x="155.3" y="1631"
+        font-family="monospace" font-size="13" fill="#222">for</text>
+        </g>
+                <g>
+                   <rect x="187" y="1666"
+            width="53.4" height="30"
+            rx="3" ry="3"
+            style="fill:#90caf9; stroke:#444; stroke-width:1" />
+                   <title>j++</title>
+            <text x="202" y="1686"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="202" y="1686">j++</tspan>
+            </text>
+                   
+                   
+                </g><g>
+            <rect x="217" y="1729.5"
+            width="216" height="30"
+            rx="3" ry="3"
+            style="fill:#ce93d8; stroke:#444; stroke-width:1" />                
+            <polygon points="187,1744.5 217,1714.5 247,1744.5 217,1774.5"
+            style="fill:#ce93d8; stroke:#444; stroke-width:1" />
+            <title>(matrix[i][j] === 0)</title>
+            <text x="262" y="1749.5"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="262" y="1749.5">(matrix[i][j] === 0)</tspan>
+            </text>
+            
+            <text x="209.2" y="1749.5"
+        font-family="monospace" font-size="13" fill="#222">if</text> <text x="224.8" y="1776.45"
+        font-family="monospace" font-size="13" fill="#222">+</text> 
+        </g>
+                <g>
+                   <rect x="237" y="1784.5"
+            width="139.2" height="30"
+            rx="3" ry="3"
+            style="fill:#90caf9; stroke:#444; stroke-width:1" />
+                   <title>rows[i] = true</title>
+            <text x="252" y="1804.5"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="252" y="1804.5">rows[i] = true</tspan>
+            </text>
+                   
+                   
+                </g>
+                <g>
+                   <rect x="237" y="1833"
+            width="139.2" height="30"
+            rx="3" ry="3"
+            style="fill:#90caf9; stroke:#444; stroke-width:1" />
+                   <title>cols[j] = true</title>
+            <text x="252" y="1853"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="252" y="1853">cols[j] = true</tspan>
+            </text>
+                   
+                   
+                </g><g>
+
+            <rect x="117" y="1918"
+            width="192.6" height="30"
+            rx="3" ry="3"
+            style="fill:#b39ddb; stroke:#444; stroke-width:1" />
+            <polygon points="87,1933 117,1903 147,1933 117,1963"
+            style="fill:#b39ddb; stroke:#444; stroke-width:1" />
+                
+            <title>i &lt; matrix.length</title>
+            <text x="162" y="1938"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="162" y="1938">i &lt; matrix.length</tspan>
+            </text>
+            
+            <text x="105.3" y="1938"
+        font-family="monospace" font-size="13" fill="#222">for</text>
+        </g>
+                <g>
+                   <rect x="137" y="1973"
+            width="53.4" height="30"
+            rx="3" ry="3"
+            style="fill:#90caf9; stroke:#444; stroke-width:1" />
+                   <title>i++</title>
+            <text x="152" y="1993"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="152" y="1993">i++</tspan>
+            </text>
+                   
+                   
+                </g><g>
+            <rect x="167" y="2036.5"
+            width="216" height="30"
+            rx="3" ry="3"
+            style="fill:#ce93d8; stroke:#444; stroke-width:1" />                
+            <polygon points="137,2051.5 167,2021.5 197,2051.5 167,2081.5"
+            style="fill:#ce93d8; stroke:#444; stroke-width:1" />
+            <title>(matrix[i][0] === 0)</title>
+            <text x="212" y="2056.5"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="212" y="2056.5">(matrix[i][0] === 0)</tspan>
+            </text>
+            
+            <text x="159.2" y="2056.5"
+        font-family="monospace" font-size="13" fill="#222">if</text> <text x="174.8" y="2083.45"
+        font-family="monospace" font-size="13" fill="#222">+</text> 
+        </g>
+                <g>
+                   <rect x="187" y="2091.5"
+            width="193.79999999999998" height="30"
+            rx="2" ry="2"
+            style="fill:#C5E1A5; stroke:#444; stroke-width:1" />
+                   <title>nullifyRow(matrix, i)</title>
+            <text x="202" y="2111.5"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="202" y="2111.5">nullifyRow(matrix, i)</tspan>
+            </text>
+                   
+                   
+                </g><g>
+
+            <rect x="117" y="2176.5"
+            width="216" height="30"
+            rx="3" ry="3"
+            style="fill:#b39ddb; stroke:#444; stroke-width:1" />
+            <polygon points="87,2191.5 117,2161.5 147,2191.5 117,2221.5"
+            style="fill:#b39ddb; stroke:#444; stroke-width:1" />
+                
+            <title>j &lt; matrix[0].length</title>
+            <text x="162" y="2196.5"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="162" y="2196.5">j &lt; matrix[0].length</tspan>
+            </text>
+            
+            <text x="105.3" y="2196.5"
+        font-family="monospace" font-size="13" fill="#222">for</text>
+        </g>
+                <g>
+                   <rect x="137" y="2231.5"
+            width="53.4" height="30"
+            rx="3" ry="3"
+            style="fill:#90caf9; stroke:#444; stroke-width:1" />
+                   <title>j++</title>
+            <text x="152" y="2251.5"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="152" y="2251.5">j++</tspan>
+            </text>
+                   
+                   
+                </g><g>
+            <rect x="167" y="2295"
+            width="216" height="30"
+            rx="3" ry="3"
+            style="fill:#ce93d8; stroke:#444; stroke-width:1" />                
+            <polygon points="137,2310 167,2280 197,2310 167,2340"
+            style="fill:#ce93d8; stroke:#444; stroke-width:1" />
+            <title>(matrix[0][j] === 0)</title>
+            <text x="212" y="2315"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="212" y="2315">(matrix[0][j] === 0)</tspan>
+            </text>
+            
+            <text x="159.2" y="2315"
+        font-family="monospace" font-size="13" fill="#222">if</text> <text x="174.8" y="2341.95"
+        font-family="monospace" font-size="13" fill="#222">+</text> 
+        </g>
+                <g>
+                   <rect x="187" y="2350"
+            width="193.79999999999998" height="30"
+            rx="2" ry="2"
+            style="fill:#C5E1A5; stroke:#444; stroke-width:1" />
+                   <title>nullifyCol(matrix, j)</title>
+            <text x="202" y="2370"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="202" y="2370">nullifyCol(matrix, j)</tspan>
+            </text>
+                   
+                   
+                </g><g>
+            <rect x="117" y="2415"
+            width="153.6" height="30"
+            rx="3" ry="3"
+            style="fill:#ce93d8; stroke:#444; stroke-width:1" />                
+            <polygon points="87,2430 117,2400 147,2430 117,2460"
+            style="fill:#ce93d8; stroke:#444; stroke-width:1" />
+            <title>(rowHasZero)</title>
+            <text x="162" y="2435"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="162" y="2435">(rowHasZero)</tspan>
+            </text>
+            
+            <text x="109.2" y="2435"
+        font-family="monospace" font-size="13" fill="#222">if</text> <text x="124.8" y="2461.95"
+        font-family="monospace" font-size="13" fill="#222">+</text> 
+        </g>
+                <g>
+                   <rect x="137" y="2470"
+            width="193.79999999999998" height="30"
+            rx="2" ry="2"
+            style="fill:#C5E1A5; stroke:#444; stroke-width:1" />
+                   <title>nullifyRow(matrix, 0)</title>
+            <text x="152" y="2490"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="152" y="2490">nullifyRow(matrix, 0)</tspan>
+            </text>
+                   
+                   
+                </g><g>
+            <rect x="117" y="2535"
+            width="153.6" height="30"
+            rx="3" ry="3"
+            style="fill:#ce93d8; stroke:#444; stroke-width:1" />                
+            <polygon points="87,2550 117,2520 147,2550 117,2580"
+            style="fill:#ce93d8; stroke:#444; stroke-width:1" />
+            <title>(colHasZero)</title>
+            <text x="162" y="2555"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="162" y="2555">(colHasZero)</tspan>
+            </text>
+            
+            <text x="109.2" y="2555"
+        font-family="monospace" font-size="13" fill="#222">if</text> <text x="124.8" y="2581.95"
+        font-family="monospace" font-size="13" fill="#222">+</text> 
+        </g>
+                <g>
+                   <rect x="137" y="2590"
+            width="193.79999999999998" height="30"
+            rx="2" ry="2"
+            style="fill:#C5E1A5; stroke:#444; stroke-width:1" />
+                   <title>nullifyCol(matrix, 0)</title>
+            <text x="152" y="2610"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="152" y="2610">nullifyCol(matrix, 0)</tspan>
+            </text>
+                   
+                   
+                </g>
+            <g>
+                <rect x="87" y="2640"
+            width="131.39999999999998" height="30"
+            rx="3" ry="3"
+            style="fill:#90caf9; stroke:#444; stroke-width:1" />
+                
+                <line x1="218.39999999999998" y1="2650" x2="223.39999999999998" y2="2650"
+                style="fill:#a5d6a7; stroke:#444; stroke-width:1" />
+                
+                <line x1="218.39999999999998" y1="2660" x2="223.39999999999998" y2="2660"
+                style="fill:#a5d6a7; stroke:#444; stroke-width:1" />
+
+                <path d="M223.39999999999998, 2644 L239.39999999999998, 2655 L223.39999999999998, 2666 Z" 
+        fill="#a5d6a7" stroke="#444" stroke-width="1" />
+                             
+                <title>return matrix</title>
+            <text x="102" y="2660"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="102" y="2660">return matrix</tspan>
+            </text>
+                
+            </g>
+                <g>
+                   <rect x="50" y="2688.5"
+            width="443.4" height="30"
+            rx="2" ry="2"
+            style="fill:#C5E1A5; stroke:#444; stroke-width:1" />
+                   <title>console.log(setZeroes([[1, 1, 1], [1, 0, 1], [1, 1, 1]]))</title>
+            <text x="65" y="2708.5"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="65" y="2708.5">console.log(setZeroes([[1, 1, 1], [1, 0, 1], [1, 1...</tspan>
+            </text>
+                   
+                   
+                </g>
+                <g>
+                   <rect x="50" y="2737"
+            width="443.4" height="30"
+            rx="2" ry="2"
+            style="fill:#C5E1A5; stroke:#444; stroke-width:1" />
+                   <title>console.log(setZeroes([[0, 1, 2, 0], [3, 4, 5, 2], [1, 3, 1, 5]]))</title>
+            <text x="65" y="2757"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="65" y="2757">console.log(setZeroes([[0, 1, 2, 0], [3, 4, 5, 2],...</tspan>
+            </text>
+                   
+                   
+                </g>
+            <g>
+                <rect x="50" y="2800.5"
+            width="307.4" height="30"
+            style="fill:#a5d6a7; stroke:#444; stroke-width:1" />
+                    
+                <line x1="60" y1="2800.5" x2="60" y2="2830.5"
+                style="fill:#a5d6a7; stroke:#444; stroke-width:1" />
+                <line x1="347.4" y1="2800.5" x2="347.4" y2="2830.5"
+                style="fill:#a5d6a7; stroke:#444; stroke-width:1" />
+             
+                <title>solution = function(isBadVersion)</title>
+            <text x="75" y="2820.5"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="75" y="2820.5">solution = function(isBadVersion)</tspan>
+            </text>
+                
+            </g>
+            <g>
+                <rect x="87" y="2849"
+            width="76.8" height="30"
+            rx="3" ry="3"
+            style="fill:#90caf9; stroke:#444; stroke-width:1" />
+                
+                <line x1="163.8" y1="2859" x2="168.8" y2="2859"
+                style="fill:#a5d6a7; stroke:#444; stroke-width:1" />
+                
+                <line x1="163.8" y1="2869" x2="168.8" y2="2869"
+                style="fill:#a5d6a7; stroke:#444; stroke-width:1" />
+
+                <path d="M168.8, 2853 L184.8, 2864 L168.8, 2875 Z" 
+        fill="#a5d6a7" stroke="#444" stroke-width="1" />
+                             
+                <title>return</title>
+            <text x="102" y="2869"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="102" y="2869">return</tspan>
+            </text>
+                
+            </g>
+            <g>
+                <rect x="124" y="2912.5"
+            width="135.8" height="30"
+            style="fill:#a5d6a7; stroke:#444; stroke-width:1" />
+                    
+                <line x1="134" y1="2912.5" x2="134" y2="2942.5"
+                style="fill:#a5d6a7; stroke:#444; stroke-width:1" />
+                <line x1="249.8" y1="2912.5" x2="249.8" y2="2942.5"
+                style="fill:#a5d6a7; stroke:#444; stroke-width:1" />
+             
+                <title>function(n)</title>
+            <text x="149" y="2932.5"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="149" y="2932.5">function(n)</tspan>
+            </text>
+                
+            </g>
+                <g>
+                   <rect x="161" y="2961"
+            width="115.8" height="30"
+            rx="3" ry="3"
+            style="fill:#90caf9; stroke:#444; stroke-width:1" />
+                   <title>var min = 1</title>
+            <text x="176" y="2981"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="176" y="2981">var min = 1</tspan>
+            </text>
+                   
+                   
+                </g>
+                <g>
+                   <rect x="161" y="3009.5"
+            width="115.8" height="30"
+            rx="3" ry="3"
+            style="fill:#90caf9; stroke:#444; stroke-width:1" />
+                   <title>var max = n</title>
+            <text x="176" y="3029.5"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="176" y="3029.5">var max = n</tspan>
+            </text>
+                   
+                   
+                </g>
+                <g>
+                   <rect x="161" y="3058"
+            width="123.6" height="30"
+            rx="3" ry="3"
+            style="fill:#90caf9; stroke:#444; stroke-width:1" />
+                   <title>var bad = -1</title>
+            <text x="176" y="3078"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="176" y="3078">var bad = -1</tspan>
+            </text>
+                   
+                   
+                </g><g>
+
+            <rect x="191" y="3141.5"
+            width="138" height="30"
+            rx="3" ry="3"
+            style="fill:#b39ddb; stroke:#444; stroke-width:1" />
+            <polygon points="161,3156.5 191,3126.5 221,3156.5 191,3186.5"
+            style="fill:#b39ddb; stroke:#444; stroke-width:1" />
+                
+            <title>min &lt;= max</title>
+            <text x="236" y="3161.5"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="236" y="3161.5">min &lt;= max</tspan>
+            </text>
+            
+            <text x="171.5" y="3161.5"
+        font-family="monospace" font-size="13" fill="#222">while</text>
+        </g>
+                <g>
+                   <rect x="211" y="3196.5"
+            width="318.59999999999997" height="30"
+            rx="3" ry="3"
+            style="fill:#90caf9; stroke:#444; stroke-width:1" />
+                   <title>var mid = Math.floor((min + max) / 2)</title>
+            <text x="226" y="3216.5"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="226" y="3216.5">var mid = Math.floor((min + max) / 2)</tspan>
+            </text>
+                   
+                   
+                </g><g>
+            <rect x="241" y="3260"
+            width="208.2" height="30"
+            rx="3" ry="3"
+            style="fill:#ce93d8; stroke:#444; stroke-width:1" />                
+            <polygon points="211,3275 241,3245 271,3275 241,3305"
+            style="fill:#ce93d8; stroke:#444; stroke-width:1" />
+            <title>(isBadVersion(mid))</title>
+            <text x="286" y="3280"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="286" y="3280">(isBadVersion(mid))</tspan>
+            </text>
+            
+            <text x="233.2" y="3280"
+        font-family="monospace" font-size="13" fill="#222">if</text> <text x="248.8" y="3306.95"
+        font-family="monospace" font-size="13" fill="#222">+</text> <text x="453.09999999999997" y="3273.05"
+        font-family="monospace" font-size="13" fill="#222">-</text>
+        </g>
+                <g>
+                   <rect x="261" y="3315"
+            width="100.2" height="30"
+            rx="3" ry="3"
+            style="fill:#90caf9; stroke:#444; stroke-width:1" />
+                   <title>bad = mid</title>
+            <text x="276" y="3335"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="276" y="3335">bad = mid</tspan>
+            </text>
+                   
+                   
+                </g>
+                <g>
+                   <rect x="261" y="3363.5"
+            width="131.39999999999998" height="30"
+            rx="3" ry="3"
+            style="fill:#90caf9; stroke:#444; stroke-width:1" />
+                   <title>max = mid - 1</title>
+            <text x="276" y="3383.5"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="276" y="3383.5">max = mid - 1</tspan>
+            </text>
+                   
+                   
+                </g>
+                <g>
+                   <rect x="509.2" y="3315"
+            width="131.39999999999998" height="30"
+            rx="3" ry="3"
+            style="fill:#90caf9; stroke:#444; stroke-width:1" />
+                   <title>min = mid + 1</title>
+            <text x="524.2" y="3335"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="524.2" y="3335">min = mid + 1</tspan>
+            </text>
+                   
+                   
+                </g>
+            <g>
+                <rect x="161" y="3413.5"
+            width="108" height="30"
+            rx="3" ry="3"
+            style="fill:#90caf9; stroke:#444; stroke-width:1" />
+                
+                <line x1="269" y1="3423.5" x2="274" y2="3423.5"
+                style="fill:#a5d6a7; stroke:#444; stroke-width:1" />
+                
+                <line x1="269" y1="3433.5" x2="274" y2="3433.5"
+                style="fill:#a5d6a7; stroke:#444; stroke-width:1" />
+
+                <path d="M274, 3417.5 L290, 3428.5 L274, 3439.5 Z" 
+        fill="#a5d6a7" stroke="#444" stroke-width="1" />
+                             
+                <title>return bad</title>
+            <text x="176" y="3433.5"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="176" y="3433.5">return bad</tspan>
+            </text>
+                
+            </g>
+                <g>
+                   <rect x="50" y="3462"
+            width="232.79999999999998" height="30"
+            rx="2" ry="2"
+            style="fill:#C5E1A5; stroke:#444; stroke-width:1" />
+                   <title>console.log(solution(5)())</title>
+            <text x="65" y="3482"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="65" y="3482">console.log(solution(5)())</tspan>
+            </text>
+                   
+                   
+                </g>
+            <g>
+               <rect x="25" y="13.75"
+            width="216.6" height="24"
+            style="fill:#fff59d; stroke:#444; stroke-width:1" />
+               <circle cx="25" cy="25" r="15"
+        style="fill:#fff59d; stroke:#444; stroke-width:1" />
+               <title>Program: source module</title>
+            <text x="55" y="30"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="55" y="30">Program: source module</tspan>
+            </text>
+            </g>
+            <g>
+               <path d="M25, 40 L25 91 Q25 95
+                29 95
+                L42 95 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M42, 92 L50, 95 L42, 98 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M68.5, 110 L68.5 139.5 Q68.5 143.5
+                72.5 143.5
+                L79 143.5 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M79, 140.5 L87, 143.5 L79, 146.5 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M68.5, 110 L68.5 188 Q68.5 192
+                72.5 192
+                L79 192 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M79, 189 L87, 192 L79, 195 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M68.5, 110 L68.5 236.5 Q68.5 240.5
+                72.5 240.5
+                L79 240.5 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M79, 237.5 L87, 240.5 L79, 243.5 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M68.5, 110 L68.5 285 Q68.5 289
+                72.5 289
+                L79 289 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M79, 286 L87, 289 L79, 292 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M68.5, 110 L68.5 348.5 Q68.5 352.5
+                72.5 352.5
+                L79 352.5 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M79, 349.5 L87, 352.5 L79, 355.5 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M105.5, 367.5 L105.5 432 Q105.5 436
+                109.5 436
+                L116 436 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M116, 433 L124, 436 L116, 439 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M154, 466 L154 487 Q154 491
+                158 491
+                L166 491 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M166, 488 L174, 491 L166, 494 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M154, 466 L154 535.5 Q154 539.5
+                158 539.5
+                L166 539.5 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M166, 536.5 L174, 539.5 L166, 542.5 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M375.6, 539.5 L393.79999999999995 539.5  Q397.79999999999995 539.5
+                397.79999999999995 535.5
+                L397.79999999999995 394 Q397.79999999999995 386
+                393.79999999999995 386
+                L162 386  Q154 386
+                154 390
+                L154 398"
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M151, 398 L154, 406 L157, 398 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M68.5, 110 L68.5 599 Q68.5 603
+                72.5 603
+                L79 603 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M79, 600 L87, 603 L79, 606 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M105.5, 618 L105.5 682.5 Q105.5 686.5
+                109.5 686.5
+                L116 686.5 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M116, 683.5 L124, 686.5 L116, 689.5 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M154, 716.5 L154 737.5 Q154 741.5
+                158 741.5
+                L166 741.5 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M166, 738.5 L174, 741.5 L166, 744.5 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M154, 716.5 L154 786 Q154 790
+                158 790
+                L166 790 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M166, 787 L174, 790 L166, 793 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M375.6, 790 L393.79999999999995 790  Q397.79999999999995 790
+                397.79999999999995 786
+                L397.79999999999995 644.5 Q397.79999999999995 636.5
+                393.79999999999995 636.5
+                L162 636.5  Q154 636.5
+                154 640.5
+                L154 648.5"
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M151, 648.5 L154, 656.5 L157, 648.5 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M68.5, 110 L68.5 869.5 Q68.5 873.5
+                72.5 873.5
+                L79 873.5 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M79, 870.5 L87, 873.5 L79, 876.5 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M117, 903.5 L117 924.5 Q117 928.5
+                121 928.5
+                L129 928.5 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M129, 925.5 L137, 928.5 L129, 931.5 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M117, 903.5 L117 988 Q117 992
+                121 992
+                L129 992 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M129, 989 L137, 992 L129, 995 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M167, 1022 L167 1043 Q167 1047
+                171 1047
+                L179 1047 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M179, 1044 L187, 1047 L179, 1050 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M167, 1022 L167 1091.5 Q167 1095.5
+                171 1095.5
+                L179 1095.5 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M179, 1092.5 L187, 1095.5 L179, 1098.5 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M277, 1095.5 L399 1095.5  Q403 1095.5
+                403 1091.5
+                L403 831.5 Q403 823.5
+                399 823.5
+                L125 823.5  Q117 823.5
+                117 827.5
+                L117 835.5"
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M114, 835.5 L117, 843.5 L120, 835.5 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M68.5, 110 L68.5 1176.5 Q68.5 1180.5
+                72.5 1180.5
+                L79 1180.5 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M79, 1177.5 L87, 1180.5 L79, 1183.5 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M117, 1210.5 L117 1231.5 Q117 1235.5
+                121 1235.5
+                L129 1235.5 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M129, 1232.5 L137, 1235.5 L129, 1238.5 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M117, 1210.5 L117 1295 Q117 1299
+                121 1299
+                L129 1299 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M129, 1296 L137, 1299 L129, 1302 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M167, 1329 L167 1350 Q167 1354
+                171 1354
+                L179 1354 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M179, 1351 L187, 1354 L179, 1357 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M167, 1329 L167 1398.5 Q167 1402.5
+                171 1402.5
+                L179 1402.5 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M179, 1399.5 L187, 1402.5 L179, 1405.5 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M277, 1402.5 L399 1402.5  Q403 1402.5
+                403 1398.5
+                L403 1138.5 Q403 1130.5
+                399 1130.5
+                L125 1130.5  Q117 1130.5
+                117 1134.5
+                L117 1142.5"
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M114, 1142.5 L117, 1150.5 L120, 1142.5 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M68.5, 110 L68.5 1483.5 Q68.5 1487.5
+                72.5 1487.5
+                L79 1487.5 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M79, 1484.5 L87, 1487.5 L79, 1490.5 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M117, 1517.5 L117 1538.5 Q117 1542.5
+                121 1542.5
+                L129 1542.5 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M129, 1539.5 L137, 1542.5 L129, 1545.5 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M117, 1517.5 L117 1622 Q117 1626
+                121 1626
+                L129 1626 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M129, 1623 L137, 1626 L129, 1629 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M167, 1656 L167 1677 Q167 1681
+                171 1681
+                L179 1681 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M179, 1678 L187, 1681 L179, 1684 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M167, 1656 L167 1740.5 Q167 1744.5
+                171 1744.5
+                L179 1744.5 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M179, 1741.5 L187, 1744.5 L179, 1747.5 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M217, 1774.5 L217 1795.5 Q217 1799.5
+                221 1799.5
+                L229 1799.5 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M229, 1796.5 L237, 1799.5 L229, 1802.5 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M217, 1774.5 L217 1844 Q217 1848
+                221 1848
+                L229 1848 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M229, 1845 L237, 1848 L229, 1851 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M376.2, 1848 L449 1848  Q453 1848
+                453 1844
+                L453 1584 Q453 1576
+                449 1576
+                L175 1576  Q167 1576
+                167 1580
+                L167 1588"
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M164, 1588 L167, 1596 L170, 1588 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M376.2, 1848 L449 1848  Q453 1848
+                453 1844
+                L453 1445.5 Q453 1437.5
+                449 1437.5
+                L125 1437.5  Q117 1437.5
+                117 1441.5
+                L117 1449.5"
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M114, 1449.5 L117, 1457.5 L120, 1449.5 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M68.5, 110 L68.5 1929 Q68.5 1933
+                72.5 1933
+                L79 1933 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M79, 1930 L87, 1933 L79, 1936 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M117, 1963 L117 1984 Q117 1988
+                121 1988
+                L129 1988 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M129, 1985 L137, 1988 L129, 1991 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M117, 1963 L117 2047.5 Q117 2051.5
+                121 2051.5
+                L129 2051.5 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M129, 2048.5 L137, 2051.5 L129, 2054.5 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M167, 2081.5 L167 2102.5 Q167 2106.5
+                171 2106.5
+                L179 2106.5 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M179, 2103.5 L187, 2106.5 L179, 2109.5 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M380.79999999999995, 2106.5 L399 2106.5  Q403 2106.5
+                403 2102.5
+                L403 1891 Q403 1883
+                399 1883
+                L125 1883  Q117 1883
+                117 1887
+                L117 1895"
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M114, 1895 L117, 1903 L120, 1895 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M68.5, 110 L68.5 2187.5 Q68.5 2191.5
+                72.5 2191.5
+                L79 2191.5 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M79, 2188.5 L87, 2191.5 L79, 2194.5 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M117, 2221.5 L117 2242.5 Q117 2246.5
+                121 2246.5
+                L129 2246.5 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M129, 2243.5 L137, 2246.5 L129, 2249.5 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M117, 2221.5 L117 2306 Q117 2310
+                121 2310
+                L129 2310 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M129, 2307 L137, 2310 L129, 2313 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M167, 2340 L167 2361 Q167 2365
+                171 2365
+                L179 2365 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M179, 2362 L187, 2365 L179, 2368 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M380.79999999999995, 2365 L399 2365  Q403 2365
+                403 2361
+                L403 2149.5 Q403 2141.5
+                399 2141.5
+                L125 2141.5  Q117 2141.5
+                117 2145.5
+                L117 2153.5"
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M114, 2153.5 L117, 2161.5 L120, 2153.5 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M68.5, 110 L68.5 2426 Q68.5 2430
+                72.5 2430
+                L79 2430 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M79, 2427 L87, 2430 L79, 2433 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M117, 2460 L117 2481 Q117 2485
+                121 2485
+                L129 2485 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M129, 2482 L137, 2485 L129, 2488 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M68.5, 110 L68.5 2546 Q68.5 2550
+                72.5 2550
+                L79 2550 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M79, 2547 L87, 2550 L79, 2553 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M117, 2580 L117 2601 Q117 2605
+                121 2605
+                L129 2605 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M129, 2602 L137, 2605 L129, 2608 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M68.5, 110 L68.5 2651 Q68.5 2655
+                72.5 2655
+                L79 2655 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M79, 2652 L87, 2655 L79, 2658 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M25, 40 L25 2699.5 Q25 2703.5
+                29 2703.5
+                L42 2703.5 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M42, 2700.5 L50, 2703.5 L42, 2706.5 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M25, 40 L25 2748 Q25 2752
+                29 2752
+                L42 2752 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M42, 2749 L50, 2752 L42, 2755 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M25, 40 L25 2811.5 Q25 2815.5
+                29 2815.5
+                L42 2815.5 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M42, 2812.5 L50, 2815.5 L42, 2818.5 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M68.5, 2830.5 L68.5 2860 Q68.5 2864
+                72.5 2864
+                L79 2864 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M79, 2861 L87, 2864 L79, 2867 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M105.5, 2879 L105.5 2923.5 Q105.5 2927.5
+                109.5 2927.5
+                L116 2927.5 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M116, 2924.5 L124, 2927.5 L116, 2930.5 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M142.5, 2942.5 L142.5 2972 Q142.5 2976
+                146.5 2976
+                L153 2976 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M153, 2973 L161, 2976 L153, 2979 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M142.5, 2942.5 L142.5 3020.5 Q142.5 3024.5
+                146.5 3024.5
+                L153 3024.5 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M153, 3021.5 L161, 3024.5 L153, 3027.5 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M142.5, 2942.5 L142.5 3069 Q142.5 3073
+                146.5 3073
+                L153 3073 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M153, 3070 L161, 3073 L153, 3076 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M142.5, 2942.5 L142.5 3152.5 Q142.5 3156.5
+                146.5 3156.5
+                L153 3156.5 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M153, 3153.5 L161, 3156.5 L153, 3159.5 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M191, 3186.5 L191 3207.5 Q191 3211.5
+                195 3211.5
+                L203 3211.5 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M203, 3208.5 L211, 3211.5 L203, 3214.5 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M191, 3186.5 L191 3271 Q191 3275
+                195 3275
+                L203 3275 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M203, 3272 L211, 3275 L203, 3278 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M241, 3305 L241 3326 Q241 3330
+                245 3330
+                L253 3330 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M253, 3327 L261, 3330 L253, 3333 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M241, 3305 L241 3374.5 Q241 3378.5
+                245 3378.5
+                L253 3378.5 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M253, 3375.5 L261, 3378.5 L253, 3381.5 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M449.2, 3275 L485.2 3275  Q489.2 3275
+                489.2 3279
+                L489.2 3322 Q489.2 3330
+                493.2 3330
+                L501.2 3330 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M501.2, 3327 L509.2, 3330 L501.2, 3333 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M640.5999999999999, 3330 L656.5999999999999 3330  Q660.5999999999999 3330
+                660.5999999999999 3326
+                L660.5999999999999 3114.5 Q660.5999999999999 3106.5
+                656.5999999999999 3106.5
+                L199 3106.5  Q191 3106.5
+                191 3110.5
+                L191 3118.5"
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M188, 3118.5 L191, 3126.5 L194, 3118.5 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M142.5, 2942.5 L142.5 3424.5 Q142.5 3428.5
+                146.5 3428.5
+                L153 3428.5 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M153, 3425.5 L161, 3428.5 L153, 3431.5 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M25, 40 L25 3473 Q25 3477
+                29 3477
+                L42 3477 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M42, 3474 L50, 3477 L42, 3480 Z" 
+        fill="#333" />
+            </g>
+            </svg>

@@ -97,15 +97,14 @@ switch (action) {
     case 'clean':
         cleanSvgs();
         break;
-    case 'generate':
+    case 'svg':
         generateSvgs();
         break;
     case 'readme':
         createReadme();
         break;
         default:
-        console.log('Please choose an action');
+        console.log('Please choose an action', 'clean', 'svg', 'readme');
         break;
 }
 
-console.log(process.argv);

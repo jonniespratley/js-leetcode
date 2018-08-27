@@ -31,18 +31,18 @@
 
 /** Binary search */
 function solution(isBadVersion) {
-    /**
-     * @param {integer} n Total versions
-     * @return {integer} The first bad version
-     */
-    return function (n) {
-      return find(1, n);
-    };
-  
-    function find(l, r){
-      if (l === r) return l;
-  
-      const mid = Math.floor((l + r) / 2);
-      return isBadVersion(mid) ? find(l, mid) : find(mid + 1, r);
-    }
-  
+  /**
+   * @param {integer} n Total versions
+   * @return {integer} The first bad version
+   */
+  return function (n) {
+    return find(1, n);
+  };
+
+  function find(l, r) {
+    if (l === r) return l;
+
+    const mid = Math.floor((l + r) / 2);
+    return isBadVersion(mid) ? find(l, mid) : find(mid + 1, r);
+  }
+}

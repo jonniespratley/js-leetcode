@@ -1,6 +1,6 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
-                width="478" height="519">
+                width="611" height="1003">
                 
             <g>
                 <rect x="50" y="80"
@@ -149,6 +149,152 @@
                    
                 </g>
             <g>
+                <rect x="50" y="529"
+            width="315.2" height="30"
+            style="fill:#a5d6a7; stroke:#444; stroke-width:1" />
+                    
+                <line x1="60" y1="529" x2="60" y2="559"
+                style="fill:#a5d6a7; stroke:#444; stroke-width:1" />
+                <line x1="355.2" y1="529" x2="355.2" y2="559"
+                style="fill:#a5d6a7; stroke:#444; stroke-width:1" />
+             
+                <title>function strStr1(haystack, needle)</title>
+            <text x="75" y="549"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="75" y="549">function strStr1(haystack, needle)</tspan>
+            </text>
+                
+            </g>
+            <g>
+                <rect x="87" y="577.5"
+            width="271.79999999999995" height="30"
+            rx="3" ry="3"
+            style="fill:#90caf9; stroke:#444; stroke-width:1" />
+                
+                <line x1="358.79999999999995" y1="587.5" x2="363.79999999999995" y2="587.5"
+                style="fill:#a5d6a7; stroke:#444; stroke-width:1" />
+                
+                <line x1="358.79999999999995" y1="597.5" x2="363.79999999999995" y2="597.5"
+                style="fill:#a5d6a7; stroke:#444; stroke-width:1" />
+
+                <path d="M363.79999999999995, 581.5 L379.79999999999995, 592.5 L363.79999999999995, 603.5 Z" 
+        fill="#a5d6a7" stroke="#444" stroke-width="1" />
+                             
+                <title>return haystack.indexOf(needle)</title>
+            <text x="102" y="597.5"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="102" y="597.5">return haystack.indexOf(needle)</tspan>
+            </text>
+                
+            </g>
+            <g>
+                <rect x="50" y="641"
+            width="315.2" height="30"
+            style="fill:#a5d6a7; stroke:#444; stroke-width:1" />
+                    
+                <line x1="60" y1="641" x2="60" y2="671"
+                style="fill:#a5d6a7; stroke:#444; stroke-width:1" />
+                <line x1="355.2" y1="641" x2="355.2" y2="671"
+                style="fill:#a5d6a7; stroke:#444; stroke-width:1" />
+             
+                <title>function strStr2(haystack, needle)</title>
+            <text x="75" y="661"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="75" y="661">function strStr2(haystack, needle)</tspan>
+            </text>
+                
+            </g><g>
+
+            <rect x="117" y="724.5"
+            width="364.2" height="30"
+            rx="3" ry="3"
+            style="fill:#b39ddb; stroke:#444; stroke-width:1" />
+            <polygon points="87,739.5 117,709.5 147,739.5 117,769.5"
+            style="fill:#b39ddb; stroke:#444; stroke-width:1" />
+                
+            <title>i &lt; haystack.length - needle.length + 1</title>
+            <text x="162" y="744.5"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="162" y="744.5">i &lt; haystack.length - needle.length + 1</tspan>
+            </text>
+            
+            <text x="105.3" y="744.5"
+        font-family="monospace" font-size="13" fill="#222">for</text>
+        </g>
+                <g>
+                   <rect x="137" y="779.5"
+            width="53.4" height="30"
+            rx="3" ry="3"
+            style="fill:#90caf9; stroke:#444; stroke-width:1" />
+                   <title>i++</title>
+            <text x="152" y="799.5"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="152" y="799.5">i++</tspan>
+            </text>
+                   
+                   
+                </g><g>
+            <rect x="167" y="843"
+            width="418.8" height="30"
+            rx="3" ry="3"
+            style="fill:#ce93d8; stroke:#444; stroke-width:1" />                
+            <polygon points="137,858 167,828 197,858 167,888"
+            style="fill:#ce93d8; stroke:#444; stroke-width:1" />
+            <title>(haystack.substr(i, needle.length) === needle)</title>
+            <text x="212" y="863"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="212" y="863">(haystack.substr(i, needle.length) === needle)</tspan>
+            </text>
+            
+            <text x="159.2" y="863"
+        font-family="monospace" font-size="13" fill="#222">if</text> <text x="174.8" y="889.95"
+        font-family="monospace" font-size="13" fill="#222">+</text> 
+        </g>
+            <g>
+                <rect x="187" y="898"
+            width="92.4" height="30"
+            rx="3" ry="3"
+            style="fill:#90caf9; stroke:#444; stroke-width:1" />
+                
+                <line x1="279.4" y1="908" x2="284.4" y2="908"
+                style="fill:#a5d6a7; stroke:#444; stroke-width:1" />
+                
+                <line x1="279.4" y1="918" x2="284.4" y2="918"
+                style="fill:#a5d6a7; stroke:#444; stroke-width:1" />
+
+                <path d="M284.4, 902 L300.4, 913 L284.4, 924 Z" 
+        fill="#a5d6a7" stroke="#444" stroke-width="1" />
+                             
+                <title>return i</title>
+            <text x="202" y="918"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="202" y="918">return i</tspan>
+            </text>
+                
+            </g>
+            <g>
+                <rect x="87" y="948"
+            width="100.2" height="30"
+            rx="3" ry="3"
+            style="fill:#90caf9; stroke:#444; stroke-width:1" />
+                
+                <line x1="187.2" y1="958" x2="192.2" y2="958"
+                style="fill:#a5d6a7; stroke:#444; stroke-width:1" />
+                
+                <line x1="187.2" y1="968" x2="192.2" y2="968"
+                style="fill:#a5d6a7; stroke:#444; stroke-width:1" />
+
+                <path d="M192.2, 952 L208.2, 963 L192.2, 974 Z" 
+        fill="#a5d6a7" stroke="#444" stroke-width="1" />
+                             
+                <title>return -1</title>
+            <text x="102" y="968"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="102" y="968">return -1</tspan>
+            </text>
+                
+            </g>
+            <g>
                <rect x="25" y="13.75"
             width="216.6" height="24"
             style="fill:#fff59d; stroke:#444; stroke-width:1" />
@@ -232,6 +378,82 @@
                 L367.4 479 "
         style="fill:none; stroke:#444; stroke-width:1" />
                <path d="M367.4, 476 L375.4, 479 L367.4, 482 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M25, 40 L25 540 Q25 544
+                29 544
+                L42 544 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M42, 541 L50, 544 L42, 547 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M68.5, 559 L68.5 588.5 Q68.5 592.5
+                72.5 592.5
+                L79 592.5 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M79, 589.5 L87, 592.5 L79, 595.5 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M25, 40 L25 652 Q25 656
+                29 656
+                L42 656 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M42, 653 L50, 656 L42, 659 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M68.5, 671 L68.5 735.5 Q68.5 739.5
+                72.5 739.5
+                L79 739.5 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M79, 736.5 L87, 739.5 L79, 742.5 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M117, 769.5 L117 790.5 Q117 794.5
+                121 794.5
+                L129 794.5 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M129, 791.5 L137, 794.5 L129, 797.5 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M117, 769.5 L117 854 Q117 858
+                121 858
+                L129 858 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M129, 855 L137, 858 L129, 861 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M167, 888 L167 909 Q167 913
+                171 913
+                L179 913 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M179, 910 L187, 913 L179, 916 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M300.4, 913 L601.8 913  Q605.8 913
+                605.8 909
+                L605.8 697.5 Q605.8 689.5
+                601.8 689.5
+                L125 689.5  Q117 689.5
+                117 693.5
+                L117 701.5"
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M114, 701.5 L117, 709.5 L120, 701.5 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M68.5, 671 L68.5 959 Q68.5 963
+                72.5 963
+                L79 963 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M79, 960 L87, 963 L79, 966 Z" 
         fill="#333" />
             </g>
             </svg>

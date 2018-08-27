@@ -1,0 +1,609 @@
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+                width="512" height="1390">
+                
+            <g>
+                <rect x="50" y="80"
+            width="252.79999999999998" height="30"
+            style="fill:#a5d6a7; stroke:#444; stroke-width:1" />
+                    
+                <line x1="60" y1="80" x2="60" y2="110"
+                style="fill:#a5d6a7; stroke:#444; stroke-width:1" />
+                <line x1="292.79999999999995" y1="80" x2="292.79999999999995" y2="110"
+                style="fill:#a5d6a7; stroke:#444; stroke-width:1" />
+             
+                <title>serialize = function(root)</title>
+            <text x="75" y="100"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="75" y="100">serialize = function(root)</tspan>
+            </text>
+                
+            </g>
+                <g>
+                   <rect x="87" y="128.5"
+            width="123.6" height="30"
+            rx="3" ry="3"
+            style="fill:#90caf9; stroke:#444; stroke-width:1" />
+                   <title>let str = &apos;&apos;</title>
+            <text x="102" y="148.5"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="102" y="148.5">let str = &apos;&apos;</tspan>
+            </text>
+                   
+                   
+                </g>
+            <g>
+                <rect x="87" y="192"
+            width="268.4" height="30"
+            style="fill:#a5d6a7; stroke:#444; stroke-width:1" />
+                    
+                <line x1="97" y1="192" x2="97" y2="222"
+                style="fill:#a5d6a7; stroke:#444; stroke-width:1" />
+                <line x1="345.4" y1="192" x2="345.4" y2="222"
+                style="fill:#a5d6a7; stroke:#444; stroke-width:1" />
+             
+                <title>buildString = function(node)</title>
+            <text x="112" y="212"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="112" y="212">buildString = function(node)</tspan>
+            </text>
+                
+            </g><g>
+            <rect x="154" y="255.5"
+            width="114.6" height="30"
+            rx="3" ry="3"
+            style="fill:#ce93d8; stroke:#444; stroke-width:1" />                
+            <polygon points="124,270.5 154,240.5 184,270.5 154,300.5"
+            style="fill:#ce93d8; stroke:#444; stroke-width:1" />
+            <title>(!node)</title>
+            <text x="199" y="275.5"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="199" y="275.5">(!node)</tspan>
+            </text>
+            
+            <text x="146.2" y="275.5"
+        font-family="monospace" font-size="13" fill="#222">if</text> <text x="161.8" y="302.45"
+        font-family="monospace" font-size="13" fill="#222">+</text> 
+        </g>
+                <g>
+                   <rect x="174" y="310.5"
+            width="115.8" height="30"
+            rx="3" ry="3"
+            style="fill:#90caf9; stroke:#444; stroke-width:1" />
+                   <title>str += &apos;# &apos;</title>
+            <text x="189" y="330.5"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="189" y="330.5">str += &apos;# &apos;</tspan>
+            </text>
+                   
+                   
+                </g>
+            <g>
+                <rect x="174" y="359"
+            width="76.8" height="30"
+            rx="3" ry="3"
+            style="fill:#90caf9; stroke:#444; stroke-width:1" />
+                
+                <line x1="250.8" y1="369" x2="255.8" y2="369"
+                style="fill:#a5d6a7; stroke:#444; stroke-width:1" />
+                
+                <line x1="250.8" y1="379" x2="255.8" y2="379"
+                style="fill:#a5d6a7; stroke:#444; stroke-width:1" />
+
+                <path d="M255.8, 363 L271.8, 374 L255.8, 385 Z" 
+        fill="#a5d6a7" stroke="#444" stroke-width="1" />
+                             
+                <title>return</title>
+            <text x="189" y="379"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="189" y="379">return</tspan>
+            </text>
+                
+            </g>
+                <g>
+                   <rect x="124" y="409"
+            width="193.79999999999998" height="30"
+            rx="3" ry="3"
+            style="fill:#90caf9; stroke:#444; stroke-width:1" />
+                   <title>str += node.val + &apos; &apos;</title>
+            <text x="139" y="429"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="139" y="429">str += node.val + &apos; &apos;</tspan>
+            </text>
+                   
+                   
+                </g>
+                <g>
+                   <rect x="124" y="457.5"
+            width="201.6" height="30"
+            rx="2" ry="2"
+            style="fill:#C5E1A5; stroke:#444; stroke-width:1" />
+                   <title>buildString(node.left)</title>
+            <text x="139" y="477.5"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="139" y="477.5">buildString(node.left)</tspan>
+            </text>
+                   
+                   
+                </g>
+                <g>
+                   <rect x="124" y="506"
+            width="209.4" height="30"
+            rx="2" ry="2"
+            style="fill:#C5E1A5; stroke:#444; stroke-width:1" />
+                   <title>buildString(node.right)</title>
+            <text x="139" y="526"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="139" y="526">buildString(node.right)</tspan>
+            </text>
+                   
+                   
+                </g>
+                <g>
+                   <rect x="87" y="554.5"
+            width="162.6" height="30"
+            rx="2" ry="2"
+            style="fill:#C5E1A5; stroke:#444; stroke-width:1" />
+                   <title>buildString(root)</title>
+            <text x="102" y="574.5"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="102" y="574.5">buildString(root)</tspan>
+            </text>
+                   
+                   
+                </g>
+            <g>
+                <rect x="87" y="603"
+            width="108" height="30"
+            rx="3" ry="3"
+            style="fill:#90caf9; stroke:#444; stroke-width:1" />
+                
+                <line x1="195" y1="613" x2="200" y2="613"
+                style="fill:#a5d6a7; stroke:#444; stroke-width:1" />
+                
+                <line x1="195" y1="623" x2="200" y2="623"
+                style="fill:#a5d6a7; stroke:#444; stroke-width:1" />
+
+                <path d="M200, 607 L216, 618 L200, 629 Z" 
+        fill="#a5d6a7" stroke="#444" stroke-width="1" />
+                             
+                <title>return str</title>
+            <text x="102" y="623"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="102" y="623">return str</tspan>
+            </text>
+                
+            </g>
+            <g>
+                <rect x="50" y="666.5"
+            width="268.4" height="30"
+            style="fill:#a5d6a7; stroke:#444; stroke-width:1" />
+                    
+                <line x1="60" y1="666.5" x2="60" y2="696.5"
+                style="fill:#a5d6a7; stroke:#444; stroke-width:1" />
+                <line x1="308.4" y1="666.5" x2="308.4" y2="696.5"
+                style="fill:#a5d6a7; stroke:#444; stroke-width:1" />
+             
+                <title>deserialize = function(data)</title>
+            <text x="75" y="686.5"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="75" y="686.5">deserialize = function(data)</tspan>
+            </text>
+                
+            </g>
+                <g>
+                   <rect x="87" y="715"
+            width="248.4" height="30"
+            rx="3" ry="3"
+            style="fill:#90caf9; stroke:#444; stroke-width:1" />
+                   <title>let values = data.split(&apos; &apos;)</title>
+            <text x="102" y="735"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="102" y="735">let values = data.split(&apos; &apos;)</tspan>
+            </text>
+                   
+                   
+                </g>
+                <g>
+                   <rect x="87" y="763.5"
+            width="209.4" height="30"
+            rx="3" ry="3"
+            style="fill:#90caf9; stroke:#444; stroke-width:1" />
+                   <title>let len = values.length</title>
+            <text x="102" y="783.5"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="102" y="783.5">let len = values.length</tspan>
+            </text>
+                   
+                   
+                </g>
+                <g>
+                   <rect x="87" y="812"
+            width="115.8" height="30"
+            rx="3" ry="3"
+            style="fill:#90caf9; stroke:#444; stroke-width:1" />
+                   <title>let idx = 0</title>
+            <text x="102" y="832"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="102" y="832">let idx = 0</tspan>
+            </text>
+                   
+                   
+                </g>
+            <g>
+                <rect x="87" y="875.5"
+            width="221.6" height="30"
+            style="fill:#a5d6a7; stroke:#444; stroke-width:1" />
+                    
+                <line x1="97" y1="875.5" x2="97" y2="905.5"
+                style="fill:#a5d6a7; stroke:#444; stroke-width:1" />
+                <line x1="298.6" y1="875.5" x2="298.6" y2="905.5"
+                style="fill:#a5d6a7; stroke:#444; stroke-width:1" />
+             
+                <title>buildTree = function()</title>
+            <text x="112" y="895.5"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="112" y="895.5">buildTree = function()</tspan>
+            </text>
+                
+            </g><g>
+            <rect x="154" y="939"
+            width="333" height="30"
+            rx="3" ry="3"
+            style="fill:#ce93d8; stroke:#444; stroke-width:1" />                
+            <polygon points="124,954 154,924 184,954 154,984"
+            style="fill:#ce93d8; stroke:#444; stroke-width:1" />
+            <title>(idx &gt;= len || values[idx] === &apos;#&apos;)</title>
+            <text x="199" y="959"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="199" y="959">(idx &gt;= len || values[idx] === &apos;#&apos;)</tspan>
+            </text>
+            
+            <text x="146.2" y="959"
+        font-family="monospace" font-size="13" fill="#222">if</text> <text x="161.8" y="985.95"
+        font-family="monospace" font-size="13" fill="#222">+</text> 
+        </g>
+            <g>
+                <rect x="174" y="994"
+            width="115.80000000000001" height="30"
+            rx="3" ry="3"
+            style="fill:#90caf9; stroke:#444; stroke-width:1" />
+                
+                <line x1="289.8" y1="1004" x2="294.8" y2="1004"
+                style="fill:#a5d6a7; stroke:#444; stroke-width:1" />
+                
+                <line x1="289.8" y1="1014" x2="294.8" y2="1014"
+                style="fill:#a5d6a7; stroke:#444; stroke-width:1" />
+
+                <path d="M294.8, 998 L310.8, 1009 L294.8, 1020 Z" 
+        fill="#a5d6a7" stroke="#444" stroke-width="1" />
+                             
+                <title>return null</title>
+            <text x="189" y="1014"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="189" y="1014">return null</tspan>
+            </text>
+                
+            </g>
+                <g>
+                   <rect x="124" y="1044"
+            width="357.59999999999997" height="30"
+            rx="3" ry="3"
+            style="fill:#90caf9; stroke:#444; stroke-width:1" />
+                   <title>let node = TreeNode(parseInt(values[idx]))</title>
+            <text x="139" y="1064"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="139" y="1064">let node = TreeNode(parseInt(values[idx]))</tspan>
+            </text>
+                   
+                   
+                </g>
+                <g>
+                   <rect x="124" y="1092.5"
+            width="69" height="30"
+            rx="3" ry="3"
+            style="fill:#90caf9; stroke:#444; stroke-width:1" />
+                   <title>++idx</title>
+            <text x="139" y="1112.5"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="139" y="1112.5">++idx</tspan>
+            </text>
+                   
+                   
+                </g>
+                <g>
+                   <rect x="124" y="1141"
+            width="209.4" height="30"
+            rx="3" ry="3"
+            style="fill:#90caf9; stroke:#444; stroke-width:1" />
+                   <title>node.left = buildTree()</title>
+            <text x="139" y="1161"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="139" y="1161">node.left = buildTree()</tspan>
+            </text>
+                   
+                   
+                </g>
+                <g>
+                   <rect x="124" y="1189.5"
+            width="69" height="30"
+            rx="3" ry="3"
+            style="fill:#90caf9; stroke:#444; stroke-width:1" />
+                   <title>++idx</title>
+            <text x="139" y="1209.5"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="139" y="1209.5">++idx</tspan>
+            </text>
+                   
+                   
+                </g>
+                <g>
+                   <rect x="124" y="1238"
+            width="217.2" height="30"
+            rx="3" ry="3"
+            style="fill:#90caf9; stroke:#444; stroke-width:1" />
+                   <title>node.right = buildTree()</title>
+            <text x="139" y="1258"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="139" y="1258">node.right = buildTree()</tspan>
+            </text>
+                   
+                   
+                </g>
+            <g>
+                <rect x="124" y="1286.5"
+            width="115.80000000000001" height="30"
+            rx="3" ry="3"
+            style="fill:#90caf9; stroke:#444; stroke-width:1" />
+                
+                <line x1="239.8" y1="1296.5" x2="244.8" y2="1296.5"
+                style="fill:#a5d6a7; stroke:#444; stroke-width:1" />
+                
+                <line x1="239.8" y1="1306.5" x2="244.8" y2="1306.5"
+                style="fill:#a5d6a7; stroke:#444; stroke-width:1" />
+
+                <path d="M244.8, 1290.5 L260.8, 1301.5 L244.8, 1312.5 Z" 
+        fill="#a5d6a7" stroke="#444" stroke-width="1" />
+                             
+                <title>return node</title>
+            <text x="139" y="1306.5"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="139" y="1306.5">return node</tspan>
+            </text>
+                
+            </g>
+            <g>
+                <rect x="87" y="1335"
+            width="170.4" height="30"
+            rx="3" ry="3"
+            style="fill:#90caf9; stroke:#444; stroke-width:1" />
+                
+                <line x1="257.4" y1="1345" x2="262.4" y2="1345"
+                style="fill:#a5d6a7; stroke:#444; stroke-width:1" />
+                
+                <line x1="257.4" y1="1355" x2="262.4" y2="1355"
+                style="fill:#a5d6a7; stroke:#444; stroke-width:1" />
+
+                <path d="M262.4, 1339 L278.4, 1350 L262.4, 1361 Z" 
+        fill="#a5d6a7" stroke="#444" stroke-width="1" />
+                             
+                <title>return buildTree()</title>
+            <text x="102" y="1355"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="102" y="1355">return buildTree()</tspan>
+            </text>
+                
+            </g>
+            <g>
+               <rect x="25" y="13.75"
+            width="216.6" height="24"
+            style="fill:#fff59d; stroke:#444; stroke-width:1" />
+               <circle cx="25" cy="25" r="15"
+        style="fill:#fff59d; stroke:#444; stroke-width:1" />
+               <title>Program: source module</title>
+            <text x="55" y="30"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="55" y="30">Program: source module</tspan>
+            </text>
+            </g>
+            <g>
+               <path d="M25, 40 L25 91 Q25 95
+                29 95
+                L42 95 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M42, 92 L50, 95 L42, 98 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M68.5, 110 L68.5 139.5 Q68.5 143.5
+                72.5 143.5
+                L79 143.5 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M79, 140.5 L87, 143.5 L79, 146.5 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M68.5, 110 L68.5 203 Q68.5 207
+                72.5 207
+                L79 207 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M79, 204 L87, 207 L79, 210 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M105.5, 222 L105.5 266.5 Q105.5 270.5
+                109.5 270.5
+                L116 270.5 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M116, 267.5 L124, 270.5 L116, 273.5 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M154, 300.5 L154 321.5 Q154 325.5
+                158 325.5
+                L166 325.5 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M166, 322.5 L174, 325.5 L166, 328.5 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M154, 300.5 L154 370 Q154 374
+                158 374
+                L166 374 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M166, 371 L174, 374 L166, 377 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M105.5, 222 L105.5 420 Q105.5 424
+                109.5 424
+                L116 424 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M116, 421 L124, 424 L116, 427 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M105.5, 222 L105.5 468.5 Q105.5 472.5
+                109.5 472.5
+                L116 472.5 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M116, 469.5 L124, 472.5 L116, 475.5 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M105.5, 222 L105.5 517 Q105.5 521
+                109.5 521
+                L116 521 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M116, 518 L124, 521 L116, 524 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M68.5, 110 L68.5 565.5 Q68.5 569.5
+                72.5 569.5
+                L79 569.5 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M79, 566.5 L87, 569.5 L79, 572.5 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M68.5, 110 L68.5 614 Q68.5 618
+                72.5 618
+                L79 618 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M79, 615 L87, 618 L79, 621 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M25, 40 L25 677.5 Q25 681.5
+                29 681.5
+                L42 681.5 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M42, 678.5 L50, 681.5 L42, 684.5 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M68.5, 696.5 L68.5 726 Q68.5 730
+                72.5 730
+                L79 730 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M79, 727 L87, 730 L79, 733 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M68.5, 696.5 L68.5 774.5 Q68.5 778.5
+                72.5 778.5
+                L79 778.5 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M79, 775.5 L87, 778.5 L79, 781.5 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M68.5, 696.5 L68.5 823 Q68.5 827
+                72.5 827
+                L79 827 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M79, 824 L87, 827 L79, 830 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M68.5, 696.5 L68.5 886.5 Q68.5 890.5
+                72.5 890.5
+                L79 890.5 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M79, 887.5 L87, 890.5 L79, 893.5 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M105.5, 905.5 L105.5 950 Q105.5 954
+                109.5 954
+                L116 954 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M116, 951 L124, 954 L116, 957 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M154, 984 L154 1005 Q154 1009
+                158 1009
+                L166 1009 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M166, 1006 L174, 1009 L166, 1012 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M105.5, 905.5 L105.5 1055 Q105.5 1059
+                109.5 1059
+                L116 1059 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M116, 1056 L124, 1059 L116, 1062 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M105.5, 905.5 L105.5 1103.5 Q105.5 1107.5
+                109.5 1107.5
+                L116 1107.5 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M116, 1104.5 L124, 1107.5 L116, 1110.5 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M105.5, 905.5 L105.5 1152 Q105.5 1156
+                109.5 1156
+                L116 1156 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M116, 1153 L124, 1156 L116, 1159 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M105.5, 905.5 L105.5 1200.5 Q105.5 1204.5
+                109.5 1204.5
+                L116 1204.5 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M116, 1201.5 L124, 1204.5 L116, 1207.5 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M105.5, 905.5 L105.5 1249 Q105.5 1253
+                109.5 1253
+                L116 1253 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M116, 1250 L124, 1253 L116, 1256 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M105.5, 905.5 L105.5 1297.5 Q105.5 1301.5
+                109.5 1301.5
+                L116 1301.5 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M116, 1298.5 L124, 1301.5 L116, 1304.5 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M68.5, 696.5 L68.5 1346 Q68.5 1350
+                72.5 1350
+                L79 1350 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M79, 1347 L87, 1350 L79, 1353 Z" 
+        fill="#333" />
+            </g>
+            </svg>

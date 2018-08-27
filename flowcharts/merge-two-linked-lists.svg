@@ -1,0 +1,252 @@
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+                width="844" height="471">
+                
+            <g>
+                <rect x="50" y="80"
+            width="299.6" height="30"
+            style="fill:#a5d6a7; stroke:#444; stroke-width:1" />
+                    
+                <line x1="60" y1="80" x2="60" y2="110"
+                style="fill:#a5d6a7; stroke:#444; stroke-width:1" />
+                <line x1="339.6" y1="80" x2="339.6" y2="110"
+                style="fill:#a5d6a7; stroke:#444; stroke-width:1" />
+             
+                <title>mergeTwoLists = function(l1, l2)</title>
+            <text x="75" y="100"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="75" y="100">mergeTwoLists = function(l1, l2)</tspan>
+            </text>
+                
+            </g>
+            <g>
+                <rect x="50" y="128.5"
+            width="284" height="30"
+            style="fill:#a5d6a7; stroke:#444; stroke-width:1" />
+                    
+                <line x1="60" y1="128.5" x2="60" y2="158.5"
+                style="fill:#a5d6a7; stroke:#444; stroke-width:1" />
+                <line x1="324" y1="128.5" x2="324" y2="158.5"
+                style="fill:#a5d6a7; stroke:#444; stroke-width:1" />
+             
+                <title>function mergeTwoLists(l1, l2)</title>
+            <text x="75" y="148.5"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="75" y="148.5">function mergeTwoLists(l1, l2)</tspan>
+            </text>
+                
+            </g><g>
+            <rect x="117" y="192"
+            width="153.6" height="30"
+            rx="3" ry="3"
+            style="fill:#ce93d8; stroke:#444; stroke-width:1" />                
+            <polygon points="87,207 117,177 147,207 117,237"
+            style="fill:#ce93d8; stroke:#444; stroke-width:1" />
+            <title>(!l1 || !l2)</title>
+            <text x="162" y="212"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="162" y="212">(!l1 || !l2)</tspan>
+            </text>
+            
+            <text x="109.2" y="212"
+        font-family="monospace" font-size="13" fill="#222">if</text> <text x="124.8" y="238.95"
+        font-family="monospace" font-size="13" fill="#222">+</text> 
+        </g>
+            <g>
+                <rect x="137" y="247"
+            width="147" height="30"
+            rx="3" ry="3"
+            style="fill:#90caf9; stroke:#444; stroke-width:1" />
+                
+                <line x1="284" y1="257" x2="289" y2="257"
+                style="fill:#a5d6a7; stroke:#444; stroke-width:1" />
+                
+                <line x1="284" y1="267" x2="289" y2="267"
+                style="fill:#a5d6a7; stroke:#444; stroke-width:1" />
+
+                <path d="M289, 251 L305, 262 L289, 273 Z" 
+        fill="#a5d6a7" stroke="#444" stroke-width="1" />
+                             
+                <title>return l1 || l2</title>
+            <text x="152" y="267"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="152" y="267">return l1 || l2</tspan>
+            </text>
+                
+            </g><g>
+            <rect x="117" y="312"
+            width="192.6" height="30"
+            rx="3" ry="3"
+            style="fill:#ce93d8; stroke:#444; stroke-width:1" />                
+            <polygon points="87,327 117,297 147,327 117,357"
+            style="fill:#ce93d8; stroke:#444; stroke-width:1" />
+            <title>(l1.val &lt; l2.val)</title>
+            <text x="162" y="332"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="162" y="332">(l1.val &lt; l2.val)</tspan>
+            </text>
+            
+            <text x="109.2" y="332"
+        font-family="monospace" font-size="13" fill="#222">if</text> <text x="124.8" y="358.95"
+        font-family="monospace" font-size="13" fill="#222">+</text> <text x="313.5" y="325.05"
+        font-family="monospace" font-size="13" fill="#222">-</text>
+        </g>
+                <g>
+                   <rect x="137" y="367"
+            width="310.8" height="30"
+            rx="3" ry="3"
+            style="fill:#90caf9; stroke:#444; stroke-width:1" />
+                   <title>l1.next = mergeTwoLists(l1.next, l2)</title>
+            <text x="152" y="387"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="152" y="387">l1.next = mergeTwoLists(l1.next, l2)</tspan>
+            </text>
+                   
+                   
+                </g>
+            <g>
+                <rect x="137" y="415.5"
+            width="100.2" height="30"
+            rx="3" ry="3"
+            style="fill:#90caf9; stroke:#444; stroke-width:1" />
+                
+                <line x1="237.2" y1="425.5" x2="242.2" y2="425.5"
+                style="fill:#a5d6a7; stroke:#444; stroke-width:1" />
+                
+                <line x1="237.2" y1="435.5" x2="242.2" y2="435.5"
+                style="fill:#a5d6a7; stroke:#444; stroke-width:1" />
+
+                <path d="M242.2, 419.5 L258.2, 430.5 L242.2, 441.5 Z" 
+        fill="#a5d6a7" stroke="#444" stroke-width="1" />
+                             
+                <title>return l1</title>
+            <text x="152" y="435.5"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="152" y="435.5">return l1</tspan>
+            </text>
+                
+            </g>
+                <g>
+                   <rect x="507.8" y="367"
+            width="310.8" height="30"
+            rx="3" ry="3"
+            style="fill:#90caf9; stroke:#444; stroke-width:1" />
+                   <title>l2.next = mergeTwoLists(l1, l2.next)</title>
+            <text x="522.8" y="387"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="522.8" y="387">l2.next = mergeTwoLists(l1, l2.next)</tspan>
+            </text>
+                   
+                   
+                </g>
+            <g>
+                <rect x="507.8" y="415.5"
+            width="100.2" height="30"
+            rx="3" ry="3"
+            style="fill:#90caf9; stroke:#444; stroke-width:1" />
+                
+                <line x1="608" y1="425.5" x2="613" y2="425.5"
+                style="fill:#a5d6a7; stroke:#444; stroke-width:1" />
+                
+                <line x1="608" y1="435.5" x2="613" y2="435.5"
+                style="fill:#a5d6a7; stroke:#444; stroke-width:1" />
+
+                <path d="M613, 419.5 L629, 430.5 L613, 441.5 Z" 
+        fill="#a5d6a7" stroke="#444" stroke-width="1" />
+                             
+                <title>return l2</title>
+            <text x="522.8" y="435.5"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="522.8" y="435.5">return l2</tspan>
+            </text>
+                
+            </g>
+            <g>
+               <rect x="25" y="13.75"
+            width="216.6" height="24"
+            style="fill:#fff59d; stroke:#444; stroke-width:1" />
+               <circle cx="25" cy="25" r="15"
+        style="fill:#fff59d; stroke:#444; stroke-width:1" />
+               <title>Program: source module</title>
+            <text x="55" y="30"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="55" y="30">Program: source module</tspan>
+            </text>
+            </g>
+            <g>
+               <path d="M25, 40 L25 91 Q25 95
+                29 95
+                L42 95 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M42, 92 L50, 95 L42, 98 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M25, 40 L25 139.5 Q25 143.5
+                29 143.5
+                L42 143.5 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M42, 140.5 L50, 143.5 L42, 146.5 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M68.5, 158.5 L68.5 203 Q68.5 207
+                72.5 207
+                L79 207 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M79, 204 L87, 207 L79, 210 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M117, 237 L117 258 Q117 262
+                121 262
+                L129 262 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M129, 259 L137, 262 L129, 265 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M68.5, 158.5 L68.5 323 Q68.5 327
+                72.5 327
+                L79 327 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M79, 324 L87, 327 L79, 330 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M117, 357 L117 378 Q117 382
+                121 382
+                L129 382 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M129, 379 L137, 382 L129, 385 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M117, 357 L117 426.5 Q117 430.5
+                121 430.5
+                L129 430.5 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M129, 427.5 L137, 430.5 L129, 433.5 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M309.6, 327 L483.8 327  Q487.8 327
+                487.8 331
+                L487.8 374 Q487.8 382
+                491.8 382
+                L499.8 382 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M499.8, 379 L507.8, 382 L499.8, 385 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M309.6, 327 L483.8 327  Q487.8 327
+                487.8 331
+                L487.8 422.5 Q487.8 430.5
+                491.8 430.5
+                L499.8 430.5 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M499.8, 427.5 L507.8, 430.5 L499.8, 433.5 Z" 
+        fill="#333" />
+            </g>
+            </svg>

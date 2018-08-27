@@ -61,7 +61,77 @@ function magicFunc() {
 
 ---
 
-## 1 - ./examples/array-pair-sum.js
+## 1 - ./examples/array-3-sum-equal-zero.js
+
+```javascript
+    function sumToZero(arr) {
+    if (!arr) return false
+
+    arr.sort();
+    let n = arr.length - 1;
+    let sum = 0;
+    let count = 0;
+
+    //loop each item
+    for (let i = 0; i < arr.length; i++) {
+        let j = i + 1; //right of i
+        let k = n; //end of arr
+        while (k > j) {
+            count++;
+            sum = arr[i] + arr[j] + arr[k];
+            console.log(i, j, k, sum);
+            
+            //found match...done
+            if (sum === 0) {
+                console.log('Found sum at', i, j, k, `(${arr[i]} + ${arr[j]} + ${arr[k]})`);
+                return true;
+            }
+            // We didn't match. Let's try to get a little closer:
+            //   If the sum was too big, decrement k.
+            //   If the sum was too small, increment j.
+            sum > 0 ? k-- : j++;
+        }
+    }
+
+    return false;
+}
+
+
+//console.log(sumToZero([1, 1, 2, -1]));
+//console.log(sumToZero([1, 2, 3, -3]));
+//console.log(sumToZero([2, 1, -3, 3]));
+console.log(sumToZero([3, 2, 1, 7, 9, 0, -4, 6]));
+
+
+
+
+
+
+function threeSum(arr) {
+    arr.sort();
+    let k = arr.length - 1;
+    for (let i = 0; i < arr.length; i++) {
+        const a = arr[i];
+        for (let j = i + 1; j < arr.length; j++) {
+            const b = arr[j];
+            console.log(a, b);
+        }
+    }
+    
+    
+}
+console.log(threeSum([2, 1, -3, 3]));
+```
+
+### Flowchart
+![./examples/array-3-sum-equal-zero.js-svg image][./examples/array-3-sum-equal-zero.js-svg]
+
+[./examples/array-3-sum-equal-zero.js-svg]: https://raw.githubusercontent.com/jonniespratley/js-leetcode/master/flowcharts/array-3-sum-equal-zero.svg "Logo Title Text 2"
+
+
+---
+
+## 2 - ./examples/array-pair-sum.js
 
 ```javascript
     var arrayPairSum = function (nums) {
@@ -100,7 +170,354 @@ function magicFunc() {
 
 ---
 
-## 2 - ./examples/binary-search.js
+## 3 - ./examples/array-shuffle.js
+
+```javascript
+    /**
+ * @param {number[]} nums
+ */
+var Solution = function(nums) {
+    this.nums = nums;
+};
+
+/**
+ * Resets the array to its original configuration and return it.
+ * @return {number[]}
+ */
+Solution.prototype.reset = function() {
+    return this.nums;
+};
+
+/**
+ * Returns a random shuffling of the array.
+ * @return {number[]}
+ */
+Solution.prototype.shuffle = function() {
+   /* let copy = this.nums.slice();
+    for (let i = 0; i < copy.length; i++) {
+        let rand = Math.floor(Math.random() * copy.length);
+        let temp = copy[i];
+        copy[i] = copy[rand];
+        copy[rand] = temp;
+    }
+    return copy;*/
+
+    let nums = [...this.nums];
+    let i = nums.length;
+
+    while (i--) {
+      const n = Math.floor(Math.random() * nums.length);
+      [nums[i], nums[n]] = [nums[n], nums[i]];
+    }
+
+    return nums;
+
+   /* let temp = [];
+    this.nums.forEach((val, key) => temp[key] = val);
+    for (let i = 0; i < temp.length; i++) {
+        let rand = Math.floor(Math.random() * (temp.length - i))
+        let n = temp[i];
+        temp[i] = temp[rand];
+        temp[rand] = n;
+    }
+    
+    return temp;*/
+};
+
+/** 
+ * Your Solution object will be instantiated and called as such:
+ * var obj = Object.create(Solution).createNew(nums)
+ * var param_1 = obj.reset()
+ * var param_2 = obj.shuffle()
+ */
+```
+
+### Flowchart
+![./examples/array-shuffle.js-svg image][./examples/array-shuffle.js-svg]
+
+[./examples/array-shuffle.js-svg]: https://raw.githubusercontent.com/jonniespratley/js-leetcode/master/flowcharts/array-shuffle.svg "Logo Title Text 2"
+
+
+---
+
+## 4 - ./examples/best-time-to-buy-sell-stock-2.js
+
+```javascript
+    // Say you have an array for which the ith element is the price of a given stock on day i.
+//
+// Design an algorithm to find the maximum profit. You may complete as many transactions as you like (i.e., buy one and sell one share of the stock multiple times).
+//
+// Note: You may not engage in multiple transactions at the same time (i.e., you must sell the stock before you buy again).
+//
+// Example 1:
+//
+// Input: [7,1,5,3,6,4]
+// Output: 7
+// Explanation: Buy on day 2 (price = 1) and sell on day 3 (price = 5), profit = 5-1 = 4.
+// Then buy on day 4 (price = 3) and sell on day 5 (price = 6), profit = 6-3 = 3.
+//
+// Example 2:
+//
+// Input: [1,2,3,4,5]
+// Output: 4
+// Explanation: Buy on day 1 (price = 1) and sell on day 5 (price = 5), profit = 5-1 = 4.
+// Note that you cannot buy on day 1, buy on day 2 and sell them later, as you are
+// engaging multiple transactions at the same time. You must sell before buying again.
+//
+// Example 3:
+//
+// Input: [7,6,4,3,1]
+// Output: 0
+// Explanation: In this case, no transaction is done, i.e. max profit = 0.
+
+/**
+ * @param {number[]} prices
+ * @return {number}
+ */
+
+// time O(n)
+// space O(1)
+function maxProfit(prices) {
+    let profit = 0;
+
+    for (let i = 0; i < prices.length - 1; i++) {
+        const diff = prices[i + 1] - prices[i];
+        if (diff > 0) profit += diff;
+    }
+
+    return profit;
+}
+```
+
+### Flowchart
+![./examples/best-time-to-buy-sell-stock-2.js-svg image][./examples/best-time-to-buy-sell-stock-2.js-svg]
+
+[./examples/best-time-to-buy-sell-stock-2.js-svg]: https://raw.githubusercontent.com/jonniespratley/js-leetcode/master/flowcharts/best-time-to-buy-sell-stock-2.svg "Logo Title Text 2"
+
+
+---
+
+## 5 - ./examples/best-time-to-buy-sell-stock.js
+
+```javascript
+    // Say you have an array for which the ith element is the price of a given stock on day i.
+//
+// If you were only permitted to complete at most one transaction (i.e., buy one and sell one share of the stock), design an algorithm to find the maximum profit.
+//
+// Note that you cannot sell a stock before you buy one.
+//
+// Example 1:
+//
+// Input: [7,1,5,3,6,4]
+// Output: 5
+// Explanation: Buy on day 2 (price = 1) and sell on day 5 (price = 6), profit = 6-1 = 5.
+// Not 7-1 = 6, as selling price needs to be larger than buying price.
+//
+// Example 2:
+//
+// Input: [7,6,4,3,1]
+// Output: 0
+// Explanation: In this case, no transaction is done, i.e. max profit = 0.
+
+/**
+ * @param {number[]} prices
+ * @return {number}
+ */
+
+// time O(n)
+// space O(1)
+function maxProfit(prices) {
+    let min = Infinity;
+    let max = 0;
+
+    for (let i = 0; i < prices.length - 1; i++) {
+        min = Math.min(min, prices[i]);
+        max = Math.max(max, prices[i + 1] - min)
+    }
+
+    return max;
+}
+```
+
+### Flowchart
+![./examples/best-time-to-buy-sell-stock.js-svg image][./examples/best-time-to-buy-sell-stock.js-svg]
+
+[./examples/best-time-to-buy-sell-stock.js-svg]: https://raw.githubusercontent.com/jonniespratley/js-leetcode/master/flowcharts/best-time-to-buy-sell-stock.svg "Logo Title Text 2"
+
+
+---
+
+## 6 - ./examples/big-o.js
+
+```javascript
+    /*
+## Big-O Analysis
+
+Big-O analysis is a form of runtime analysis that measures the efficiency of an algorithm in terms of the time it takes for the algorithm to run as a function of the input size. It’s not a formal benchmark, just a simple way to classify algorithms by relative efficiency when dealing with very large input sizes.
+How Big-O Analysis Works
+
+In Big-O analysis, input size is assumed to be an unknown value n. In this example, n simply represents the number of elements in an array. In other problems, n may represent the number of nodes in a linked list, the number of bits in a data type, or the number of entries in a hash table. After determining what n means in terms of the input, you must determine how many operations are performed for each of the n input items. “Operation” is a fuzzy word because algorithms differ greatly.
+Commonly, an operation is something that a real computer can do in a constant amount of time, like adding an input value to a constant, creating a new input item, or deleting an input value. In Big-O analysis, the times for these operations are all considered equivalent.
+
+- In both `CompareToMax` and `CompareToAll`, the operation of greatest interest is comparing an array value to another value.
+
+- In `CompareToMax`, each array element was compared once to a maximum value. Thus, the n input items are each examined once, resulting in n examinations. 
+This is considered O(n), usually referred to as linear time: The time required to run the algorithm increases linearly with the number of input items.
+How to Do Big-O Analysis
+
+The general procedure for Big-O runtime analysis is as follows:
+
+1. Figure out what the input is and what n represents.
+2. Express the number of operations the algorithm performs in terms of n.
+3. Eliminate all but the highest-order terms.
+4. Remove all constant factors.
+
+For the algorithms you’ll encounter in interviews, Big-O analysis should be straightforward as long as you correctly identify the operations that are dependent on the input size.
+Which is Better?
+
+The performance of most algorithms depends on n, the size of the input. The algorithms can be classified as follows from best-to-worse performance:
+
+* O(log n) — An algorithm is said to be logarithmic if its running time increases logarithmically in proportion to the input size.
+* O(n) — A linear algorithm’s running time increases in direct proportion to the input size.
+* O(n log n) — A superlinear algorithm is midway between a linear algorithm and a polynomial algorithm.
+* O(nc) — A polynomial algorithm grows quickly based on the size of the input.
+* O(cn) — An exponential algorithm grows even faster than a polynomial algorithm.
+* O(n!) — A factorial algorithm grows the fastest and becomes quickly unusable for even small values of n.
+
+The run times of different orders of algorithms separate rapidly as n gets larger. 
+
+Consider the run time for each of these algorithm classes with n = 10:
+
+* log 10 = 1
+* 10 = 10
+* 10 log 10 = 10
+* 102 = 100
+* 210= 1,024
+* 10! = 3,628,800
+
+Now double it to n = 20:
+
+* log 20 = 1.30
+* 20 = 20
+* 20 log 20= 26.02
+* 202 = 400
+* 220 = 1,048,576
+* 20! = 2.43×1018
+
+Notation
+Name
+O(1)
+Constant
+O(log(n))
+Logarithmic
+O((log(n))c)
+Poly-logarithmic
+O(n)
+Linear
+O(n2)
+Quadratic
+O(nc)
+Polynomial
+O(cn)
+Exponential
+
+
+### [] O(1)
+
+Consider the following function:
+
+function increment(num){ 
+  return ++num; 
+}
+
+[]O(N)
+
+Now, let's use the sequential search algorithm:
+
+function sequentialSearch(array, item){ 
+  for (var i=0; i<array.length; i++){ 
+    if (item === array[i]){ //{1} 
+      return i; 
+    } 
+  } 
+  return -1; 
+}
+
+[]O(N2)
+For the O(n2) example, let's use the bubble sort algorithm:
+
+function swap(array, index1, index2){ 
+  var aux = array[index1]; 
+  array[index1] = array[index2]; 
+  array[index2] = aux; 
+} 
+ 
+function bubbleSort(array){ 
+  var length = array.length; 
+  for (var i=0; i<length; i++){    //{1} 
+    for (var j=0; j<length-1; j++ ){ //{2} 
+      if (array[j] > array[j+1]){ 
+        swap(array, j, j+1); 
+      } 
+    } 
+  } 
+}
+
+*/
+
+// O(1)
+function increment(num) {
+    return ++num;
+}
+console.log(increment(2));
+
+
+// O(n)
+function sequentialSearch(array, item) {
+    for (var i = 0; i < array.length; i++) {
+        if (item === array[i]) { //{1} 
+            return i;
+        }
+    }
+    return -1;
+}
+
+let input1 = [9, 5, 2, 4, 3, 7, 6];
+
+console.log(sequentialSearch(input1, 4));
+
+
+
+// O(n^2)
+function swap(array, index1, index2) {
+    let aux = array[index1];
+    array[index1] = array[index2];
+    array[index2] = aux;
+}
+
+function bubbleSort(array) {
+    let length = array.length;
+    for (let i = 0; i < length; i++) { //{1} 
+        for (let j = 0; j < length - 1; j++) { //{2} 
+            if (array[j] > array[j + 1]) {
+                swap(array, j, j + 1);
+            }
+        }
+    }
+    return array;
+}
+console.log(bubbleSort(input1));
+```
+
+### Flowchart
+![./examples/big-o.js-svg image][./examples/big-o.js-svg]
+
+[./examples/big-o.js-svg]: https://raw.githubusercontent.com/jonniespratley/js-leetcode/master/flowcharts/big-o.svg "Logo Title Text 2"
+
+
+---
+
+## 7 - ./examples/binary-search.js
 
 ```javascript
     function binarySearch(arr, val) {
@@ -157,7 +574,7 @@ console.log(findPairs([1, 0, -4, 7, 6, 4], [0, 2, 4, -3, 2, 1], 8))
 
 ---
 
-## 3 - ./examples/bubble-sort.js
+## 8 - ./examples/bubble-sort.js
 
 ```javascript
     
@@ -190,7 +607,7 @@ console.log(bubbleSort([5,4,3,2,1]));
 
 ---
 
-## 4 - ./examples/climb-stairs.js
+## 9 - ./examples/climb-stairs.js
 
 ```javascript
     /*
@@ -246,7 +663,7 @@ var climbStairs = function (n) {
 
 ---
 
-## 5 - ./examples/coin-change.js
+## 10 - ./examples/coin-change.js
 
 ```javascript
     const print = console.log.apply;
@@ -300,7 +717,7 @@ function makeChange(origAmt, coins) {
 
 ---
 
-## 6 - ./examples/contains-duplicate.js
+## 11 - ./examples/contains-duplicate.js
 
 ```javascript
     
@@ -379,7 +796,118 @@ console.timeEnd('containsDuplicate2');
 
 ---
 
-## 7 - ./examples/diagonal-traverse.js
+## 12 - ./examples/count-and-say.js
+
+```javascript
+    // The count-and-say sequence is the sequence of integers with the first five terms as following:
+//
+// 1.     1
+// 2.     11
+// 3.     21
+// 4.     1211
+// 5.     111221
+//
+// 1 is read off as "one 1" or 11.
+// 11 is read off as "two 1s" or 21.
+// 21 is read off as "one 2, then one 1" or 1211.
+// Given an integer n, generate the nth term of the count-and-say sequence.
+//
+// Note: Each term of the sequence of integers will be represented as a string.
+//
+// Example 1:
+//
+// Input: 1
+// Output: "1"
+//
+// Example 2:
+//
+// Input: 4
+// Output: "1211"
+
+/**
+ * @param {number} n
+ * @return {string}
+ */
+function countAndSay(n) {
+    let res = '1';
+
+    for (let i = 1; i < n; i++) {
+        res = say(res);
+    }
+
+    return res;
+}
+
+function say(str) {
+    let res = '';
+    let count = 0;
+    let num = str[0];
+
+    for (let i = 0; i < str.length; i++) {
+        if (str[i] === num) {
+            count++;
+        } else {
+            res += count + str[i - 1];
+            count = 1;
+            num = str[i];
+        }
+    }
+
+    return res + count + num;
+}
+```
+
+### Flowchart
+![./examples/count-and-say.js-svg image][./examples/count-and-say.js-svg]
+
+[./examples/count-and-say.js-svg]: https://raw.githubusercontent.com/jonniespratley/js-leetcode/master/flowcharts/count-and-say.svg "Logo Title Text 2"
+
+
+---
+
+## 13 - ./examples/delete-nth-linked-list.js
+
+```javascript
+    /*
+## Delete Node in a Linked List
+
+Write a function to delete a node (except the tail) in a singly linked list, given only access to that node.
+
+Given linked list -- head = [4,5,1,9], which looks like following:
+```
+    4 -> 5 -> 1 -> 9
+```
+*/
+/**
+ * Definition for singly-linked list.
+ * function ListNode(val) {
+ *     this.val = val;
+ *     this.next = null;
+ * }
+ */
+/**
+ * // Since we do not have access to the node before the one we want to delete, we cannot modify the next pointer of that node in any way.
+// Instead, we have to replace the value of the node we want to delete with the value in the node after it, and then delete the node after it.
+// Because we know that the node we want to delete is not the tail of the list, we can guarantee that this approach is possible.
+
+ * @param {ListNode} node
+ * @return {void} Do not return anything, modify node in-place instead.
+ */
+var deleteNode = function (node) {
+    node.val = node.next.val;
+    node.next = node.next.next;
+};
+```
+
+### Flowchart
+![./examples/delete-nth-linked-list.js-svg image][./examples/delete-nth-linked-list.js-svg]
+
+[./examples/delete-nth-linked-list.js-svg]: https://raw.githubusercontent.com/jonniespratley/js-leetcode/master/flowcharts/delete-nth-linked-list.svg "Logo Title Text 2"
+
+
+---
+
+## 14 - ./examples/diagonal-traverse.js
 
 ```javascript
     /**
@@ -437,7 +965,7 @@ var findDiagonalOrder = function (matrix) {
 
 ---
 
-## 8 - ./examples/example.js
+## 15 - ./examples/example.js
 
 ```javascript
     function indexSearch(list, element) {
@@ -475,7 +1003,7 @@ var findDiagonalOrder = function (matrix) {
 
 ---
 
-## 9 - ./examples/fib.js
+## 16 - ./examples/fib.js
 
 ```javascript
     function fib(n){
@@ -497,7 +1025,68 @@ console.log(fib(5));
 
 ---
 
-## 10 - ./examples/first-uniq-char.js
+## 17 - ./examples/first-bad-version.js
+
+```javascript
+    // You are a product manager and currently leading a team to develop a new product. Unfortunately, the latest version of your product fails the quality check. Since each version is developed based on the previous version, all the versions after a bad version are also bad.
+//
+// Suppose you have n versions [1, 2, ..., n] and you want to find out the first bad one, which causes all the following ones to be bad.
+//
+// You are given an API bool isBadVersion(version) which will return whether version is bad. Implement a function to find the first bad version. You should minimize the number of calls to the API.
+//
+// Example:
+//
+// Given n = 5
+//
+// call isBadVersion(3) -> false
+// call isBadVersion(5) -> true
+// call isBadVersion(4) -> true
+//
+// Then 4 is the first bad version.
+
+/**
+ * Definition for isBadVersion()
+ *
+ * @param {integer} version number
+ * @return {boolean} whether the version is bad
+ * isBadVersion = function(version) {
+ *     ...
+ * };
+ */
+
+/**
+ * @param {function} isBadVersion()
+ * @return {function}
+ */
+
+/** Binary search */
+function solution(isBadVersion) {
+  /**
+   * @param {integer} n Total versions
+   * @return {integer} The first bad version
+   */
+  return function (n) {
+    return find(1, n);
+  };
+
+  function find(l, r) {
+    if (l === r) return l;
+
+    const mid = Math.floor((l + r) / 2);
+    return isBadVersion(mid) ? find(l, mid) : find(mid + 1, r);
+  }
+}
+```
+
+### Flowchart
+![./examples/first-bad-version.js-svg image][./examples/first-bad-version.js-svg]
+
+[./examples/first-bad-version.js-svg]: https://raw.githubusercontent.com/jonniespratley/js-leetcode/master/flowcharts/first-bad-version.svg "Logo Title Text 2"
+
+
+---
+
+## 18 - ./examples/first-uniq-char.js
 
 ```javascript
     /*
@@ -554,7 +1143,114 @@ console.log(firstUniqChar('loveleetcode'));
 
 ---
 
-## 11 - ./examples/has-path-sum.js
+## 19 - ./examples/fizz-buzz.js
+
+```javascript
+    /*
+## Fizz Buzz
+Write a program that outputs the string representation of numbers from 1 to n.
+
+But for multiples of three it should output “Fizz” instead of the number and for the multiples of five output “Buzz”. For numbers which are multiples of both three and five output “FizzBuzz”.
+
+Example:
+```
+n = 15,
+
+Return:
+[
+  "1",
+  "2",
+  "Fizz", 3
+  "4",
+  "Buzz",
+  "Fizz", 6
+  "7",
+  "8",
+  "Fizz", 9
+  "Buzz",
+  "11",
+  "Fizz", 12
+  "13",
+  "14",
+  "FizzBuzz"
+]
+```
+*/
+/**
+ * @param {number} n
+ * @return {string[]}
+ */
+function fizzBuzz(n) {
+    let arr = [];
+
+    for (let i = 1; i <= n; i++) {
+        if (i % 15 === 0) arr.push('FizzBuzz');
+        else if (i % 3 === 0) arr.push('Fizz');
+        else if (i % 5 === 0) arr.push('Buzz');
+        else arr.push(String(i));
+    }
+
+    return arr;
+}
+```
+
+### Flowchart
+![./examples/fizz-buzz.js-svg image][./examples/fizz-buzz.js-svg]
+
+[./examples/fizz-buzz.js-svg]: https://raw.githubusercontent.com/jonniespratley/js-leetcode/master/flowcharts/fizz-buzz.svg "Logo Title Text 2"
+
+
+---
+
+## 20 - ./examples/group-anagrams.js
+
+```javascript
+    /**
+ * @param {string[]} strs
+ * @return {string[][]}
+ */
+
+
+var groupAnagrams = function (strs) {
+
+    // 1 sort each word's letters to enable matching
+    // alph will be, e.g.: ['aet', 'aet', 'ant' ...]
+    var alph = strs.map(word => word.split('').sort().join(''));
+
+    // 2 create groups of indices of identical sorted words
+    // locations will be, e.g.: { 'aet': [0, 1, 3], 'ant': [...] }
+    var locations = {};
+    for (var i = 0; i < alph.length; i++) {
+        if (!locations[alph[i]]) {
+            locations[alph[i]] = [i];
+        } else {
+            locations[alph[i]].push(i);
+        }
+    }
+    console.log(locations);
+
+    // 3 transform groups of indices into groups of original words
+    // e.g. for 'aet', map [0, 1, 3] to words at those indices in strs
+    var output = [];
+    for (var word in locations) {
+        output.push(locations[word].map(idx => strs[idx]));
+    }
+    return output;
+};
+console.log(
+    groupAnagrams(["eat", "tea", "tan", "ate", "nat", "bat"])
+)
+```
+
+### Flowchart
+![./examples/group-anagrams.js-svg image][./examples/group-anagrams.js-svg]
+
+[./examples/group-anagrams.js-svg]: https://raw.githubusercontent.com/jonniespratley/js-leetcode/master/flowcharts/group-anagrams.svg "Logo Title Text 2"
+
+
+---
+
+## 21 - ./examples/has-path-sum.js
 
 ```javascript
     var hasPathSum = function(root, sum) {
@@ -588,7 +1284,7 @@ console.log(firstUniqChar('loveleetcode'));
 
 ---
 
-## 12 - ./examples/hour-glass.js
+## 22 - ./examples/hour-glass.js
 
 ```javascript
     let input = [
@@ -646,7 +1342,111 @@ console.log(hourglassSum(input2));
 
 ---
 
-## 13 - ./examples/is-palindrome.js
+## 23 - ./examples/house-robber.js
+
+```javascript
+    // You are a professional robber planning to rob houses along a street. Each house has a certain amount of money stashed, the only constraint stopping you from robbing each of them is that adjacent houses have security system connected and it will automatically contact the police if two adjacent houses were broken into on the same night.
+//
+// Given a list of non-negative integers representing the amount of money of each house, determine the maximum amount of money you can rob tonight without alerting the police.
+//
+// Example 1:
+//
+// Input: [1,2,3,1]
+// Output: 4
+// Explanation: Rob house 1 (money = 1) and then rob house 3 (money = 3).
+//   Total amount you can rob = 1 + 3 = 4.
+//
+// Example 2:
+//
+// Input: [2,7,9,3,1]
+// Output: 12
+// Explanation: Rob house 1 (money = 2), rob house 3 (money = 9) and rob house 5 (money = 1).
+//   Total amount you can rob = 2 + 9 + 1 = 12.
+
+/**
+ * @param {number[]} nums
+ * @return {number}
+ */
+
+/** 1) Recursion */
+// time O(n)
+// space O(n)
+function rob1(nums) {
+    return count(nums.length - 1, [], nums)
+}
+
+function count(n, cache, nums) {
+    if (n < 0) return 0;
+    if (cache[n] !== undefined) return cache[n];
+
+    cache[n] = Math.max(
+        count(n - 2, cache, nums) + nums[n],
+        count(n - 1, cache, nums)
+    );
+
+    return cache[n];
+}
+
+/** 2) Iteration */
+// time O(n)
+// space O(n)
+function rob2(nums) {
+    if (nums.length === 0) return 0;
+    if (nums.length === 1) return nums[0];
+
+    const totals = [nums[0], Math.max(nums[0], nums[1])];
+
+    for (let i = 2; i < nums.length; i++) {
+        totals.push(Math.max(totals[i - 2] + nums[i], totals[i - 1]));
+    }
+
+    return totals[totals.length - 1];
+}
+
+/** 3) Iteration */
+// time O(n)
+// space O(1)
+function rob3(nums) {
+    if (nums.length === 0) return 0;
+    if (nums.length === 1) return nums[0];
+
+    let a = nums[0];
+    let b = Math.max(nums[0], nums[1]);
+
+    for (let i = 2; i < nums.length; i++) {
+        const max = Math.max(a + nums[i], b);
+        a = b;
+        b = max;
+    }
+
+    return b;
+}
+
+/** 4) Iteration */
+// time O(n)
+// space O(1)
+function rob(nums) {
+    let a = 0;
+    let b = 0;
+
+    for (let i = 0; i < nums.length; i++) {
+        if (i % 2 === 0) a = Math.max(a + nums[i], b);
+        else b = Math.max(a, b + nums[i]);
+    }
+
+    return Math.max(a, b);
+}
+```
+
+### Flowchart
+![./examples/house-robber.js-svg image][./examples/house-robber.js-svg]
+
+[./examples/house-robber.js-svg]: https://raw.githubusercontent.com/jonniespratley/js-leetcode/master/flowcharts/house-robber.svg "Logo Title Text 2"
+
+
+---
+
+## 24 - ./examples/is-palindrome.js
 
 ```javascript
     function isPalindrome(word) {
@@ -676,7 +1476,7 @@ console.log(hourglassSum(input2));
 
 ---
 
-## 14 - ./examples/is-valid-params.js
+## 25 - ./examples/is-valid-params.js
 
 ```javascript
     /**
@@ -714,7 +1514,7 @@ function isValid(s) {
 
 ---
 
-## 15 - ./examples/knapsack.js
+## 26 - ./examples/knapsack.js
 
 ```javascript
     function max(a, b) {
@@ -749,7 +1549,7 @@ function isValid(s) {
 
 ---
 
-## 16 - ./examples/kth-largest-element.js
+## 27 - ./examples/kth-largest-element.js
 
 ```javascript
     /*
@@ -802,7 +1602,50 @@ var findKthLargest = function (nums, k) {
 
 ---
 
-## 17 - ./examples/letter-combinations.js
+## 28 - ./examples/length-of-longest-substring.js
+
+```javascript
+    /**
+ * 
+ * Using a map to keep track of the count of each appeared characters.
+Once the count of character at right is greater than 1, 
+we will try to move left pointer to approach to right until the count of that character is less or equal to 1.
+We update the max length of non-repeating substring during looping.
+ * 
+ * 
+ */
+const lengthOfLongestSubstring = function (str) {
+    if (str.length === 0 || str === null) return 0
+    const map = {};
+    let len = str.length
+    let left = 0;
+    let right = 0;
+    let max = 0;
+    for (; right < len; right++) {
+        let ch = str.charAt(right)
+        map[ch] ? map[ch]++ : map[ch] = 1
+        while (map[ch] > 1 && left < right) {
+            map[str.charAt(left)]--
+                left++
+        }
+        console.log(map)
+        max = Math.max(max, right - left + 1)
+    }
+    return max
+}
+
+console.log(lengthOfLongestSubstring("pwwkew"));
+```
+
+### Flowchart
+![./examples/length-of-longest-substring.js-svg image][./examples/length-of-longest-substring.js-svg]
+
+[./examples/length-of-longest-substring.js-svg]: https://raw.githubusercontent.com/jonniespratley/js-leetcode/master/flowcharts/length-of-longest-substring.svg "Logo Title Text 2"
+
+
+---
+
+## 29 - ./examples/letter-combinations.js
 
 ```javascript
     const mappings = {
@@ -855,7 +1698,7 @@ console.log(letterCombinations('23'));
 
 ---
 
-## 18 - ./examples/level-order.js
+## 30 - ./examples/level-order.js
 
 ```javascript
     var levelOrder = function (root) {
@@ -894,7 +1737,7 @@ console.log(letterCombinations('23'));
 
 ---
 
-## 19 - ./examples/longest-common-prefix.js
+## 31 - ./examples/longest-common-prefix.js
 
 ```javascript
     /**
@@ -931,7 +1774,69 @@ var longestCommonPrefix = function (strs) {
 
 ---
 
-## 20 - ./examples/max-depth-of-binary-tree.js
+## 32 - ./examples/longest-palindromic-substring.js
+
+```javascript
+    /*
+## Longest Palindromic Substring
+Given a string s, find the longest palindromic substring in s. You may assume that the maximum length of s is 1000.
+
+Example 1:
+
+```
+Input: "babad"
+Output: "bab"
+```
+Note: "aba" is also a valid answer.
+
+
+Example 2:
+
+```
+Input: "cbbd"
+Output: "bb"
+```
+ */
+/**
+ * @param {string} s
+ * @return {string}
+ */
+var longestPalindrome = function(s) {
+    console.log(s);
+};
+
+function isPalindrome(word) {
+    return word === word.split('').reverse().join('');
+}
+
+
+
+
+let isEven = (n) => n % 2 !== 1;
+let isOdd = (n) => n % 2 === 1;
+
+
+
+//[2,4,6,8,10].map( val => console.log(isEven(val)));
+[1,3,5,7,9, 11, 13].map( val => console.log(isOdd(val)))
+
+
+
+
+
+
+console.log(longestPalindrome('babad'));
+```
+
+### Flowchart
+![./examples/longest-palindromic-substring.js-svg image][./examples/longest-palindromic-substring.js-svg]
+
+[./examples/longest-palindromic-substring.js-svg]: https://raw.githubusercontent.com/jonniespratley/js-leetcode/master/flowcharts/longest-palindromic-substring.svg "Logo Title Text 2"
+
+
+---
+
+## 33 - ./examples/max-depth-of-binary-tree.js
 
 ```javascript
     /*
@@ -985,7 +1890,7 @@ var maxDepth = function(root) {
 
 ---
 
-## 21 - ./examples/max-sub-array-len.js
+## 34 - ./examples/max-sub-array-len.js
 
 ```javascript
     var maxSubArrayLen = function (nums, k) {
@@ -1017,7 +1922,7 @@ console.log(maxSubArrayLen([1, -1, 5, -2, 3], 3));
 
 ---
 
-## 22 - ./examples/max-sub-array.js
+## 35 - ./examples/max-sub-array.js
 
 ```javascript
     
@@ -1056,7 +1961,7 @@ console.log(maxSubArray([-2,1,-3,4,-1,2,1,-5,4]));
 
 ---
 
-## 23 - ./examples/maximum-sub-array.js
+## 36 - ./examples/maximum-sub-array.js
 
 ```javascript
     /*
@@ -1144,7 +2049,7 @@ console.log(maxSubArray2([-2, -1]));
 
 ---
 
-## 24 - ./examples/merge-arrays.js
+## 37 - ./examples/merge-arrays.js
 
 ```javascript
     //imperative:
@@ -1178,7 +2083,61 @@ console.log(mergeArrays([1, 2, 3], [4, 5], [6]));
 
 ---
 
-## 25 - ./examples/min-sub-array-len.js
+## 38 - ./examples/merge-two-linked-lists.js
+
+```javascript
+    /*
+## Merge Two Sorted Lists
+
+Merge two sorted linked lists and return it as a new list. The new list should be made by splicing together the nodes of the first two lists.
+
+Example:
+
+```
+Input: 1->2->4, 1->3->4
+Output: 1->1->2->3->4->4
+```
+*/
+/**
+ * Definition for singly-linked list.
+ * function ListNode(val) {
+ *     this.val = val;
+ *     this.next = null;
+ * }
+ */
+/**
+ * @param {ListNode} l1
+ * @param {ListNode} l2
+ * @return {ListNode}
+ */
+var mergeTwoLists = function (l1, l2) {
+
+};
+
+function mergeTwoLists(l1, l2) {
+    // base case
+    if (!l1 || !l2) return l1 || l2;
+
+    
+    if (l1.val < l2.val) {
+        l1.next = mergeTwoLists(l1.next, l2);
+        return l1;
+    } else {
+        l2.next = mergeTwoLists(l1, l2.next);
+        return l2;
+    }
+}
+```
+
+### Flowchart
+![./examples/merge-two-linked-lists.js-svg image][./examples/merge-two-linked-lists.js-svg]
+
+[./examples/merge-two-linked-lists.js-svg]: https://raw.githubusercontent.com/jonniespratley/js-leetcode/master/flowcharts/merge-two-linked-lists.svg "Logo Title Text 2"
+
+
+---
+
+## 39 - ./examples/min-sub-array-len.js
 
 ```javascript
     var minSubArrayLen = function(s, nums) {
@@ -1204,7 +2163,7 @@ console.log(mergeArrays([1, 2, 3], [4, 5], [6]));
 
 ---
 
-## 26 - ./examples/min-swaps.js
+## 40 - ./examples/min-swaps.js
 
 ```javascript
     
@@ -1298,7 +2257,7 @@ console.log(minimumSwaps([4, 3, 1, 2]));
 
 ---
 
-## 27 - ./examples/move-zeros.js
+## 41 - ./examples/move-zeros.js
 
 ```javascript
     /**
@@ -1556,7 +2515,7 @@ Output: ["()()()", "(())()"]
 
 ---
 
-## 28 - ./examples/nested-list-weight-sum.js
+## 42 - ./examples/nested-list-weight-sum.js
 
 ```javascript
     function depthSumHelper(list, depth) {
@@ -1628,7 +2587,7 @@ function bubbleSort2(array) {
 
 ---
 
-## 29 - ./examples/number-of-islands.js
+## 43 - ./examples/number-of-islands.js
 
 ```javascript
     /*
@@ -1721,7 +2680,21 @@ console.log(numIslands([
 
 ---
 
-## 30 - ./examples/pascal-triangle-2.js
+## 44 - ./examples/one-edit-away.js
+
+```javascript
+    
+```
+
+### Flowchart
+![./examples/one-edit-away.js-svg image][./examples/one-edit-away.js-svg]
+
+[./examples/one-edit-away.js-svg]: https://raw.githubusercontent.com/jonniespratley/js-leetcode/master/flowcharts/one-edit-away.svg "Logo Title Text 2"
+
+
+---
+
+## 45 - ./examples/pascal-triangle-2.js
 
 ```javascript
     function pascalTriangle(lineNumber) {
@@ -1750,7 +2723,7 @@ console.log(numIslands([
 
 ---
 
-## 31 - ./examples/path-sum.js
+## 46 - ./examples/path-sum.js
 
 ```javascript
     /*
@@ -1819,7 +2792,7 @@ var hasPathSum = function(root, sum) {
 
 ---
 
-## 32 - ./examples/permutations.js
+## 47 - ./examples/permutations.js
 
 ```javascript
     /*
@@ -1871,7 +2844,7 @@ console.log(permute([1, 2, 3]))
 
 ---
 
-## 33 - ./examples/pivot-index.js
+## 48 - ./examples/pivot-index.js
 
 ```javascript
     var pivotIndex = function(nums) {
@@ -1902,7 +2875,7 @@ console.log(pivotIndex([1,7,3,6,5,6]));
 
 ---
 
-## 34 - ./examples/plus-one.js
+## 49 - ./examples/plus-one.js
 
 ```javascript
     /**
@@ -1930,7 +2903,7 @@ var plusOne = function(digits) {
 
 ---
 
-## 35 - ./examples/read-n-characters-given-read4.js
+## 50 - ./examples/read-n-characters-given-read4.js
 
 ```javascript
     /**
@@ -1981,7 +2954,7 @@ var solution = function (read4) {
 
 ---
 
-## 36 - ./examples/remove-duplicates.js
+## 51 - ./examples/remove-duplicates.js
 
 ```javascript
     /**
@@ -2025,7 +2998,7 @@ console.timeEnd('removeDuplicates');
 
 ---
 
-## 37 - ./examples/remove-element.js
+## 52 - ./examples/remove-element.js
 
 ```javascript
     var removeElement = function (nums, val) {
@@ -2048,7 +3021,7 @@ console.timeEnd('removeDuplicates');
 
 ---
 
-## 38 - ./examples/remove-invalid-parentheses.js
+## 53 - ./examples/remove-invalid-parentheses.js
 
 ```javascript
     function openBrace(s) {
@@ -2148,7 +3121,7 @@ console.log(removeInvalidParentheses2("(b)(c))"));
 
 ---
 
-## 39 - ./examples/remove-nth-node-from-end-of-list.js
+## 54 - ./examples/remove-nth-node-from-end-of-list.js
 
 ```javascript
     /**
@@ -2212,7 +3185,7 @@ const removeNthFromEnd2 = function (head, n) {
 
 ---
 
-## 40 - ./examples/reverse-words-2.js
+## 55 - ./examples/reverse-words-2.js
 
 ```javascript
     /**
@@ -2251,7 +3224,7 @@ console.log(reverseWords2("Let's take LeetCode contest") === "s'teL ekat edoCtee
 
 ---
 
-## 41 - ./examples/reverse-words.js
+## 56 - ./examples/reverse-words.js
 
 ```javascript
     /**
@@ -2292,7 +3265,98 @@ console.log(reverseWords(' the sky is blue '));
 
 ---
 
-## 42 - ./examples/rotate-array.js
+## 57 - ./examples/roman-to-integer.js
+
+```javascript
+    // Roman numerals are represented by seven different symbols: I, V, X, L, C, D and M.
+//
+// Symbol       Value
+// I             1
+// V             5
+// X             10
+// L             50
+// C             100
+// D             500
+// M             1000
+//
+// For example, two is written as II in Roman numeral, just two one's added together. Twelve is written as, XII, which is simply X + II. The number twenty seven is written as XXVII, which is XX + V + II.
+//
+// Roman numerals are usually written largest to smallest from left to right. However, the numeral for four is not IIII. Instead, the number four is written as IV. Because the one is before the five we subtract it making four. The same principle applies to the number nine, which is written as IX. There are six instances where subtraction is used:
+//
+// I can be placed before V (5) and X (10) to make 4 and 9.
+// X can be placed before L (50) and C (100) to make 40 and 90.
+// C can be placed before D (500) and M (1000) to make 400 and 900.
+//
+// Given a roman numeral, convert it to an integer. Input is guaranteed to be within the range from 1 to 3999.
+//
+// Example 1:
+//
+// Input: "III"
+// Output: 3
+//
+// Example 2:
+//
+// Input: "IV"
+// Output: 4
+//
+// Example 3:
+//
+// Input: "IX"
+// Output: 9
+//
+// Example 4:
+//
+// Input: "LVIII"
+// Output: 58
+// Explanation: C = 100, L = 50, XXX = 30 and III = 3.
+//
+// Example 5:
+//
+// Input: "MCMXCIV"
+// Output: 1994
+// Explanation: M = 1000, CM = 900, XC = 90 and IV = 4.
+
+/**
+ * @param {string} s
+ * @return {number}
+ */
+function romanToInt(s) {
+    const map = {
+        I: 1,
+        V: 5,
+        X: 10,
+        L: 50,
+        C: 100,
+        D: 500,
+        M: 1000
+    };
+
+    let prevNum = 0;
+    let sum = 0;
+
+    for (let c of s) {
+        const num = map[c];
+
+        sum = prevNum >= num ?
+            sum + num :
+            sum + num - prevNum * 2;
+
+        prevNum = num;
+    }
+
+    return sum;
+}
+```
+
+### Flowchart
+![./examples/roman-to-integer.js-svg image][./examples/roman-to-integer.js-svg]
+
+[./examples/roman-to-integer.js-svg]: https://raw.githubusercontent.com/jonniespratley/js-leetcode/master/flowcharts/roman-to-integer.svg "Logo Title Text 2"
+
+
+---
+
+## 58 - ./examples/rotate-array.js
 
 ```javascript
     var rotate = function (nums, k) {
@@ -2350,7 +3414,7 @@ console.log(rotateArray([1, 2], 2));
 
 ---
 
-## 43 - ./examples/serialize-and-deserialize-binary-tree.js
+## 59 - ./examples/serialize-and-deserialize-binary-tree.js
 
 ```javascript
     /*
@@ -2445,7 +3509,151 @@ var deserialize = function(data) {
 
 ---
 
-## 44 - ./examples/single-number.js
+## 60 - ./examples/set-matrix-zeros.js
+
+```javascript
+    /*
+## Set Matrix Zeroes
+
+Given a m x n matrix, if an element is 0, set its entire row and column to 0. Do it in-place.
+
+Example 1:
+
+```
+Input: 
+[
+  [1,1,1],
+  [1,0,1],
+  [1,1,1]
+]
+Output: 
+[
+  [1,0,1],
+  [0,0,0],
+  [1,0,1]
+]
+```
+
+*/
+/**
+ * @param {number[][]} matrix
+ * @return {void} Do not return anything, modify matrix in-place instead.
+ */
+var setZeroes = function (matrix) {
+    let rowHasZero = false;
+    let colHasZero = false;
+
+    let rows = [];
+    let cols = [];
+
+    function nullifyRow(matrix, row) {
+        for (let index = 0; index < matrix.length; index++) {
+            matrix[row][index] = 0;
+        }
+    }
+
+    function nullifyCol(matrix, col) {
+        for (let index = 0; index < matrix.length; index++) {
+            matrix[index][col] = 0;
+        }
+    }
+
+    //check if first row has 0
+    for (let j = 0; j < matrix[0].length; j++) {
+        if (matrix[0][j] === 0) {
+            rowHasZero = true;
+            break;
+        }
+    }
+    //check if first col has 0
+    for (let i = 0; i < matrix.length; i++) {
+        if (matrix[i][0] === 0) {
+            colHasZero = true;
+            break;
+        }
+    }
+
+    // check for zeros in rest of array
+    for (let i = 1; i < matrix.length; i++) {
+        for (let j = 1; j < matrix[0].length; j++) {
+            if (matrix[i][j] === 0) {
+                rows[i] = true;
+                cols[j] = true;
+            } 
+        }    
+    }
+    
+      // Nullify rows
+      for (let i = 1; i < matrix.length; i++) {
+        if (matrix[i][0] === 0) {
+            nullifyRow(matrix, i);
+        }
+    }
+    // Nullify cols
+    for (let j = 1; j < matrix[0].length; j++) {
+        if (matrix[0][j] === 0) {
+            nullifyCol(matrix, j);
+        }
+    }
+
+    if(rowHasZero){
+        nullifyRow(matrix, 0)
+    }
+    if(colHasZero){
+        nullifyCol(matrix, 0)
+    }
+    return matrix;
+};
+
+console.log(
+    setZeroes([
+        [1, 1, 1],
+        [1, 0, 1],
+        [1, 1, 1]
+    ])
+);
+console.log(
+    setZeroes([
+        [0,1,2,0],
+        [3,4,5,2],
+        [1,3,1,5]
+      ])
+);
+var solution = function(isBadVersion) {
+    /**
+      * @param {integer} n Total versions
+      * @return {integer} The first bad version
+      */
+     return function(n) {
+         var min = 1;
+         var max = n;
+         var bad = -1;
+         while (min <= max) {
+             var mid = Math.floor((min+max)/2);
+             if (isBadVersion(mid)) {
+                 bad = mid;
+                 max = mid-1;
+             }
+             else {
+                 min = mid+1;
+             }
+         }
+         return bad;
+     };
+ };
+
+ console.log(solution(5)())
+```
+
+### Flowchart
+![./examples/set-matrix-zeros.js-svg image][./examples/set-matrix-zeros.js-svg]
+
+[./examples/set-matrix-zeros.js-svg]: https://raw.githubusercontent.com/jonniespratley/js-leetcode/master/flowcharts/set-matrix-zeros.svg "Logo Title Text 2"
+
+
+---
+
+## 61 - ./examples/single-number.js
 
 ```javascript
     
@@ -2497,33 +3705,47 @@ console.log(singleNumber([1,1,1,1,1,5]));
 
 ---
 
-## 45 - ./examples/sorted-array-to-bst.js
+## 62 - ./examples/sorted-array-to-bst.js
 
 ```javascript
-    function TreeNode(val) {
-    this.val = val;
-    this.left = this.right = null;
+    // Given an array where elements are sorted in ascending order, convert it to a height balanced BST.
+//
+// For this problem, a height-balanced binary tree is defined as a binary tree in which the depth of the two subtrees of every node never differ by more than 1.
+//
+// Example:
+//
+// Given the sorted array: [-10,-3,0,5,9],
+//
+// One possible answer is: [0,-3,9,-10,null,5], which represents the following height balanced BST:
+//
+//       0
+//      / \
+//    -3   9
+//    /   /
+//  -10  5
+
+/**
+ * Definition for a binary tree node.
+ * function TreeNode(val) {
+ *     this.val = val;
+ *     this.left = this.right = null;
+ * }
+ */
+/**
+ * @param {number[]} nums
+ * @return {TreeNode}
+ */
+function sortedArrayToBST(nums) {
+    if (!nums.length) return null;
+
+    const mid = Math.floor(nums.length / 2);
+
+    let node = new TreeNode(nums[mid]);
+    node.left = sortedArrayToBST(nums.slice(0, mid));
+    node.right = sortedArrayToBST(nums.slice(mid + 1)); // make sure + 1, because mid number is root node, so need skip it
+
+    return node;
 }
-var sortedArrayToBST = function (nums) {
-    return sortedArrayToBSTHelper(0, nums.length);
-
-    function sortedArrayToBSTHelper(start, end) {
-        if (start >= end) {
-            return null;
-        }
-        const middle = start + Math.floor((end - start) / 2);
-        const currentNode = new TreeNode(nums[middle]);
-
-        const leftNode = sortedArrayToBSTHelper(start, middle);
-        const rightNode = sortedArrayToBSTHelper(middle + 1, end);
-
-        currentNode.left = leftNode;
-        currentNode.right = rightNode;
-
-        return currentNode;
-    }
-};
-console.log(sortedArrayToBST( [-10,-3,0,5,9]));
 ```
 
 ### Flowchart
@@ -2534,7 +3756,7 @@ console.log(sortedArrayToBST( [-10,-3,0,5,9]));
 
 ---
 
-## 46 - ./examples/spiral-order.js
+## 63 - ./examples/spiral-order.js
 
 ```javascript
     /*  
@@ -2598,22 +3820,57 @@ var spiralOrder = function (matrix) {
 
 ---
 
-## 47 - ./examples/str-str.js
+## 64 - ./examples/str-str.js
 
 ```javascript
-    /**
+    // Implement strStr().
+//
+// Return the index of the first occurrence of needle in haystack, or -1 if needle is not part of haystack.
+//
+// Example 1:
+//
+// Input: haystack = "hello", needle = "ll"
+// Output: 2
+//
+// Example 2:
+//
+// Input: haystack = "aaaaa", needle = "bba"
+// Output: -1
+//
+// Clarification:
+//
+// What should we return when needle is an empty string? This is a great question to ask during an interview.
+//
+// For the purpose of this problem, we will return 0 when needle is an empty string. This is consistent to C's strstr() and Java's indexOf().
+
+
+/**
  * @param {string} haystack
  * @param {string} needle
  * @return {number}
  */
-var strStr = function(haystack, needle) {
-    let result = 0;
-    if(needle === ""){
-      return result;
-    }
-    let index = haystack.indexOf(needle);
-    return index >= -1 ? index : result;
-  };
+var strStr = function (haystack, needle) {
+  let result = 0;
+  if (needle === "") {
+    return result;
+  }
+  let index = haystack.indexOf(needle);
+  return index >= -1 ? index : result;
+};
+
+/** 1) Cheating */
+function strStr1(haystack, needle) {
+  return haystack.indexOf(needle);
+}
+
+/** 2) Brute force */
+function strStr2(haystack, needle) {
+  for (let i = 0; i < haystack.length - needle.length + 1; i++) {
+    if (haystack.substr(i, needle.length) === needle) return i;
+  }
+
+  return -1;
+}
 ```
 
 ### Flowchart
@@ -2624,7 +3881,7 @@ var strStr = function(haystack, needle) {
 
 ---
 
-## 48 - ./examples/sub-sets.js
+## 65 - ./examples/sub-sets.js
 
 ```javascript
     /**
@@ -2721,7 +3978,7 @@ var letterCombinations = function (digits) {
 
 ---
 
-## 49 - ./examples/three-sum.js
+## 66 - ./examples/three-sum.js
 
 ```javascript
     /**
@@ -2764,7 +4021,7 @@ console.log(threeSum([-1, 0, 1, 2, -1, -4]));
 
 ---
 
-## 50 - ./examples/tree-populate-next-pointer.js
+## 67 - ./examples/tree-populate-next-pointer.js
 
 ```javascript
     /*
@@ -2850,7 +4107,7 @@ var connect = function(root) {
 
 ---
 
-## 51 - ./examples/tree-preorder-traversal.js
+## 68 - ./examples/tree-preorder-traversal.js
 
 ```javascript
     function TreeNode(val) {
@@ -3029,7 +4286,7 @@ console.log(firstUniqChar('loveleetcode'));
 
 ---
 
-## 52 - ./examples/two-sum.js
+## 69 - ./examples/two-sum.js
 
 ```javascript
     /**
@@ -3058,15 +4315,36 @@ return [0, 1].
  * @param {number} target
  * @return {number[]}
  */
-var twoSum = function(numbers, target) {
+var twoSum = function (numbers, target) {
     let dict = {};
-    for (i in numbers){
-        if (target - numbers[i] in dict){
+    for (i in numbers) {
+        if (target - numbers[i] in dict) {
             return [dict[target - numbers[i]] + 1, Number(i) + 1];
         }
         dict[numbers[i]] = Number(i);
     }
 };
+
+function twoSum1(nums, target) {
+    for (let i = 0; i < nums.length; i++) {
+        for (let j = 0; j < nums.length; j++) {
+            if (i === j) continue;
+
+            if (nums[i] + nums[j] === target) return [i, j];
+        }
+    }
+}
+
+function twoSum(nums, target) {
+    let map = {};
+
+    for (let i = 0; i < nums.length; i++) {
+        const diff = target - nums[i];
+
+        if (map[diff] !== undefined) return [map[diff], i];
+        map[nums[i]] = i;
+    }
+}
 console.log(twoSum([2, 7, 11, 15], 9));
 ```
 
@@ -3078,7 +4356,7 @@ console.log(twoSum([2, 7, 11, 15], 9));
 
 ---
 
-## 53 - ./examples/valid-params.js
+## 70 - ./examples/valid-params.js
 
 ```javascript
     /**
