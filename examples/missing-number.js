@@ -48,6 +48,10 @@ var missingNumber3 = function (nums) {
     let w = (n * (n + 1)) / 2;
     return w - sum;
 };
+function missingNumber(nums) {
+    const sum = nums.reduce((a, b) => a + b);
+    return (1 + nums.length) * nums.length / 2 - sum;
+  }
 console.log(missingNumber([1, 0]));
 console.log(missingNumber2([1, 0]));
 console.log(missingNumber3([1, 0]));

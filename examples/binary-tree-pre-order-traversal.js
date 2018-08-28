@@ -53,3 +53,47 @@ function preorderTraversal(node) {
     }
     return res;
 }
+
+var inorderTraversal = function (root) {
+    if (!root) return [];
+    let stack = [];
+    let order = [];
+    stack.push(root);
+    while (stack.length) {
+        let node = stack.pop();
+        if (node.v) {
+            order.push(node.val);
+        } else {
+            node.v = true;
+            if (node.right) {
+                stack.push(node.right);
+            }
+            stack.push(node);
+            if (node.left) {
+                stack.push(node.left);
+            }
+
+        }
+    }
+    return order;
+};
+
+function inorderTraversalRecur(root){
+    if(!root) return null;
+    
+    if(root.right) inorderTraversalRecur(root.right)
+    console.log(root.val);
+    if(root.left) inorderTraversalRecur(root.left)
+}
+
+function TreeNode(val) {
+    this.val = val;
+    this.left = this.right = null;
+}
+//[2,1,3], p = 1
+let t = new TreeNode(2);
+t.right = new TreeNode(1);
+t.left = new TreeNode(3);
+
+console.log(inorderTraversal(t));
+console.log(inorderTraversalRecur(t));

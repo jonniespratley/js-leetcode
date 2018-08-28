@@ -1,4 +1,3 @@
-
 /**
  * 
 
@@ -25,7 +24,7 @@ Output: 4
  * @param {number[]} nums
  * @return {number}
  */
-var singleNumber = function(nums) {
+var singleNumber = function (nums) {
     for (let i = 0; i < nums.length; i++) {
         let n1 = nums[i];
         if (nums.indexOf(n1) === nums.lastIndexOf(n1)) {
@@ -33,9 +32,13 @@ var singleNumber = function(nums) {
         }
     }
 };
-function singleNumber(nums) {
-    return nums.reduce((sum, num) => sum ^ num);  // ^ is XOR
-  }
+
+function singleNumber2(nums) {
+    return nums.reduce((sum, num) => sum ^ num); // ^ is XOR
+}
 console.log(singleNumber([2, 2, 1]));
+console.log(singleNumber2([2, 2, 1]));
 //console.log(singleNumber([4,1,2,1,2]));
-console.log(singleNumber([1,1,1,1,1,5]));
+
+console.log(singleNumber([1, 1, 1, 1, 1, 5]));
+console.log(singleNumber2([1, 1, 1, 1, 1, 5]));

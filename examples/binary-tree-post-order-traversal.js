@@ -25,14 +25,14 @@
 // 1) Recursive
 function postorderTraversal1(node) {
     let res = [];
-    helper(node, res);
+    go(node, res);
     return res;
 }
 
-function helper(node, res) {
+function go(node, res) {
     if (!node) return;
-    helper(node.left, res);
-    helper(node.right, res);
+    go(node.left, res);
+    go(node.right, res);
     res.push(node.val);
 }
 // 2) Iterating method using Stack
