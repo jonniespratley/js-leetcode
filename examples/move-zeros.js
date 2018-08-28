@@ -31,6 +31,11 @@ var moveZeroes = function (nums) {
     return nums;
 };
 
+function moveZeroes(nums) {
+    for (let i = nums.length - 1; i >= 0; i--) { // cannot from 0 to length - 1
+        if (nums[i] === 0) nums.push(...nums.splice(i, 1));
+    }
+}
 
 
 var moveZeroes2 = function (nums) {
@@ -241,5 +246,5 @@ Input: "()())()"
 Output: ["()()()", "(())()"]
  */
 
- console.log(removeInvalidParentheses("(a)())()"))
- console.log(removeInvalidParentheses("()()(())"))
+console.log(removeInvalidParentheses("(a)())()"))
+console.log(removeInvalidParentheses("()()(())"))

@@ -1,4 +1,5 @@
-/*
+/**
+@description
 ## Big-O Analysis
 
 Big-O analysis is a form of runtime analysis that measures the efficiency of an algorithm in terms of the time it takes for the algorithm to run as a function of the input size. It’s not a formal benchmark, just a simple way to classify algorithms by relative efficiency when dealing with very large input sizes.
@@ -52,22 +53,14 @@ Now double it to n = 20:
 * 220 = 1,048,576
 * 20! = 2.43×1018
 
-Notation
-Name
-O(1)
-Constant
-O(log(n))
-Logarithmic
-O((log(n))c)
-Poly-logarithmic
-O(n)
-Linear
-O(n2)
-Quadratic
-O(nc)
-Polynomial
-O(cn)
-Exponential
+Notation      - Name
+O(1)          - Constant
+O(log(n))     - Logarithmic
+O((log(n))c)  - Poly-logarithmic
+O(n)          - Linear
+O(n2)         - Quadratic
+O(nc)         - Polynomial
+O(cn)         - Exponential
 
 
 ### [] O(1)
@@ -120,7 +113,11 @@ function increment(num) {
 console.log(increment(2));
 
 
-// O(n)
+/**
+ * Sequential search example
+ * @param {Array} array The array of items
+ * @param {any} item The item to search for
+ */
 function sequentialSearch(array, item) {
     for (var i = 0; i < array.length; i++) {
         if (item === array[i]) { //{1} 
