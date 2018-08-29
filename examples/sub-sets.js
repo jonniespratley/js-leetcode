@@ -42,42 +42,36 @@ const subsets = function (nums) {
     helper(0);
     return res;
 }
-
 console.log(subsets([1, 2, 3]));
 console.log(subsets([1, 2]));
 
 
 
 
-/**
- * @param {string} digits
- * @return {string[]}
- */
-var letterCombinations = function (digits) {
-    let hashTable = {
-        2: 'abc',
-        3: 'def',
-        4: 'ghi',
-        5: 'jkl',
-        6: 'mno',
-        7: 'pqrs',
-        8: 'tuv',
-        9: 'wxyz'
-    };
-    let output = [];
 
-    function helper(digit, n) {
-        if (digit === n) {
-            return;
-        }
-        for (let i = 0; i < hashTable[digit].length; i++) {
-            let curr = hashTable[digit][i];
-            console.log(curr);
-            output.push(hashTable[digit][i])
+/** Backtracking */
+// Similar
+// 46. Permutations
+function subsets2(nums) {
+    let res = [];
+
+    function find(curr, rest, start) {
+        res.push(curr);
+        for (let i = start; i < rest.length; i++) {
+            //console.log(...rest.slice(0, i))
+            find(
+                [...curr, rest[i]], [...rest.slice(0, i), ...rest.slice(i + 1)],
+                start
+            );
+            start++;
         }
     }
-    digits.split('').forEach(d => {
-        console.log(helper(d));
-    })
-    return output;
-};
+
+    find([], nums, 0);
+
+    return res;
+}
+
+console.log(subsets2([1, 2, 3]));
+console.log(subsets2([1, 2]));
+console.log(subsets2(['a', 'b', 'c']));
