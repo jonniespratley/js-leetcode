@@ -1,6 +1,6 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
-                width="391" height="565">
+                width="553" height="822">
                 
             <g>
                 <rect x="50" y="80"
@@ -150,6 +150,97 @@
                 
             </g>
             <g>
+                <rect x="50" y="573"
+            width="299.6" height="30"
+            style="fill:#a5d6a7; stroke:#444; stroke-width:1" />
+                    
+                <line x1="60" y1="573" x2="60" y2="603"
+                style="fill:#a5d6a7; stroke:#444; stroke-width:1" />
+                <line x1="339.6" y1="573" x2="339.6" y2="603"
+                style="fill:#a5d6a7; stroke:#444; stroke-width:1" />
+             
+                <title>function findKthLargest(nums, k)</title>
+            <text x="75" y="593"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="75" y="593">function findKthLargest(nums, k)</tspan>
+            </text>
+                
+            </g>
+            <g>
+                <rect x="87" y="621.5"
+            width="420" height="30"
+            rx="3" ry="3"
+            style="fill:#90caf9; stroke:#444; stroke-width:1" />
+                
+                <line x1="507" y1="631.5" x2="512" y2="631.5"
+                style="fill:#a5d6a7; stroke:#444; stroke-width:1" />
+                
+                <line x1="507" y1="641.5" x2="512" y2="641.5"
+                style="fill:#a5d6a7; stroke:#444; stroke-width:1" />
+
+                <path d="M512, 625.5 L528, 636.5 L512, 647.5 Z" 
+        fill="#a5d6a7" stroke="#444" stroke-width="1" />
+                             
+                <title>return nums.sort((a, b) =&gt; a - b)[nums.length - k]</title>
+            <text x="102" y="641.5"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="102" y="641.5">return nums.sort((a, b) =&gt; a - b)[nums.length - k]</tspan>
+            </text>
+                
+            </g>
+                <g>
+                   <rect x="124" y="670"
+            width="139.2" height="30"
+            rx="2" ry="2"
+            style="fill:#C5E1A5; stroke:#444; stroke-width:1" />
+                   <title>nums.sort(*())</title>
+            <text x="139" y="690"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="139" y="690">nums.sort(*())</tspan>
+            </text>
+                   
+                   
+                </g>
+            <g>
+                <rect x="161" y="718.5"
+            width="120.2" height="30"
+            style="fill:#a5d6a7; stroke:#444; stroke-width:1" />
+                    
+                <line x1="171" y1="718.5" x2="171" y2="748.5"
+                style="fill:#a5d6a7; stroke:#444; stroke-width:1" />
+                <line x1="271.2" y1="718.5" x2="271.2" y2="748.5"
+                style="fill:#a5d6a7; stroke:#444; stroke-width:1" />
+             
+                <title>(a, b) =&gt;</title>
+            <text x="186" y="738.5"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="186" y="738.5">(a, b) =&gt;</tspan>
+            </text>
+                
+            </g>
+            <g>
+                <rect x="198" y="767"
+            width="123.6" height="30"
+            rx="3" ry="3"
+            style="fill:#90caf9; stroke:#444; stroke-width:1" />
+                
+                <line x1="321.6" y1="777" x2="326.6" y2="777"
+                style="fill:#a5d6a7; stroke:#444; stroke-width:1" />
+                
+                <line x1="321.6" y1="787" x2="326.6" y2="787"
+                style="fill:#a5d6a7; stroke:#444; stroke-width:1" />
+
+                <path d="M326.6, 771 L342.6, 782 L326.6, 793 Z" 
+        fill="#a5d6a7" stroke="#444" stroke-width="1" />
+                             
+                <title>return a - b</title>
+            <text x="213" y="787"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="213" y="787">return a - b</tspan>
+            </text>
+                
+            </g>
+            <g>
                <rect x="25" y="13.75"
             width="216.6" height="24"
             style="fill:#fff59d; stroke:#444; stroke-width:1" />
@@ -242,6 +333,45 @@
                 L79 524.5 "
         style="fill:none; stroke:#444; stroke-width:1" />
                <path d="M79, 521.5 L87, 524.5 L79, 527.5 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M25, 40 L25 584 Q25 588
+                29 588
+                L42 588 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M42, 585 L50, 588 L42, 591 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M68.5, 603 L68.5 632.5 Q68.5 636.5
+                72.5 636.5
+                L79 636.5 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M79, 633.5 L87, 636.5 L79, 639.5 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M105.5, 651.5 L105.5 681 Q105.5 685
+                109.5 685
+                L116 685 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M116, 682 L124, 685 L116, 688 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M142.5, 700 L142.5 729.5 Q142.5 733.5
+                146.5 733.5
+                L161 733.5 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               false
+            </g>
+            <g>
+               <path d="M179.5, 748.5 L179.5 778 Q179.5 782
+                183.5 782
+                L190 782 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M190, 779 L198, 782 L190, 785 Z" 
         fill="#333" />
             </g>
             </svg>

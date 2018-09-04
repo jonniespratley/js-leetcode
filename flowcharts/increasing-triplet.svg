@@ -1,6 +1,6 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
-                width="391" height="800">
+                width="479" height="782">
                 
             <g>
                 <rect x="50" y="80"
@@ -12,186 +12,194 @@
                 <line x1="355.2" y1="80" x2="355.2" y2="110"
                 style="fill:#a5d6a7; stroke:#444; stroke-width:1" />
              
-                <title>function removeNthFromEnd(head, n)</title>
+                <title>increasingTriplet = function(nums)</title>
             <text x="75" y="100"
                 font-family="monospace" font-size="13" fill="#222">
-                <tspan x="75" y="100">function removeNthFromEnd(head, n)</tspan>
+                <tspan x="75" y="100">increasingTriplet = function(nums)</tspan>
             </text>
                 
             </g>
                 <g>
                    <rect x="87" y="128.5"
-            width="240.6" height="30"
+            width="100.2" height="30"
             rx="3" ry="3"
             style="fill:#90caf9; stroke:#444; stroke-width:1" />
-                   <title>let before = ListNode(null)</title>
+                   <title>var i = 0</title>
             <text x="102" y="148.5"
                 font-family="monospace" font-size="13" fill="#222">
-                <tspan x="102" y="148.5">let before = ListNode(null)</tspan>
+                <tspan x="102" y="148.5">var i = 0</tspan>
             </text>
                    
                    
                 </g>
                 <g>
                    <rect x="87" y="177"
-            width="170.4" height="30"
+            width="100.2" height="30"
             rx="3" ry="3"
             style="fill:#90caf9; stroke:#444; stroke-width:1" />
-                   <title>before.next = head</title>
+                   <title>let j = 0</title>
             <text x="102" y="197"
                 font-family="monospace" font-size="13" fill="#222">
-                <tspan x="102" y="197">before.next = head</tspan>
+                <tspan x="102" y="197">let j = 0</tspan>
             </text>
                    
                    
                 </g>
                 <g>
                    <rect x="87" y="225.5"
-            width="162.6" height="30"
+            width="100.2" height="30"
             rx="3" ry="3"
             style="fill:#90caf9; stroke:#444; stroke-width:1" />
-                   <title>let slow = before</title>
+                   <title>let k = 0</title>
             <text x="102" y="245.5"
                 font-family="monospace" font-size="13" fill="#222">
-                <tspan x="102" y="245.5">let slow = before</tspan>
-            </text>
-                   
-                   
-                </g>
-                <g>
-                   <rect x="87" y="274"
-            width="147" height="30"
-            rx="3" ry="3"
-            style="fill:#90caf9; stroke:#444; stroke-width:1" />
-                   <title>let fast = head</title>
-            <text x="102" y="294"
-                font-family="monospace" font-size="13" fill="#222">
-                <tspan x="102" y="294">let fast = head</tspan>
+                <tspan x="102" y="245.5">let k = 0</tspan>
             </text>
                    
                    
                 </g><g>
 
-            <rect x="117" y="357.5"
-            width="83.4" height="30"
+            <rect x="117" y="309"
+            width="177" height="30"
             rx="3" ry="3"
             style="fill:#b39ddb; stroke:#444; stroke-width:1" />
-            <polygon points="87,372.5 117,342.5 147,372.5 117,402.5"
+            <polygon points="87,324 117,294 147,324 117,354"
             style="fill:#b39ddb; stroke:#444; stroke-width:1" />
                 
-            <title>n--</title>
-            <text x="162" y="377.5"
+            <title>i &lt; nums.length</title>
+            <text x="162" y="329"
                 font-family="monospace" font-size="13" fill="#222">
-                <tspan x="162" y="377.5">n--</tspan>
+                <tspan x="162" y="329">i &lt; nums.length</tspan>
             </text>
             
-            <text x="97.5" y="377.5"
-        font-family="monospace" font-size="13" fill="#222">while</text>
+            <text x="105.3" y="329"
+        font-family="monospace" font-size="13" fill="#222">for</text>
         </g>
                 <g>
-                   <rect x="137" y="412.5"
+                   <rect x="137" y="364"
             width="53.4" height="30"
             rx="3" ry="3"
             style="fill:#90caf9; stroke:#444; stroke-width:1" />
-                   <title>n--</title>
+                   <title>i++</title>
+            <text x="152" y="384"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="152" y="384">i++</tspan>
+            </text>
+                   
+                   
+                </g>
+                <g>
+                   <rect x="137" y="412.5"
+            width="100.2" height="30"
+            rx="3" ry="3"
+            style="fill:#90caf9; stroke:#444; stroke-width:1" />
+                   <title>j = i + 1</title>
             <text x="152" y="432.5"
                 font-family="monospace" font-size="13" fill="#222">
-                <tspan x="152" y="432.5">n--</tspan>
+                <tspan x="152" y="432.5">j = i + 1</tspan>
             </text>
                    
                    
                 </g>
                 <g>
                    <rect x="137" y="461"
-            width="154.8" height="30"
+            width="100.2" height="30"
             rx="3" ry="3"
             style="fill:#90caf9; stroke:#444; stroke-width:1" />
-                   <title>fast = fast.next</title>
+                   <title>k = j + 1</title>
             <text x="152" y="481"
                 font-family="monospace" font-size="13" fill="#222">
-                <tspan x="152" y="481">fast = fast.next</tspan>
+                <tspan x="152" y="481">k = j + 1</tspan>
             </text>
                    
                    
                 </g><g>
-
-            <rect x="117" y="544.5"
-            width="91.2" height="30"
+            <rect x="167" y="524.5"
+            width="286.2" height="30"
             rx="3" ry="3"
-            style="fill:#b39ddb; stroke:#444; stroke-width:1" />
-            <polygon points="87,559.5 117,529.5 147,559.5 117,589.5"
-            style="fill:#b39ddb; stroke:#444; stroke-width:1" />
-                
-            <title>fast</title>
-            <text x="162" y="564.5"
+            style="fill:#ce93d8; stroke:#444; stroke-width:1" />                
+            <polygon points="137,539.5 167,509.5 197,539.5 167,569.5"
+            style="fill:#ce93d8; stroke:#444; stroke-width:1" />
+            <title>(nums[i] &lt; nums[j] &lt; nums[k])</title>
+            <text x="212" y="544.5"
                 font-family="monospace" font-size="13" fill="#222">
-                <tspan x="162" y="564.5">fast</tspan>
+                <tspan x="212" y="544.5">(nums[i] &lt; nums[j] &lt; nums[k])</tspan>
             </text>
             
-            <text x="97.5" y="564.5"
-        font-family="monospace" font-size="13" fill="#222">while</text>
+            <text x="159.2" y="544.5"
+        font-family="monospace" font-size="13" fill="#222">if</text> <text x="174.8" y="571.45"
+        font-family="monospace" font-size="13" fill="#222">+</text> 
         </g>
-                <g>
-                   <rect x="137" y="599.5"
-            width="154.8" height="30"
-            rx="3" ry="3"
-            style="fill:#90caf9; stroke:#444; stroke-width:1" />
-                   <title>slow = slow.next</title>
-            <text x="152" y="619.5"
-                font-family="monospace" font-size="13" fill="#222">
-                <tspan x="152" y="619.5">slow = slow.next</tspan>
-            </text>
-                   
-                   
-                </g>
-                <g>
-                   <rect x="137" y="648"
-            width="154.8" height="30"
-            rx="3" ry="3"
-            style="fill:#90caf9; stroke:#444; stroke-width:1" />
-                   <title>fast = fast.next</title>
-            <text x="152" y="668"
-                font-family="monospace" font-size="13" fill="#222">
-                <tspan x="152" y="668">fast = fast.next</tspan>
-            </text>
-                   
-                   
-                </g>
-                <g>
-                   <rect x="87" y="696.5"
-            width="232.79999999999998" height="30"
-            rx="3" ry="3"
-            style="fill:#90caf9; stroke:#444; stroke-width:1" />
-                   <title>slow.next = slow.next.next</title>
-            <text x="102" y="716.5"
-                font-family="monospace" font-size="13" fill="#222">
-                <tspan x="102" y="716.5">slow.next = slow.next.next</tspan>
-            </text>
-                   
-                   
-                </g>
             <g>
-                <rect x="87" y="745"
-            width="170.4" height="30"
+                <rect x="187" y="579.5"
+            width="115.80000000000001" height="30"
             rx="3" ry="3"
             style="fill:#90caf9; stroke:#444; stroke-width:1" />
                 
-                <line x1="257.4" y1="755" x2="262.4" y2="755"
+                <line x1="302.8" y1="589.5" x2="307.8" y2="589.5"
                 style="fill:#a5d6a7; stroke:#444; stroke-width:1" />
                 
-                <line x1="257.4" y1="765" x2="262.4" y2="765"
+                <line x1="302.8" y1="599.5" x2="307.8" y2="599.5"
                 style="fill:#a5d6a7; stroke:#444; stroke-width:1" />
 
-                <path d="M262.4, 749 L278.4, 760 L262.4, 771 Z" 
+                <path d="M307.8, 583.5 L323.8, 594.5 L307.8, 605.5 Z" 
         fill="#a5d6a7" stroke="#444" stroke-width="1" />
                              
-                <title>return before.next</title>
-            <text x="102" y="765"
+                <title>return true</title>
+            <text x="202" y="599.5"
                 font-family="monospace" font-size="13" fill="#222">
-                <tspan x="102" y="765">return before.next</tspan>
+                <tspan x="202" y="599.5">return true</tspan>
             </text>
                 
             </g>
+            <g>
+                <rect x="87" y="629.5"
+            width="123.6" height="30"
+            rx="3" ry="3"
+            style="fill:#90caf9; stroke:#444; stroke-width:1" />
+                
+                <line x1="210.6" y1="639.5" x2="215.6" y2="639.5"
+                style="fill:#a5d6a7; stroke:#444; stroke-width:1" />
+                
+                <line x1="210.6" y1="649.5" x2="215.6" y2="649.5"
+                style="fill:#a5d6a7; stroke:#444; stroke-width:1" />
+
+                <path d="M215.6, 633.5 L231.6, 644.5 L215.6, 655.5 Z" 
+        fill="#a5d6a7" stroke="#444" stroke-width="1" />
+                             
+                <title>return false</title>
+            <text x="102" y="649.5"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="102" y="649.5">return false</tspan>
+            </text>
+                
+            </g>
+                <g>
+                   <rect x="50" y="678"
+            width="396.59999999999997" height="30"
+            rx="2" ry="2"
+            style="fill:#C5E1A5; stroke:#444; stroke-width:1" />
+                   <title>console.log(increasingTriplet([1, 2, 3, 4, 5]))</title>
+            <text x="65" y="698"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="65" y="698">console.log(increasingTriplet([1, 2, 3, 4, 5]))</tspan>
+            </text>
+                   
+                   
+                </g>
+                <g>
+                   <rect x="50" y="726.5"
+            width="396.59999999999997" height="30"
+            rx="2" ry="2"
+            style="fill:#C5E1A5; stroke:#444; stroke-width:1" />
+                   <title>console.log(increasingTriplet([5, 4, 3, 2, 1]))</title>
+            <text x="65" y="746.5"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="65" y="746.5">console.log(increasingTriplet([5, 4, 3, 2, 1]))</tspan>
+            </text>
+                   
+                   
+                </g>
             <g>
                <rect x="25" y="13.75"
             width="216.6" height="24"
@@ -237,23 +245,23 @@
         fill="#333" />
             </g>
             <g>
-               <path d="M68.5, 110 L68.5 285 Q68.5 289
-                72.5 289
-                L79 289 "
+               <path d="M68.5, 110 L68.5 320 Q68.5 324
+                72.5 324
+                L79 324 "
         style="fill:none; stroke:#444; stroke-width:1" />
-               <path d="M79, 286 L87, 289 L79, 292 Z" 
+               <path d="M79, 321 L87, 324 L79, 327 Z" 
         fill="#333" />
             </g>
             <g>
-               <path d="M68.5, 110 L68.5 368.5 Q68.5 372.5
-                72.5 372.5
-                L79 372.5 "
+               <path d="M117, 354 L117 375 Q117 379
+                121 379
+                L129 379 "
         style="fill:none; stroke:#444; stroke-width:1" />
-               <path d="M79, 369.5 L87, 372.5 L79, 375.5 Z" 
+               <path d="M129, 376 L137, 379 L129, 382 Z" 
         fill="#333" />
             </g>
             <g>
-               <path d="M117, 402.5 L117 423.5 Q117 427.5
+               <path d="M117, 354 L117 423.5 Q117 427.5
                 121 427.5
                 L129 427.5 "
         style="fill:none; stroke:#444; stroke-width:1" />
@@ -261,7 +269,7 @@
         fill="#333" />
             </g>
             <g>
-               <path d="M117, 402.5 L117 472 Q117 476
+               <path d="M117, 354 L117 472 Q117 476
                 121 476
                 L129 476 "
         style="fill:none; stroke:#444; stroke-width:1" />
@@ -269,67 +277,55 @@
         fill="#333" />
             </g>
             <g>
-               <path d="M291.8, 476 L307.8 476  Q311.8 476
-                311.8 472
-                L311.8 330.5 Q311.8 322.5
-                307.8 322.5
-                L125 322.5  Q117 322.5
-                117 326.5
-                L117 334.5"
+               <path d="M117, 354 L117 535.5 Q117 539.5
+                121 539.5
+                L129 539.5 "
         style="fill:none; stroke:#444; stroke-width:1" />
-               <path d="M114, 334.5 L117, 342.5 L120, 334.5 Z" 
+               <path d="M129, 536.5 L137, 539.5 L129, 542.5 Z" 
         fill="#333" />
             </g>
             <g>
-               <path d="M68.5, 110 L68.5 555.5 Q68.5 559.5
-                72.5 559.5
-                L79 559.5 "
+               <path d="M167, 569.5 L167 590.5 Q167 594.5
+                171 594.5
+                L179 594.5 "
         style="fill:none; stroke:#444; stroke-width:1" />
-               <path d="M79, 556.5 L87, 559.5 L79, 562.5 Z" 
+               <path d="M179, 591.5 L187, 594.5 L179, 597.5 Z" 
         fill="#333" />
             </g>
             <g>
-               <path d="M117, 589.5 L117 610.5 Q117 614.5
-                121 614.5
-                L129 614.5 "
+               <path d="M323.8, 594.5 L469.2 594.5  Q473.2 594.5
+                473.2 590.5
+                L473.2 282 Q473.2 274
+                469.2 274
+                L125 274  Q117 274
+                117 278
+                L117 286"
         style="fill:none; stroke:#444; stroke-width:1" />
-               <path d="M129, 611.5 L137, 614.5 L129, 617.5 Z" 
+               <path d="M114, 286 L117, 294 L120, 286 Z" 
         fill="#333" />
             </g>
             <g>
-               <path d="M117, 589.5 L117 659 Q117 663
-                121 663
-                L129 663 "
+               <path d="M68.5, 110 L68.5 640.5 Q68.5 644.5
+                72.5 644.5
+                L79 644.5 "
         style="fill:none; stroke:#444; stroke-width:1" />
-               <path d="M129, 660 L137, 663 L129, 666 Z" 
+               <path d="M79, 641.5 L87, 644.5 L79, 647.5 Z" 
         fill="#333" />
             </g>
             <g>
-               <path d="M291.8, 663 L307.8 663  Q311.8 663
-                311.8 659
-                L311.8 517.5 Q311.8 509.5
-                307.8 509.5
-                L125 509.5  Q117 509.5
-                117 513.5
-                L117 521.5"
+               <path d="M25, 40 L25 689 Q25 693
+                29 693
+                L42 693 "
         style="fill:none; stroke:#444; stroke-width:1" />
-               <path d="M114, 521.5 L117, 529.5 L120, 521.5 Z" 
+               <path d="M42, 690 L50, 693 L42, 696 Z" 
         fill="#333" />
             </g>
             <g>
-               <path d="M68.5, 110 L68.5 707.5 Q68.5 711.5
-                72.5 711.5
-                L79 711.5 "
+               <path d="M25, 40 L25 737.5 Q25 741.5
+                29 741.5
+                L42 741.5 "
         style="fill:none; stroke:#444; stroke-width:1" />
-               <path d="M79, 708.5 L87, 711.5 L79, 714.5 Z" 
-        fill="#333" />
-            </g>
-            <g>
-               <path d="M68.5, 110 L68.5 756 Q68.5 760
-                72.5 760
-                L79 760 "
-        style="fill:none; stroke:#444; stroke-width:1" />
-               <path d="M79, 757 L87, 760 L79, 763 Z" 
+               <path d="M42, 738.5 L50, 741.5 L42, 744.5 Z" 
         fill="#333" />
             </g>
             </svg>

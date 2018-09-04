@@ -33,3 +33,51 @@ var groupAnagrams = function (strs) {
 console.log(
     groupAnagrams(["eat", "tea", "tan", "ate", "nat", "bat"])
 )
+
+
+/**
+ * @param {string[]} strs
+ * @return {string[][]}
+ */
+var groupAnagrams2 = function (strs) {
+    let out = [];
+    let locations = {};
+    let alpha = strs.sort().map(s => s.split('').sort().join(''));
+    for (let i = 0; i < alpha.length; i++) {
+        let s1 = alpha[i];
+        if (!locations[s1]) {
+            locations[s1] = [i];
+        } else {
+            locations[s1].push(i);
+        }
+        console.log(s1);
+    }
+
+    for (let w in locations) {
+        out.push(locations[w].map(idx => strs[idx]));
+    }
+
+    //If match is not the same, check again.
+    return out;
+};
+console.log(
+    groupAnagrams2(["eat", "tea", "tan", "ate", "nat", "bat"])
+)
+
+var groupAnagrams3 = function (strs) {
+    if (strs.length === 0) return [];
+    if (strs.length === 1) return [strs];
+
+    const groups = {};
+
+    for (const word of strs) {
+        let sum = 0;
+        for (let i = 0; i < word.length; i++) sum += (word.charCodeAt(i) ** 4);
+        groups[sum] ? groups[sum].push(word) : groups[sum] = [word];
+    }
+
+    return Object.values(groups);
+};
+console.log(
+    groupAnagrams3(["eat", "tea", "tan", "ate", "nat", "bat"])
+)

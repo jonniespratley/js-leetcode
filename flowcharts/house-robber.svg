@@ -1,6 +1,6 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
-                width="769" height="2372">
+                width="863" height="2885">
                 
             <g>
                 <rect x="50" y="80"
@@ -689,6 +689,187 @@
                 
             </g>
             <g>
+                <rect x="50" y="2380.5"
+            width="198.2" height="30"
+            style="fill:#a5d6a7; stroke:#444; stroke-width:1" />
+                    
+                <line x1="60" y1="2380.5" x2="60" y2="2410.5"
+                style="fill:#a5d6a7; stroke:#444; stroke-width:1" />
+                <line x1="238.2" y1="2380.5" x2="238.2" y2="2410.5"
+                style="fill:#a5d6a7; stroke:#444; stroke-width:1" />
+             
+                <title>function rob4(nums)</title>
+            <text x="75" y="2400.5"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="75" y="2400.5">function rob4(nums)</tspan>
+            </text>
+                
+            </g>
+                <g>
+                   <rect x="87" y="2429"
+            width="131.39999999999998" height="30"
+            rx="3" ry="3"
+            style="fill:#90caf9; stroke:#444; stroke-width:1" />
+                   <title>let memo = []</title>
+            <text x="102" y="2449"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="102" y="2449">let memo = []</tspan>
+            </text>
+                   
+                   
+                </g>
+            <g>
+                <rect x="87" y="2492.5"
+            width="252.79999999999998" height="30"
+            style="fill:#a5d6a7; stroke:#444; stroke-width:1" />
+                    
+                <line x1="97" y1="2492.5" x2="97" y2="2522.5"
+                style="fill:#a5d6a7; stroke:#444; stroke-width:1" />
+                <line x1="329.79999999999995" y1="2492.5" x2="329.79999999999995" y2="2522.5"
+                style="fill:#a5d6a7; stroke:#444; stroke-width:1" />
+             
+                <title>function _recursiveCall(i)</title>
+            <text x="112" y="2512.5"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="112" y="2512.5">function _recursiveCall(i)</tspan>
+            </text>
+                
+            </g><g>
+            <rect x="154" y="2556"
+            width="200.4" height="30"
+            rx="3" ry="3"
+            style="fill:#ce93d8; stroke:#444; stroke-width:1" />                
+            <polygon points="124,2571 154,2541 184,2571 154,2601"
+            style="fill:#ce93d8; stroke:#444; stroke-width:1" />
+            <title>(i &gt;= nums.length)</title>
+            <text x="199" y="2576"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="199" y="2576">(i &gt;= nums.length)</tspan>
+            </text>
+            
+            <text x="146.2" y="2576"
+        font-family="monospace" font-size="13" fill="#222">if</text> <text x="161.8" y="2602.95"
+        font-family="monospace" font-size="13" fill="#222">+</text> 
+        </g>
+            <g>
+                <rect x="174" y="2611"
+            width="92.4" height="30"
+            rx="3" ry="3"
+            style="fill:#90caf9; stroke:#444; stroke-width:1" />
+                
+                <line x1="266.4" y1="2621" x2="271.4" y2="2621"
+                style="fill:#a5d6a7; stroke:#444; stroke-width:1" />
+                
+                <line x1="266.4" y1="2631" x2="271.4" y2="2631"
+                style="fill:#a5d6a7; stroke:#444; stroke-width:1" />
+
+                <path d="M271.4, 2615 L287.4, 2626 L271.4, 2637 Z" 
+        fill="#a5d6a7" stroke="#444" stroke-width="1" />
+                             
+                <title>return 0</title>
+            <text x="189" y="2631"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="189" y="2631">return 0</tspan>
+            </text>
+                
+            </g><g>
+            <rect x="154" y="2676"
+            width="239.39999999999998" height="30"
+            rx="3" ry="3"
+            style="fill:#ce93d8; stroke:#444; stroke-width:1" />                
+            <polygon points="124,2691 154,2661 184,2691 154,2721"
+            style="fill:#ce93d8; stroke:#444; stroke-width:1" />
+            <title>(memo[i] === undefined)</title>
+            <text x="199" y="2696"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="199" y="2696">(memo[i] === undefined)</tspan>
+            </text>
+            
+            <text x="146.2" y="2696"
+        font-family="monospace" font-size="13" fill="#222">if</text> <text x="161.8" y="2722.95"
+        font-family="monospace" font-size="13" fill="#222">+</text> <text x="397.29999999999995" y="2689.05"
+        font-family="monospace" font-size="13" fill="#222">-</text>
+        </g>
+                <g>
+                   <rect x="174" y="2731"
+            width="443.4" height="30"
+            rx="3" ry="3"
+            style="fill:#90caf9; stroke:#444; stroke-width:1" />
+                   <title>memo[i] = Math.max(nums[i] + _recursiveCall(i + 2), _recursiveCall(i + 1))</title>
+            <text x="189" y="2751"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="189" y="2751">memo[i] = Math.max(nums[i] + _recursiveCall(i + 2)...</tspan>
+            </text>
+                   
+                   
+                </g>
+            <g>
+                <rect x="174" y="2779.5"
+            width="139.2" height="30"
+            rx="3" ry="3"
+            style="fill:#90caf9; stroke:#444; stroke-width:1" />
+                
+                <line x1="313.2" y1="2789.5" x2="318.2" y2="2789.5"
+                style="fill:#a5d6a7; stroke:#444; stroke-width:1" />
+                
+                <line x1="313.2" y1="2799.5" x2="318.2" y2="2799.5"
+                style="fill:#a5d6a7; stroke:#444; stroke-width:1" />
+
+                <path d="M318.2, 2783.5 L334.2, 2794.5 L318.2, 2805.5 Z" 
+        fill="#a5d6a7" stroke="#444" stroke-width="1" />
+                             
+                <title>return memo[i]</title>
+            <text x="189" y="2799.5"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="189" y="2799.5">return memo[i]</tspan>
+            </text>
+                
+            </g>
+            <g>
+                <rect x="677.4" y="2731"
+            width="139.2" height="30"
+            rx="3" ry="3"
+            style="fill:#90caf9; stroke:#444; stroke-width:1" />
+                
+                <line x1="816.5999999999999" y1="2741" x2="821.5999999999999" y2="2741"
+                style="fill:#a5d6a7; stroke:#444; stroke-width:1" />
+                
+                <line x1="816.5999999999999" y1="2751" x2="821.5999999999999" y2="2751"
+                style="fill:#a5d6a7; stroke:#444; stroke-width:1" />
+
+                <path d="M821.5999999999999, 2735 L837.5999999999999, 2746 L821.5999999999999, 2757 Z" 
+        fill="#a5d6a7" stroke="#444" stroke-width="1" />
+                             
+                <title>return memo[i]</title>
+            <text x="692.4" y="2751"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="692.4" y="2751">return memo[i]</tspan>
+            </text>
+                
+            </g>
+            <g>
+                <rect x="87" y="2829.5"
+            width="217.2" height="30"
+            rx="3" ry="3"
+            style="fill:#90caf9; stroke:#444; stroke-width:1" />
+                
+                <line x1="304.2" y1="2839.5" x2="309.2" y2="2839.5"
+                style="fill:#a5d6a7; stroke:#444; stroke-width:1" />
+                
+                <line x1="304.2" y1="2849.5" x2="309.2" y2="2849.5"
+                style="fill:#a5d6a7; stroke:#444; stroke-width:1" />
+
+                <path d="M309.2, 2833.5 L325.2, 2844.5 L309.2, 2855.5 Z" 
+        fill="#a5d6a7" stroke="#444" stroke-width="1" />
+                             
+                <title>return _recursiveCall(0)</title>
+            <text x="102" y="2849.5"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="102" y="2849.5">return _recursiveCall(0)</tspan>
+            </text>
+                
+            </g>
+            <g>
                <rect x="25" y="13.75"
             width="216.6" height="24"
             style="fill:#fff59d; stroke:#444; stroke-width:1" />
@@ -1064,6 +1245,88 @@
                 L79 2332 "
         style="fill:none; stroke:#444; stroke-width:1" />
                <path d="M79, 2329 L87, 2332 L79, 2335 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M25, 40 L25 2391.5 Q25 2395.5
+                29 2395.5
+                L42 2395.5 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M42, 2392.5 L50, 2395.5 L42, 2398.5 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M68.5, 2410.5 L68.5 2440 Q68.5 2444
+                72.5 2444
+                L79 2444 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M79, 2441 L87, 2444 L79, 2447 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M68.5, 2410.5 L68.5 2503.5 Q68.5 2507.5
+                72.5 2507.5
+                L79 2507.5 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M79, 2504.5 L87, 2507.5 L79, 2510.5 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M105.5, 2522.5 L105.5 2567 Q105.5 2571
+                109.5 2571
+                L116 2571 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M116, 2568 L124, 2571 L116, 2574 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M154, 2601 L154 2622 Q154 2626
+                158 2626
+                L166 2626 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M166, 2623 L174, 2626 L166, 2629 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M105.5, 2522.5 L105.5 2687 Q105.5 2691
+                109.5 2691
+                L116 2691 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M116, 2688 L124, 2691 L116, 2694 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M154, 2721 L154 2742 Q154 2746
+                158 2746
+                L166 2746 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M166, 2743 L174, 2746 L166, 2749 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M154, 2721 L154 2790.5 Q154 2794.5
+                158 2794.5
+                L166 2794.5 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M166, 2791.5 L174, 2794.5 L166, 2797.5 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M393.4, 2691 L653.4 2691  Q657.4 2691
+                657.4 2695
+                L657.4 2738 Q657.4 2746
+                661.4 2746
+                L669.4 2746 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M669.4, 2743 L677.4, 2746 L669.4, 2749 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M68.5, 2410.5 L68.5 2840.5 Q68.5 2844.5
+                72.5 2844.5
+                L79 2844.5 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M79, 2841.5 L87, 2844.5 L79, 2847.5 Z" 
         fill="#333" />
             </g>
             </svg>

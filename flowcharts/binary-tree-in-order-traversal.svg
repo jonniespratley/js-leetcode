@@ -1,0 +1,532 @@
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+                width="375" height="1241">
+                
+            <g>
+                <rect x="50" y="80"
+            width="299.6" height="30"
+            style="fill:#a5d6a7; stroke:#444; stroke-width:1" />
+                    
+                <line x1="60" y1="80" x2="60" y2="110"
+                style="fill:#a5d6a7; stroke:#444; stroke-width:1" />
+                <line x1="339.6" y1="80" x2="339.6" y2="110"
+                style="fill:#a5d6a7; stroke:#444; stroke-width:1" />
+             
+                <title>function inorderTraversal1(node)</title>
+            <text x="75" y="100"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="75" y="100">function inorderTraversal1(node)</tspan>
+            </text>
+                
+            </g>
+                <g>
+                   <rect x="87" y="128.5"
+            width="123.6" height="30"
+            rx="3" ry="3"
+            style="fill:#90caf9; stroke:#444; stroke-width:1" />
+                   <title>let res = []</title>
+            <text x="102" y="148.5"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="102" y="148.5">let res = []</tspan>
+            </text>
+                   
+                   
+                </g>
+                <g>
+                   <rect x="87" y="177"
+            width="131.39999999999998" height="30"
+            rx="2" ry="2"
+            style="fill:#C5E1A5; stroke:#444; stroke-width:1" />
+                   <title>go(node, res)</title>
+            <text x="102" y="197"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="102" y="197">go(node, res)</tspan>
+            </text>
+                   
+                   
+                </g>
+            <g>
+                <rect x="87" y="225.5"
+            width="108" height="30"
+            rx="3" ry="3"
+            style="fill:#90caf9; stroke:#444; stroke-width:1" />
+                
+                <line x1="195" y1="235.5" x2="200" y2="235.5"
+                style="fill:#a5d6a7; stroke:#444; stroke-width:1" />
+                
+                <line x1="195" y1="245.5" x2="200" y2="245.5"
+                style="fill:#a5d6a7; stroke:#444; stroke-width:1" />
+
+                <path d="M200, 229.5 L216, 240.5 L200, 251.5 Z" 
+        fill="#a5d6a7" stroke="#444" stroke-width="1" />
+                             
+                <title>return res</title>
+            <text x="102" y="245.5"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="102" y="245.5">return res</tspan>
+            </text>
+                
+            </g>
+            <g>
+                <rect x="50" y="289"
+            width="221.6" height="30"
+            style="fill:#a5d6a7; stroke:#444; stroke-width:1" />
+                    
+                <line x1="60" y1="289" x2="60" y2="319"
+                style="fill:#a5d6a7; stroke:#444; stroke-width:1" />
+                <line x1="261.6" y1="289" x2="261.6" y2="319"
+                style="fill:#a5d6a7; stroke:#444; stroke-width:1" />
+             
+                <title>function go(node, res)</title>
+            <text x="75" y="309"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="75" y="309">function go(node, res)</tspan>
+            </text>
+                
+            </g><g>
+            <rect x="117" y="352.5"
+            width="114.6" height="30"
+            rx="3" ry="3"
+            style="fill:#ce93d8; stroke:#444; stroke-width:1" />                
+            <polygon points="87,367.5 117,337.5 147,367.5 117,397.5"
+            style="fill:#ce93d8; stroke:#444; stroke-width:1" />
+            <title>(!node)</title>
+            <text x="162" y="372.5"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="162" y="372.5">(!node)</tspan>
+            </text>
+            
+            <text x="109.2" y="372.5"
+        font-family="monospace" font-size="13" fill="#222">if</text> <text x="124.8" y="399.45"
+        font-family="monospace" font-size="13" fill="#222">+</text> 
+        </g>
+            <g>
+                <rect x="137" y="407.5"
+            width="76.8" height="30"
+            rx="3" ry="3"
+            style="fill:#90caf9; stroke:#444; stroke-width:1" />
+                
+                <line x1="213.8" y1="417.5" x2="218.8" y2="417.5"
+                style="fill:#a5d6a7; stroke:#444; stroke-width:1" />
+                
+                <line x1="213.8" y1="427.5" x2="218.8" y2="427.5"
+                style="fill:#a5d6a7; stroke:#444; stroke-width:1" />
+
+                <path d="M218.8, 411.5 L234.8, 422.5 L218.8, 433.5 Z" 
+        fill="#a5d6a7" stroke="#444" stroke-width="1" />
+                             
+                <title>return</title>
+            <text x="152" y="427.5"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="152" y="427.5">return</tspan>
+            </text>
+                
+            </g>
+                <g>
+                   <rect x="87" y="457.5"
+            width="170.4" height="30"
+            rx="2" ry="2"
+            style="fill:#C5E1A5; stroke:#444; stroke-width:1" />
+                   <title>go(node.left, res)</title>
+            <text x="102" y="477.5"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="102" y="477.5">go(node.left, res)</tspan>
+            </text>
+                   
+                   
+                </g>
+                <g>
+                   <rect x="87" y="506"
+            width="170.4" height="30"
+            rx="2" ry="2"
+            style="fill:#C5E1A5; stroke:#444; stroke-width:1" />
+                   <title>res.push(node.val)</title>
+            <text x="102" y="526"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="102" y="526">res.push(node.val)</tspan>
+            </text>
+                   
+                   
+                </g>
+                <g>
+                   <rect x="87" y="554.5"
+            width="178.2" height="30"
+            rx="2" ry="2"
+            style="fill:#C5E1A5; stroke:#444; stroke-width:1" />
+                   <title>go(node.right, res)</title>
+            <text x="102" y="574.5"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="102" y="574.5">go(node.right, res)</tspan>
+            </text>
+                   
+                   
+                </g>
+            <g>
+                <rect x="50" y="618"
+            width="291.79999999999995" height="30"
+            style="fill:#a5d6a7; stroke:#444; stroke-width:1" />
+                    
+                <line x1="60" y1="618" x2="60" y2="648"
+                style="fill:#a5d6a7; stroke:#444; stroke-width:1" />
+                <line x1="331.79999999999995" y1="618" x2="331.79999999999995" y2="648"
+                style="fill:#a5d6a7; stroke:#444; stroke-width:1" />
+             
+                <title>function inorderTraversal(node)</title>
+            <text x="75" y="638"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="75" y="638">function inorderTraversal(node)</tspan>
+            </text>
+                
+            </g>
+                <g>
+                   <rect x="87" y="666.5"
+            width="139.2" height="30"
+            rx="3" ry="3"
+            style="fill:#90caf9; stroke:#444; stroke-width:1" />
+                   <title>let stack = []</title>
+            <text x="102" y="686.5"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="102" y="686.5">let stack = []</tspan>
+            </text>
+                   
+                   
+                </g>
+                <g>
+                   <rect x="87" y="715"
+            width="123.6" height="30"
+            rx="3" ry="3"
+            style="fill:#90caf9; stroke:#444; stroke-width:1" />
+                   <title>let res = []</title>
+            <text x="102" y="735"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="102" y="735">let res = []</tspan>
+            </text>
+                   
+                   
+                </g><g>
+
+            <rect x="117" y="798.5"
+            width="216" height="30"
+            rx="3" ry="3"
+            style="fill:#b39ddb; stroke:#444; stroke-width:1" />
+            <polygon points="87,813.5 117,783.5 147,813.5 117,843.5"
+            style="fill:#b39ddb; stroke:#444; stroke-width:1" />
+                
+            <title>node || stack.length</title>
+            <text x="162" y="818.5"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="162" y="818.5">node || stack.length</tspan>
+            </text>
+            
+            <text x="97.5" y="818.5"
+        font-family="monospace" font-size="13" fill="#222">while</text>
+        </g><g>
+
+            <rect x="167" y="888.5"
+            width="91.2" height="30"
+            rx="3" ry="3"
+            style="fill:#b39ddb; stroke:#444; stroke-width:1" />
+            <polygon points="137,903.5 167,873.5 197,903.5 167,933.5"
+            style="fill:#b39ddb; stroke:#444; stroke-width:1" />
+                
+            <title>node</title>
+            <text x="212" y="908.5"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="212" y="908.5">node</tspan>
+            </text>
+            
+            <text x="147.5" y="908.5"
+        font-family="monospace" font-size="13" fill="#222">while</text>
+        </g>
+                <g>
+                   <rect x="187" y="943.5"
+            width="154.8" height="30"
+            rx="2" ry="2"
+            style="fill:#C5E1A5; stroke:#444; stroke-width:1" />
+                   <title>stack.push(node)</title>
+            <text x="202" y="963.5"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="202" y="963.5">stack.push(node)</tspan>
+            </text>
+                   
+                   
+                </g>
+                <g>
+                   <rect x="187" y="992"
+            width="154.8" height="30"
+            rx="3" ry="3"
+            style="fill:#90caf9; stroke:#444; stroke-width:1" />
+                   <title>node = node.left</title>
+            <text x="202" y="1012"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="202" y="1012">node = node.left</tspan>
+            </text>
+                   
+                   
+                </g>
+                <g>
+                   <rect x="137" y="1040.5"
+            width="170.4" height="30"
+            rx="3" ry="3"
+            style="fill:#90caf9; stroke:#444; stroke-width:1" />
+                   <title>node = stack.pop()</title>
+            <text x="152" y="1060.5"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="152" y="1060.5">node = stack.pop()</tspan>
+            </text>
+                   
+                   
+                </g>
+                <g>
+                   <rect x="137" y="1089"
+            width="170.4" height="30"
+            rx="2" ry="2"
+            style="fill:#C5E1A5; stroke:#444; stroke-width:1" />
+                   <title>res.push(node.val)</title>
+            <text x="152" y="1109"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="152" y="1109">res.push(node.val)</tspan>
+            </text>
+                   
+                   
+                </g>
+                <g>
+                   <rect x="137" y="1137.5"
+            width="162.6" height="30"
+            rx="3" ry="3"
+            style="fill:#90caf9; stroke:#444; stroke-width:1" />
+                   <title>node = node.right</title>
+            <text x="152" y="1157.5"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="152" y="1157.5">node = node.right</tspan>
+            </text>
+                   
+                   
+                </g>
+            <g>
+                <rect x="87" y="1186"
+            width="108" height="30"
+            rx="3" ry="3"
+            style="fill:#90caf9; stroke:#444; stroke-width:1" />
+                
+                <line x1="195" y1="1196" x2="200" y2="1196"
+                style="fill:#a5d6a7; stroke:#444; stroke-width:1" />
+                
+                <line x1="195" y1="1206" x2="200" y2="1206"
+                style="fill:#a5d6a7; stroke:#444; stroke-width:1" />
+
+                <path d="M200, 1190 L216, 1201 L200, 1212 Z" 
+        fill="#a5d6a7" stroke="#444" stroke-width="1" />
+                             
+                <title>return res</title>
+            <text x="102" y="1206"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="102" y="1206">return res</tspan>
+            </text>
+                
+            </g>
+            <g>
+               <rect x="25" y="13.75"
+            width="216.6" height="24"
+            style="fill:#fff59d; stroke:#444; stroke-width:1" />
+               <circle cx="25" cy="25" r="15"
+        style="fill:#fff59d; stroke:#444; stroke-width:1" />
+               <title>Program: source module</title>
+            <text x="55" y="30"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="55" y="30">Program: source module</tspan>
+            </text>
+            </g>
+            <g>
+               <path d="M25, 40 L25 91 Q25 95
+                29 95
+                L42 95 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M42, 92 L50, 95 L42, 98 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M68.5, 110 L68.5 139.5 Q68.5 143.5
+                72.5 143.5
+                L79 143.5 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M79, 140.5 L87, 143.5 L79, 146.5 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M68.5, 110 L68.5 188 Q68.5 192
+                72.5 192
+                L79 192 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M79, 189 L87, 192 L79, 195 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M68.5, 110 L68.5 236.5 Q68.5 240.5
+                72.5 240.5
+                L79 240.5 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M79, 237.5 L87, 240.5 L79, 243.5 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M25, 40 L25 300 Q25 304
+                29 304
+                L42 304 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M42, 301 L50, 304 L42, 307 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M68.5, 319 L68.5 363.5 Q68.5 367.5
+                72.5 367.5
+                L79 367.5 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M79, 364.5 L87, 367.5 L79, 370.5 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M117, 397.5 L117 418.5 Q117 422.5
+                121 422.5
+                L129 422.5 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M129, 419.5 L137, 422.5 L129, 425.5 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M68.5, 319 L68.5 468.5 Q68.5 472.5
+                72.5 472.5
+                L79 472.5 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M79, 469.5 L87, 472.5 L79, 475.5 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M68.5, 319 L68.5 517 Q68.5 521
+                72.5 521
+                L79 521 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M79, 518 L87, 521 L79, 524 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M68.5, 319 L68.5 565.5 Q68.5 569.5
+                72.5 569.5
+                L79 569.5 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M79, 566.5 L87, 569.5 L79, 572.5 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M25, 40 L25 629 Q25 633
+                29 633
+                L42 633 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M42, 630 L50, 633 L42, 636 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M68.5, 648 L68.5 677.5 Q68.5 681.5
+                72.5 681.5
+                L79 681.5 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M79, 678.5 L87, 681.5 L79, 684.5 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M68.5, 648 L68.5 726 Q68.5 730
+                72.5 730
+                L79 730 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M79, 727 L87, 730 L79, 733 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M68.5, 648 L68.5 809.5 Q68.5 813.5
+                72.5 813.5
+                L79 813.5 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M79, 810.5 L87, 813.5 L79, 816.5 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M117, 843.5 L117 899.5 Q117 903.5
+                121 903.5
+                L129 903.5 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M129, 900.5 L137, 903.5 L129, 906.5 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M167, 933.5 L167 954.5 Q167 958.5
+                171 958.5
+                L179 958.5 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M179, 955.5 L187, 958.5 L179, 961.5 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M167, 933.5 L167 1003 Q167 1007
+                171 1007
+                L179 1007 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M179, 1004 L187, 1007 L179, 1010 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M341.8, 1007 L357.8 1007  Q361.8 1007
+                361.8 1003
+                L361.8 861.5 Q361.8 853.5
+                357.8 853.5
+                L175 853.5  Q167 853.5
+                167 857.5
+                L167 865.5"
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M164, 865.5 L167, 873.5 L170, 865.5 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M117, 843.5 L117 1051.5 Q117 1055.5
+                121 1055.5
+                L129 1055.5 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M129, 1052.5 L137, 1055.5 L129, 1058.5 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M117, 843.5 L117 1100 Q117 1104
+                121 1104
+                L129 1104 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M129, 1101 L137, 1104 L129, 1107 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M117, 843.5 L117 1148.5 Q117 1152.5
+                121 1152.5
+                L129 1152.5 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M129, 1149.5 L137, 1152.5 L129, 1155.5 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M299.6, 1152.5 L357.8 1152.5  Q361.8 1152.5
+                361.8 1148.5
+                L361.8 771.5 Q361.8 763.5
+                357.8 763.5
+                L125 763.5  Q117 763.5
+                117 767.5
+                L117 775.5"
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M114, 775.5 L117, 783.5 L120, 775.5 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M68.5, 648 L68.5 1197 Q68.5 1201
+                72.5 1201
+                L79 1201 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M79, 1198 L87, 1201 L79, 1204 Z" 
+        fill="#333" />
+            </g>
+            </svg>

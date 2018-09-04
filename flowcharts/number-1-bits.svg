@@ -1,0 +1,137 @@
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+                width="530" height="329">
+                
+            <g>
+                <rect x="50" y="80"
+            width="245" height="30"
+            style="fill:#a5d6a7; stroke:#444; stroke-width:1" />
+                    
+                <line x1="60" y1="80" x2="60" y2="110"
+                style="fill:#a5d6a7; stroke:#444; stroke-width:1" />
+                <line x1="285" y1="80" x2="285" y2="110"
+                style="fill:#a5d6a7; stroke:#444; stroke-width:1" />
+             
+                <title>function hammingWeight(n)</title>
+            <text x="75" y="100"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="75" y="100">function hammingWeight(n)</tspan>
+            </text>
+                
+            </g>
+            <g>
+                <rect x="87" y="128.5"
+            width="396.59999999999997" height="30"
+            rx="3" ry="3"
+            style="fill:#90caf9; stroke:#444; stroke-width:1" />
+                
+                <line x1="483.59999999999997" y1="138.5" x2="488.59999999999997" y2="138.5"
+                style="fill:#a5d6a7; stroke:#444; stroke-width:1" />
+                
+                <line x1="483.59999999999997" y1="148.5" x2="488.59999999999997" y2="148.5"
+                style="fill:#a5d6a7; stroke:#444; stroke-width:1" />
+
+                <path d="M488.59999999999997, 132.5 L504.59999999999997, 143.5 L488.59999999999997, 154.5 Z" 
+        fill="#a5d6a7" stroke="#444" stroke-width="1" />
+                             
+                <title>return n.toString(2).split(&apos;0&apos;).join(&apos;&apos;).length</title>
+            <text x="102" y="148.5"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="102" y="148.5">return n.toString(2).split(&apos;0&apos;).join(&apos;&apos;).length</tspan>
+            </text>
+                
+            </g>
+                <g>
+                   <rect x="124" y="177"
+            width="131.39999999999998" height="30"
+            rx="2" ry="2"
+            style="fill:#C5E1A5; stroke:#444; stroke-width:1" />
+                   <title>n.toString(2)</title>
+            <text x="139" y="197"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="139" y="197">n.toString(2)</tspan>
+            </text>
+                   
+                   
+                </g>
+                <g>
+                   <rect x="124" y="225.5"
+            width="115.8" height="30"
+            rx="2" ry="2"
+            style="fill:#C5E1A5; stroke:#444; stroke-width:1" />
+                   <title>.split(&apos;0&apos;)</title>
+            <text x="139" y="245.5"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="139" y="245.5">.split(&apos;0&apos;)</tspan>
+            </text>
+                   <circle cx="130" cy="249.5" r="4"
+        style="fill:#ede7f6; stroke:#444; stroke-width:1" />
+                   
+                </g>
+                <g>
+                   <rect x="124" y="274"
+            width="100.2" height="30"
+            rx="2" ry="2"
+            style="fill:#C5E1A5; stroke:#444; stroke-width:1" />
+                   <title>.join(&apos;&apos;)</title>
+            <text x="139" y="294"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="139" y="294">.join(&apos;&apos;)</tspan>
+            </text>
+                   <circle cx="130" cy="298" r="4"
+        style="fill:#ede7f6; stroke:#444; stroke-width:1" />
+                   
+                </g>
+            <g>
+               <rect x="25" y="13.75"
+            width="216.6" height="24"
+            style="fill:#fff59d; stroke:#444; stroke-width:1" />
+               <circle cx="25" cy="25" r="15"
+        style="fill:#fff59d; stroke:#444; stroke-width:1" />
+               <title>Program: source module</title>
+            <text x="55" y="30"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="55" y="30">Program: source module</tspan>
+            </text>
+            </g>
+            <g>
+               <path d="M25, 40 L25 91 Q25 95
+                29 95
+                L42 95 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M42, 92 L50, 95 L42, 98 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M68.5, 110 L68.5 139.5 Q68.5 143.5
+                72.5 143.5
+                L79 143.5 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M79, 140.5 L87, 143.5 L79, 146.5 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M105.5, 158.5 L105.5 188 Q105.5 192
+                109.5 192
+                L116 192 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M116, 189 L124, 192 L116, 195 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M105.5, 158.5 L105.5 236.5 Q105.5 240.5
+                109.5 240.5
+                L116 240.5 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M116, 237.5 L124, 240.5 L116, 243.5 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M105.5, 158.5 L105.5 285 Q105.5 289
+                109.5 289
+                L116 289 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M116, 286 L124, 289 L116, 292 Z" 
+        fill="#333" />
+            </g>
+            </svg>

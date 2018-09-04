@@ -1,6 +1,6 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
-                width="756" height="1776">
+                width="433" height="1776">
                 
             <g>
                 <rect x="50" y="80"
@@ -236,112 +236,98 @@
             </g>
             <g>
                 <rect x="50" y="977"
-            width="323" height="30"
+            width="307.4" height="30"
             style="fill:#a5d6a7; stroke:#444; stroke-width:1" />
                     
                 <line x1="60" y1="977" x2="60" y2="1007"
                 style="fill:#a5d6a7; stroke:#444; stroke-width:1" />
-                <line x1="363" y1="977" x2="363" y2="1007"
+                <line x1="347.4" y1="977" x2="347.4" y2="1007"
                 style="fill:#a5d6a7; stroke:#444; stroke-width:1" />
              
-                <title>containsDuplicate2 = function(nums)</title>
+                <title>function containsDuplicate2(nums)</title>
             <text x="75" y="997"
                 font-family="monospace" font-size="13" fill="#222">
-                <tspan x="75" y="997">containsDuplicate2 = function(nums)</tspan>
+                <tspan x="75" y="997">function containsDuplicate2(nums)</tspan>
             </text>
                 
             </g>
                 <g>
                    <rect x="87" y="1025.5"
-            width="162.6" height="30"
+            width="131.39999999999998" height="30"
             rx="3" ry="3"
             style="fill:#90caf9; stroke:#444; stroke-width:1" />
-                   <title>var counter = {*}</title>
+                   <title>let obj = {*}</title>
             <text x="102" y="1045.5"
                 font-family="monospace" font-size="13" fill="#222">
-                <tspan x="102" y="1045.5">var counter = {*}</tspan>
+                <tspan x="102" y="1045.5">let obj = {*}</tspan>
             </text>
                    
                    
                 </g><g>
 
             <rect x="117" y="1109"
-            width="177" height="30"
+            width="153.6" height="30"
             rx="3" ry="3"
             style="fill:#b39ddb; stroke:#444; stroke-width:1" />
             <polygon points="87,1124 117,1094 147,1124 117,1154"
             style="fill:#b39ddb; stroke:#444; stroke-width:1" />
                 
-            <title>i &lt; nums.length</title>
+            <title> num of nums</title>
             <text x="162" y="1129"
                 font-family="monospace" font-size="13" fill="#222">
-                <tspan x="162" y="1129">i &lt; nums.length</tspan>
+                <tspan x="162" y="1129"> num of nums</tspan>
             </text>
             
             <text x="105.3" y="1129"
         font-family="monospace" font-size="13" fill="#222">for</text>
-        </g>
-                <g>
-                   <rect x="137" y="1164"
-            width="53.4" height="30"
-            rx="3" ry="3"
-            style="fill:#90caf9; stroke:#444; stroke-width:1" />
-                   <title>i++</title>
-            <text x="152" y="1184"
-                font-family="monospace" font-size="13" fill="#222">
-                <tspan x="152" y="1184">i++</tspan>
-            </text>
-                   
-                   
-                </g><g>
-            <rect x="167" y="1227.5"
-            width="317.4" height="30"
+        </g><g>
+            <rect x="167" y="1179"
+            width="138" height="30"
             rx="3" ry="3"
             style="fill:#ce93d8; stroke:#444; stroke-width:1" />                
-            <polygon points="137,1242.5 167,1212.5 197,1242.5 167,1272.5"
+            <polygon points="137,1194 167,1164 197,1194 167,1224"
             style="fill:#ce93d8; stroke:#444; stroke-width:1" />
-            <title>(counter.hasOwnProperty(nums[i]))</title>
-            <text x="212" y="1247.5"
+            <title>(obj[num])</title>
+            <text x="212" y="1199"
                 font-family="monospace" font-size="13" fill="#222">
-                <tspan x="212" y="1247.5">(counter.hasOwnProperty(nums[i]))</tspan>
+                <tspan x="212" y="1199">(obj[num])</tspan>
             </text>
             
-            <text x="159.2" y="1247.5"
-        font-family="monospace" font-size="13" fill="#222">if</text> <text x="174.8" y="1274.45"
-        font-family="monospace" font-size="13" fill="#222">+</text> <text x="488.29999999999995" y="1240.55"
-        font-family="monospace" font-size="13" fill="#222">-</text>
+            <text x="159.2" y="1199"
+        font-family="monospace" font-size="13" fill="#222">if</text> <text x="174.8" y="1225.95"
+        font-family="monospace" font-size="13" fill="#222">+</text> 
         </g>
             <g>
-                <rect x="187" y="1282.5"
+                <rect x="187" y="1234"
             width="115.80000000000001" height="30"
             rx="3" ry="3"
             style="fill:#90caf9; stroke:#444; stroke-width:1" />
                 
-                <line x1="302.8" y1="1292.5" x2="307.8" y2="1292.5"
+                <line x1="302.8" y1="1244" x2="307.8" y2="1244"
                 style="fill:#a5d6a7; stroke:#444; stroke-width:1" />
                 
-                <line x1="302.8" y1="1302.5" x2="307.8" y2="1302.5"
+                <line x1="302.8" y1="1254" x2="307.8" y2="1254"
                 style="fill:#a5d6a7; stroke:#444; stroke-width:1" />
 
-                <path d="M307.8, 1286.5 L323.8, 1297.5 L307.8, 1308.5 Z" 
+                <path d="M307.8, 1238 L323.8, 1249 L307.8, 1260 Z" 
         fill="#a5d6a7" stroke="#444" stroke-width="1" />
                              
                 <title>return true</title>
-            <text x="202" y="1302.5"
+            <text x="202" y="1254"
                 font-family="monospace" font-size="13" fill="#222">
-                <tspan x="202" y="1302.5">return true</tspan>
+                <tspan x="202" y="1254">return true</tspan>
             </text>
                 
             </g>
                 <g>
-                   <rect x="544.4" y="1282.5"
-            width="186" height="30"
+                   <rect x="137" y="1284"
+            width="147" height="30"
             rx="3" ry="3"
             style="fill:#90caf9; stroke:#444; stroke-width:1" />
-                   <title>counter[nums[i]] = 1</title>
-            <text x="559.4" y="1302.5"
+                   <title>obj[num] = true</title>
+            <text x="152" y="1304"
                 font-family="monospace" font-size="13" fill="#222">
-                <tspan x="559.4" y="1302.5">counter[nums[i]] = 1</tspan>
+                <tspan x="152" y="1304">obj[num] = true</tspan>
             </text>
                    
                    
@@ -661,44 +647,34 @@
         fill="#333" />
             </g>
             <g>
-               <path d="M117, 1154 L117 1175 Q117 1179
-                121 1179
-                L129 1179 "
+               <path d="M117, 1154 L117 1190 Q117 1194
+                121 1194
+                L129 1194 "
         style="fill:none; stroke:#444; stroke-width:1" />
-               <path d="M129, 1176 L137, 1179 L129, 1182 Z" 
+               <path d="M129, 1191 L137, 1194 L129, 1197 Z" 
         fill="#333" />
             </g>
             <g>
-               <path d="M117, 1154 L117 1238.5 Q117 1242.5
-                121 1242.5
-                L129 1242.5 "
+               <path d="M167, 1224 L167 1245 Q167 1249
+                171 1249
+                L179 1249 "
         style="fill:none; stroke:#444; stroke-width:1" />
-               <path d="M129, 1239.5 L137, 1242.5 L129, 1245.5 Z" 
+               <path d="M179, 1246 L187, 1249 L179, 1252 Z" 
         fill="#333" />
             </g>
             <g>
-               <path d="M167, 1272.5 L167 1293.5 Q167 1297.5
-                171 1297.5
-                L179 1297.5 "
+               <path d="M117, 1154 L117 1295 Q117 1299
+                121 1299
+                L129 1299 "
         style="fill:none; stroke:#444; stroke-width:1" />
-               <path d="M179, 1294.5 L187, 1297.5 L179, 1300.5 Z" 
+               <path d="M129, 1296 L137, 1299 L129, 1302 Z" 
         fill="#333" />
             </g>
             <g>
-               <path d="M484.4, 1242.5 L520.4 1242.5  Q524.4 1242.5
-                524.4 1246.5
-                L524.4 1289.5 Q524.4 1297.5
-                528.4 1297.5
-                L536.4 1297.5 "
-        style="fill:none; stroke:#444; stroke-width:1" />
-               <path d="M536.4, 1294.5 L544.4, 1297.5 L536.4, 1300.5 Z" 
-        fill="#333" />
-            </g>
-            <g>
-               <path d="M730.4, 1297.5 L746.4 1297.5  Q750.4 1297.5
-                750.4 1293.5
-                L750.4 1082 Q750.4 1074
-                746.4 1074
+               <path d="M284, 1299 L339.8 1299  Q343.8 1299
+                343.8 1295
+                L343.8 1082 Q343.8 1074
+                339.8 1074
                 L125 1074  Q117 1074
                 117 1078
                 L117 1086"

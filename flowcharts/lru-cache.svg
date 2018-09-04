@@ -1,0 +1,460 @@
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+                width="612" height="1106">
+                
+            <g>
+                <rect x="50" y="80"
+            width="167" height="30"
+            style="fill:#80cbc4; stroke:#444; stroke-width:1" />
+                    
+                <line x1="60" y1="80" x2="60" y2="110"
+                style="fill:#80cbc4; stroke:#444; stroke-width:1" />
+                <line x1="207" y1="80" x2="207" y2="110"
+                style="fill:#80cbc4; stroke:#444; stroke-width:1" />
+             
+                <title>class LRUCache </title>
+            <text x="75" y="100"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="75" y="100">class LRUCache </tspan>
+            </text>
+                
+            </g>
+            <g>
+                <rect x="87" y="128.5"
+            width="213.79999999999998" height="30"
+            style="fill:#a5d6a7; stroke:#444; stroke-width:1" />
+                    
+                <line x1="97" y1="128.5" x2="97" y2="158.5"
+                style="fill:#a5d6a7; stroke:#444; stroke-width:1" />
+                <line x1="290.79999999999995" y1="128.5" x2="290.79999999999995" y2="158.5"
+                style="fill:#a5d6a7; stroke:#444; stroke-width:1" />
+             
+                <title>constructor(capacity)</title>
+            <text x="112" y="148.5"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="112" y="148.5">constructor(capacity)</tspan>
+            </text>
+                
+            </g>
+                <g>
+                   <rect x="124" y="177"
+            width="201.6" height="30"
+            rx="3" ry="3"
+            style="fill:#90caf9; stroke:#444; stroke-width:1" />
+                   <title>this.cache = new Map()</title>
+            <text x="139" y="197"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="139" y="197">this.cache = new Map()</tspan>
+            </text>
+                   
+                   
+                </g>
+                <g>
+                   <rect x="124" y="225.5"
+            width="217.2" height="30"
+            rx="3" ry="3"
+            style="fill:#90caf9; stroke:#444; stroke-width:1" />
+                   <title>this.capacity = capacity</title>
+            <text x="139" y="245.5"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="139" y="245.5">this.capacity = capacity</tspan>
+            </text>
+                   
+                   
+                </g>
+            <g>
+                <rect x="87" y="289"
+            width="112.4" height="30"
+            style="fill:#a5d6a7; stroke:#444; stroke-width:1" />
+                    
+                <line x1="97" y1="289" x2="97" y2="319"
+                style="fill:#a5d6a7; stroke:#444; stroke-width:1" />
+                <line x1="189.4" y1="289" x2="189.4" y2="319"
+                style="fill:#a5d6a7; stroke:#444; stroke-width:1" />
+             
+                <title>get(key)</title>
+            <text x="112" y="309"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="112" y="309">get(key)</tspan>
+            </text>
+                
+            </g><g>
+            <rect x="154" y="352.5"
+            width="231.60000000000002" height="30"
+            rx="3" ry="3"
+            style="fill:#ce93d8; stroke:#444; stroke-width:1" />                
+            <polygon points="124,367.5 154,337.5 184,367.5 154,397.5"
+            style="fill:#ce93d8; stroke:#444; stroke-width:1" />
+            <title>(!this.cache.has(key))</title>
+            <text x="199" y="372.5"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="199" y="372.5">(!this.cache.has(key))</tspan>
+            </text>
+            
+            <text x="146.2" y="372.5"
+        font-family="monospace" font-size="13" fill="#222">if</text> <text x="161.8" y="399.45"
+        font-family="monospace" font-size="13" fill="#222">+</text> 
+        </g>
+            <g>
+                <rect x="174" y="407.5"
+            width="100.2" height="30"
+            rx="3" ry="3"
+            style="fill:#90caf9; stroke:#444; stroke-width:1" />
+                
+                <line x1="274.2" y1="417.5" x2="279.2" y2="417.5"
+                style="fill:#a5d6a7; stroke:#444; stroke-width:1" />
+                
+                <line x1="274.2" y1="427.5" x2="279.2" y2="427.5"
+                style="fill:#a5d6a7; stroke:#444; stroke-width:1" />
+
+                <path d="M279.2, 411.5 L295.2, 422.5 L279.2, 433.5 Z" 
+        fill="#a5d6a7" stroke="#444" stroke-width="1" />
+                             
+                <title>return -1</title>
+            <text x="189" y="427.5"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="189" y="427.5">return -1</tspan>
+            </text>
+                
+            </g>
+                <g>
+                   <rect x="124" y="457.5"
+            width="287.4" height="30"
+            rx="3" ry="3"
+            style="fill:#90caf9; stroke:#444; stroke-width:1" />
+                   <title>const value = this.cache.get(key)</title>
+            <text x="139" y="477.5"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="139" y="477.5">const value = this.cache.get(key)</tspan>
+            </text>
+                   
+                   
+                </g>
+                <g>
+                   <rect x="124" y="506"
+            width="201.6" height="30"
+            rx="2" ry="2"
+            style="fill:#C5E1A5; stroke:#444; stroke-width:1" />
+                   <title>this.cache.delete(key)</title>
+            <text x="139" y="526"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="139" y="526">this.cache.delete(key)</tspan>
+            </text>
+                   
+                   
+                </g>
+                <g>
+                   <rect x="124" y="554.5"
+            width="232.79999999999998" height="30"
+            rx="2" ry="2"
+            style="fill:#C5E1A5; stroke:#444; stroke-width:1" />
+                   <title>this.cache.set(key, value)</title>
+            <text x="139" y="574.5"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="139" y="574.5">this.cache.set(key, value)</tspan>
+            </text>
+                   
+                   
+                </g>
+            <g>
+                <rect x="124" y="603"
+            width="232.79999999999998" height="30"
+            rx="3" ry="3"
+            style="fill:#90caf9; stroke:#444; stroke-width:1" />
+                
+                <line x1="356.79999999999995" y1="613" x2="361.79999999999995" y2="613"
+                style="fill:#a5d6a7; stroke:#444; stroke-width:1" />
+                
+                <line x1="356.79999999999995" y1="623" x2="361.79999999999995" y2="623"
+                style="fill:#a5d6a7; stroke:#444; stroke-width:1" />
+
+                <path d="M361.79999999999995, 607 L377.79999999999995, 618 L361.79999999999995, 629 Z" 
+        fill="#a5d6a7" stroke="#444" stroke-width="1" />
+                             
+                <title>return this.cache.get(key)</title>
+            <text x="139" y="623"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="139" y="623">return this.cache.get(key)</tspan>
+            </text>
+                
+            </g>
+            <g>
+                <rect x="87" y="666.5"
+            width="167" height="30"
+            style="fill:#a5d6a7; stroke:#444; stroke-width:1" />
+                    
+                <line x1="97" y1="666.5" x2="97" y2="696.5"
+                style="fill:#a5d6a7; stroke:#444; stroke-width:1" />
+                <line x1="244" y1="666.5" x2="244" y2="696.5"
+                style="fill:#a5d6a7; stroke:#444; stroke-width:1" />
+             
+                <title>put(key, value)</title>
+            <text x="112" y="686.5"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="112" y="686.5">put(key, value)</tspan>
+            </text>
+                
+            </g><g>
+            <rect x="154" y="730"
+            width="223.79999999999998" height="30"
+            rx="3" ry="3"
+            style="fill:#ce93d8; stroke:#444; stroke-width:1" />                
+            <polygon points="124,745 154,715 184,745 154,775"
+            style="fill:#ce93d8; stroke:#444; stroke-width:1" />
+            <title>(this.cache.has(key))</title>
+            <text x="199" y="750"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="199" y="750">(this.cache.has(key))</tspan>
+            </text>
+            
+            <text x="146.2" y="750"
+        font-family="monospace" font-size="13" fill="#222">if</text> <text x="161.8" y="776.95"
+        font-family="monospace" font-size="13" fill="#222">+</text> 
+        </g>
+                <g>
+                   <rect x="174" y="785"
+            width="201.6" height="30"
+            rx="2" ry="2"
+            style="fill:#C5E1A5; stroke:#444; stroke-width:1" />
+                   <title>this.cache.delete(key)</title>
+            <text x="189" y="805"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="189" y="805">this.cache.delete(key)</tspan>
+            </text>
+                   
+                   
+                </g>
+                <g>
+                   <rect x="124" y="835"
+            width="232.79999999999998" height="30"
+            rx="2" ry="2"
+            style="fill:#C5E1A5; stroke:#444; stroke-width:1" />
+                   <title>this.cache.set(key, value)</title>
+            <text x="139" y="855"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="139" y="855">this.cache.set(key, value)</tspan>
+            </text>
+                   
+                   
+                </g><g>
+            <rect x="154" y="898.5"
+            width="317.4" height="30"
+            rx="3" ry="3"
+            style="fill:#ce93d8; stroke:#444; stroke-width:1" />                
+            <polygon points="124,913.5 154,883.5 184,913.5 154,943.5"
+            style="fill:#ce93d8; stroke:#444; stroke-width:1" />
+            <title>(this.cache.size &gt; this.capacity)</title>
+            <text x="199" y="918.5"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="199" y="918.5">(this.cache.size &gt; this.capacity)</tspan>
+            </text>
+            
+            <text x="146.2" y="918.5"
+        font-family="monospace" font-size="13" fill="#222">if</text> <text x="161.8" y="945.45"
+        font-family="monospace" font-size="13" fill="#222">+</text> 
+        </g>
+                <g>
+                   <rect x="174" y="953.5"
+            width="162.6" height="30"
+            rx="2" ry="2"
+            style="fill:#C5E1A5; stroke:#444; stroke-width:1" />
+                   <title>this.cache.keys()</title>
+            <text x="189" y="973.5"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="189" y="973.5">this.cache.keys()</tspan>
+            </text>
+                   
+                   
+                </g>
+                <g>
+                   <rect x="174" y="1002"
+            width="84.6" height="30"
+            rx="2" ry="2"
+            style="fill:#C5E1A5; stroke:#444; stroke-width:1" />
+                   <title>.next()</title>
+            <text x="189" y="1022"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="189" y="1022">.next()</tspan>
+            </text>
+                   <circle cx="180" cy="1026" r="4"
+        style="fill:#ede7f6; stroke:#444; stroke-width:1" />
+                   
+                </g>
+                <g>
+                   <rect x="174" y="1050.5"
+            width="412.2" height="30"
+            rx="2" ry="2"
+            style="fill:#C5E1A5; stroke:#444; stroke-width:1" />
+                   <title>this.cache.delete(this.cache.keys().next().value)</title>
+            <text x="189" y="1070.5"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="189" y="1070.5">this.cache.delete(this.cache.keys().next().value)</tspan>
+            </text>
+                   
+                   
+                </g>
+            <g>
+               <rect x="25" y="13.75"
+            width="216.6" height="24"
+            style="fill:#fff59d; stroke:#444; stroke-width:1" />
+               <circle cx="25" cy="25" r="15"
+        style="fill:#fff59d; stroke:#444; stroke-width:1" />
+               <title>Program: source module</title>
+            <text x="55" y="30"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="55" y="30">Program: source module</tspan>
+            </text>
+            </g>
+            <g>
+               <path d="M25, 40 L25 91 Q25 95
+                29 95
+                L42 95 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M42, 92 L50, 95 L42, 98 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M68.5, 110 L68.5 139.5 Q68.5 143.5
+                72.5 143.5
+                L79 143.5 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M79, 140.5 L87, 143.5 L79, 146.5 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M105.5, 158.5 L105.5 188 Q105.5 192
+                109.5 192
+                L116 192 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M116, 189 L124, 192 L116, 195 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M105.5, 158.5 L105.5 236.5 Q105.5 240.5
+                109.5 240.5
+                L116 240.5 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M116, 237.5 L124, 240.5 L116, 243.5 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M68.5, 110 L68.5 300 Q68.5 304
+                72.5 304
+                L79 304 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M79, 301 L87, 304 L79, 307 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M105.5, 319 L105.5 363.5 Q105.5 367.5
+                109.5 367.5
+                L116 367.5 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M116, 364.5 L124, 367.5 L116, 370.5 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M154, 397.5 L154 418.5 Q154 422.5
+                158 422.5
+                L166 422.5 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M166, 419.5 L174, 422.5 L166, 425.5 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M105.5, 319 L105.5 468.5 Q105.5 472.5
+                109.5 472.5
+                L116 472.5 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M116, 469.5 L124, 472.5 L116, 475.5 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M105.5, 319 L105.5 517 Q105.5 521
+                109.5 521
+                L116 521 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M116, 518 L124, 521 L116, 524 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M105.5, 319 L105.5 565.5 Q105.5 569.5
+                109.5 569.5
+                L116 569.5 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M116, 566.5 L124, 569.5 L116, 572.5 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M105.5, 319 L105.5 614 Q105.5 618
+                109.5 618
+                L116 618 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M116, 615 L124, 618 L116, 621 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M68.5, 110 L68.5 677.5 Q68.5 681.5
+                72.5 681.5
+                L79 681.5 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M79, 678.5 L87, 681.5 L79, 684.5 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M105.5, 696.5 L105.5 741 Q105.5 745
+                109.5 745
+                L116 745 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M116, 742 L124, 745 L116, 748 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M154, 775 L154 796 Q154 800
+                158 800
+                L166 800 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M166, 797 L174, 800 L166, 803 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M105.5, 696.5 L105.5 846 Q105.5 850
+                109.5 850
+                L116 850 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M116, 847 L124, 850 L116, 853 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M105.5, 696.5 L105.5 909.5 Q105.5 913.5
+                109.5 913.5
+                L116 913.5 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M116, 910.5 L124, 913.5 L116, 916.5 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M154, 943.5 L154 964.5 Q154 968.5
+                158 968.5
+                L166 968.5 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M166, 965.5 L174, 968.5 L166, 971.5 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M154, 943.5 L154 1013 Q154 1017
+                158 1017
+                L166 1017 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M166, 1014 L174, 1017 L166, 1020 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M154, 943.5 L154 1061.5 Q154 1065.5
+                158 1065.5
+                L166 1065.5 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M166, 1062.5 L174, 1065.5 L166, 1068.5 Z" 
+        fill="#333" />
+            </g>
+            </svg>

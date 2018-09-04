@@ -1,6 +1,6 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
-                width="588" height="539">
+                width="588" height="845">
                 
             <g>
                 <rect x="50" y="80"
@@ -100,28 +100,132 @@
             </text>
                 
             </g>
+            <g>
+                <rect x="50" y="450.5"
+            width="268.4" height="30"
+            style="fill:#a5d6a7; stroke:#444; stroke-width:1" />
+                    
+                <line x1="60" y1="450.5" x2="60" y2="480.5"
+                style="fill:#a5d6a7; stroke:#444; stroke-width:1" />
+                <line x1="308.4" y1="450.5" x2="308.4" y2="480.5"
+                style="fill:#a5d6a7; stroke:#444; stroke-width:1" />
+             
+                <title>function singleNumber2(nums)</title>
+            <text x="75" y="470.5"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="75" y="470.5">function singleNumber2(nums)</tspan>
+            </text>
+                
+            </g>
+            <g>
+                <rect x="87" y="499"
+            width="365.4" height="30"
+            rx="3" ry="3"
+            style="fill:#90caf9; stroke:#444; stroke-width:1" />
+                
+                <line x1="452.4" y1="509" x2="457.4" y2="509"
+                style="fill:#a5d6a7; stroke:#444; stroke-width:1" />
+                
+                <line x1="452.4" y1="519" x2="457.4" y2="519"
+                style="fill:#a5d6a7; stroke:#444; stroke-width:1" />
+
+                <path d="M457.4, 503 L473.4, 514 L457.4, 525 Z" 
+        fill="#a5d6a7" stroke="#444" stroke-width="1" />
+                             
+                <title>return nums.reduce((sum, num) =&gt; sum ^ num)</title>
+            <text x="102" y="519"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="102" y="519">return nums.reduce((sum, num) =&gt; sum ^ num)</tspan>
+            </text>
+                
+            </g>
+            <g>
+                <rect x="124" y="547.5"
+            width="151.39999999999998" height="30"
+            style="fill:#a5d6a7; stroke:#444; stroke-width:1" />
+                    
+                <line x1="134" y1="547.5" x2="134" y2="577.5"
+                style="fill:#a5d6a7; stroke:#444; stroke-width:1" />
+                <line x1="265.4" y1="547.5" x2="265.4" y2="577.5"
+                style="fill:#a5d6a7; stroke:#444; stroke-width:1" />
+             
+                <title>(sum, num) =&gt;</title>
+            <text x="149" y="567.5"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="149" y="567.5">(sum, num) =&gt;</tspan>
+            </text>
+                
+            </g>
+            <g>
+                <rect x="161" y="596"
+            width="154.8" height="30"
+            rx="3" ry="3"
+            style="fill:#90caf9; stroke:#444; stroke-width:1" />
+                
+                <line x1="315.8" y1="606" x2="320.8" y2="606"
+                style="fill:#a5d6a7; stroke:#444; stroke-width:1" />
+                
+                <line x1="315.8" y1="616" x2="320.8" y2="616"
+                style="fill:#a5d6a7; stroke:#444; stroke-width:1" />
+
+                <path d="M320.8, 600 L336.8, 611 L320.8, 622 Z" 
+        fill="#a5d6a7" stroke="#444" stroke-width="1" />
+                             
+                <title>return sum ^ num</title>
+            <text x="176" y="616"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="176" y="616">return sum ^ num</tspan>
+            </text>
+                
+            </g>
                 <g>
-                   <rect x="50" y="435.5"
+                   <rect x="50" y="644.5"
             width="310.8" height="30"
             rx="2" ry="2"
             style="fill:#C5E1A5; stroke:#444; stroke-width:1" />
                    <title>console.log(singleNumber([2, 2, 1]))</title>
-            <text x="65" y="455.5"
+            <text x="65" y="664.5"
                 font-family="monospace" font-size="13" fill="#222">
-                <tspan x="65" y="455.5">console.log(singleNumber([2, 2, 1]))</tspan>
+                <tspan x="65" y="664.5">console.log(singleNumber([2, 2, 1]))</tspan>
             </text>
                    
                    
                 </g>
                 <g>
-                   <rect x="50" y="484"
+                   <rect x="50" y="693"
+            width="318.59999999999997" height="30"
+            rx="2" ry="2"
+            style="fill:#C5E1A5; stroke:#444; stroke-width:1" />
+                   <title>console.log(singleNumber2([2, 2, 1]))</title>
+            <text x="65" y="713"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="65" y="713">console.log(singleNumber2([2, 2, 1]))</tspan>
+            </text>
+                   
+                   
+                </g>
+                <g>
+                   <rect x="50" y="741.5"
             width="381" height="30"
             rx="2" ry="2"
             style="fill:#C5E1A5; stroke:#444; stroke-width:1" />
                    <title>console.log(singleNumber([1, 1, 1, 1, 1, 5]))</title>
-            <text x="65" y="504"
+            <text x="65" y="761.5"
                 font-family="monospace" font-size="13" fill="#222">
-                <tspan x="65" y="504">console.log(singleNumber([1, 1, 1, 1, 1, 5]))</tspan>
+                <tspan x="65" y="761.5">console.log(singleNumber([1, 1, 1, 1, 1, 5]))</tspan>
+            </text>
+                   
+                   
+                </g>
+                <g>
+                   <rect x="50" y="790"
+            width="388.8" height="30"
+            rx="2" ry="2"
+            style="fill:#C5E1A5; stroke:#444; stroke-width:1" />
+                   <title>console.log(singleNumber2([1, 1, 1, 1, 1, 5]))</title>
+            <text x="65" y="810"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="65" y="810">console.log(singleNumber2([1, 1, 1, 1, 1, 5]))</tspan>
             </text>
                    
                    
@@ -199,19 +303,67 @@
         fill="#333" />
             </g>
             <g>
-               <path d="M25, 40 L25 446.5 Q25 450.5
-                29 450.5
-                L42 450.5 "
+               <path d="M25, 40 L25 461.5 Q25 465.5
+                29 465.5
+                L42 465.5 "
         style="fill:none; stroke:#444; stroke-width:1" />
-               <path d="M42, 447.5 L50, 450.5 L42, 453.5 Z" 
+               <path d="M42, 462.5 L50, 465.5 L42, 468.5 Z" 
         fill="#333" />
             </g>
             <g>
-               <path d="M25, 40 L25 495 Q25 499
-                29 499
-                L42 499 "
+               <path d="M68.5, 480.5 L68.5 510 Q68.5 514
+                72.5 514
+                L79 514 "
         style="fill:none; stroke:#444; stroke-width:1" />
-               <path d="M42, 496 L50, 499 L42, 502 Z" 
+               <path d="M79, 511 L87, 514 L79, 517 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M105.5, 529 L105.5 558.5 Q105.5 562.5
+                109.5 562.5
+                L116 562.5 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M116, 559.5 L124, 562.5 L116, 565.5 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M142.5, 577.5 L142.5 607 Q142.5 611
+                146.5 611
+                L153 611 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M153, 608 L161, 611 L153, 614 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M25, 40 L25 655.5 Q25 659.5
+                29 659.5
+                L42 659.5 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M42, 656.5 L50, 659.5 L42, 662.5 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M25, 40 L25 704 Q25 708
+                29 708
+                L42 708 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M42, 705 L50, 708 L42, 711 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M25, 40 L25 752.5 Q25 756.5
+                29 756.5
+                L42 756.5 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M42, 753.5 L50, 756.5 L42, 759.5 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M25, 40 L25 801 Q25 805
+                29 805
+                L42 805 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M42, 802 L50, 805 L42, 808 Z" 
         fill="#333" />
             </g>
             </svg>
