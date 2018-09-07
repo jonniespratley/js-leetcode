@@ -240,7 +240,98 @@ Solution.prototype.shuffle = function() {
 
 ---
 
-## 4 - ./examples/best-time-to-buy-sell-stock-2.js
+## 4 - ./examples/basic-calculator-ii.js
+
+```javascript
+    /**
+
+Implement a basic calculator to evaluate a simple expression string.
+
+The expression string contains only non-negative integers, `+`, `-`, `*`, `/` operators and empty spaces ` `. The integer division should truncate toward zero.
+
+Example 1:
+
+```
+Input: "3+2*2"
+Output: 7
+```
+
+
+Example 2:
+
+```
+Input: " 3/2 "
+Output: 1
+```
+
+Example 3:
+
+```
+Input: " 3+5 / 2 "
+Output: 5
+```
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * @param {string} s
+ * @return {number}
+ */
+var calculate = function (s) {
+    let sum = 0;
+    let num = 0;
+
+    //trim spaces
+    s = s.replace(/\s/g, '');
+
+    //hold the numbers from the string
+    let nums = [];
+
+    //hold the current sign;
+    let sign = '+';
+
+    for (let i = 0; i < s.length; i++) {
+        let n = s[i];
+        if (/\d/.test(n)) {
+            n = Number(n);
+            num = num * 10 + Number(n);
+        }
+        // sign or last number
+        if ((/\D/.test(n)) || i === s.length - 1) {
+            if (sign === '-') nums.push(-num);
+            if (sign === '+') nums.push(num);
+            if (sign === '*') nums.push(nums.pop() * num);
+            if (sign === '/') nums.push(~~(nums.pop() / num));
+
+            sign = n;
+            num = 0;
+        }
+    }
+
+    let res = 0;
+    for (let n of nums) {
+        res += n;
+    }
+    return res;
+};
+
+console.log(calculate('3+2*2'));
+console.log(calculate('3/2'));
+console.log(calculate(' 3+5 / 2 '));
+```
+
+### Flowchart
+![./examples/basic-calculator-ii.js-svg image][./examples/basic-calculator-ii.js-svg]
+
+[./examples/basic-calculator-ii.js-svg]: https://raw.githubusercontent.com/jonniespratley/js-leetcode/master/flowcharts/basic-calculator-ii.svg "Logo Title Text 2"
+
+
+---
+
+## 5 - ./examples/best-time-to-buy-sell-stock-2.js
 
 ```javascript
     // Say you have an array for which the ith element is the price of a given stock on day i.
@@ -297,7 +388,7 @@ function maxProfit(prices) {
 
 ---
 
-## 5 - ./examples/best-time-to-buy-sell-stock.js
+## 6 - ./examples/best-time-to-buy-sell-stock.js
 
 ```javascript
     // Say you have an array for which the ith element is the price of a given stock on day i.
@@ -347,10 +438,11 @@ function maxProfit(prices) {
 
 ---
 
-## 6 - ./examples/big-o.js
+## 7 - ./examples/big-o.js
 
 ```javascript
-    /*
+    /**
+@description
 ## Big-O Analysis
 
 Big-O analysis is a form of runtime analysis that measures the efficiency of an algorithm in terms of the time it takes for the algorithm to run as a function of the input size. It’s not a formal benchmark, just a simple way to classify algorithms by relative efficiency when dealing with very large input sizes.
@@ -404,22 +496,14 @@ Now double it to n = 20:
 * 220 = 1,048,576
 * 20! = 2.43×1018
 
-Notation
-Name
-O(1)
-Constant
-O(log(n))
-Logarithmic
-O((log(n))c)
-Poly-logarithmic
-O(n)
-Linear
-O(n2)
-Quadratic
-O(nc)
-Polynomial
-O(cn)
-Exponential
+Notation      - Name
+O(1)          - Constant
+O(log(n))     - Logarithmic
+O((log(n))c)  - Poly-logarithmic
+O(n)          - Linear
+O(n2)         - Quadratic
+O(nc)         - Polynomial
+O(cn)         - Exponential
 
 
 ### [] O(1)
@@ -472,7 +556,11 @@ function increment(num) {
 console.log(increment(2));
 
 
-// O(n)
+/**
+ * Sequential search example
+ * @param {Array} array The array of items
+ * @param {any} item The item to search for
+ */
 function sequentialSearch(array, item) {
     for (var i = 0; i < array.length; i++) {
         if (item === array[i]) { //{1} 
@@ -517,7 +605,125 @@ console.log(bubbleSort(input1));
 
 ---
 
-## 7 - ./examples/binary-search.js
+## 8 - ./examples/binary-search-tree-iterator.js
+
+```javascript
+    /*
+## Binary Search Tree Iterator
+
+Implement an iterator over a binary search tree (BST). Your iterator will be initialized with the root node of a BST.
+
+Calling next() will return the next smallest number in the BST.
+
+Note: next() and hasNext() should run in average O(1) time and uses O(h) memory, where h is the height of the tree.
+
+
+*/
+/**
+ * Definition for binary tree
+ * function TreeNode(val) {
+ *     this.val = val;
+ *     this.left = this.right = null;
+ * }
+ */
+function TreeNode(val) {
+    this.val = val;
+    this.left = this.right = null;
+}
+
+
+class BSTIterator {
+    /**
+     * @constructor
+     * @param {TreeNode} root - root of the binary search tree
+     */
+    constructor(node) {
+        this.stack = [];
+        this.pushLeft(node);
+    }
+    /**
+     * @this BSTIterator
+     * @returns {boolean} - whether we have a next smallest number
+     */
+    hasNext() {
+        return this.stack.length > 0;
+    }
+    /**
+     * @this BSTIterator
+     * @returns {number} - the next smallest number
+     */
+    next() {
+        if (this.hasNext()) {
+            const n = this.stack.pop();
+            if (n.right) this.pushLeft(n.right);
+            return n.val;
+        }
+    }
+    pushLeft(node) {
+        while (node) {
+            this.stack.push(node);
+            node = node.left;
+        }
+    }
+}
+
+
+/*
+In a BST, the value held by a node’s left child is less than or equal to its own value, 
+and the value held by a node’s right child is greater than or equal to its value.
+*/
+
+
+//[2,1,3], p = 1
+let t = new TreeNode(2);
+t.right = new TreeNode(3);
+t.left = new TreeNode(1);
+
+/**
+ * Your BSTIterator will be called like this:
+ * var i = new BSTIterator(root), a = [];
+ * while (i.hasNext()) a.push(i.next());
+ */
+var i = new BSTIterator(t),
+    a = [];
+while (i.hasNext()) a.push(i.next());
+
+console.log(a); //1,2,3
+
+
+
+
+class BST {
+    findNode(root, value) {
+        while (root != null) {
+            let currval = root.val;
+            if (currval == value) break;
+            if (currval <= value) {
+                root = root.right;
+            } else { // currval > value
+                root = root.left;
+            }
+        }
+        return root;
+    }
+}
+
+let bst = new BST();
+let n = bst.findNode(t, 3);
+console.log(bst.findNode(t, 3));
+console.log(bst.findNode(t, 5));
+console.log(bst.findNode(t, 2));
+```
+
+### Flowchart
+![./examples/binary-search-tree-iterator.js-svg image][./examples/binary-search-tree-iterator.js-svg]
+
+[./examples/binary-search-tree-iterator.js-svg]: https://raw.githubusercontent.com/jonniespratley/js-leetcode/master/flowcharts/binary-search-tree-iterator.svg "Logo Title Text 2"
+
+
+---
+
+## 9 - ./examples/binary-search.js
 
 ```javascript
     function binarySearch(arr, val) {
@@ -574,7 +780,448 @@ console.log(findPairs([1, 0, -4, 7, 6, 4], [0, 2, 4, -3, 2, 1], 8))
 
 ---
 
-## 8 - ./examples/bubble-sort.js
+## 10 - ./examples/binary-tree-in-order-traversal.js
+
+```javascript
+    // Given a binary tree, return the inorder traversal of its nodes' values.
+//
+// Example:
+//
+// Input: [1,null,2,3]
+//    1
+//     \
+//      2
+//      /
+//     3
+//
+// Output: [1,3,2]
+//
+// Follow up: Recursive solution is trivial, could you do it iteratively?
+
+/**
+ * Definition for a binary tree node.
+ * function TreeNode(val) {
+ *     this.val = val;
+ *     this.left = this.right = null;
+ * }
+ */
+/**
+ * @param {TreeNode} root
+ * @return {number[]}
+ */
+
+/** 1) Recursion */
+// time O(n), the time complexity is O(n) because the recursive function is T(n) = 2 * T(n / 2) + 1
+// space O(log n), n is number of nodes. The worst case space is O(n)
+function inorderTraversal1(node) {
+    let res = [];
+    go(node, res);
+    return res;
+}
+
+function go(node, res) {
+    if (!node) return;
+
+    go(node.left, res);
+    res.push(node.val);
+    go(node.right, res);
+}
+
+/** 2) Iteration using stack */
+// time O(n)
+// space O(n)
+function inorderTraversal(node) {
+    let stack = [];
+    let res = [];
+
+    while (node || stack.length) {
+        // drill left
+        while (node) {
+            stack.push(node);
+            node = node.left;
+        }
+
+        // print & go to right child
+        node = stack.pop();
+        res.push(node.val);
+        node = node.right;
+    }
+
+    return res;
+}
+```
+
+### Flowchart
+![./examples/binary-tree-in-order-traversal.js-svg image][./examples/binary-tree-in-order-traversal.js-svg]
+
+[./examples/binary-tree-in-order-traversal.js-svg]: https://raw.githubusercontent.com/jonniespratley/js-leetcode/master/flowcharts/binary-tree-in-order-traversal.svg "Logo Title Text 2"
+
+
+---
+
+## 11 - ./examples/binary-tree-inorder-successor.js
+
+```javascript
+    /*
+## Inorder Successor in BST
+
+Given a binary search tree and a node in it, find the in-order successor of that node in the BST.
+
+> Note: If the given node has no in-order successor in the tree, return null.
+
+Example 1:
+
+```
+Input: root = [2,1,3], p = 1
+
+  2
+ / \
+1   3
+
+Output: 2
+```
+
+Example 2:
+
+```
+Input: root = [5,3,6,2,4,null,null,1], p = 6
+
+      5
+     / \
+    3   6
+   / \
+  2   4
+ /   
+1
+
+Output: null
+```
+
+*/
+/**
+ * Definition for a binary tree node.
+ * function TreeNode(val) {
+ *     this.val = val;
+ *     this.left = this.right = null;
+ * }
+ */
+/**
+ * In-order traversal visits the right, then self, then left.
+ * @param {TreeNode} root
+ * @param {TreeNode} p
+ * @return {TreeNode}
+ */
+var inorderSuccessor = function (root, p) {
+    if (!root) return null;
+
+    function traverse(node, res) {
+        if (!node) return;
+        res.push(node.val);
+        traverse(node.right, res);
+        traverse(node.left, res);
+    }
+
+    let res = [];
+    traverse(root, res);
+    return res[res.indexOf(p) - 1];
+};
+
+
+//[2,1,3], p = 1
+let t = new TreeNode(2);
+t.right = new TreeNode(1);
+t.left = new TreeNode(3);
+
+//console.log(inorderTraversal(t));
+//console.log(inorderTraversalRecur(t));
+console.log(inorderSuccessor(0, 1));
+console.log(inorderSuccessor(t, 1));
+
+
+
+
+
+
+
+var inorderTraversal3 = function (root) {
+    if (!root) return [];
+    let stack = [];
+    let order = [];
+    stack.push(root);
+    while (stack.length) {
+        let node = stack.pop();
+        if (node.v) {
+            order.push(node.val);
+        } else {
+            node.v = true;
+            if (node.right) {
+                stack.push(node.right);
+            }
+            stack.push(node);
+            if (node.left) {
+                stack.push(node.left);
+            }
+
+        }
+    }
+    return order;
+};
+
+
+/** 1) Recursion */
+// time O(n), the time complexity is O(n) because the recursive function is T(n) = 2 * T(n / 2) + 1
+// space O(log n), n is number of nodes. The worst case space is O(n)
+function inorderTraversal1(node) {
+    let res = [];
+    go(node, res);
+    return res;
+}
+
+function go(node, res) {
+    if (!node) return;
+
+    go(node.left, res);
+    res.push(node.val);
+    go(node.right, res);
+}
+
+/** 2) Iteration using stack */
+// time O(n)
+// space O(n)
+function inorderTraversal(node) {
+    let stack = [];
+    let res = [];
+
+    while (node || stack.length) {
+
+        // drill left
+        while (node) {
+            console.log(node && node.val, 'left');
+            stack.push(node);
+            node = node.left;
+        }
+
+        // print & go to right child
+        node = stack.pop();
+        res.push(node.val);
+        node = node.right;
+
+        console.log(node && node.val, 'right');
+
+    }
+
+    return res;
+}
+
+function TreeNode(val) {
+    this.val = val;
+    this.left = this.right = null;
+}
+
+
+console.log(inorderTraversal1(t));
+console.log(inorderTraversal3(t));
+console.log(inorderTraversal(t));
+```
+
+### Flowchart
+![./examples/binary-tree-inorder-successor.js-svg image][./examples/binary-tree-inorder-successor.js-svg]
+
+[./examples/binary-tree-inorder-successor.js-svg]: https://raw.githubusercontent.com/jonniespratley/js-leetcode/master/flowcharts/binary-tree-inorder-successor.svg "Logo Title Text 2"
+
+
+---
+
+## 12 - ./examples/binary-tree-post-order-traversal.js
+
+```javascript
+    // Given a binary tree, return the postorder traversal of its nodes' res.
+//
+// Example:
+//
+// Input: [1,null,2,3]
+//    1
+//     \
+//      2
+//     /
+//    3
+//
+// Output: [3,2,1]
+// Follow up: Recursive solution is trivial, could you do it iteratively?
+/**
+ * Definition for a binary tree node.
+ * function TreeNode(val) {
+ *     this.val = val;
+ *     this.left = this.right = null;
+ * }
+ */
+/**
+ * @param {TreeNode} root
+ * @return {number[]}
+ */
+// 1) Recursive
+function postorderTraversal1(node) {
+    let res = [];
+    go(node, res);
+    return res;
+}
+
+function go(node, res) {
+    if (!node) return;
+    go(node.left, res);
+    go(node.right, res);
+    res.push(node.val);
+}
+// 2) Iterating method using Stack
+function postorderTraversal(node) {
+    let stack = [];
+    let res = [];
+    if (node) stack.push(node);
+    while (stack.length) {
+        node = stack.pop();
+        res.unshift(node.val);
+        if (node.left) stack.push(node.left);
+        if (node.right) stack.push(node.right);
+    }
+    return res;
+}
+/** Level Order Traversal */
+// Iterating method using Queue
+function levelOrderTraversal(node) {
+    let stack = [];
+    let res = [];
+    if (node) stack.push(node);
+    while (stack.length) {
+        node = stack.shift();
+        res.push(node.val);
+        if (node.left) stack.push(node.left);
+        if (node.right) stack.push(node.right);
+    }
+    return res;
+}
+```
+
+### Flowchart
+![./examples/binary-tree-post-order-traversal.js-svg image][./examples/binary-tree-post-order-traversal.js-svg]
+
+[./examples/binary-tree-post-order-traversal.js-svg]: https://raw.githubusercontent.com/jonniespratley/js-leetcode/master/flowcharts/binary-tree-post-order-traversal.svg "Logo Title Text 2"
+
+
+---
+
+## 13 - ./examples/binary-tree-pre-order-traversal.js
+
+```javascript
+    // Given a binary tree, return the preorder traversal of its nodes' values.
+//
+// Example:
+//
+//   Input: [1,null,2,3]
+//     1
+//      \
+//       2
+//      /
+//     3
+//
+// Output: [1,2,3]
+//
+// Follow up: Recursive solution is trivial, could you do it iteratively?
+/**
+ * Definition for a binary tree node.
+ * function TreeNode(val) {
+ *     this.val = val;
+ *     this.left = this.right = null;
+ * }
+ */
+/**
+ * @param {TreeNode} root
+ * @return {number[]}
+ */
+// 1) Recursive
+function preorderTraversal1(node) {
+    let res = [];
+    helper(node, res);
+    return res;
+}
+
+function helper(node, res) {
+    if (!node) return;
+    res.push(node.val);
+    helper(node.left, res);
+    helper(node.right, res);
+}
+// 2) Iterating method using Stack
+function preorderTraversal(node) {
+    let stack = [];
+    let res = [];
+    while (node || stack.length) {
+        // print & drill left
+        while (node) {
+            res.push(node.val);
+            stack.push(node);
+            node = node.left;
+        }
+        // go to right child
+        node = stack.pop();
+        node = node.right;
+    }
+    return res;
+}
+
+var inorderTraversal = function (root) {
+    if (!root) return [];
+    let stack = [];
+    let order = [];
+    stack.push(root);
+    while (stack.length) {
+        let node = stack.pop();
+        if (node.v) {
+            order.push(node.val);
+        } else {
+            node.v = true;
+            if (node.right) {
+                stack.push(node.right);
+            }
+            stack.push(node);
+            if (node.left) {
+                stack.push(node.left);
+            }
+
+        }
+    }
+    return order;
+};
+
+function inorderTraversalRecur(root){
+    if(!root) return null;
+    
+    if(root.right) inorderTraversalRecur(root.right)
+    console.log(root.val);
+    if(root.left) inorderTraversalRecur(root.left)
+}
+
+function TreeNode(val) {
+    this.val = val;
+    this.left = this.right = null;
+}
+//[2,1,3], p = 1
+let t = new TreeNode(2);
+t.right = new TreeNode(1);
+t.left = new TreeNode(3);
+
+console.log(inorderTraversal(t));
+console.log(inorderTraversalRecur(t));
+```
+
+### Flowchart
+![./examples/binary-tree-pre-order-traversal.js-svg image][./examples/binary-tree-pre-order-traversal.js-svg]
+
+[./examples/binary-tree-pre-order-traversal.js-svg]: https://raw.githubusercontent.com/jonniespratley/js-leetcode/master/flowcharts/binary-tree-pre-order-traversal.svg "Logo Title Text 2"
+
+
+---
+
+## 14 - ./examples/bubble-sort.js
 
 ```javascript
     
@@ -607,7 +1254,7 @@ console.log(bubbleSort([5,4,3,2,1]));
 
 ---
 
-## 9 - ./examples/climb-stairs.js
+## 15 - ./examples/climb-stairs.js
 
 ```javascript
     /*
@@ -663,7 +1310,7 @@ var climbStairs = function (n) {
 
 ---
 
-## 10 - ./examples/coin-change.js
+## 16 - ./examples/coin-change.js
 
 ```javascript
     const print = console.log.apply;
@@ -717,11 +1364,10 @@ function makeChange(origAmt, coins) {
 
 ---
 
-## 11 - ./examples/contains-duplicate.js
+## 17 - ./examples/contains-duplicate.js
 
 ```javascript
-    
-/**
+    /**
  * Given an array of integers, find if the array contains any duplicates.
 
 Your function should return true if any value appears at least twice in the array, and it should return false if every element is distinct.
@@ -763,18 +1409,14 @@ var containsDuplicate = function (nums) {
     return result;
 };
 
-var containsDuplicate2 = function (nums) {
-    var counter = {};
-    for (var i = 0; i < nums.length; i++) {
-        if (counter.hasOwnProperty(nums[i])) {
-            return true;
-        } else {
-            counter[nums[i]] = 1;
-        }
+function containsDuplicate2(nums) {
+    let obj = {};
+    for (let num of nums) {
+        if (obj[num]) return true;
+        obj[num] = true;
     }
-
     return false;
-};
+}
 
 console.time('containsDuplicate');
 console.log(containsDuplicate([9, 9, 1]));
@@ -796,7 +1438,7 @@ console.timeEnd('containsDuplicate2');
 
 ---
 
-## 12 - ./examples/count-and-say.js
+## 18 - ./examples/count-and-say.js
 
 ```javascript
     // The count-and-say sequence is the sequence of integers with the first five terms as following:
@@ -865,7 +1507,7 @@ function say(str) {
 
 ---
 
-## 13 - ./examples/delete-nth-linked-list.js
+## 19 - ./examples/delete-nth-linked-list.js
 
 ```javascript
     /*
@@ -907,7 +1549,207 @@ var deleteNode = function (node) {
 
 ---
 
-## 14 - ./examples/diagonal-traverse.js
+## 20 - ./examples/design-hit-counter.js
+
+```javascript
+    /*
+## Design Hit Counter
+
+Design a hit counter which counts the number of hits received in the past 5 minutes.
+
+Each function accepts a timestamp parameter (in seconds granularity) and you may assume that calls are being made to the system in chronological order (ie, the timestamp is monotonically increasing). You may assume that the earliest timestamp starts at 1.
+
+It is possible that several hits arrive roughly at the same time.
+
+Example:
+
+```
+const counter = new HitCounter();
+
+// hit at timestamp 1.
+counter.hit(1);
+
+// hit at timestamp 2.
+counter.hit(2);
+
+// hit at timestamp 3.
+counter.hit(3);
+
+// get hits at timestamp 4, should return 3.
+counter.getHits(4);
+
+// hit at timestamp 300.
+counter.hit(300);
+
+// get hits at timestamp 300, should return 4.
+counter.getHits(300);
+
+// get hits at timestamp 301, should return 3.
+counter.getHits(301); 
+```
+
+Follow up:
+- What if the number of hits per second could be very large? Does your design scale?
+*/
+/**
+ * Initialize your data structure here.
+ */
+var HitCounter = function () {
+    this.map = new Map();
+};
+
+/**
+ * Record a hit.
+        @param timestamp - The current timestamp (in seconds granularity). 
+ * @param {number} timestamp
+ * @return {void}
+ */
+HitCounter.prototype.hit = function (timestamp) {
+    if (!this.map.has(timestamp)) {
+        this.map.set(timestamp, 0);
+    }
+    return this.map.set(timestamp, this.map.get(timestamp) + 1);
+};
+
+/**
+ * Return the number of hits in the past 5 minutes.
+        @param timestamp - The current timestamp (in seconds granularity). 
+ * @param {number} timestamp
+ * @return {number}
+ */
+HitCounter.prototype.getHits = function (timestamp) {
+    let count = 0;
+    let bound = Math.max(1, timestamp - 300 + 1);
+    for (let i = timestamp; i >= bound; i--) {
+        if (this.map.has(i)) {
+            count += this.map.get(i);
+        }
+    }
+    return count;
+};
+
+/** 
+ * Your HitCounter object will be instantiated and called as such:
+ * var obj = Object.create(HitCounter).createNew()
+ * obj.hit(timestamp)
+ * var param_2 = obj.getHits(timestamp)
+ */
+const counter = new HitCounter();
+
+// hit at timestamp 1.
+counter.hit(1);
+
+// hit at timestamp 2.
+counter.hit(2);
+
+// hit at timestamp 3.
+console.log(counter.hit(3));
+
+// get hits at timestamp 4, should return 3.
+console.log(counter.getHits(4));
+
+// hit at timestamp 300.
+counter.hit(300);
+
+// get hits at timestamp 300, should return 4.
+console.log(counter.getHits(300));
+
+// get hits at timestamp 301, should return 3.
+console.log(counter.getHits(301));
+
+```
+
+### Flowchart
+![./examples/design-hit-counter.js-svg image][./examples/design-hit-counter.js-svg]
+
+[./examples/design-hit-counter.js-svg]: https://raw.githubusercontent.com/jonniespratley/js-leetcode/master/flowcharts/design-hit-counter.svg "Logo Title Text 2"
+
+
+---
+
+## 21 - ./examples/design-linked-list.js
+
+```javascript
+    /**
+ * Initialize your data structure here.
+ */
+var MyLinkedList = function() {
+    
+};
+
+/**
+ * Get the value of the index-th node in the linked list. If the index is invalid, return -1. 
+ * @param {number} index
+ * @return {number}
+ */
+MyLinkedList.prototype.get = function(index) {
+    
+};
+
+/**
+ * Add a node of value val before the first element of the linked list. After the insertion, the new node will be the first node of the linked list. 
+ * @param {number} val
+ * @return {void}
+ */
+MyLinkedList.prototype.addAtHead = function(val) {
+    
+};
+
+/**
+ * Append a node of value val to the last element of the linked list. 
+ * @param {number} val
+ * @return {void}
+ */
+MyLinkedList.prototype.addAtTail = function(val) {
+    
+};
+
+/**
+ * Add a node of value val before the index-th node in the linked list. If index equals to the length of linked list, the node will be appended to the end of linked list. If index is greater than the length, the node will not be inserted. 
+ * @param {number} index 
+ * @param {number} val
+ * @return {void}
+ */
+MyLinkedList.prototype.addAtIndex = function(index, val) {
+    
+};
+
+/**
+ * Delete the index-th node in the linked list, if the index is valid. 
+ * @param {number} index
+ * @return {void}
+ */
+MyLinkedList.prototype.deleteAtIndex = function(index) {
+    
+};
+
+/** 
+ * Your MyLinkedList object will be instantiated and called as such:
+ * var obj = Object.create(MyLinkedList).createNew()
+ * var param_1 = obj.get(index)
+ * obj.addAtHead(val)
+ * obj.addAtTail(val)
+ * obj.addAtIndex(index,val)
+ * obj.deleteAtIndex(index)
+ */
+var linkedList = new MyLinkedList();
+linkedList.addAtHead(1);
+linkedList.addAtTail(3);
+linkedList.addAtIndex(1, 2);  // linked list becomes 1->2->3
+linkedList.get(1);            // returns 2
+linkedList.deleteAtIndex(1);  // now the linked list is 1->3
+linkedList.get(1);            // returns 3
+```
+
+### Flowchart
+![./examples/design-linked-list.js-svg image][./examples/design-linked-list.js-svg]
+
+[./examples/design-linked-list.js-svg]: https://raw.githubusercontent.com/jonniespratley/js-leetcode/master/flowcharts/design-linked-list.svg "Logo Title Text 2"
+
+
+---
+
+## 22 - ./examples/diagonal-traverse.js
 
 ```javascript
     /**
@@ -965,10 +1807,15 @@ var findDiagonalOrder = function (matrix) {
 
 ---
 
-## 15 - ./examples/example.js
+## 23 - ./examples/example.js
 
 ```javascript
-    function indexSearch(list, element) {
+    /**
+ * 
+ * @param {Array} list A list of items
+ * @param {any} element The value to search for.
+ */
+function indexSearch(list, element) {
     let currentIndex,
         currentElement,
         minIndex = 0,
@@ -977,7 +1824,7 @@ var findDiagonalOrder = function (matrix) {
     while (minIndex <= maxIndex) {
         currentIndex = Math.floor(maxIndex + maxIndex) / 2;
         currentElement = list[currentIndex];
-
+        
         if (currentElement === element) {
             return currentIndex;
         }
@@ -993,6 +1840,8 @@ var findDiagonalOrder = function (matrix) {
 
     return -1;
 }
+
+console.log(indexSearch([2,1,4,8,3,5,6,3,2,1,9], 5))
 ```
 
 ### Flowchart
@@ -1003,7 +1852,57 @@ var findDiagonalOrder = function (matrix) {
 
 ---
 
-## 16 - ./examples/fib.js
+## 24 - ./examples/facebook-interview-question.js
+
+```javascript
+    /**
+ * question: determine if any 3 integers in an array sum to zero.
+ * 
+ * [ 2, 3, 1, -6 ]
+ * [ 2, 1, -1, -1]
+ * 
+ * Time: O(n2)
+ * Space: O(1)
+ * 
+ * @param {*} arr 
+ */
+function sumToZero(arr) {
+    if (!arr) return false
+    arr.sort();
+
+    let i = 0;
+    let j = 0;
+    let k = arr.length - 1;
+    let sum = 0;
+
+    //loop each item
+    for (; i < arr.length; i++) {
+        j = i + 1;
+
+        while (k > j) {
+            sum = arr[i] + arr[j] + arr[k];
+
+            //Check if we have match
+            if (sum === 0) {
+                return true;
+            }
+
+            sum > 0 ? k-- : j++;
+        }
+    }
+    return false;
+}
+```
+
+### Flowchart
+![./examples/facebook-interview-question.js-svg image][./examples/facebook-interview-question.js-svg]
+
+[./examples/facebook-interview-question.js-svg]: https://raw.githubusercontent.com/jonniespratley/js-leetcode/master/flowcharts/facebook-interview-question.svg "Logo Title Text 2"
+
+
+---
+
+## 25 - ./examples/fib.js
 
 ```javascript
     function fib(n){
@@ -1025,7 +1924,161 @@ console.log(fib(5));
 
 ---
 
-## 17 - ./examples/first-bad-version.js
+## 26 - ./examples/find-all-anagrams-in-a-string.js
+
+```javascript
+    /*
+## Find All Anagrams in a String
+Given a string s and a non-empty string p, find all the start indices of p's anagrams in s.
+
+Strings consists of lowercase English letters only and the length of both strings s and p will not be larger than 20,100.
+
+The order of output does not matter.
+
+Example 1:
+
+```
+Input:
+s: "cbaebabacd" p: "abc"
+
+Output:
+[0, 6]
+
+Explanation:
+The substring with start index = 0 is "cba", which is an anagram of "abc".
+The substring with start index = 6 is "bac", which is an anagram of "abc".
+```
+
+Example 2:
+
+```
+Input:
+s: "abab" p: "ab"
+
+Output:
+[0, 1, 2]
+
+Explanation:
+The substring with start index = 0 is "ab", which is an anagram of "ab".
+The substring with start index = 1 is "ba", which is an anagram of "ab".
+The substring with start index = 2 is "ab", which is an anagram of "ab".
+```
+*/
+
+/**
+ * @param {string} s
+ * @param {string} p
+ * @return {number[]}
+ */
+var findAnagrams = function (s, p) {
+
+    const resultArray = [];
+    const pLength = p.length;
+    const sLength = s.length;
+
+    // create two empty arrays with 0 inside
+    const pWindow = new Array(26).fill(0);
+    const sWindow = new Array(26).fill(0);
+
+    //assume only a-z
+    //TODO: add checker later if input has invalid characters
+    [...p].forEach(character => {
+        // charCodeAt returns a--> 97, b --> 98, c--> 99, etc
+        pWindow[character.charCodeAt(0) - 97]++
+    });
+
+    [...s].forEach((character, index) => {
+        //jump into next position, and minus the previous chart from window
+        if (index >= pLength) sWindow[s.charCodeAt(index - pLength) - 97]--
+        sWindow[character.charCodeAt(0) - 97]++
+        // compare two strings
+        if (pWindow.join() === sWindow.join()) resultArray.push(index + 1 - pLength)
+    });
+
+    return resultArray
+};
+
+console.log(findAnagrams('abab', 'ab'));
+```
+
+### Flowchart
+![./examples/find-all-anagrams-in-a-string.js-svg image][./examples/find-all-anagrams-in-a-string.js-svg]
+
+[./examples/find-all-anagrams-in-a-string.js-svg]: https://raw.githubusercontent.com/jonniespratley/js-leetcode/master/flowcharts/find-all-anagrams-in-a-string.svg "Logo Title Text 2"
+
+
+---
+
+## 27 - ./examples/find-min-in-rotated-sorted-array.js
+
+```javascript
+    /**
+# Find Minimum in Rotated Sorted Array
+Suppose an array sorted in ascending order is rotated at some pivot unknown to you beforehand.
+
+(i.e.,  [0,1,2,4,5,6,7] might become  [4,5,6,7,0,1,2]).
+
+Find the minimum element.
+
+You may assume no duplicate exists in the array.
+
+Example 1:
+
+Input: [3,4,5,1,2] 
+Output: 1
+Example 2:
+
+Input: [4,5,6,7,0,1,2]
+Output: 0
+
+ * 
+ * 
+ * 
+ * @param {number[]} nums
+ * @return {number}
+ */
+var findMin2 = function (nums) {
+    var min = Infinity
+
+    for (var i = 0; i < nums.length; i++) {
+        if (nums[i] > nums[i + 1]) {
+            return nums[i + 1]
+        }
+        if (nums[i] < min) {
+            min = nums[i]
+        }
+    }
+    return min
+};
+
+var findMin3 = function (nums) {
+    let left = 0,
+        right = nums.length - 1;
+    while (right - left > 1) {
+        let mid = left + ((right - left) >> 1);
+        if (nums[mid] > nums[right]) {
+            left = mid;
+        } else {
+            right = mid;
+        }
+    }
+    return Math.min(nums[left], nums[right]);
+};
+
+var findMin = function (nums) {
+    return Math.min(...nums);
+}
+```
+
+### Flowchart
+![./examples/find-min-in-rotated-sorted-array.js-svg image][./examples/find-min-in-rotated-sorted-array.js-svg]
+
+[./examples/find-min-in-rotated-sorted-array.js-svg]: https://raw.githubusercontent.com/jonniespratley/js-leetcode/master/flowcharts/find-min-in-rotated-sorted-array.svg "Logo Title Text 2"
+
+
+---
+
+## 28 - ./examples/first-bad-version.js
 
 ```javascript
     // You are a product manager and currently leading a team to develop a new product. Unfortunately, the latest version of your product fails the quality check. Since each version is developed based on the previous version, all the versions after a bad version are also bad.
@@ -1086,7 +2139,7 @@ function solution(isBadVersion) {
 
 ---
 
-## 18 - ./examples/first-uniq-char.js
+## 29 - ./examples/first-uniq-char.js
 
 ```javascript
     /*
@@ -1143,7 +2196,7 @@ console.log(firstUniqChar('loveleetcode'));
 
 ---
 
-## 19 - ./examples/fizz-buzz.js
+## 30 - ./examples/fizz-buzz.js
 
 ```javascript
     /*
@@ -1202,7 +2255,296 @@ function fizzBuzz(n) {
 
 ---
 
-## 20 - ./examples/group-anagrams.js
+## 31 - ./examples/flatten-2d-vector.js
+
+```javascript
+    /*
+## Flatten 2D Vector
+
+Implement an iterator to flatten a 2d vector.
+
+Example:
+
+```
+Input: 2d vector =
+[
+  [1,2],
+  [3],
+  [4,5,6]
+]
+Output: [1,2,3,4,5,6]
+```
+
+Explanation: By calling next repeatedly until hasNext returns false, 
+             the order of elements returned by next should be: [1,2,3,4,5,6].
+
+*/
+/**
+ * @constructor
+ * @param {Integer[][]} vec2d
+ */
+var Vector2D = function (vec2d) {
+    let list = [];
+
+    function flatten(arr, list) {
+        if (arr instanceof Array) {
+            for (let i = 0; i < arr.length; i++) {
+                flatten(arr[i], list)
+            }
+        } else {
+            list.push(arr);
+        }
+    }
+
+    flatten(vec2d, list);
+    this.list = list;
+};
+
+
+/**
+ * @this Vector2D
+ * @returns {boolean}
+ */
+Vector2D.prototype.hasNext = function () {
+    return this.list.length > 0;
+};
+
+/**
+ * @this Vector2D
+ * @returns {integer}
+ */
+Vector2D.prototype.next = function () {
+    return this.list.shift();
+};
+
+/**
+ * Your Vector2D will be called like this:
+ * var i = new Vector2D(vec2d), a = [];
+ * while (i.hasNext()) a.push(i.next());
+ */
+var vec2d = [
+    [1, 2],
+    [3],
+    [4, 5, 6]
+];
+var i = new Vector2D(vec2d),
+    a = [];
+while (i.hasNext()) a.push(i.next());
+
+console.log(a);
+```
+
+### Flowchart
+![./examples/flatten-2d-vector.js-svg image][./examples/flatten-2d-vector.js-svg]
+
+[./examples/flatten-2d-vector.js-svg]: https://raw.githubusercontent.com/jonniespratley/js-leetcode/master/flowcharts/flatten-2d-vector.svg "Logo Title Text 2"
+
+
+---
+
+## 32 - ./examples/flatten-nested-list-iterator.js
+
+```javascript
+    /*
+Given a nested list of integers, implement an iterator to flatten it.
+
+Each element is either an integer, or a list -- whose elements may also be integers or other lists.
+
+Example 1:
+
+```
+Input: [[1,1],2,[1,1]]
+Output: [1,1,2,1,1]
+Explanation: By calling next repeatedly until hasNext returns false, 
+             the order of elements returned by next should be: [1,1,2,1,1].
+
+```
+
+Example 2:
+
+```
+Input: [1,[4,[6]]]
+Output: [1,4,6]
+Explanation: By calling next repeatedly until hasNext returns false, 
+             the order of elements returned by next should be: [1,4,6].
+```
+*/
+/**
+ * // This is the interface that allows for creating nested lists.
+ * // You should not implement it, or speculate about its implementation
+ * function NestedInteger() {
+ *
+ *     Return true if this NestedInteger holds a single integer, rather than a nested list.
+ *     @return {boolean}
+ *     this.isInteger = function() {
+ *         ...
+ *     };
+ *
+ *     Return the single integer that this NestedInteger holds, if it holds a single integer
+ *     Return null if this NestedInteger holds a nested list
+ *     @return {integer}
+ *     this.getInteger = function() {
+ *         ...
+ *     };
+ *
+ *     Return the nested list that this NestedInteger holds, if it holds a nested list
+ *     Return null if this NestedInteger holds a single integer
+ *     @return {NestedInteger[]}
+ *     this.getList = function() {
+ *         ...
+ *     };
+ * };
+ */
+
+/**
+ * @constructor
+ * @param {NestedInteger[]} nestedList
+ */
+var NestedIterator = function (nestedList) {
+    this.stack = [];
+
+    for (var i = nestedList.length; i--;) {
+        this.stack.push(nestedList[i]);
+    }
+};
+
+
+/**
+ * @this NestedIterator
+ * @returns {boolean}
+ */
+NestedIterator.prototype.hasNext = function () {
+    // keep looping until we found insert an integer in the stack
+    while (this.stack.length > 0) {
+        var next = this.stack[this.stack.length - 1];
+        if (next.isInteger()) {
+            return true;
+        }
+
+        this.stack.pop();
+        var list = next.getList();
+        for (var i = list.length; i--;) {
+            this.stack.push(list[i]);
+        }
+    }
+
+    return false;
+};
+
+/**
+ * @this NestedIterator
+ * @returns {integer}
+ */
+NestedIterator.prototype.next = function () {
+    return this.stack.pop();
+};
+
+
+var NestedIterator2 = function (nestedList) {
+    var list = [];
+    this.curr = 0;
+    var flattenList = function (nestedList) {
+        for (var i = 0; i < nestedList.length; i++) {
+            if (nestedList[i].isInteger()) {
+                list.push(nestedList[i].getInteger());
+            } else {
+                flattenList(nestedList[i].getList());
+            }
+        }
+    }
+    flattenList(nestedList);
+    this.list = list;
+};
+
+
+/**
+ * @this NestedIterator
+ * @returns {boolean}
+ */
+NestedIterator.prototype.hasNext = function () {
+    if (this.list[this.curr] !== undefined) return true;
+    return false;
+};
+
+/**
+ * @this NestedIterator
+ * @returns {integer}
+ */
+NestedIterator.prototype.next = function () {
+    if (this.curr < this.list.length) return this.list[this.curr++];
+    return null;
+};
+
+
+
+
+
+/**
+ * Your NestedIterator will be called like this:
+ 
+*/
+let nestedList = [
+    [1, 1], 2, [1, 1]
+];
+var i = new NestedIterator(nestedList),
+    a = [];
+while (i.hasNext()) a.push(i.next());
+
+console.log(a);
+```
+
+### Flowchart
+![./examples/flatten-nested-list-iterator.js-svg image][./examples/flatten-nested-list-iterator.js-svg]
+
+[./examples/flatten-nested-list-iterator.js-svg]: https://raw.githubusercontent.com/jonniespratley/js-leetcode/master/flowcharts/flatten-nested-list-iterator.svg "Logo Title Text 2"
+
+
+---
+
+## 33 - ./examples/generate-paranthesis.js
+
+```javascript
+    // Given n pairs of parentheses, write a function to generate all combinations of well-formed parentheses.
+//
+// For example, given n = 3, a solution set is:
+//
+//   [
+//     "((()))",
+//     "(()())",
+//     "(())()",
+//     "()(())",
+//     "()()()"
+//   ]
+/**
+ * @param {number} n
+ * @return {string[]}
+ */
+function generateParenthesis(n) {
+    let res = [];
+    compose(n, n, '', res);
+    return res;
+}
+// backtracking
+function compose(left, right, s, res) { // left: left remaining, right: right remaining
+    if (left > right) return; // e.g. ))(
+    if (!left && !right) {
+        res.push(s);
+        return;
+    }
+    if (left) compose(left - 1, right, s + '(', res);
+    if (right) compose(left, right - 1, s + ')', res);
+}
+```
+
+### Flowchart
+![./examples/generate-paranthesis.js-svg image][./examples/generate-paranthesis.js-svg]
+
+[./examples/generate-paranthesis.js-svg]: https://raw.githubusercontent.com/jonniespratley/js-leetcode/master/flowcharts/generate-paranthesis.svg "Logo Title Text 2"
+
+
+---
+
+## 34 - ./examples/group-anagrams.js
 
 ```javascript
     /**
@@ -1227,7 +2569,7 @@ var groupAnagrams = function (strs) {
             locations[alph[i]].push(i);
         }
     }
-    console.log(locations);
+   
 
     // 3 transform groups of indices into groups of original words
     // e.g. for 'aet', map [0, 1, 3] to words at those indices in strs
@@ -1237,9 +2579,64 @@ var groupAnagrams = function (strs) {
     }
     return output;
 };
+console.time('groupAnagrams')
 console.log(
     groupAnagrams(["eat", "tea", "tan", "ate", "nat", "bat"])
 )
+console.timeEnd('groupAnagrams')
+
+
+/**
+ * @param {string[]} strs
+ * @return {string[][]}
+ */
+var groupAnagrams2 = function (strs) {
+    let out = [];
+    let locations = {};
+    let alpha = strs.sort().map(s => s.split('').sort().join(''));
+    for (let i = 0; i < alpha.length; i++) {
+        let s1 = alpha[i];
+        if (!locations[s1]) {
+            locations[s1] = [i];
+        } else {
+            locations[s1].push(i);
+        }
+       // console.log(s1);
+    }
+
+    for (let w in locations) {
+        out.push(locations[w].map(idx => strs[idx]));
+    }
+
+    //If match is not the same, check again.
+    return out;
+};
+console.time('groupAnagrams2')
+console.log(
+    groupAnagrams2(["eat", "tea", "tan", "ate", "nat", "bat"])
+)
+console.timeEnd('groupAnagrams2')
+
+/**
+ * Fastest implementation.
+ * @param {Array} strs 
+ */
+var groupAnagrams3 = function (strs) {
+    if (strs.length === 0) return [];
+    if (strs.length === 1) return [strs];
+    const groups = {};
+    for (const word of strs) {
+        let sum = 0;
+        for (let i = 0; i < word.length; i++) sum += (word.charCodeAt(i) ** 4);
+        groups[sum] ? groups[sum].push(word) : groups[sum] = [word];
+    }
+    return Object.values(groups);
+};
+console.time('groupAnagrams3')
+console.log(
+    groupAnagrams3(["eat", "tea", "tan", "ate", "nat", "bat"])
+)
+console.timeEnd('groupAnagrams3')
 ```
 
 ### Flowchart
@@ -1250,7 +2647,48 @@ console.log(
 
 ---
 
-## 21 - ./examples/has-path-sum.js
+## 35 - ./examples/hammering-distance.js
+
+```javascript
+    // The Hamming distance between two integers is the number of positions at which the corresponding bits are different.
+//
+// Given two integers x and y, calculate the Hamming distance.
+//
+// Note:
+// 0 ≤ x, y < 231.
+//
+// Example:
+//
+// Input: x = 1, y = 4
+//
+// Output: 2
+//
+// Explanation:
+// 1   (0 0 0 1)
+// 4   (0 1 0 0)
+//        ↑   ↑
+//
+// The above arrows point to positions where the corresponding bits are different.
+
+/**
+ * @param {number} x
+ * @param {number} y
+ * @return {number}
+ */
+function hammingDistance(x, y) {
+    return (x ^ y).toString(2).split('0').join('').length;
+}
+```
+
+### Flowchart
+![./examples/hammering-distance.js-svg image][./examples/hammering-distance.js-svg]
+
+[./examples/hammering-distance.js-svg]: https://raw.githubusercontent.com/jonniespratley/js-leetcode/master/flowcharts/hammering-distance.svg "Logo Title Text 2"
+
+
+---
+
+## 36 - ./examples/has-path-sum.js
 
 ```javascript
     var hasPathSum = function(root, sum) {
@@ -1284,7 +2722,7 @@ console.log(
 
 ---
 
-## 22 - ./examples/hour-glass.js
+## 37 - ./examples/hour-glass.js
 
 ```javascript
     let input = [
@@ -1342,7 +2780,7 @@ console.log(hourglassSum(input2));
 
 ---
 
-## 23 - ./examples/house-robber.js
+## 38 - ./examples/house-robber.js
 
 ```javascript
     // You are a professional robber planning to rob houses along a street. Each house has a certain amount of money stashed, the only constraint stopping you from robbing each of them is that adjacent houses have security system connected and it will automatically contact the police if two adjacent houses were broken into on the same night.
@@ -1422,6 +2860,8 @@ function rob3(nums) {
     return b;
 }
 
+
+
 /** 4) Iteration */
 // time O(n)
 // space O(1)
@@ -1436,6 +2876,22 @@ function rob(nums) {
 
     return Math.max(a, b);
 }
+
+function rob4(nums){
+    let memo = [];
+    function _recursiveCall (i) {
+        if (i >= nums.length) return 0;
+        
+        if (memo[i] === undefined) {
+            memo[i] = Math.max(nums[i] + _recursiveCall(i + 2), _recursiveCall(i + 1));
+            return memo[i];
+        } else {
+            return memo[i];
+        }
+    }
+                        
+    return _recursiveCall(0);
+}
 ```
 
 ### Flowchart
@@ -1446,26 +2902,389 @@ function rob(nums) {
 
 ---
 
-## 24 - ./examples/is-palindrome.js
+## 39 - ./examples/increasing-triplet-subsequence.js
 
 ```javascript
-    function isPalindrome(word) {
-    var s = new Stack();
-    for (var i = 0; i < word.length; ++i) {
-       s.push(word[i]);
+    /*
+## Increasing Triplet Subsequence
+
+Given an unsorted array return whether an increasing subsequence of length 3 exists or not in the array.
+
+Formally the function should:
+
+> Return true if there exists i, j, k such that arr[i] < arr[j] < arr[k] given 0 ≤ i < j < k ≤ n-1 else return false.
+> Note: Your algorithm should run in O(n) time complexity and O(1) space complexity.
+
+Example 1:
+
+```
+Input: [1,2,3,4,5]
+Output: true
+```
+
+Example 2:
+
+```
+Input: [5,4,3,2,1]
+Output: false
+```
+*/
+
+/**
+ * @param {number[]} nums
+ * @return {boolean}
+ */
+var increasingTriplet = function (nums) {
+    let small = Number.MAX_SAFE_INTEGER; // Set max value
+    let big = Number.MAX_SAFE_INTEGER;
+    for (let i = 0; i < nums.length; i++) {
+        if (big >= nums[i]) {
+            big = nums[i]; //update big to be smaller val
+        } else if (small >= nums[i]) {
+            small = nums[i]; //update small to be smaller val
+        } else {
+            return true;
+        }
     }
-    var rword = "";
-    while (s.length() > 0) {
-       rword += s.pop();
+    return false;
+};
+
+console.log(increasingTriplet([1, 2, 3, 4, 5]));
+console.log(increasingTriplet([5, 4, 3, 2, 1]));
+console.log(increasingTriplet([2, 1, 5, 0, 4, 6]));
+```
+
+### Flowchart
+![./examples/increasing-triplet-subsequence.js-svg image][./examples/increasing-triplet-subsequence.js-svg]
+
+[./examples/increasing-triplet-subsequence.js-svg]: https://raw.githubusercontent.com/jonniespratley/js-leetcode/master/flowcharts/increasing-triplet-subsequence.svg "Logo Title Text 2"
+
+
+---
+
+## 40 - ./examples/increasing-triplet.js
+
+```javascript
+    /*
+
+## Increasing Triplet Subsequence
+Given an unsorted array return whether an increasing subsequence of length 3 exists or not in the array.
+
+Formally the function should:
+
+```
+Return true if there exists i, j, k 
+such that arr[i] < arr[j] < arr[k] given 0 ≤ i < j < k ≤ n-1 else return false.
+Note: Your algorithm should run in O(n) time complexity and O(1) space complexity.
+```
+
+Example 1:
+
+```
+Input: [1,2,3,4,5]
+Output: true
+```
+
+Example 2:
+
+```
+Input: [5,4,3,2,1]
+Output: false
+```
+
+*/
+var increasingTriplet = function (nums) {
+    var i = 0;
+    let j = 0;
+    let k = 0;
+    for (; i < nums.length; i++) {
+        j = i + 1;
+        k = j + 1;
+        if (nums[i] < nums[j] < nums[k]) {
+            return true;
+        } else {
+
+        }
     }
-    if (word == rword) {
-       return true;
-     }
-    else {
-       return false;
+    return false;
+
+};
+
+console.log(increasingTriplet([1, 2, 3, 4, 5]));
+console.log(increasingTriplet([5, 4, 3, 2, 1]));
+```
+
+### Flowchart
+![./examples/increasing-triplet.js-svg image][./examples/increasing-triplet.js-svg]
+
+[./examples/increasing-triplet.js-svg]: https://raw.githubusercontent.com/jonniespratley/js-leetcode/master/flowcharts/increasing-triplet.svg "Logo Title Text 2"
+
+
+---
+
+## 41 - ./examples/insert-into-a-binary-search-tree.js
+
+```javascript
+    /*
+## Insert into a Binary Search Tree
+
+Given the root node of a binary search tree (BST) and a value to be inserted into the tree, insert the value into the BST. Return the root node of the BST after the insertion. It is guaranteed that the new value does not exist in the original BST.
+
+Note that there may exist multiple valid ways for the insertion, as long as the tree remains a BST after insertion. You can return any of them.
+
+For example, 
+
+Given the tree:
+        4
+       / \
+      2   7
+     / \
+    1   3
+And the value to insert: 5
+You can return this binary search tree:
+
+         4
+       /   \
+      2     7
+     / \   /
+    1   3 5
+This tree is also valid:
+
+         5
+       /   \
+      2     7
+     / \   
+    1   3
+         \
+          4
+*/
+
+/**
+ * Definition for a binary tree node.
+ * function TreeNode(val) {
+ *     this.val = val;
+ *     this.left = this.right = null;
+ * }
+ */
+/**
+ * @param {TreeNode} root
+ * @param {number} val
+ * @return {TreeNode}
+ */
+var insertIntoBST = function (root, val) {
+    if (root == null) {
+        return new TreeNode(val);
     }
- }
- 
+    if (root.val < val) {
+        root.right = insertIntoBST(root.right, val);
+    } else {
+        root.left = insertIntoBST(root.left, val);
+    }
+    return root;
+};
+```
+
+### Flowchart
+![./examples/insert-into-a-binary-search-tree.js-svg image][./examples/insert-into-a-binary-search-tree.js-svg]
+
+[./examples/insert-into-a-binary-search-tree.js-svg]: https://raw.githubusercontent.com/jonniespratley/js-leetcode/master/flowcharts/insert-into-a-binary-search-tree.svg "Logo Title Text 2"
+
+
+---
+
+## 42 - ./examples/intersection-two-linked-lists.js
+
+```javascript
+    // Write a program to find the node at which the intersection of two singly linked lists begins.
+//
+//
+// For example, the following two linked lists:
+//
+// A:          a1 → a2
+//                    ↘
+//                      c1 → c2 → c3
+//                    ↗
+// B:     b1 → b2 → b3
+//
+// begin to intersect at node c1.
+//
+// Notes:
+//
+// If the two linked lists have no intersection at all, return null.
+// The linked lists must retain their original structure after the function returns.
+// You may assume there are no cycles anywhere in the entire linked structure.
+// Your code should preferably run in O(n) time and use only O(1) memory.
+/**
+ * Definition for singly-linked list.
+ * function ListNode(val) {
+ *     this.val = val;
+ *     this.next = null;
+ * }
+ */
+/**
+ * @param {ListNode} headA
+ * @param {ListNode} headB
+ * @return {ListNode}
+ */
+/** 1) Hash table */
+// Time complexity O(m + n)
+// Space complexity O(m) or O(n)
+function getIntersectionNode1(headA, headB) {
+    let map = {};
+
+    while (headA) {
+        map[headA.val] = true;
+        headA = headA.next;
+    }
+
+    while (headB) {
+        if (map[headB.val]) return headB;
+        headB = headB.next;
+    }
+    return null;
+}
+/** 2) Two pointers */
+// Time complexity O(m + n)
+// Space complexity O(1)
+function getIntersectionNode(headA, headB) {
+    let a = headA;
+    let b = headB;
+    // a === b happens at the connecting point or when they are both null at the end
+    while (a !== b) {
+        a = a ? a.next : headB; // move a to head of b if at end
+        b = b ? b.next : headA; // move b to head of a if at end
+    }
+    return a;
+}
+```
+
+### Flowchart
+![./examples/intersection-two-linked-lists.js-svg image][./examples/intersection-two-linked-lists.js-svg]
+
+[./examples/intersection-two-linked-lists.js-svg]: https://raw.githubusercontent.com/jonniespratley/js-leetcode/master/flowcharts/intersection-two-linked-lists.svg "Logo Title Text 2"
+
+
+---
+
+## 43 - ./examples/invert-tree.js
+
+```javascript
+    /*
+## 226. Invert Binary Tree
+
+Invert a binary tree.
+
+Example:
+
+```
+Input:
+
+     4
+   /   \
+  2     7
+ / \   / \
+1   3 6   9
+
+Output:
+
+     4
+   /   \
+  7     2
+ / \   / \
+9   6 3   1
+```
+
+*/
+function TreeNode(val) {
+    this.val = val;
+    this.left = this.right = null;
+}
+
+/**
+ * Definition for a binary tree node.
+ * function TreeNode(val) {
+ *     this.val = val;
+ *     this.left = this.right = null;
+ * }
+ */
+/**
+ * @param {TreeNode} root
+ * @return {TreeNode}
+ */
+var invertTree = function (root) {
+    if(root === null){ return root; }
+    var tmp = root.left;
+    root.left = root.right;
+    root.right = tmp;
+    invertTree(root.left);
+    invertTree(root.right);
+    return root;
+};
+
+
+let root = new TreeNode(4);
+root.left = new TreeNode(2);
+root.left.left = new TreeNode(1);
+root.left.right = new TreeNode(3);
+root.right = new TreeNode(7);
+root.right.left = new TreeNode(6);
+root.right.right = new TreeNode(9);
+
+
+console.log(invertTree(root));
+```
+
+### Flowchart
+![./examples/invert-tree.js-svg image][./examples/invert-tree.js-svg]
+
+[./examples/invert-tree.js-svg]: https://raw.githubusercontent.com/jonniespratley/js-leetcode/master/flowcharts/invert-tree.svg "Logo Title Text 2"
+
+
+---
+
+## 44 - ./examples/is-palindrome.js
+
+```javascript
+    // Given a string, determine if it is a palindrome, considering only alphanumeric characters and ignoring cases.
+//
+// Note: For the purpose of this problem, we define empty string as valid palindrome.
+//
+// Example 1:
+//
+// Input: "A man, a plan, a canal: Panama"
+// Output: true
+//
+// Example 2:
+//
+// Input: "race a car"
+// Output: false
+/**
+ * @param {string} s
+ * @return {boolean}
+ */
+function isPalindrome(s) {
+  const s2 = s.replace(/\W/g, '').toLowerCase();
+  for (let i = 0; i < s2.length / 2; i++) {
+    if (s2[i] !== s2[s2.length - i - 1]) return false
+  }
+  return true;
+}
+
+function isPalindrome(word) {
+  var s = [];
+  for (var i = 0; i < word.length; ++i) {
+    s.push(word[i]);
+  }
+  var rword = "";
+  while (s.length() > 0) {
+    rword += s.pop();
+  }
+  if (word == rword) {
+    return true;
+  } else {
+    return false;
+  }
+}
 ```
 
 ### Flowchart
@@ -1476,7 +3295,92 @@ function rob(nums) {
 
 ---
 
-## 25 - ./examples/is-valid-params.js
+## 45 - ./examples/is-valid-bst.js
+
+```javascript
+    /*
+## Validate Binary Search Tree
+
+Given a binary tree, determine if it is a valid binary search tree (BST).
+
+Assume a BST is defined as follows:
+
+The left subtree of a node contains only nodes with keys less than the node's key.
+The right subtree of a node contains only nodes with keys greater than the node's key.
+Both the left and right subtrees must also be binary search trees.
+
+
+Example 1:
+
+```
+Input:
+    2
+   / \
+  1   3
+Output: true
+```
+
+Example 2:
+
+```
+    5
+   / \
+  1   4
+     / \
+    3   6
+Output: false
+
+```
+
+Explanation: The input is: [5,1,4,null,null,3,6]. The root node's value
+             is 5 but its right child's value is 4.
+
+*/
+/**
+ * Definition for a binary tree node.
+ * function TreeNode(val) {
+ *     this.val = val;
+ *     this.left = this.right = null;
+ * }
+ */
+/**
+ * @param {TreeNode} root
+ * @return {boolean}
+ */
+var isValidBST = function(root) {
+    if(root === null) return true;
+    
+    const stack = [{ node: root, minimum: -Infinity, maximum: Infinity }];
+    
+    while(stack.length) {
+      const { node, minimum, maximum } = stack.pop();
+      if(node.val <= minimum || node.val >= maximum){
+        return false;
+      }
+      
+      if(node.left !== null) {
+        stack.push({ node: node.left, minimum, maximum: node.val });
+      }   
+      
+      if(node.right !== null) {
+        stack.push({ node: node.right, minimum: node.val , maximum });
+      }
+     
+    }
+    
+    return true;
+  };
+```
+
+### Flowchart
+![./examples/is-valid-bst.js-svg image][./examples/is-valid-bst.js-svg]
+
+[./examples/is-valid-bst.js-svg]: https://raw.githubusercontent.com/jonniespratley/js-leetcode/master/flowcharts/is-valid-bst.svg "Logo Title Text 2"
+
+
+---
+
+## 46 - ./examples/is-valid-params.js
 
 ```javascript
     /**
@@ -1514,7 +3418,7 @@ function isValid(s) {
 
 ---
 
-## 26 - ./examples/knapsack.js
+## 47 - ./examples/knapsack.js
 
 ```javascript
     function max(a, b) {
@@ -1549,7 +3453,7 @@ function isValid(s) {
 
 ---
 
-## 27 - ./examples/kth-largest-element.js
+## 48 - ./examples/kth-largest-element.js
 
 ```javascript
     /*
@@ -1592,6 +3496,10 @@ var findKthLargest = function (nums, k) {
 
     return array.pop();
 };
+
+function findKthLargest(nums, k) {
+    return nums.sort((a, b) => a - b)[nums.length - k];
+}
 ```
 
 ### Flowchart
@@ -1602,7 +3510,66 @@ var findKthLargest = function (nums, k) {
 
 ---
 
-## 28 - ./examples/length-of-longest-substring.js
+## 49 - ./examples/length-of-longest-substring-without-repeating.js
+
+```javascript
+    // Given a string, find the length of the longest substring without repeating characters.
+//
+// Examples:
+//
+// Given "abcabcbb", the answer is "abc", which the length is 3.
+//
+// Given "bbbbb", the answer is "b", with the length of 1.
+//
+// Given "pwwkew", the answer is "wke", with the length of 3. Note that the answer must be a substring, "pwke" is a subsequence and not a substring.
+/**
+ * @param {string} s
+ * @return {number}
+ */
+function lengthOfLongestSubstring(s) {
+  let max = 0;
+  let chars = [];
+  for (let c of s) {
+    chars = chars.slice(chars.indexOf(c) + 1); // remove everything before when find duplicate one, e.g. awke + w -> ke + w
+    max = Math.max(chars.push(c), max); // push returns the array length
+    console.log(chars)
+  }
+  return max;
+}
+
+console.log(lengthOfLongestSubstring('abcabcbb'));
+console.log(lengthOfLongestSubstring('bbbbb'));
+console.log(lengthOfLongestSubstring('pwwkew'));
+
+var lengthOfLongestSubstring2 = function (s) {
+  var map = {};
+  var max = 0;
+  var i = 0,
+    j = 0;
+  for (i; i < s.length; i++) {
+    var index = s.indexOf(s[i], j);
+    if (index !== -1 && index < i) {
+      var l = i - j;
+      max = Math.max(max, l);
+      j = index + 1;
+    }
+  }
+  return Math.max(max, i - j);
+};
+console.log(lengthOfLongestSubstring2('abcabcbb'));
+console.log(lengthOfLongestSubstring2('bbbbb'));
+console.log(lengthOfLongestSubstring2('pwwkew'));
+```
+
+### Flowchart
+![./examples/length-of-longest-substring-without-repeating.js-svg image][./examples/length-of-longest-substring-without-repeating.js-svg]
+
+[./examples/length-of-longest-substring-without-repeating.js-svg]: https://raw.githubusercontent.com/jonniespratley/js-leetcode/master/flowcharts/length-of-longest-substring-without-repeating.svg "Logo Title Text 2"
+
+
+---
+
+## 50 - ./examples/length-of-longest-substring.js
 
 ```javascript
     /**
@@ -1645,49 +3612,62 @@ console.log(lengthOfLongestSubstring("pwwkew"));
 
 ---
 
-## 29 - ./examples/letter-combinations.js
+## 51 - ./examples/letter-combinations.js
 
 ```javascript
-    const mappings = {
-    1: "",
-    2: "abc",
-    3: "def",
-    4: "ghi",
-    5: "jkl",
-    6: "mno",
-    7: "pqrs",
-    8: "tuv",
-    9: "wxyz"
-};
+    // Given a string containing digits from 2-9 inclusive, return all possible letter combinations that the number could represent.
+//
+// A mapping of digit to letters (just like on the telephone buttons) is given below. Note that 1 does not map to any letters.
+//
+// Example:
+//
+// Input: "23"
+// Output: ["ad", "ae", "af", "bd", "be", "bf", "cd", "ce", "cf"].
+//
+// Note:
+//
+// Although the above answer is in lexicographical order, your answer could be in any order you want.
+/**
+ * @param {string} digits
+ * @return {string[]}
+ */
+function letterCombinations(digits) {
+    const letters = {
+        1: '',
+        2: 'abc',
+        3: 'def',
+        4: 'ghi',
+        5: 'jkl',
+        6: 'mno',
+        7: 'pqrs',
+        8: 'tuv',
+        9: 'wxyz'
+    };
+    let prefix = [];
+    let res = [];
 
-var letterCombinations = function (digits) {
-    if (digits == null || digits === "") {
-        return [];
+    function dfs(i) {
+        if (i === digits.length) {
+            return res.push(prefix.join(''));
+        }
+        for (let c of letters[digits[i]]) {
+            
+            prefix.push(c);
+            dfs(i + 1);
+            prefix.pop();
+        }
     }
-    let res = []; // initialize the result array
-    let currIdx = 0; // keep track of the current index of digit we are looking at
-    let currStr = ""; // keep track of the current substring we are exploring
-    backtracking(res, digits, currIdx, currStr); // start recursion
+    if (digits.length) {
+        dfs(0);
+    }
     return res;
-};
-
-var backtracking = function (res, digits, currIdx, currStr) {
-    if (currIdx === digits.length) {
-        return res.push(currStr); // one of the solution now is complete, push it to the array
-    }
-
-    const c = digits[currIdx]; // get the current character    
-    const mapping = mappings[c]; // get its mapping
-
-    for (const s of mapping) { // iterate through every character in the mapping
-        currStr += s;
-        backtracking(res, digits, currIdx + 1, currStr); // recursion
-        currStr = currStr.slice(0, -1); // revert currStr back
-    }
-};
+}
 
 //["ad", "ae", "af", "bd", "be", "bf", "cd", "ce", "cf"].
 console.log(letterCombinations('23'));
+console.log(letterCombinations('123'));
+//console.log(letterCombinations('456'));
+//console.log(letterCombinations('789'));
 ```
 
 ### Flowchart
@@ -1698,7 +3678,7 @@ console.log(letterCombinations('23'));
 
 ---
 
-## 30 - ./examples/level-order.js
+## 52 - ./examples/level-order.js
 
 ```javascript
     var levelOrder = function (root) {
@@ -1737,10 +3717,289 @@ console.log(letterCombinations('23'));
 
 ---
 
-## 31 - ./examples/longest-common-prefix.js
+## 53 - ./examples/linked-list-cycle.js
 
 ```javascript
+    // Given a linked list, determine if it has a cycle in it.
+//
+// Follow up:
+// Can you solve it without using extra space?
+ /**
+ * Definition for singly-linked list.
+ * function ListNode(val) {
+ *     this.val = val;
+ *     this.next = null;
+ * }
+ */
+ /**
+ * @param {ListNode} head
+ * @return {boolean}
+ */
+function hasCycle(head) {
+    if (!head) return false;
+     let slow = head;
+    let fast = head.next;
+     while (fast) {
+      if (!fast.next) return false;
+      if (slow === fast) return true;
+       slow = slow.next;
+      fast = fast.next.next;
+    }
+     return false;
+  }
+```
+
+### Flowchart
+![./examples/linked-list-cycle.js-svg image][./examples/linked-list-cycle.js-svg]
+
+[./examples/linked-list-cycle.js-svg]: https://raw.githubusercontent.com/jonniespratley/js-leetcode/master/flowcharts/linked-list-cycle.svg "Logo Title Text 2"
+
+
+---
+
+## 54 - ./examples/linkedin-interview-question.js
+
+```javascript
+    const foo = function () {
+    this.bar();
+}
+
+const MyClass = function () { 
+    this.foo = foo;
+}
+
+const MyOtherClass = function () { 
+
+}
+
+MyOtherClass.prototype.bar = function () { 
+    this.foo();
+}
+
+const myInstance = new MyOtherClass();
+
+console.log(myInstance.__proto__);
+
+/// Deep iterator
+// Write an iterator that, given a (potentially nested) collection will iterate over the contents of the collections in order.
+// ----
+// Thus, given a collection containing [[1, 3, 5], [4, 7, 3], [[2, 3], 4]] the deep iterator should return [1, 3, 5, 4, 7, 3, 2, 3, 4]
+
+function deepIterator(arr, callback) {
+    if (arr instanceof Array) {
+        for (let i = 0; i < arr.length; i++) {
+            deepIterator(arr[i], callback);
+        }
+    } else {
+        callback(arr);
+    }
+}
+
+console.log(flattenArray([[1, 3, 5], [4, 7, 3], [[2, 3], 4]]), [1, 3, 5, 4, 7, 3, 2, 3, 4]) // true;
+
+function flattenArray(arr) {
+    // Logic
+    let result = [];
+    deepIterator(arr, (item) => {
+        result.push(item);
+    });
+    return result;
+}
+
+// Scoping
+var Foo = function (a) {
+    this.a = a;
+    function bar() {
+        return a;
+    }
+    this.baz = function () {
+        return a;
+    };
+    this.bar = bar;
+};
+
+Foo.prototype = {
+    biz: function () {
+        return this.a;
+    }
+};
+
+var f = new Foo(7);
+f.bar(); // undefined
+f.baz(); // undefined
+f.biz(); // undefined
+
+const parent = function() {
+    const a = 'Hi!';
+
+    const foo = function() {
+        console.log(a);
+    }
+    foo();
+}
+
+parent();
+
+function baz() { 
+    const a = 'hi!';
+    function biz() { 
+        console.log(this); // obj
+        console.log(a);
+    }
+    biz();
+}
+
+const obj = {
+    baz: baz,
+}
+
+
+baz(); // ?
+```
+
+### Flowchart
+![./examples/linkedin-interview-question.js-svg image][./examples/linkedin-interview-question.js-svg]
+
+[./examples/linkedin-interview-question.js-svg]: https://raw.githubusercontent.com/jonniespratley/js-leetcode/master/flowcharts/linkedin-interview-question.svg "Logo Title Text 2"
+
+
+---
+
+## 55 - ./examples/logger-rate-limiter.js
+
+```javascript
+    /*
+## Logger Rate Limiter
+
+Design a logger system that receive stream of messages along with its timestamps, 
+each message should be printed if and only if it is not printed in the last 10 seconds.
+
+Given a message and a timestamp (in seconds granularity), 
+return true if the message should be printed in the given timestamp, otherwise returns false.
+
+It is possible that several messages arrive roughly at the same time.
+
+Example:
+
+```
+Logger logger = new Logger();
+
+// logging string "foo" at timestamp 1
+logger.shouldPrintMessage(1, "foo"); // returns true; 
+
+// logging string "bar" at timestamp 2
+logger.shouldPrintMessage(2,"bar"); // returns true;
+
+// logging string "foo" at timestamp 3
+logger.shouldPrintMessage(3,"foo"); // returns false;
+
+// logging string "bar" at timestamp 8
+logger.shouldPrintMessage(8,"bar"); // returns false;
+
+// logging string "foo" at timestamp 10
+logger.shouldPrintMessage(10,"foo"); // returns false;
+
+// logging string "foo" at timestamp 11
+logger.shouldPrintMessage(11,"foo"); // returns true;
+```
+
+*/
+class Logger {
     /**
+     * Initialize your data structure here.
+     */
+    constructor() {
+        this.store = new Map();
+    }
+    /**
+     * Returns true if the message should be printed in the given timestamp, otherwise returns false.
+            If this method returns false, the message will not be printed.
+            The timestamp is in seconds granularity. 
+    * @param {number} timestamp 
+    * @param {string} message
+    * @return {boolean}
+    */
+    shouldPrintMessage(timestamp, message) {
+        let time = this.store.get(message);
+        if (!time) {
+            this.store.set(message, timestamp + 10);
+            return true;
+        }
+        if (time > timestamp) {
+            return false;
+        }
+        this.store.set(message, timestamp + 10);
+        return true;
+    }
+}
+
+/** 
+ * Your Logger object will be instantiated and called as such:
+ * var obj = Object.create(Logger).createNew()
+ * var param_1 = obj.shouldPrintMessage(timestamp,message)
+ */
+
+var logger = new Logger();
+
+// logging string "foo" at timestamp 1
+console.log(logger.shouldPrintMessage(1, "foo")); // returns true; 
+
+// logging string "bar" at timestamp 2
+console.log(logger.shouldPrintMessage(2, "bar")); // returns true;
+
+
+// logging string "foo" at timestamp 3
+console.log(logger.shouldPrintMessage(3, "foo")); // returns false;
+
+// logging string "bar" at timestamp 8
+console.log(logger.shouldPrintMessage(8, "bar")); // returns false;
+
+// logging string "foo" at timestamp 10
+console.log(logger.shouldPrintMessage(10, "foo")); // returns false;
+
+// logging string "foo" at timestamp 11
+console.log(logger.shouldPrintMessage(11, "foo")); // returns false;
+console.log(logger.shouldPrintMessage(100, "bug")); // returns true;
+console.log(logger.shouldPrintMessage(110, "bug")); // returns true;
+console.log(logger.shouldPrintMessage(110, "bug")); // returns true;
+
+
+
+console.log(logger);
+```
+
+### Flowchart
+![./examples/logger-rate-limiter.js-svg image][./examples/logger-rate-limiter.js-svg]
+
+[./examples/logger-rate-limiter.js-svg]: https://raw.githubusercontent.com/jonniespratley/js-leetcode/master/flowcharts/logger-rate-limiter.svg "Logo Title Text 2"
+
+
+---
+
+## 56 - ./examples/longest-common-prefix.js
+
+```javascript
+    // ## Longest Common Prefix
+// Write a function to find the longest common prefix string amongst an array of strings.
+//
+// If there is no common prefix, return an empty string "".
+//
+// Example 1:
+//
+// Input: ["flower","flow","flight"]
+// Output: "fl"
+//
+// Example 2:
+//
+// Input: ["dog","racecar","car"]
+// Output: ""
+// Explanation: There is no common prefix among the input strings.
+//
+// Note:
+//
+// All given inputs are in lowercase letters a-z.
+
+/**
  * @param {string[]} strs
  * @return {string}
  */
@@ -1764,6 +4023,16 @@ var longestCommonPrefix = function (strs) {
     }
     return ''
 };
+function longestCommonPrefix(strs) {
+    if (!strs.length) return '';
+     for (let i = 0; i < strs[0].length; i++) {
+      for (let j = 1; j < strs.length; j++) {
+        const str = strs[j];
+         if (str[i] !== strs[0][i]) return str.slice(0, i);
+      }
+    }
+     return strs[0];
+  }
 ```
 
 ### Flowchart
@@ -1774,7 +4043,7 @@ var longestCommonPrefix = function (strs) {
 
 ---
 
-## 32 - ./examples/longest-palindromic-substring.js
+## 57 - ./examples/longest-palindromic-substring.js
 
 ```javascript
     /*
@@ -1801,14 +4070,31 @@ Output: "bb"
  * @param {string} s
  * @return {string}
  */
-var longestPalindrome = function(s) {
+var longestPalindrome = function (s) {
     console.log(s);
+};
+
+var longestPalindrome = function (s) {
+    let res = "";
+    let cur = "";
+    for (let i = 0; i < s.length; i++) {
+        for (let j = i; j < i + 2; j++) {
+            let left = i;
+            let right = j;
+            while (s[left] && s[left] === s[right]) {
+                cur = s.substring(left, right + 1);
+                if (cur.length > res.length) res = cur;
+                left--;
+                right++;
+            }
+        }
+    }
+    return res;
 };
 
 function isPalindrome(word) {
     return word === word.split('').reverse().join('');
 }
-
 
 
 
@@ -1818,7 +4104,7 @@ let isOdd = (n) => n % 2 === 1;
 
 
 //[2,4,6,8,10].map( val => console.log(isEven(val)));
-[1,3,5,7,9, 11, 13].map( val => console.log(isOdd(val)))
+[1, 3, 5, 7, 9, 11, 13].map(val => console.log(isOdd(val)))
 
 
 
@@ -1836,7 +4122,95 @@ console.log(longestPalindrome('babad'));
 
 ---
 
-## 33 - ./examples/max-depth-of-binary-tree.js
+## 58 - ./examples/lru-cache.js
+
+```javascript
+    // Design and implement a data structure for Least Recently Used (LRU) cache. It should support the following operations: get and put.
+//
+// get(key) - Get the value (will always be positive) of the key if the key exists in the cache, otherwise return -1.
+// put(key, value) - Set or insert the value if the key is not already present. When the cache reached its capacity, it should invalidate the least recently used item before inserting a new item.
+//
+// Follow up:
+//
+// Could you do both operations in O(1) time complexity?
+//
+// Example:
+//
+// LRUCache cache = new LRUCache( 2 /* capacity */ );
+//
+// cache.put(1, 1);
+// cache.put(2, 2);
+// cache.get(1);       // returns 1
+// cache.put(3, 3);    // evicts key 2
+// cache.get(2);       // returns -1 (not found)
+// cache.put(4, 4);    // evicts key 1
+// cache.get(1);       // returns -1 (not found)
+// cache.get(3);       // returns 3
+// cache.get(4);       // returns 4
+
+class LRUCache {
+  /**
+   * @param {number} capacity
+   */
+  constructor(capacity) {
+    this.cache = new Map();
+    this.capacity = capacity;
+  }
+
+  /**
+   * @param {number} key
+   * @return {number}
+   */
+  get(key) {
+    if (!this.cache.has(key)) {
+      return -1;
+    }
+
+    const value = this.cache.get(key);
+    this.cache.delete(key);
+    this.cache.set(key, value);
+    return this.cache.get(key);
+  };
+
+
+  /**
+   * @param {number} key
+   * @param {number} value
+   * @return {void}
+   */
+  put(key, value) {
+    if (this.cache.has(key)) {
+      this.cache.delete(key);
+    }
+    this.cache.set(key, value);
+    if (this.cache.size > this.capacity) {
+      this.cache.delete(this.cache.keys().next().value); // keys().next().value is first item's key
+    }
+  };
+}
+
+var cache = new LRUCache(2 /* capacity */ );
+//
+console.log(cache.put(1, 1));
+console.log(cache.put(2, 2));
+console.log(cache.get(1)); // returns 1
+console.log(cache.put(3, 3)); // evicts key 2
+console.log(cache.get(2)); // returns -1 (not found)
+console.log(cache.put(4, 4)); // evicts key 1
+console.log(cache.get(1)); // returns -1 (not found)
+console.log(cache.get(3)); // returns 3
+console.log(cache.get(4)); // returns 4
+```
+
+### Flowchart
+![./examples/lru-cache.js-svg image][./examples/lru-cache.js-svg]
+
+[./examples/lru-cache.js-svg]: https://raw.githubusercontent.com/jonniespratley/js-leetcode/master/flowcharts/lru-cache.svg "Logo Title Text 2"
+
+
+---
+
+## 59 - ./examples/max-depth-of-binary-tree.js
 
 ```javascript
     /*
@@ -1890,7 +4264,7 @@ var maxDepth = function(root) {
 
 ---
 
-## 34 - ./examples/max-sub-array-len.js
+## 60 - ./examples/max-sub-array-len.js
 
 ```javascript
     var maxSubArrayLen = function (nums, k) {
@@ -1922,7 +4296,7 @@ console.log(maxSubArrayLen([1, -1, 5, -2, 3], 3));
 
 ---
 
-## 35 - ./examples/max-sub-array.js
+## 61 - ./examples/max-sub-array.js
 
 ```javascript
     
@@ -1961,7 +4335,7 @@ console.log(maxSubArray([-2,1,-3,4,-1,2,1,-5,4]));
 
 ---
 
-## 36 - ./examples/maximum-sub-array.js
+## 62 - ./examples/maximum-sub-array.js
 
 ```javascript
     /*
@@ -2049,7 +4423,7 @@ console.log(maxSubArray2([-2, -1]));
 
 ---
 
-## 37 - ./examples/merge-arrays.js
+## 63 - ./examples/merge-arrays.js
 
 ```javascript
     //imperative:
@@ -2083,7 +4457,7 @@ console.log(mergeArrays([1, 2, 3], [4, 5], [6]));
 
 ---
 
-## 38 - ./examples/merge-two-linked-lists.js
+## 64 - ./examples/merge-two-linked-lists.js
 
 ```javascript
     /*
@@ -2111,14 +4485,23 @@ Output: 1->1->2->3->4->4
  * @return {ListNode}
  */
 var mergeTwoLists = function (l1, l2) {
-
+    if (!l1 || !l2) {
+        return l1 || l2;
+    }
+    if (l1.val < l2.val) {
+        l1.next = mergeTwoLists(l1.next, l2);
+        return l1;
+    } else {
+        l2.next = mergeTwoLists(l1, l2.next);
+        return l2;
+    }
 };
 
 function mergeTwoLists(l1, l2) {
     // base case
     if (!l1 || !l2) return l1 || l2;
 
-    
+
     if (l1.val < l2.val) {
         l1.next = mergeTwoLists(l1.next, l2);
         return l1;
@@ -2137,7 +4520,7 @@ function mergeTwoLists(l1, l2) {
 
 ---
 
-## 39 - ./examples/min-sub-array-len.js
+## 65 - ./examples/min-sub-array-len.js
 
 ```javascript
     var minSubArrayLen = function(s, nums) {
@@ -2163,7 +4546,7 @@ function mergeTwoLists(l1, l2) {
 
 ---
 
-## 40 - ./examples/min-swaps.js
+## 66 - ./examples/min-swaps.js
 
 ```javascript
     
@@ -2257,7 +4640,81 @@ console.log(minimumSwaps([4, 3, 1, 2]));
 
 ---
 
-## 41 - ./examples/move-zeros.js
+## 67 - ./examples/missing-number.js
+
+```javascript
+    /*
+## Missing Number
+  
+Given an array containing n distinct numbers taken from 0, 1, 2, ..., n, find the one that is missing from the array.
+
+Example 1:
+
+```
+Input: [3,0,1]
+Output: 2
+```
+
+Example 2:
+
+```
+Input: [9,6,4,2,3,5,7,0,1]
+Output: 8
+```
+
+Note:
+- Your algorithm should run in linear runtime complexity. Could you implement it using only constant extra space complexity?
+*/
+/**
+ * @param {number[]} nums
+ * @return {number}
+ */
+var missingNumber = function (nums) {
+    nums.sort((a, b) => a - b);
+    let num = 0;
+    for (let i = 0; i < nums.length; i++) {
+        if (nums[i] === i) {
+            num++;
+        }
+    }
+    return num;
+};
+var missingNumber2 = function (nums) {
+    var sum = 0;
+    for (var i = 0; i < nums.length; i++) {
+        sum = sum + nums[i];
+    }
+    var expected = (nums.length + 1) * nums.length / 2;
+    return expected - sum;
+};
+var missingNumber3 = function (nums) {
+    let sum = nums.reduce((s, n) => s + n, 0);
+    let n = nums.length;
+    let w = (n * (n + 1)) / 2;
+    return w - sum;
+};
+function missingNumber(nums) {
+    const sum = nums.reduce((a, b) => a + b);
+    return (1 + nums.length) * nums.length / 2 - sum;
+  }
+console.log(missingNumber([1, 0]));
+console.log(missingNumber2([1, 0]));
+console.log(missingNumber3([1, 0]));
+console.log(missingNumber([0]));
+console.log(missingNumber([3, 0, 1]));
+console.log(missingNumber([9, 6, 4, 2, 3, 5, 7, 0, 1]));
+console.log(missingNumber([45, 35, 38, 13, 12, 23, 48, 15, 44, 21, 43, 26, 6, 37, 1, 19, 22, 3, 11, 32, 4, 16, 28, 49, 29, 36, 33, 8, 9, 39, 46, 17, 41, 7, 2, 5, 27, 20, 40, 34, 30, 25, 47, 0, 31, 42, 24, 10, 14]));
+```
+
+### Flowchart
+![./examples/missing-number.js-svg image][./examples/missing-number.js-svg]
+
+[./examples/missing-number.js-svg]: https://raw.githubusercontent.com/jonniespratley/js-leetcode/master/flowcharts/missing-number.svg "Logo Title Text 2"
+
+
+---
+
+## 68 - ./examples/move-zeros.js
 
 ```javascript
     /**
@@ -2293,6 +4750,11 @@ var moveZeroes = function (nums) {
     return nums;
 };
 
+function moveZeroes(nums) {
+    for (let i = nums.length - 1; i >= 0; i--) { // cannot from 0 to length - 1
+        if (nums[i] === 0) nums.push(...nums.splice(i, 1));
+    }
+}
 
 
 var moveZeroes2 = function (nums) {
@@ -2503,8 +4965,8 @@ Input: "()())()"
 Output: ["()()()", "(())()"]
  */
 
- console.log(removeInvalidParentheses("(a)())()"))
- console.log(removeInvalidParentheses("()()(())"))
+console.log(removeInvalidParentheses("(a)())()"))
+console.log(removeInvalidParentheses("()()(())"))
 ```
 
 ### Flowchart
@@ -2515,7 +4977,7 @@ Output: ["()()()", "(())()"]
 
 ---
 
-## 42 - ./examples/nested-list-weight-sum.js
+## 69 - ./examples/nested-list-weight-sum.js
 
 ```javascript
     function depthSumHelper(list, depth) {
@@ -2587,85 +5049,96 @@ function bubbleSort2(array) {
 
 ---
 
-## 43 - ./examples/number-of-islands.js
+## 70 - ./examples/number-1-bits.js
 
 ```javascript
-    /*
-Given a 2d grid map of '1's (land) and '0's (water), count the number of islands. 
-An island is surrounded by water and is formed by connecting adjacent lands horizontally or vertically. 
+    // Write a function that takes an unsigned integer and returns the number of '1' bits it has (also known as the Hamming weight).
+//
+// Example 1:
+//
+// Input: 11
+// Output: 3
+// Explanation: Integer 11 has binary representation 00000000000000000000000000001011
+//
+// Example 2:
+//
+// Input: 128
+// Output: 1
+// Explanation: Integer 128 has binary representation 00000000000000000000000010000000
 
-> You may assume all four edges of the grid are all surrounded by water.
-
-Example 1:
-
-```
-Input:
-11110
-11010
-11000
-00000
-
-Output: 1
-```
-
-Example 2:
-
-```
-Input:
-11000
-11000
-00100
-00011
-['1', '1', '1', '0', '0'],
-['0', '0', '1', '0', '0'],
-['0', '0', '0', '1', '1']
-Output: 3
+/**
+ * @param {number} n - a positive integer
+ * @return {number}
+ */
+function hammingWeight(n) {
+    return n.toString(2).split('0').join('').length;
+  }
 ```
 
-*/
+### Flowchart
+![./examples/number-1-bits.js-svg image][./examples/number-1-bits.js-svg]
+
+[./examples/number-1-bits.js-svg]: https://raw.githubusercontent.com/jonniespratley/js-leetcode/master/flowcharts/number-1-bits.svg "Logo Title Text 2"
+
+
+---
+
+## 71 - ./examples/number-of-islands.js
+
+```javascript
+    // Given a 2d grid map of '1's (land) and '0's (water), count the number of islands. An island is surrounded by water and is formed by connecting adjacent lands horizontally or vertically. You may assume all four edges of the grid are all surrounded by water.
+//
+// Example 1:
+//
+// Input:
+// 11110
+// 11010
+// 11000
+// 00000
+//
+// Output: 1
+//
+// Example 2:
+//
+// Input:
+// 11000
+// 11000
+// 00100
+// 00011
+//
+// Output: 3
 /**
  * @param {character[][]} grid
  * @return {number}
  */
-var numIslands = function (grid) {
+function numIslands(grid) {
     let count = 0;
-    
-    const height = grid.length;
-    const width = grid[0].length;
-    const visited = Array(height * width).fill(false);
-
-    for (let i = 0; i < height; i++) {
-        for (let j = 0; j < width; j++) {
-            const col = grid[i][j];
-            //console.log(col);
-            if (!visited[i * width + j] && grid[i][j] === 1) {
+    for (let i = 0; i < grid.length; i++) {
+        for (let j = 0; j < grid[i].length; j++) {
+            
+            if (grid[i][j] === '1') {
+                dfs(grid, i, j);
                 count++;
-                dfs(i, j);
             }
+            
         }
-
     }
-
-    function dfs(r, c) {
-        visited[r * width + c] = true;
-        let dr = [r - 1, r + 1, r, r];
-        let dc = [c, c, c - 1, c + 1];
-        for (let i = 0; i < 4; i++) {
-            if (dr[i] >= 0 && dr[i] < height && dc[i] >= 0 && dc[i] < width && grid[dr[i]][dc[i]] === 1 && !visited[dr[i] * width + dc[i]]) {
-                dfs(dr[i], dc[i]);
-            }
-        }
-        return;
-    }
-
     return count;
-};
+}
 
+function dfs(grid, row, col) {
+    if (grid[row][col] === '1') {
+        grid[row][col] = '*'; // mark land piece as visited
+        if (row > 0) dfs(grid, row - 1, col); // up
+        if (row < grid.length - 1) dfs(grid, row + 1, col); // down
+        if (col > 0) dfs(grid, row, col - 1); // left
+        if (col < grid[row].length - 1) dfs(grid, row, col + 1); // right
+    }
+}
 
+ 
 console.log(numIslands([
-    []
-]));
-console.log(numIslands([
+    [1, 1, 0, 0, 0],
     [1, 1, 1, 0, 0],
     [0, 0, 1, 0, 0],
     [0, 0, 0, 1, 1]
@@ -2680,7 +5153,7 @@ console.log(numIslands([
 
 ---
 
-## 44 - ./examples/one-edit-away.js
+## 72 - ./examples/one-edit-away.js
 
 ```javascript
     
@@ -2694,7 +5167,180 @@ console.log(numIslands([
 
 ---
 
-## 45 - ./examples/pascal-triangle-2.js
+## 73 - ./examples/palindrome-linked-list.js
+
+```javascript
+    /*
+## Palindrome Linked List
+
+Given a singly linked list, determine if it is a palindrome.
+
+Example 1:
+
+```
+Input: 1->2
+Output: false
+```
+
+Example 2:
+
+```
+Input: 1->2->2->1
+Output: true
+```
+
+Follow up:
+- Could you do it in O(n) time and O(1) space?
+*/
+
+/**
+ * Definition for singly-linked list.
+ * function ListNode(val) {
+ *     this.val = val;
+ *     this.next = null;
+ * }
+ */
+/**
+ * @param {ListNode} head
+ * @return {boolean}
+ */
+var isPalindrome = function (head) {
+    let nums = [];
+    let temp = [];
+    let cur = head;
+    while (cur !== null) {
+        nums.push(cur.val);
+        cur = cur.next;
+    }
+    return nums.length > 1 ? nums.join('') === temp.concat(nums).reverse().join('') : true;
+};
+
+//Time: 0(n)
+//Space: 0(1)
+var isPalindrome2 = function (head) {
+    if (!head) return true;
+
+    let curr = head;
+    let prev = null;
+
+    while (curr) {
+        curr.prev = prev;
+        prev = curr;
+        curr = curr.next;
+    }
+
+    let left = head;
+    let right = prev;
+
+    while (left.next && right.prev) {
+        if (left.val !== right.val) return false;
+        left = left.next;
+        right = right.prev;
+    }
+
+    return true;
+};
+```
+
+### Flowchart
+![./examples/palindrome-linked-list.js-svg image][./examples/palindrome-linked-list.js-svg]
+
+[./examples/palindrome-linked-list.js-svg]: https://raw.githubusercontent.com/jonniespratley/js-leetcode/master/flowcharts/palindrome-linked-list.svg "Logo Title Text 2"
+
+
+---
+
+## 74 - ./examples/palindrome-permutation.js
+
+```javascript
+    /*
+## Palindrome Permutation
+Given a string, determine if a permutation of the string could form a palindrome.
+
+
+Example 1:
+
+```
+Input: "code"
+Output: false
+```
+
+Example 2:
+
+```
+Input: "aab"
+Output: true
+```
+
+Example 3:
+
+```
+Input: "carerac"
+Output: true
+```
+
+*/
+
+function isPalindrome(s) {
+    const s2 = s.replace(/\W/g, '').toLowerCase();
+    for (let i = 0; i < s2.length / 2; i++) {
+        if (s2[i] !== s2[s2.length - i - 1]) return false
+    }
+    return true;
+}
+
+
+var canPermutePalindrome = function (s) {
+    let map = new Map();
+    s = s.replace(/\W/g, '');
+    for (let i = 0; i < s.length; i++) {
+        let char = s[i];
+        let count = s.match(new RegExp(char, 'g') || []).length;
+        map.set(char, count)
+    }
+    let count = 0;
+    for (var [key, value] of map.entries()) {
+        count += value % 2;
+    }
+    return count <= 1;
+};
+
+
+var canPermutePalindrome = function (s) {
+    let obj = {};
+    let falseCount = 0;
+    for (let i = 0; i < s.length; i++) {
+        if (obj[s[i]] === undefined) {
+            obj[s[i]] = false;
+        } else {
+            obj[s[i]] = !obj[s[i]]
+        }
+    };
+    for (let k in obj) {
+        if (!obj[k]) {
+            falseCount++;
+        }
+        if (falseCount > 1) {
+            return false;
+        }
+    }
+    return true;
+};
+console.log(canPermutePalindrome('//\\--')); //false
+console.log(canPermutePalindrome('code')); //false
+console.log(canPermutePalindrome('carerac')); //true
+console.log(canPermutePalindrome('aab')); //true
+```
+
+### Flowchart
+![./examples/palindrome-permutation.js-svg image][./examples/palindrome-permutation.js-svg]
+
+[./examples/palindrome-permutation.js-svg]: https://raw.githubusercontent.com/jonniespratley/js-leetcode/master/flowcharts/palindrome-permutation.svg "Logo Title Text 2"
+
+
+---
+
+## 75 - ./examples/pascal-triangle-2.js
 
 ```javascript
     function pascalTriangle(lineNumber) {
@@ -2723,7 +5369,7 @@ console.log(numIslands([
 
 ---
 
-## 46 - ./examples/path-sum.js
+## 76 - ./examples/path-sum.js
 
 ```javascript
     /*
@@ -2792,7 +5438,7 @@ var hasPathSum = function(root, sum) {
 
 ---
 
-## 47 - ./examples/permutations.js
+## 77 - ./examples/permutations.js
 
 ```javascript
     /*
@@ -2834,6 +5480,24 @@ const permute = function (nums) {
 }
 
 console.log(permute([1, 2, 3]))
+
+function permute(nums) {
+    let res = [];
+
+    function find(curr, rest) {
+        if (!rest.length) return res.push(curr);
+
+        for (let i = 0; i < rest.length; i++) {
+            find(
+                [...curr, rest[i]], [...rest.slice(0, i), ...rest.slice(i + 1)]
+            );
+        }
+    }
+
+    find([], nums);
+
+    return res;
+}
 ```
 
 ### Flowchart
@@ -2844,7 +5508,7 @@ console.log(permute([1, 2, 3]))
 
 ---
 
-## 48 - ./examples/pivot-index.js
+## 78 - ./examples/pivot-index.js
 
 ```javascript
     var pivotIndex = function(nums) {
@@ -2875,7 +5539,7 @@ console.log(pivotIndex([1,7,3,6,5,6]));
 
 ---
 
-## 49 - ./examples/plus-one.js
+## 79 - ./examples/plus-one.js
 
 ```javascript
     /**
@@ -2903,7 +5567,196 @@ var plusOne = function(digits) {
 
 ---
 
-## 50 - ./examples/read-n-characters-given-read4.js
+## 80 - ./examples/power-of-three.js
+
+```javascript
+    /*
+## Power Three
+// Given an integer, write a function to determine if it is a power of three.
+//
+// Follow up:
+// Could you do it without using any loop / recursion?
+
+*/
+// Given an integer, write a function to determine if it is a power of three.
+//
+// Follow up:
+// Could you do it without using any loop / recursion?
+
+```
+
+### Flowchart
+![./examples/power-of-three.js-svg image][./examples/power-of-three.js-svg]
+
+[./examples/power-of-three.js-svg]: https://raw.githubusercontent.com/jonniespratley/js-leetcode/master/flowcharts/power-of-three.svg "Logo Title Text 2"
+
+
+---
+
+## 81 - ./examples/randomized-set.js
+
+```javascript
+    /*
+## Insert Delete GetRandom O(1)
+Design a data structure that supports all following operations in average O(1) time.
+
+- insert(val): Inserts an item val to the set if not already present.
+- remove(val): Removes an item val from the set if present.
+- getRandom: Returns a random element from current set of elements. Each element must have the same probability of being returned.
+*/
+
+/**
+ * Initialize your data structure here.
+ */
+var RandomizedSet = function() {
+    this.count = 0;
+    this.store = new Map();
+};
+
+/**
+ * Inserts a value to the set. Returns true if the set did not already contain the specified element. 
+ * @param {number} val
+ * @return {boolean}
+ */
+RandomizedSet.prototype.insert = function(val) {
+    if(!this.store.has(val)){
+        this.count++;
+        this.store.set(val, val);
+        return true;
+    }
+    return false;
+};
+
+/**
+ * Removes a value from the set. Returns true if the set contained the specified element. 
+ * @param {number} val
+ * @return {boolean}
+ */
+RandomizedSet.prototype.remove = function(val) {
+    if(this.store.has(val)){
+        this.count--;
+        return this.store.delete(val);
+    }
+    return false;
+    
+};
+
+/**
+ * Get a random element from the set.
+ * @return {number}
+ */
+RandomizedSet.prototype.getRandom = function() {
+    return this.store.get(random(this.count));
+    function random(l) {
+        return Math.floor((Math.random() * l));
+    }
+};
+
+
+
+/**
+ * Initialize your data structure here.
+ */
+var RandomizedSet = function() {
+    this.map = {};
+    this.arr = [];
+};
+
+/**
+ * Inserts a value to the set. Returns true if the set did not already contain the specified element. 
+ * @param {number} val
+ * @return {boolean}
+ */
+RandomizedSet.prototype.insert = function(val) {
+    if(this.map.hasOwnProperty(val)) return false;
+    this.map[val] = this.arr.length;
+    this.arr.push(val);
+    return true;
+};
+
+/**
+ * Removes a value from the set. Returns true if the set contained the specified element. 
+ * @param {number} val
+ * @return {boolean}
+ */
+RandomizedSet.prototype.remove = function(val) {
+    if(!this.map.hasOwnProperty(val)) return false;
+    let index = this.map[val];
+    if(index < this.arr.length - 1) {
+        // not the last element, swap with the last element.
+        let lastElement = this.arr[this.arr.length - 1];
+        this.arr[index] = lastElement;
+        this.map[lastElement] = index;
+    }
+    delete this.map[val];
+    this.arr.pop();
+    return true;
+};
+
+/**
+ * Get a random element from the set.
+ * @return {number}
+ */
+RandomizedSet.prototype.getRandom = function() {
+    const max = this.arr.length;
+    return this.arr[Math.floor(Math.random() * max)]
+};
+
+
+/** 
+ * Your RandomizedSet object will be instantiated and called as such:
+ * var obj = Object.create(RandomizedSet).createNew()
+ * var param_1 = obj.insert(val)
+ * var param_2 = obj.remove(val)
+ * var param_3 = obj.getRandom()
+ */
+// Init an empty set.
+var randomSet = new RandomizedSet();
+
+// Inserts 1 to the set. Returns true as 1 was inserted successfully.
+console.assert(randomSet.insert(1));
+console.assert(!randomSet.insert(1));
+
+// Returns false as 2 does not exist in the set.
+console.assert(!randomSet.remove(2));
+
+// Inserts 2 to the set, returns true. Set now contains [1,2].
+console.assert(randomSet.insert(2));
+
+// getRandom should return either 1 or 2 randomly.
+console.log(randomSet.getRandom());
+console.log(randomSet.getRandom());
+
+console.log(randomSet);
+
+// Removes 1 from the set, returns true. Set now contains [2].
+console.assert(randomSet.remove(1));
+
+// 2 was already in the set, so return false.
+console.assert(!randomSet.insert(2));
+
+// Since 2 is the only number in the set, getRandom always return 2.
+console.log(randomSet.getRandom());
+
+
+let rand2 = new RandomizedSet();
+console.log(rand2.remove(0));
+console.log(rand2.remove(0));
+console.log(rand2.insert(0));
+console.log(rand2.getRandom(0));
+console.log(rand2.remove(0));
+console.log(rand2.insert(0));
+```
+
+### Flowchart
+![./examples/randomized-set.js-svg image][./examples/randomized-set.js-svg]
+
+[./examples/randomized-set.js-svg]: https://raw.githubusercontent.com/jonniespratley/js-leetcode/master/flowcharts/randomized-set.svg "Logo Title Text 2"
+
+
+---
+
+## 82 - ./examples/read-n-characters-given-read4.js
 
 ```javascript
     /**
@@ -2954,40 +5807,63 @@ var solution = function (read4) {
 
 ---
 
-## 51 - ./examples/remove-duplicates.js
+## 83 - ./examples/remove-duplicates.js
 
 ```javascript
-    /**
+    // Given a sorted array nums, remove the duplicates in-place such that each element appear only once and return the new length.
+//
+// Do not allocate extra space for another array, you must do this by modifying the input array in-place with O(1) extra memory.
+//
+// Example 1:
+//
+//   Given nums = [1,1,2],
+//
+//   Your function should return length = 2, with the first two elements of nums being 1 and 2 respectively.
+//
+//   It doesn't matter what you leave beyond the returned length.
+//
+// Example 2:
+//
+//   Given nums = [0,0,1,1,1,2,2,3,3,4],
+//
+//   Your function should return length = 5, with the first five elements of nums being modified to 0, 1, 2, 3, and 4 respectively.
+//
+//   It doesn't matter what values are set beyond the returned length.
+//
+// Clarification:
+//
+//   Confused why the returned value is an integer but your answer is an array?
+//
+//   Note that the input array is passed in by reference, which means modification to the input array will be known to the caller as well.
+//
+//   Internally you can think of this:
+//
+//     // nums is passed in by reference. (i.e., without making a copy)
+//     int len = removeDuplicates(nums);
+//
+//     // any modification to nums in your function would be known by the caller.
+//     // using the length returned by your function, it prints the first len elements.
+//     for (int i = 0; i < len; i++) {
+//       print(nums[i]);
+//     }
+/**
  * @param {number[]} nums
  * @return {number}
  */
-var removeDuplicates = function (nums) {
-    if (!nums || !nums.length) {
-        return 0
-    }
-    let newIndex = 0;
-    let p1 = 0;
-    let p2 = 0;
-    let len = nums.length;
-
-    //while p1 < length
-    while (p1 < len) {
-        // console.log(p1, p2);
-        while (p2 < len && nums[p1] == nums[p2]) {
-            p2 += 1;
-
+function removeDuplicates(nums) {
+    let slow = 0;
+    let fast = 0;
+    while (fast < nums.length) {
+        if (nums[slow] === nums[fast]) {
+            fast++;
+        } else {
+            slow++;
+            nums[slow] = nums[fast];
+            fast++;
         }
-        nums[newIndex] = nums[p1];
-        newIndex += 1
-        p1 = p2;
     }
-
-    return newIndex;
-};
-console.time('removeDuplicates');
-console.log(removeDuplicates([1, 2, 1, 1, 3]))
-console.log(removeDuplicates([1, 2]))
-console.timeEnd('removeDuplicates');
+    return slow + 1;
+}
 ```
 
 ### Flowchart
@@ -2998,7 +5874,7 @@ console.timeEnd('removeDuplicates');
 
 ---
 
-## 52 - ./examples/remove-element.js
+## 84 - ./examples/remove-element.js
 
 ```javascript
     var removeElement = function (nums, val) {
@@ -3021,7 +5897,7 @@ console.timeEnd('removeDuplicates');
 
 ---
 
-## 53 - ./examples/remove-invalid-parentheses.js
+## 85 - ./examples/remove-invalid-parentheses.js
 
 ```javascript
     function openBrace(s) {
@@ -3121,10 +5997,21 @@ console.log(removeInvalidParentheses2("(b)(c))"));
 
 ---
 
-## 54 - ./examples/remove-nth-node-from-end-of-list.js
+## 86 - ./examples/remove-nth-node-from-end-of-list.js
 
 ```javascript
-    /**
+    // Given a linked list, remove the n-th node from the end of list and return its head.
+//
+// Example:
+// Given linked list: 1->2->3->4->5, and n = 2.
+// After removing the second node from the end, the linked list becomes 1->2->3->5.
+//
+// Note:
+// Given n will always be valid.
+//
+// Follow up:
+// Could you do this in one pass?
+/**
  * Definition for singly-linked list.
  * function ListNode(val) {
  *     this.val = val;
@@ -3136,45 +6023,21 @@ console.log(removeInvalidParentheses2("(b)(c))"));
  * @param {number} n
  * @return {ListNode}
  */
-var removeNthFromEnd = function (head, n) {
-    if (!head) return head;
-
-    let p1 = head;
-    let p2 = head
+function removeNthFromEnd(head, n) {
+    let before = new ListNode(null); // for removing the only 1 node in list case
+    before.next = head;
+    let slow = before;
+    let fast = head;
     while (n--) {
-        if (p2 === null) return null
-        p2 = p2.next
+        fast = fast.next;
     }
-    while (p1 && p2.next) {
-        p1 = p1.next
-        p2 = p2.next
+    while (fast) {
+        slow = slow.next;
+        fast = fast.next;
     }
-    let removed = p1.next
-    p1.next = removed.next
-    removed.next = null
-    return head
-};
-
-const removeNthFromEnd2 = function (head, n) {
-    if (!head) return head;
-
-    let prev = head;
-    let curr = head.next;
-
-    while (curr) {
-        if (n > 0) {
-            n -= 1;
-        } else {
-            prev = prev.next;
-        }
-        curr = curr.next;
-    }
-
-    if (n === 1) return head.next;
-
-    prev.next = prev.next.next || null;
-    return head;
-};
+    slow.next = slow.next.next;
+    return before.next;
+}
 ```
 
 ### Flowchart
@@ -3185,7 +6048,39 @@ const removeNthFromEnd2 = function (head, n) {
 
 ---
 
-## 55 - ./examples/reverse-words-2.js
+## 87 - ./examples/reverse-bits.js
+
+```javascript
+    // Reverse bits of a given 32 bits unsigned integer.
+//
+// Example:
+//
+// Input: 43261596
+// Output: 964176192
+// Explanation: 43261596 represented in binary as 00000010100101000001111010011100,
+//      return 964176192 represented in binary as 00111001011110000010100101000000.
+//
+// Follow up:
+// If this function is called many times, how would you optimize it?
+
+/**
+ * @param {number} n - a positive integer
+ * @return {number} - a positive integer
+ */
+function reverseBits(n) {
+    return parseInt(n.toString(2).padStart(32, '0').split('').reverse().join(''), 2);
+}
+```
+
+### Flowchart
+![./examples/reverse-bits.js-svg image][./examples/reverse-bits.js-svg]
+
+[./examples/reverse-bits.js-svg]: https://raw.githubusercontent.com/jonniespratley/js-leetcode/master/flowcharts/reverse-bits.svg "Logo Title Text 2"
+
+
+---
+
+## 88 - ./examples/reverse-words-2.js
 
 ```javascript
     /**
@@ -3224,7 +6119,7 @@ console.log(reverseWords2("Let's take LeetCode contest") === "s'teL ekat edoCtee
 
 ---
 
-## 56 - ./examples/reverse-words.js
+## 89 - ./examples/reverse-words.js
 
 ```javascript
     /**
@@ -3265,7 +6160,7 @@ console.log(reverseWords(' the sky is blue '));
 
 ---
 
-## 57 - ./examples/roman-to-integer.js
+## 90 - ./examples/roman-to-integer.js
 
 ```javascript
     // Roman numerals are represented by seven different symbols: I, V, X, L, C, D and M.
@@ -3356,7 +6251,7 @@ function romanToInt(s) {
 
 ---
 
-## 58 - ./examples/rotate-array.js
+## 91 - ./examples/rotate-array.js
 
 ```javascript
     var rotate = function (nums, k) {
@@ -3414,7 +6309,275 @@ console.log(rotateArray([1, 2], 2));
 
 ---
 
-## 59 - ./examples/serialize-and-deserialize-binary-tree.js
+## 92 - ./examples/rotate-image.js
+
+```javascript
+    // You are given an n x n 2D matrix representing an image.
+//
+// Rotate the image by 90 degrees (clockwise).
+//
+// Note:
+//
+// You have to rotate the image in-place, which means you have to modify the input 2D matrix directly. DO NOT allocate another 2D matrix and do the rotation.
+//
+// Example 1:
+//
+//   Given input matrix =
+//   [
+//     [1,2,3],
+//     [4,5,6],
+//     [7,8,9]
+//   ],
+//
+//   rotate the input matrix in-place such that it becomes:
+//   [
+//     [7,4,1],
+//     [8,5,2],
+//     [9,6,3]
+//   ]
+//
+// Example 2:
+//
+//   Given input matrix =
+//   [
+//     [ 5, 1, 9,11],
+//     [ 2, 4, 8,10],
+//     [13, 3, 6, 7],
+//     [15,14,12,16]
+//   ],
+//
+//   rotate the input matrix in-place such that it becomes:
+//   [
+//     [15,13, 2, 5],
+//     [14, 3, 4, 1],
+//     [12, 6, 8, 9],
+//     [16, 7,10,11]
+//   ]
+
+/**
+ * @param {number[][]} matrix
+ * @return {void} Do not return anything, modify matrix in-place instead.
+ */
+
+/** 1) Swap three times from outside to inside */
+// https://youtu.be/Jtu6dJ0Cb94?t=2m20s
+//
+// Example
+// Step 1: 1 -> 3 -> 9 -> 7, then 2 -> 6 -> 8 -> 4
+// 1 2 3    3 2 1    9 2 1    7 2 1
+// 4 5 6 -> 4 5 6 => 4 5 6 -> 4 5 6
+// 7 8 9    7 8 9    7 8 3    9 8 3
+//
+// Step 2: from outside to inside
+function rotate1(matrix) {
+    const last = matrix.length - 1;
+
+    for (let i = 0; i < matrix.length / 2; i++) { // i is layer level
+        for (let j = i; j < last - i; j++) {
+            swap(matrix, i, j, j, last - i);
+            swap(matrix, i, j, last - i, last - j);
+            swap(matrix, i, j, last - j, i);
+        }
+    }
+}
+
+function swap(m, x1, y1, x2, y2) {
+    [m[x1][y1], m[x2][y2]] = [m[x2][y2], m[x1][y1]];
+}
+
+/** 2) Reverse up to down, then swap the symmetry */
+// Idea
+// To clockwise rotate, reverse up to down, then swap the symmetry
+// (To anticlockwise rotate, reverse left to right, then swap the symmetry)
+//
+// Example
+// 1 2 3    7 8 9    7 4 1
+// 4 5 6 -> 4 5 6 -> 8 5 2
+// 7 8 9    1 2 3    9 6 3
+function rotate(matrix) {
+    matrix.reverse();
+
+    for (let i = 0; i < matrix.length; i++) {
+        for (let j = i + 1; j < matrix[i].length; j++)
+            [matrix[i][j], matrix[j][i]] = [matrix[j][i], matrix[i][j]];
+    }
+}
+```
+
+### Flowchart
+![./examples/rotate-image.js-svg image][./examples/rotate-image.js-svg]
+
+[./examples/rotate-image.js-svg]: https://raw.githubusercontent.com/jonniespratley/js-leetcode/master/flowcharts/rotate-image.svg "Logo Title Text 2"
+
+
+---
+
+## 93 - ./examples/search-in-a-binary-search-tree.js
+
+```javascript
+    /*
+## Search in a Binary Search Tree
+
+Given the root node of a binary search tree (BST) and a value. You need to find the node in the BST that the node's value equals the given value. Return the subtree rooted with that node. If such node doesn't exist, you should return NULL.
+
+For example, 
+
+```
+Given the tree:
+        4
+       / \
+      2   7
+     / \
+    1   3
+
+And the value to search: 2
+```
+
+You should return this subtree:
+```
+      2     
+     / \   
+    1   3
+```
+
+In the example above, if we want to search the value 5, since there is no node with value 5, we should return NULL.
+
+Note that an empty tree is represented by NULL, therefore you would see the expected output (serialized tree format) as [], not null.
+*/
+function TreeNode(val) {
+    this.val = val;
+    this.left = this.right = null;
+}
+
+
+//[2,1,3], p = 1
+let t = new TreeNode(2);
+t.right = new TreeNode(3);
+t.left = new TreeNode(1);
+
+
+/**
+ * Recurisive
+ * recursion solution first. In the worse case, the depth of our recursion is equal to the height of the tree. Therefore, the time complexity of the recursion solution is O(h). 
+ * the space complexity should be O(h) in the worst case as well.
+ * Time: 0(h)
+ * Space: 0(h)
+ * 
+ * @param {TreeNode} root A binary tree
+ * @param {Number} val The value to find
+ */
+var searchBST = function (root, val) {
+    if (root === null) return [];
+    if (root.val === val) {
+        return root;
+    } else if (root.val < val) {
+        return searchBST(root.right, val);
+    } else {
+        return searchBST(root.left, val);
+    }
+};
+
+/**
+ *  The time complexity will be equal to the loop time which is also O(h) while the space complexity is O(1)
+ * 
+ */
+class BST {
+    /**
+     * Time: 0(h)
+     * Space: 0(1)
+     * 
+     * @param {TreeNode} root A binary tree
+     * @param {Number} val The value to find
+     */
+    findNode(root, val) {
+        while (root != null) {
+            let currval = root.val;
+            if (currval == val) break;
+            if (currval <= val) {
+                root = root.right;
+            } else { // currval > val
+                root = root.left;
+            }
+        }
+        return root ? root : [];
+    }
+}
+
+let bst = new BST();
+let n = bst.findNode(t, 3);
+console.log(bst.findNode(t, 3));
+console.log(bst.findNode(t, 5));
+console.log(bst.findNode(t, 2));
+
+console.log(searchBST(t, 2));
+```
+
+### Flowchart
+![./examples/search-in-a-binary-search-tree.js-svg image][./examples/search-in-a-binary-search-tree.js-svg]
+
+[./examples/search-in-a-binary-search-tree.js-svg]: https://raw.githubusercontent.com/jonniespratley/js-leetcode/master/flowcharts/search-in-a-binary-search-tree.svg "Logo Title Text 2"
+
+
+---
+
+## 94 - ./examples/search-matrix.js
+
+```javascript
+    // Write an efficient algorithm that searches for a value in an m x n matrix. This matrix has the following properties:
+//
+//   Integers in each row are sorted in ascending from left to right.
+//   Integers in each column are sorted in ascending from top to bottom.
+//
+// Consider the following matrix:
+//
+//   [
+//     [1,   4,  7, 11, 15],
+//     [2,   5,  8, 12, 19],
+//     [3,   6,  9, 16, 22],
+//     [10, 13, 14, 17, 24],
+//     [18, 21, 23, 26, 30]
+//   ]
+//
+// Example 1:
+//
+// Input: matrix, target = 5
+// Output: true
+//
+// Example 2:
+//
+// Input: matrix, target = 20
+// Output: false
+
+/** Search from top right corner */
+// Similar
+// 74. Search a 2D Matrix
+//
+// time O(m + n), rule out one row or one column each time
+function searchMatrix(matrix, target) {
+    if (!matrix.length || !matrix[0].length) return false;
+
+    let row = 0;
+    let col = matrix[0].length - 1;
+
+    while (col >= 0 && row <= matrix.length - 1) {
+        if (matrix[row][col] === target) return true;
+        else if (matrix[row][col] > target) col--;
+        else if (matrix[row][col] < target) row++;
+    }
+
+    return false;
+}
+```
+
+### Flowchart
+![./examples/search-matrix.js-svg image][./examples/search-matrix.js-svg]
+
+[./examples/search-matrix.js-svg]: https://raw.githubusercontent.com/jonniespratley/js-leetcode/master/flowcharts/search-matrix.svg "Logo Title Text 2"
+
+
+---
+
+## 95 - ./examples/serialize-and-deserialize-binary-tree.js
 
 ```javascript
     /*
@@ -3509,7 +6672,7 @@ var deserialize = function(data) {
 
 ---
 
-## 60 - ./examples/set-matrix-zeros.js
+## 96 - ./examples/set-matrix-zeros.js
 
 ```javascript
     /*
@@ -3653,11 +6816,10 @@ var solution = function(isBadVersion) {
 
 ---
 
-## 61 - ./examples/single-number.js
+## 97 - ./examples/single-number.js
 
 ```javascript
-    
-/**
+    /**
  * 
 
  ## Single Number
@@ -3683,7 +6845,7 @@ Output: 4
  * @param {number[]} nums
  * @return {number}
  */
-var singleNumber = function(nums) {
+var singleNumber = function (nums) {
     for (let i = 0; i < nums.length; i++) {
         let n1 = nums[i];
         if (nums.indexOf(n1) === nums.lastIndexOf(n1)) {
@@ -3692,9 +6854,15 @@ var singleNumber = function(nums) {
     }
 };
 
+function singleNumber2(nums) {
+    return nums.reduce((sum, num) => sum ^ num); // ^ is XOR
+}
 console.log(singleNumber([2, 2, 1]));
+console.log(singleNumber2([2, 2, 1]));
 //console.log(singleNumber([4,1,2,1,2]));
-console.log(singleNumber([1,1,1,1,1,5]));
+
+console.log(singleNumber([1, 1, 1, 1, 1, 5]));
+console.log(singleNumber2([1, 1, 1, 1, 1, 5]));
 ```
 
 ### Flowchart
@@ -3705,7 +6873,95 @@ console.log(singleNumber([1,1,1,1,1,5]));
 
 ---
 
-## 62 - ./examples/sorted-array-to-bst.js
+## 98 - ./examples/sort-colors.js
+
+```javascript
+    /*
+## Sort Colors
+Given an array with n objects colored red, white or blue, sort them in-place so that objects of the same color are adjacent, with the colors in the order red, white and blue.
+
+Here, we will use the integers 0, 1, and 2 to represent the color red, white, and blue respectively.
+
+> Note: You are not suppose to use the library's sort function for this problem.
+
+Example:
+
+```
+Input: [2,0,2,1,1,0]
+Output: [0,0,1,1,2,2]
+```
+
+Follow up:
+
+- A rather straight forward solution is a two-pass algorithm using counting sort.
+- First, iterate the array counting number of 0's, 1's, and 2's, then overwrite array with total number of 0's, then 1's and followed by 2's.
+- Could you come up with a one-pass algorithm using only constant space?
+*/
+
+/**
+ * @param {number[]} nums
+ * @return {void} Do not return anything, modify nums in-place instead.
+ */
+var sortColors = function (nums) {
+    // cheating
+    //nums.sort((a, b) => a - b)
+    let map = {
+        '0': 0,
+        '1': 0,
+        '2': 0
+    };
+    for (let i = 0; i < nums.length; i++) {
+        if (map.hasOwnProperty(nums[i])) {
+            map[nums[i]]++;
+        }
+    }
+    for (const key in map) {
+        console.log(key, map[key]);
+    }
+    console.log(map)
+    return nums;
+};
+
+var sortColors2 = function (nums) {
+    var num0 = 0;
+    var num1 = 0;
+    var num2 = 0;
+    for (let i = 0; i < nums.length; i++) {
+        if (nums[i] == 0) {
+            num0++;
+        } else if (nums[i] == 1) {
+            num1++;
+        } else {
+            num2++;
+        }
+    }
+    for (let i = 0; i < nums.length; i++) {
+        if (i < num0) {
+            nums[i] = 0;
+        } else if (i < num0 + num1) {
+            nums[i] = 1;
+        } else {
+            nums[i] = 2;
+        }
+    }
+    return nums;
+};
+
+console.log(sortColors([2, 1, 0]));
+
+console.log(sortColors([2, 0, 2, 1, 1, 0]));
+console.log(sortColors2([2, 0, 2, 1, 1, 0]));
+```
+
+### Flowchart
+![./examples/sort-colors.js-svg image][./examples/sort-colors.js-svg]
+
+[./examples/sort-colors.js-svg]: https://raw.githubusercontent.com/jonniespratley/js-leetcode/master/flowcharts/sort-colors.svg "Logo Title Text 2"
+
+
+---
+
+## 99 - ./examples/sorted-array-to-bst.js
 
 ```javascript
     // Given an array where elements are sorted in ascending order, convert it to a height balanced BST.
@@ -3756,10 +7012,11 @@ function sortedArrayToBST(nums) {
 
 ---
 
-## 63 - ./examples/spiral-order.js
+## 100 - ./examples/spiral-order.js
 
 ```javascript
-    /*  
+    
+/*  
 k - starting row index
 m - ending row index
 l - starting column index
@@ -3772,44 +7029,96 @@ i - iterator
  */
 var spiralOrder = function (matrix) {
     var result = [];
-     if (!matrix.length) {
-         return result;
-     }
-     var i = 0,
-         a = matrix,
-         m = matrix.length,
-         n = matrix[0].length,
-         k = 0,
-         l = 0;
- 
-     while (k < m && l < n) {
-         //first row
-         for (i = l; i < n; ++i) {
-             result.push(a[k][i]);
-         }
-         k++;
-         //last column
-         for (i = k; i < m; ++i) {
-             result.push(a[i][n - 1]);
-         }
-         n--;
-         // Print the last row from the remaining rows 
-         if (k < m) {
-             for (i = n - 1; i >= l; --i) {
-                 result.push(a[m - 1][i]);
-             }
-             m--;
-         }
-         // Print the first column from the remaining columns 
-         if (l < n) {
-             for (i = m - 1; i >= k; --i) {
-                 result.push(a[i][l]);
-             }
-             l++;
-         }
-     }
-     return result;
- };
+    if (!matrix.length) {
+        return result;
+    }
+    var i = 0,
+        a = matrix,
+        m = matrix.length,
+        n = matrix[0].length,
+        k = 0,
+        l = 0;
+
+    while (k < m && l < n) {
+        //first row
+        for (i = l; i < n; ++i) {
+            result.push(a[k][i]);
+        }
+        k++;
+        //last column
+        for (i = k; i < m; ++i) {
+            result.push(a[i][n - 1]);
+        }
+        n--;
+        // Print the last row from the remaining rows 
+        if (k < m) {
+            for (i = n - 1; i >= l; --i) {
+                result.push(a[m - 1][i]);
+            }
+            m--;
+        }
+        // Print the first column from the remaining columns 
+        if (l < n) {
+            for (i = m - 1; i >= k; --i) {
+                result.push(a[i][l]);
+            }
+            l++;
+        }
+    }
+    return result;
+};
+
+/** Directions */
+// https://leetcode.com/problems/spiral-matrix/discuss/20573/A-concise-C++-implementation-based-on-Directions
+//
+// When traversing the matrix in the spiral order, at any time we follow one out of the following four directions: RIGHT DOWN LEFT UP. Suppose we are working on a 5 x 3 matrix as such:
+// 0  1  2  3  4  5
+//    6  7  8  9 10
+//   11 12 13 14 15
+//
+// Imagine a cursor starts off at (0, -1), i.e. the position at '0', then we can achieve the spiral order by doing the following:
+// 1. Go right 5 times
+// 2. Go down 2 times
+// 3. Go left 4 times
+// 4. Go up 1 times.
+// 5. Go right 3 times
+// 6. Go down 0 times -> quit
+//
+// Notice that the directions we choose always follow the order 'right -> down -> left -> up', and for horizontal movements, 
+//the number of shifts follows: { 5, 4, 3 }, and vertical movements follows { 2, 1, 0 }.
+// Thus, we can make use of a direction matrix that records the offset for all directions, 
+//then an array of two elements that stores the number of shifts for horizontal and vertical movements, respectively. 
+//This way, we really just need one for loop instead of four.
+function spiralOrder(matrix) {
+    if (!matrix.length) return [];
+
+    const dirs = [
+        [0, 1],
+        [1, 0],
+        [0, -1],
+        [-1, 0]
+    ]; // right, down, left, up
+    const steps = [matrix[0].length, matrix.length - 1];
+
+    let res = [];
+    let dir = 0;
+    let r = 0;
+    let c = -1;
+
+    while (steps[dir % 2] > 0) {
+        for (let i = 0; i < steps[dir % 2]; i++) {
+            r += dirs[dir][0];
+            c += dirs[dir][1];
+
+            res.push(matrix[r][c]);
+        }
+
+        steps[dir % 2]--;
+        dir = (dir + 1) % 4;
+    }
+
+    return res;
+}
 ```
 
 ### Flowchart
@@ -3820,7 +7129,88 @@ var spiralOrder = function (matrix) {
 
 ---
 
-## 64 - ./examples/str-str.js
+## 101 - ./examples/sqrt.js
+
+```javascript
+    // Implement int sqrt(int x).
+//
+// Compute and return the square root of x, where x is guaranteed to be a non-negative integer.
+//
+// Since the return type is an integer, the decimal digits are truncated and only the integer part of the result is returned.
+//
+// Example 1:
+//
+// Input: 4
+// Output: 2
+//
+// Example 2:
+//
+// Input: 8
+// Output: 2
+// Explanation: The square root of 8 is 2.82842..., and since
+// the decimal part is truncated, 2 is returned.
+
+/**
+ * @param {number} x
+ * @return {number}
+ */
+/** 1) Cheating */
+function mySqrt1(x) {
+    return Math.floor(Math.sqrt(x));
+}
+
+/** 2) */
+// time O(n)
+// space O(1)
+function mySqrt2(x) {
+    for (let i = 0; i <= x; i++) {
+        if (i * i === x) return i;
+        else if (i * i > x) return i - 1;
+    }
+
+    return x;
+}
+
+/** 3) Integer square root */
+// https://en.wikipedia.org/wiki/Integer_square_root
+function mySqrt3(x) {
+    let r = x;
+
+    while (r * r > x) {
+        r = ((r + x / r) / 2) | 0;
+    }
+
+    return r;
+}
+
+/** 4) Binary search */
+// time O(log n)
+// space O(1)
+function mySqrt(x) {
+    let start = 1;
+    let end = x;
+
+    while (start < end - 1) { // if start < end, x = 8, at some point, start = 2, end = 3, will enter loop
+        const mid = Math.floor((start + end) / 2);
+
+        if (mid * mid < x) start = mid;
+        else if (mid * mid > x) end = mid;
+        else return mid;
+    }
+
+    return Math.min(start, end);
+}
+```
+
+### Flowchart
+![./examples/sqrt.js-svg image][./examples/sqrt.js-svg]
+
+[./examples/sqrt.js-svg]: https://raw.githubusercontent.com/jonniespratley/js-leetcode/master/flowcharts/sqrt.svg "Logo Title Text 2"
+
+
+---
+
+## 102 - ./examples/str-str.js
 
 ```javascript
     // Implement strStr().
@@ -3881,7 +7271,7 @@ function strStr2(haystack, needle) {
 
 ---
 
-## 65 - ./examples/sub-sets.js
+## 103 - ./examples/sub-sets.js
 
 ```javascript
     /**
@@ -3928,45 +7318,39 @@ const subsets = function (nums) {
     helper(0);
     return res;
 }
-
 console.log(subsets([1, 2, 3]));
 console.log(subsets([1, 2]));
 
 
 
 
-/**
- * @param {string} digits
- * @return {string[]}
- */
-var letterCombinations = function (digits) {
-    let hashTable = {
-        2: 'abc',
-        3: 'def',
-        4: 'ghi',
-        5: 'jkl',
-        6: 'mno',
-        7: 'pqrs',
-        8: 'tuv',
-        9: 'wxyz'
-    };
-    let output = [];
 
-    function helper(digit, n) {
-        if (digit === n) {
-            return;
-        }
-        for (let i = 0; i < hashTable[digit].length; i++) {
-            let curr = hashTable[digit][i];
-            console.log(curr);
-            output.push(hashTable[digit][i])
+/** Backtracking */
+// Similar
+// 46. Permutations
+function subsets2(nums) {
+    let res = [];
+
+    function find(curr, rest, start) {
+        res.push(curr);
+        for (let i = start; i < rest.length; i++) {
+            //console.log(...rest.slice(0, i))
+            find(
+                [...curr, rest[i]], [...rest.slice(0, i), ...rest.slice(i + 1)],
+                start
+            );
+            start++;
         }
     }
-    digits.split('').forEach(d => {
-        console.log(helper(d));
-    })
-    return output;
-};
+
+    find([], nums, 0);
+
+    return res;
+}
+
+console.log(subsets2([1, 2, 3]));
+console.log(subsets2([1, 2]));
+console.log(subsets2(['a', 'b', 'c']));
 
 ```
 
@@ -3978,10 +7362,65 @@ var letterCombinations = function (digits) {
 
 ---
 
-## 66 - ./examples/three-sum.js
+## 104 - ./examples/substring-problem-template.js
 
 ```javascript
-    /**
+    function findSubstring(s) {
+    let map = new Array(256).fill(0);
+    let counter; // check whether the substring is valid
+    
+    let d = s.length; //the length of substring
+    
+    let begin = 0;
+    let end = d - 1; //two pointers, one point to tail and one head
+    
+
+    //for () { /* initialize the hash map here */ }
+
+    while (end < s.length) {
+
+
+        //if (map[s[end++]]-- ?) {  /* modify counter here */ }
+
+        while ( counter/* counter condition */ ) {
+            /* update d here if finding minimum*/
+            //increase begin to make it invalid/valid again
+            //if (map[s[begin++]]++ ?) { /*modify counter here*/ }
+        }
+        /* update d here if finding maximum*/
+    }
+
+    return d;
+}
+```
+
+### Flowchart
+![./examples/substring-problem-template.js-svg image][./examples/substring-problem-template.js-svg]
+
+[./examples/substring-problem-template.js-svg]: https://raw.githubusercontent.com/jonniespratley/js-leetcode/master/flowcharts/substring-problem-template.svg "Logo Title Text 2"
+
+
+---
+
+## 105 - ./examples/three-sum.js
+
+```javascript
+    // Given an array nums of n integers, are there elements a, b, c in nums such that a + b + c = 0? Find all unique triplets in the array which gives the sum of zero.
+//
+// Note:
+//
+// The solution set must not contain duplicate triplets.
+//
+// Example:
+//
+// Given array nums = [-1, 0, 1, 2, -1, -4],
+//
+//   A solution set is:
+//   [
+//     [-1, 0, 1],
+//     [-1, -1, 2]
+//   ]
+/**
  * @param {number[]} nums
  * @return {number[][]}
  */
@@ -4010,6 +7449,54 @@ var threeSum = function (nums) {
     }
     return results;
 };
+
+/** Two pointers */
+// https://www.youtube.com/watch?v=y-zBV7uUkyI
+//
+// Idea
+// Select a first, move b to right, and move c to left
+//
+// Complexity
+// time O(n^2)
+//
+// Example
+// -1, 0, 1, 2, -1, -4
+//  a  b             c
+function threeSum(nums) {
+    let res = [];
+
+    nums = nums.sort((a, b) => a - b); // if sort() only will cause [-1, -2, -3, 1, 2, 3]
+
+    for (let i = 0; i < nums.length - 2; i++) { // nums.length - 2 because 3 pointers a, b, c
+        const a = nums[i];
+
+        if (i > 0 && a === nums[i - 1]) continue; // move a to next different one to avoid duplicate results
+
+        let l = i + 1;
+        let r = nums.length - 1;
+
+        while (l < r) {
+            const b = nums[l];
+            const c = nums[r];
+
+            const sum = a + b + c;
+
+            if (sum < 0) l++;
+            else if (sum > 0) r--;
+            else if (sum === 0) {
+                res.push([a, b, c]);
+
+                l++;
+                while (l < r && nums[l] === nums[l - 1]) l++; // move b to next different one
+
+                r--;
+                while (l < r && nums[r] === nums[r + 1]) r--; // move c to previous different one
+            }
+        }
+    }
+
+    return res;
+}
 console.log(threeSum([-1, 0, 1, 2, -1, -4]));
 ```
 
@@ -4021,7 +7508,7 @@ console.log(threeSum([-1, 0, 1, 2, -1, -4]));
 
 ---
 
-## 67 - ./examples/tree-populate-next-pointer.js
+## 106 - ./examples/tree-populate-next-pointer.js
 
 ```javascript
     /*
@@ -4107,7 +7594,7 @@ var connect = function(root) {
 
 ---
 
-## 68 - ./examples/tree-preorder-traversal.js
+## 107 - ./examples/tree-preorder-traversal.js
 
 ```javascript
     function TreeNode(val) {
@@ -4286,7 +7773,7 @@ console.log(firstUniqChar('loveleetcode'));
 
 ---
 
-## 69 - ./examples/two-sum.js
+## 108 - ./examples/two-sum.js
 
 ```javascript
     /**
@@ -4308,8 +7795,42 @@ return [0, 1].
  * @param {number} target
  * @return {number[]}
  */
+/**
+
+## Two Sum
+
+Given an array of integers, return indices of the two numbers such that they add up to a specific target.
+
+You may assume that each input would have exactly one solution, and you may not use the same element twice.
+
+Example:
+
+Given nums = [2, 7, 11, 15], target = 9,
+
+Because nums[0] + nums[1] = 2 + 7 = 9,
+return [0, 1].
+
+ * @param {number[]} nums
+ * @param {number} target
+ * @return {number[]}
+ */
+var twoSum = function(nums, target) {
+  let values = {};
+  for(let i = 0; i < nums.length; i++){
+    let diff = target - nums[i];
+    if(values[diff] !== undefined) return [values[diff], i]
+    values[nums[i]] = i;
+  }
+};
+
+
+
+
+
 
 //
+
+const input = [0, 1, 2, 5, 11, 15, 8, 23, 13, 7, 8];
 /**
  * @param {number[]} numbers
  * @param {number} target
@@ -4324,8 +7845,11 @@ var twoSum = function (numbers, target) {
         dict[numbers[i]] = Number(i);
     }
 };
+console.time('twoSum')
+console.log(twoSum(input, 9));
+console.timeEnd('twoSum')
 
-function twoSum1(nums, target) {
+function twoSum2(nums, target) {
     for (let i = 0; i < nums.length; i++) {
         for (let j = 0; j < nums.length; j++) {
             if (i === j) continue;
@@ -4334,18 +7858,29 @@ function twoSum1(nums, target) {
         }
     }
 }
+console.time('twoSum2')
+console.log(twoSum2(input, 9));
+console.timeEnd('twoSum2')
 
-function twoSum(nums, target) {
+//fastest
+function twoSum3(nums, target) {
     let map = {};
-
     for (let i = 0; i < nums.length; i++) {
-        const diff = target - nums[i];
-
-        if (map[diff] !== undefined) return [map[diff], i];
-        map[nums[i]] = i;
+        let num = nums[i];
+        let diff = target - num;
+        console.log(`[target] ${target} - ${num} = ${diff}`)
+        
+       // console.log(diff, map, map[diff]);
+        if (map[diff] !== undefined) {
+            return [map[diff], i];
+        }
+        map[num] = i;
     }
+    
 }
-console.log(twoSum([2, 7, 11, 15], 9));
+console.time('twoSum3')
+console.log(twoSum3(input, 9));
+console.timeEnd('twoSum3')
 ```
 
 ### Flowchart
@@ -4356,34 +7891,88 @@ console.log(twoSum([2, 7, 11, 15], 9));
 
 ---
 
-## 70 - ./examples/valid-params.js
+## 109 - ./examples/valid-params.js
 
 ```javascript
-    /**
+    // Given a string containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.
+//
+// An input string is valid if:
+//
+//   1. Open brackets must be closed by the same type of brackets.
+//   2. Open brackets must be closed in the correct order.
+//
+// Note that an empty string is also considered valid.
+//
+// Example 1:
+//
+// Input: "()"
+// Output: true
+//
+// Example 2:
+//
+// Input: "()[]{}"
+// Output: true
+//
+// Example 3:
+//
+// Input: "(]"
+// Output: false
+//
+// Example 4:
+//
+// Input: "([)]"
+// Output: false
+//
+// Example 5:
+//
+// Input: "{[]}"
+// Output: true
+/**
  * @param {string} s
  * @return {boolean}
  */
 function isValid(s) {
-    let valid = false;
-    let c;
-    let dict = {
-      '{': '}',
-      '(': ')',
-      '[': ']'
-    };
-    let stack = [];
-    for (let i = 0; i < s.length; i++) {
-      c = s[i];
-      if (dict[c]) {
-        stack.push(c);
-      } else {
-        if (dict[stack.pop()] !== c) {
-          return false;
-        }
+  const map = {
+    '(': ')',
+    '[': ']',
+    '{': '}'
+  };
+  let stack = [];
+  for (let c of s) {
+    if (map[c]) {
+      stack.push(map[c]);
+    } else {
+      if (c !== stack.pop()) return false;
+    }
+  }
+  return !stack.length;
+}
+
+/**
+ * @param {string} s
+ * @return {boolean}
+ */
+function isValid(s) {
+  let valid = false;
+  let c;
+  let dict = {
+    '{': '}',
+    '(': ')',
+    '[': ']'
+  };
+  let stack = [];
+  for (let i = 0; i < s.length; i++) {
+    c = s[i];
+    if (dict[c]) {
+      stack.push(c);
+    } else {
+      if (dict[stack.pop()] !== c) {
+        return false;
       }
     }
-    return (stack.length === 0);
-  };
+  }
+  return (stack.length === 0);
+};
 ```
 
 ### Flowchart

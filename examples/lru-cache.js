@@ -22,36 +22,54 @@
 // cache.get(4);       // returns 4
 
 class LRUCache {
-    /**
-     * @param {number} capacity
-     */
-    constructor(capacity) {
-      this.cache = new Map();
-      this.capacity = capacity;
-    }
-  
-    /**
-     * @param {number} key
-     * @return {number}
-     */
-    get(key) {
-      if (!this.cache.has(key)) return -1;
-  
-      const value = this.cache.get(key);
-      this.cache.delete(key);
-      this.cache.set(key, value);
-      return this.cache.get(key);
-    };
-  
-  
-    /**
-     * @param {number} key
-     * @param {number} value
-     * @return {void}
-     */
-    put(key, value) {
-      if (this.cache.has(key)) this.cache.delete(key);
-      this.cache.set(key, value);
-      if (this.cache.size > this.capacity) this.cache.delete(this.cache.keys().next().value); // keys().next().value is first item's key
-    };
+  /**
+   * @param {number} capacity
+   */
+  constructor(capacity) {
+    this.cache = new Map();
+    this.capacity = capacity;
   }
+
+  /**
+   * @param {number} key
+   * @return {number}
+   */
+  get(key) {
+    if (!this.cache.has(key)) {
+      return -1;
+    }
+
+    const value = this.cache.get(key);
+    this.cache.delete(key);
+    this.cache.set(key, value);
+    return this.cache.get(key);
+  };
+
+
+  /**
+   * @param {number} key
+   * @param {number} value
+   * @return {void}
+   */
+  put(key, value) {
+    if (this.cache.has(key)) {
+      this.cache.delete(key);
+    }
+    this.cache.set(key, value);
+    if (this.cache.size > this.capacity) {
+      this.cache.delete(this.cache.keys().next().value); // keys().next().value is first item's key
+    }
+  };
+}
+
+var cache = new LRUCache(2 /* capacity */ );
+//
+console.log(cache.put(1, 1));
+console.log(cache.put(2, 2));
+console.log(cache.get(1)); // returns 1
+console.log(cache.put(3, 3)); // evicts key 2
+console.log(cache.get(2)); // returns -1 (not found)
+console.log(cache.put(4, 4)); // evicts key 1
+console.log(cache.get(1)); // returns -1 (not found)
+console.log(cache.get(3)); // returns 3
+console.log(cache.get(4)); // returns 4

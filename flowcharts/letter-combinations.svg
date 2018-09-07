@@ -1,6 +1,6 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
-                width="500" height="1305">
+                width="500" height="1402">
                 
             <g>
                 <rect x="50" y="80"
@@ -34,13 +34,13 @@
                 </g>
                 <g>
                    <rect x="124" y="177"
-            width="92.4" height="30"
+            width="69" height="30"
             rx="2" ry="2"
             style="fill:#90caf9; stroke:#444; stroke-width:1" />
-                   <title>2: &apos;abc&apos;</title>
+                   <title>1: &apos;&apos;</title>
             <text x="139" y="197"
                 font-family="monospace" font-size="13" fill="#222">
-                <tspan x="139" y="197">2: &apos;abc&apos;</tspan>
+                <tspan x="139" y="197">1: &apos;&apos;</tspan>
             </text>
                    
                    
@@ -50,10 +50,10 @@
             width="92.4" height="30"
             rx="2" ry="2"
             style="fill:#90caf9; stroke:#444; stroke-width:1" />
-                   <title>3: &apos;def&apos;</title>
+                   <title>2: &apos;abc&apos;</title>
             <text x="139" y="245.5"
                 font-family="monospace" font-size="13" fill="#222">
-                <tspan x="139" y="245.5">3: &apos;def&apos;</tspan>
+                <tspan x="139" y="245.5">2: &apos;abc&apos;</tspan>
             </text>
                    
                    
@@ -63,10 +63,10 @@
             width="92.4" height="30"
             rx="2" ry="2"
             style="fill:#90caf9; stroke:#444; stroke-width:1" />
-                   <title>4: &apos;ghi&apos;</title>
+                   <title>3: &apos;def&apos;</title>
             <text x="139" y="294"
                 font-family="monospace" font-size="13" fill="#222">
-                <tspan x="139" y="294">4: &apos;ghi&apos;</tspan>
+                <tspan x="139" y="294">3: &apos;def&apos;</tspan>
             </text>
                    
                    
@@ -76,10 +76,10 @@
             width="92.4" height="30"
             rx="2" ry="2"
             style="fill:#90caf9; stroke:#444; stroke-width:1" />
-                   <title>5: &apos;jkl&apos;</title>
+                   <title>4: &apos;ghi&apos;</title>
             <text x="139" y="342.5"
                 font-family="monospace" font-size="13" fill="#222">
-                <tspan x="139" y="342.5">5: &apos;jkl&apos;</tspan>
+                <tspan x="139" y="342.5">4: &apos;ghi&apos;</tspan>
             </text>
                    
                    
@@ -89,250 +89,276 @@
             width="92.4" height="30"
             rx="2" ry="2"
             style="fill:#90caf9; stroke:#444; stroke-width:1" />
-                   <title>6: &apos;mno&apos;</title>
+                   <title>5: &apos;jkl&apos;</title>
             <text x="139" y="391"
                 font-family="monospace" font-size="13" fill="#222">
-                <tspan x="139" y="391">6: &apos;mno&apos;</tspan>
+                <tspan x="139" y="391">5: &apos;jkl&apos;</tspan>
             </text>
                    
                    
                 </g>
                 <g>
                    <rect x="124" y="419.5"
-            width="100.2" height="30"
+            width="92.4" height="30"
             rx="2" ry="2"
             style="fill:#90caf9; stroke:#444; stroke-width:1" />
-                   <title>7: &apos;pqrs&apos;</title>
+                   <title>6: &apos;mno&apos;</title>
             <text x="139" y="439.5"
                 font-family="monospace" font-size="13" fill="#222">
-                <tspan x="139" y="439.5">7: &apos;pqrs&apos;</tspan>
+                <tspan x="139" y="439.5">6: &apos;mno&apos;</tspan>
             </text>
                    
                    
                 </g>
                 <g>
                    <rect x="124" y="468"
-            width="92.4" height="30"
+            width="100.2" height="30"
             rx="2" ry="2"
             style="fill:#90caf9; stroke:#444; stroke-width:1" />
-                   <title>8: &apos;tuv&apos;</title>
+                   <title>7: &apos;pqrs&apos;</title>
             <text x="139" y="488"
                 font-family="monospace" font-size="13" fill="#222">
-                <tspan x="139" y="488">8: &apos;tuv&apos;</tspan>
+                <tspan x="139" y="488">7: &apos;pqrs&apos;</tspan>
             </text>
                    
                    
                 </g>
                 <g>
                    <rect x="124" y="516.5"
-            width="100.2" height="30"
+            width="92.4" height="30"
             rx="2" ry="2"
             style="fill:#90caf9; stroke:#444; stroke-width:1" />
-                   <title>9: &apos;wxyz&apos;</title>
+                   <title>8: &apos;tuv&apos;</title>
             <text x="139" y="536.5"
                 font-family="monospace" font-size="13" fill="#222">
-                <tspan x="139" y="536.5">9: &apos;wxyz&apos;</tspan>
+                <tspan x="139" y="536.5">8: &apos;tuv&apos;</tspan>
             </text>
                    
                    
                 </g>
                 <g>
-                   <rect x="87" y="565"
-            width="147" height="30"
-            rx="3" ry="3"
+                   <rect x="124" y="565"
+            width="100.2" height="30"
+            rx="2" ry="2"
             style="fill:#90caf9; stroke:#444; stroke-width:1" />
-                   <title>let prefix = []</title>
-            <text x="102" y="585"
+                   <title>9: &apos;wxyz&apos;</title>
+            <text x="139" y="585"
                 font-family="monospace" font-size="13" fill="#222">
-                <tspan x="102" y="585">let prefix = []</tspan>
+                <tspan x="139" y="585">9: &apos;wxyz&apos;</tspan>
             </text>
                    
                    
                 </g>
                 <g>
                    <rect x="87" y="613.5"
+            width="147" height="30"
+            rx="3" ry="3"
+            style="fill:#90caf9; stroke:#444; stroke-width:1" />
+                   <title>let prefix = []</title>
+            <text x="102" y="633.5"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="102" y="633.5">let prefix = []</tspan>
+            </text>
+                   
+                   
+                </g>
+                <g>
+                   <rect x="87" y="662"
             width="123.6" height="30"
             rx="3" ry="3"
             style="fill:#90caf9; stroke:#444; stroke-width:1" />
                    <title>let res = []</title>
-            <text x="102" y="633.5"
+            <text x="102" y="682"
                 font-family="monospace" font-size="13" fill="#222">
-                <tspan x="102" y="633.5">let res = []</tspan>
+                <tspan x="102" y="682">let res = []</tspan>
             </text>
                    
                    
                 </g>
             <g>
-                <rect x="87" y="677"
+                <rect x="87" y="725.5"
             width="167" height="30"
             style="fill:#a5d6a7; stroke:#444; stroke-width:1" />
                     
-                <line x1="97" y1="677" x2="97" y2="707"
+                <line x1="97" y1="725.5" x2="97" y2="755.5"
                 style="fill:#a5d6a7; stroke:#444; stroke-width:1" />
-                <line x1="244" y1="677" x2="244" y2="707"
+                <line x1="244" y1="725.5" x2="244" y2="755.5"
                 style="fill:#a5d6a7; stroke:#444; stroke-width:1" />
              
                 <title>function dfs(i)</title>
-            <text x="112" y="697"
+            <text x="112" y="745.5"
                 font-family="monospace" font-size="13" fill="#222">
-                <tspan x="112" y="697">function dfs(i)</tspan>
+                <tspan x="112" y="745.5">function dfs(i)</tspan>
             </text>
                 
             </g><g>
-            <rect x="154" y="740.5"
+            <rect x="154" y="789"
             width="223.79999999999998" height="30"
             rx="3" ry="3"
             style="fill:#ce93d8; stroke:#444; stroke-width:1" />                
-            <polygon points="124,755.5 154,725.5 184,755.5 154,785.5"
+            <polygon points="124,804 154,774 184,804 154,834"
             style="fill:#ce93d8; stroke:#444; stroke-width:1" />
             <title>(i === digits.length)</title>
-            <text x="199" y="760.5"
+            <text x="199" y="809"
                 font-family="monospace" font-size="13" fill="#222">
-                <tspan x="199" y="760.5">(i === digits.length)</tspan>
+                <tspan x="199" y="809">(i === digits.length)</tspan>
             </text>
             
-            <text x="146.2" y="760.5"
-        font-family="monospace" font-size="13" fill="#222">if</text> <text x="161.8" y="787.45"
+            <text x="146.2" y="809"
+        font-family="monospace" font-size="13" fill="#222">if</text> <text x="161.8" y="835.95"
         font-family="monospace" font-size="13" fill="#222">+</text> 
         </g>
             <g>
-                <rect x="174" y="795.5"
+                <rect x="174" y="844"
             width="279.6" height="30"
             rx="3" ry="3"
             style="fill:#90caf9; stroke:#444; stroke-width:1" />
                 
-                <line x1="453.6" y1="805.5" x2="458.6" y2="805.5"
+                <line x1="453.6" y1="854" x2="458.6" y2="854"
                 style="fill:#a5d6a7; stroke:#444; stroke-width:1" />
                 
-                <line x1="453.6" y1="815.5" x2="458.6" y2="815.5"
+                <line x1="453.6" y1="864" x2="458.6" y2="864"
                 style="fill:#a5d6a7; stroke:#444; stroke-width:1" />
 
-                <path d="M458.6, 799.5 L474.6, 810.5 L458.6, 821.5 Z" 
+                <path d="M458.6, 848 L474.6, 859 L458.6, 870 Z" 
         fill="#a5d6a7" stroke="#444" stroke-width="1" />
                              
                 <title>return res.push(prefix.join(&apos;&apos;))</title>
-            <text x="189" y="815.5"
+            <text x="189" y="864"
                 font-family="monospace" font-size="13" fill="#222">
-                <tspan x="189" y="815.5">return res.push(prefix.join(&apos;&apos;))</tspan>
+                <tspan x="189" y="864">return res.push(prefix.join(&apos;&apos;))</tspan>
             </text>
                 
             </g><g>
 
-            <rect x="154" y="880.5"
+            <rect x="154" y="929"
             width="247.2" height="30"
             rx="3" ry="3"
             style="fill:#b39ddb; stroke:#444; stroke-width:1" />
-            <polygon points="124,895.5 154,865.5 184,895.5 154,925.5"
+            <polygon points="124,944 154,914 184,944 154,974"
             style="fill:#b39ddb; stroke:#444; stroke-width:1" />
                 
             <title> c of letters[digits[i]]</title>
-            <text x="199" y="900.5"
+            <text x="199" y="949"
                 font-family="monospace" font-size="13" fill="#222">
-                <tspan x="199" y="900.5"> c of letters[digits[i]]</tspan>
+                <tspan x="199" y="949"> c of letters[digits[i]]</tspan>
             </text>
             
-            <text x="142.3" y="900.5"
+            <text x="142.3" y="949"
         font-family="monospace" font-size="13" fill="#222">for</text>
         </g>
                 <g>
-                   <rect x="174" y="935.5"
+                   <rect x="174" y="984"
             width="139.2" height="30"
             rx="2" ry="2"
             style="fill:#C5E1A5; stroke:#444; stroke-width:1" />
                    <title>prefix.push(c)</title>
-            <text x="189" y="955.5"
-                font-family="monospace" font-size="13" fill="#222">
-                <tspan x="189" y="955.5">prefix.push(c)</tspan>
-            </text>
-                   
-                   
-                </g>
-                <g>
-                   <rect x="174" y="984"
-            width="108" height="30"
-            rx="2" ry="2"
-            style="fill:#C5E1A5; stroke:#444; stroke-width:1" />
-                   <title>dfs(i + 1)</title>
             <text x="189" y="1004"
                 font-family="monospace" font-size="13" fill="#222">
-                <tspan x="189" y="1004">dfs(i + 1)</tspan>
+                <tspan x="189" y="1004">prefix.push(c)</tspan>
             </text>
                    
                    
                 </g>
                 <g>
                    <rect x="174" y="1032.5"
+            width="108" height="30"
+            rx="2" ry="2"
+            style="fill:#C5E1A5; stroke:#444; stroke-width:1" />
+                   <title>dfs(i + 1)</title>
+            <text x="189" y="1052.5"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="189" y="1052.5">dfs(i + 1)</tspan>
+            </text>
+                   
+                   
+                </g>
+                <g>
+                   <rect x="174" y="1081"
             width="123.6" height="30"
             rx="2" ry="2"
             style="fill:#C5E1A5; stroke:#444; stroke-width:1" />
                    <title>prefix.pop()</title>
-            <text x="189" y="1052.5"
+            <text x="189" y="1101"
                 font-family="monospace" font-size="13" fill="#222">
-                <tspan x="189" y="1052.5">prefix.pop()</tspan>
+                <tspan x="189" y="1101">prefix.pop()</tspan>
             </text>
                    
                    
                 </g><g>
-            <rect x="117" y="1096"
+            <rect x="117" y="1144.5"
             width="177" height="30"
             rx="3" ry="3"
             style="fill:#ce93d8; stroke:#444; stroke-width:1" />                
-            <polygon points="87,1111 117,1081 147,1111 117,1141"
+            <polygon points="87,1159.5 117,1129.5 147,1159.5 117,1189.5"
             style="fill:#ce93d8; stroke:#444; stroke-width:1" />
             <title>(digits.length)</title>
-            <text x="162" y="1116"
+            <text x="162" y="1164.5"
                 font-family="monospace" font-size="13" fill="#222">
-                <tspan x="162" y="1116">(digits.length)</tspan>
+                <tspan x="162" y="1164.5">(digits.length)</tspan>
             </text>
             
-            <text x="109.2" y="1116"
-        font-family="monospace" font-size="13" fill="#222">if</text> <text x="124.8" y="1142.95"
+            <text x="109.2" y="1164.5"
+        font-family="monospace" font-size="13" fill="#222">if</text> <text x="124.8" y="1191.45"
         font-family="monospace" font-size="13" fill="#222">+</text> 
         </g>
                 <g>
-                   <rect x="137" y="1151"
+                   <rect x="137" y="1199.5"
             width="76.8" height="30"
             rx="2" ry="2"
             style="fill:#C5E1A5; stroke:#444; stroke-width:1" />
                    <title>dfs(0)</title>
-            <text x="152" y="1171"
+            <text x="152" y="1219.5"
                 font-family="monospace" font-size="13" fill="#222">
-                <tspan x="152" y="1171">dfs(0)</tspan>
+                <tspan x="152" y="1219.5">dfs(0)</tspan>
             </text>
                    
                    
                 </g>
             <g>
-                <rect x="87" y="1201"
+                <rect x="87" y="1249.5"
             width="108" height="30"
             rx="3" ry="3"
             style="fill:#90caf9; stroke:#444; stroke-width:1" />
                 
-                <line x1="195" y1="1211" x2="200" y2="1211"
+                <line x1="195" y1="1259.5" x2="200" y2="1259.5"
                 style="fill:#a5d6a7; stroke:#444; stroke-width:1" />
                 
-                <line x1="195" y1="1221" x2="200" y2="1221"
+                <line x1="195" y1="1269.5" x2="200" y2="1269.5"
                 style="fill:#a5d6a7; stroke:#444; stroke-width:1" />
 
-                <path d="M200, 1205 L216, 1216 L200, 1227 Z" 
+                <path d="M200, 1253.5 L216, 1264.5 L200, 1275.5 Z" 
         fill="#a5d6a7" stroke="#444" stroke-width="1" />
                              
                 <title>return res</title>
-            <text x="102" y="1221"
+            <text x="102" y="1269.5"
                 font-family="monospace" font-size="13" fill="#222">
-                <tspan x="102" y="1221">return res</tspan>
+                <tspan x="102" y="1269.5">return res</tspan>
             </text>
                 
             </g>
                 <g>
-                   <rect x="50" y="1249.5"
+                   <rect x="50" y="1298"
             width="318.59999999999997" height="30"
             rx="2" ry="2"
             style="fill:#C5E1A5; stroke:#444; stroke-width:1" />
                    <title>console.log(letterCombinations(&apos;23&apos;))</title>
-            <text x="65" y="1269.5"
+            <text x="65" y="1318"
                 font-family="monospace" font-size="13" fill="#222">
-                <tspan x="65" y="1269.5">console.log(letterCombinations(&apos;23&apos;))</tspan>
+                <tspan x="65" y="1318">console.log(letterCombinations(&apos;23&apos;))</tspan>
+            </text>
+                   
+                   
+                </g>
+                <g>
+                   <rect x="50" y="1346.5"
+            width="326.4" height="30"
+            rx="2" ry="2"
+            style="fill:#C5E1A5; stroke:#444; stroke-width:1" />
+                   <title>console.log(letterCombinations(&apos;123&apos;))</title>
+            <text x="65" y="1366.5"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="65" y="1366.5">console.log(letterCombinations(&apos;123&apos;))</tspan>
             </text>
                    
                    
@@ -422,12 +448,11 @@
                false
             </g>
             <g>
-               <path d="M68.5, 110 L68.5 576 Q68.5 580
-                72.5 580
-                L79 580 "
+               <path d="M105.5, 158.5 L105.5 576 Q105.5 580
+                109.5 580
+                L124 580 "
         style="fill:none; stroke:#444; stroke-width:1" />
-               <path d="M79, 577 L87, 580 L79, 583 Z" 
-        fill="#333" />
+               false
             </g>
             <g>
                <path d="M68.5, 110 L68.5 624.5 Q68.5 628.5
@@ -438,47 +463,47 @@
         fill="#333" />
             </g>
             <g>
-               <path d="M68.5, 110 L68.5 688 Q68.5 692
-                72.5 692
-                L79 692 "
+               <path d="M68.5, 110 L68.5 673 Q68.5 677
+                72.5 677
+                L79 677 "
         style="fill:none; stroke:#444; stroke-width:1" />
-               <path d="M79, 689 L87, 692 L79, 695 Z" 
+               <path d="M79, 674 L87, 677 L79, 680 Z" 
         fill="#333" />
             </g>
             <g>
-               <path d="M105.5, 707 L105.5 751.5 Q105.5 755.5
-                109.5 755.5
-                L116 755.5 "
+               <path d="M68.5, 110 L68.5 736.5 Q68.5 740.5
+                72.5 740.5
+                L79 740.5 "
         style="fill:none; stroke:#444; stroke-width:1" />
-               <path d="M116, 752.5 L124, 755.5 L116, 758.5 Z" 
+               <path d="M79, 737.5 L87, 740.5 L79, 743.5 Z" 
         fill="#333" />
             </g>
             <g>
-               <path d="M154, 785.5 L154 806.5 Q154 810.5
-                158 810.5
-                L166 810.5 "
+               <path d="M105.5, 755.5 L105.5 800 Q105.5 804
+                109.5 804
+                L116 804 "
         style="fill:none; stroke:#444; stroke-width:1" />
-               <path d="M166, 807.5 L174, 810.5 L166, 813.5 Z" 
+               <path d="M116, 801 L124, 804 L116, 807 Z" 
         fill="#333" />
             </g>
             <g>
-               <path d="M105.5, 707 L105.5 891.5 Q105.5 895.5
-                109.5 895.5
-                L116 895.5 "
+               <path d="M154, 834 L154 855 Q154 859
+                158 859
+                L166 859 "
         style="fill:none; stroke:#444; stroke-width:1" />
-               <path d="M116, 892.5 L124, 895.5 L116, 898.5 Z" 
+               <path d="M166, 856 L174, 859 L166, 862 Z" 
         fill="#333" />
             </g>
             <g>
-               <path d="M154, 925.5 L154 946.5 Q154 950.5
-                158 950.5
-                L166 950.5 "
+               <path d="M105.5, 755.5 L105.5 940 Q105.5 944
+                109.5 944
+                L116 944 "
         style="fill:none; stroke:#444; stroke-width:1" />
-               <path d="M166, 947.5 L174, 950.5 L166, 953.5 Z" 
+               <path d="M116, 941 L124, 944 L116, 947 Z" 
         fill="#333" />
             </g>
             <g>
-               <path d="M154, 925.5 L154 995 Q154 999
+               <path d="M154, 974 L154 995 Q154 999
                 158 999
                 L166 999 "
         style="fill:none; stroke:#444; stroke-width:1" />
@@ -486,7 +511,7 @@
         fill="#333" />
             </g>
             <g>
-               <path d="M154, 925.5 L154 1043.5 Q154 1047.5
+               <path d="M154, 974 L154 1043.5 Q154 1047.5
                 158 1047.5
                 L166 1047.5 "
         style="fill:none; stroke:#444; stroke-width:1" />
@@ -494,47 +519,63 @@
         fill="#333" />
             </g>
             <g>
-               <path d="M297.6, 1047.5 L417.2 1047.5  Q421.2 1047.5
-                421.2 1043.5
-                L421.2 853.5 Q421.2 845.5
-                417.2 845.5
-                L162 845.5  Q154 845.5
-                154 849.5
-                L154 857.5"
+               <path d="M154, 974 L154 1092 Q154 1096
+                158 1096
+                L166 1096 "
         style="fill:none; stroke:#444; stroke-width:1" />
-               <path d="M151, 857.5 L154, 865.5 L157, 857.5 Z" 
+               <path d="M166, 1093 L174, 1096 L166, 1099 Z" 
         fill="#333" />
             </g>
             <g>
-               <path d="M68.5, 110 L68.5 1107 Q68.5 1111
-                72.5 1111
-                L79 1111 "
+               <path d="M297.6, 1096 L417.2 1096  Q421.2 1096
+                421.2 1092
+                L421.2 902 Q421.2 894
+                417.2 894
+                L162 894  Q154 894
+                154 898
+                L154 906"
         style="fill:none; stroke:#444; stroke-width:1" />
-               <path d="M79, 1108 L87, 1111 L79, 1114 Z" 
+               <path d="M151, 906 L154, 914 L157, 906 Z" 
         fill="#333" />
             </g>
             <g>
-               <path d="M117, 1141 L117 1162 Q117 1166
-                121 1166
-                L129 1166 "
+               <path d="M68.5, 110 L68.5 1155.5 Q68.5 1159.5
+                72.5 1159.5
+                L79 1159.5 "
         style="fill:none; stroke:#444; stroke-width:1" />
-               <path d="M129, 1163 L137, 1166 L129, 1169 Z" 
+               <path d="M79, 1156.5 L87, 1159.5 L79, 1162.5 Z" 
         fill="#333" />
             </g>
             <g>
-               <path d="M68.5, 110 L68.5 1212 Q68.5 1216
-                72.5 1216
-                L79 1216 "
+               <path d="M117, 1189.5 L117 1210.5 Q117 1214.5
+                121 1214.5
+                L129 1214.5 "
         style="fill:none; stroke:#444; stroke-width:1" />
-               <path d="M79, 1213 L87, 1216 L79, 1219 Z" 
+               <path d="M129, 1211.5 L137, 1214.5 L129, 1217.5 Z" 
         fill="#333" />
             </g>
             <g>
-               <path d="M25, 40 L25 1260.5 Q25 1264.5
-                29 1264.5
-                L42 1264.5 "
+               <path d="M68.5, 110 L68.5 1260.5 Q68.5 1264.5
+                72.5 1264.5
+                L79 1264.5 "
         style="fill:none; stroke:#444; stroke-width:1" />
-               <path d="M42, 1261.5 L50, 1264.5 L42, 1267.5 Z" 
+               <path d="M79, 1261.5 L87, 1264.5 L79, 1267.5 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M25, 40 L25 1309 Q25 1313
+                29 1313
+                L42 1313 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M42, 1310 L50, 1313 L42, 1316 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M25, 40 L25 1357.5 Q25 1361.5
+                29 1361.5
+                L42 1361.5 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M42, 1358.5 L50, 1361.5 L42, 1364.5 Z" 
         fill="#333" />
             </g>
             </svg>

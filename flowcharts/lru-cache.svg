@@ -1,6 +1,6 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
-                width="612" height="1106">
+                width="612" height="1592">
                 
             <g>
                 <rect x="50" y="80"
@@ -293,6 +293,136 @@
                    
                    
                 </g>
+                <g>
+                   <rect x="50" y="1100.5"
+            width="209.4" height="30"
+            rx="3" ry="3"
+            style="fill:#90caf9; stroke:#444; stroke-width:1" />
+                   <title>var cache = LRUCache(2)</title>
+            <text x="65" y="1120.5"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="65" y="1120.5">var cache = LRUCache(2)</tspan>
+            </text>
+                   
+                   
+                </g>
+                <g>
+                   <rect x="50" y="1149"
+            width="248.4" height="30"
+            rx="2" ry="2"
+            style="fill:#C5E1A5; stroke:#444; stroke-width:1" />
+                   <title>console.log(cache.put(1, 1))</title>
+            <text x="65" y="1169"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="65" y="1169">console.log(cache.put(1, 1))</tspan>
+            </text>
+                   
+                   
+                </g>
+                <g>
+                   <rect x="50" y="1197.5"
+            width="248.4" height="30"
+            rx="2" ry="2"
+            style="fill:#C5E1A5; stroke:#444; stroke-width:1" />
+                   <title>console.log(cache.put(2, 2))</title>
+            <text x="65" y="1217.5"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="65" y="1217.5">console.log(cache.put(2, 2))</tspan>
+            </text>
+                   
+                   
+                </g>
+                <g>
+                   <rect x="50" y="1246"
+            width="225" height="30"
+            rx="2" ry="2"
+            style="fill:#C5E1A5; stroke:#444; stroke-width:1" />
+                   <title>console.log(cache.get(1))</title>
+            <text x="65" y="1266"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="65" y="1266">console.log(cache.get(1))</tspan>
+            </text>
+                   
+                   
+                </g>
+                <g>
+                   <rect x="50" y="1294.5"
+            width="248.4" height="30"
+            rx="2" ry="2"
+            style="fill:#C5E1A5; stroke:#444; stroke-width:1" />
+                   <title>console.log(cache.put(3, 3))</title>
+            <text x="65" y="1314.5"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="65" y="1314.5">console.log(cache.put(3, 3))</tspan>
+            </text>
+                   
+                   
+                </g>
+                <g>
+                   <rect x="50" y="1343"
+            width="225" height="30"
+            rx="2" ry="2"
+            style="fill:#C5E1A5; stroke:#444; stroke-width:1" />
+                   <title>console.log(cache.get(2))</title>
+            <text x="65" y="1363"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="65" y="1363">console.log(cache.get(2))</tspan>
+            </text>
+                   
+                   
+                </g>
+                <g>
+                   <rect x="50" y="1391.5"
+            width="248.4" height="30"
+            rx="2" ry="2"
+            style="fill:#C5E1A5; stroke:#444; stroke-width:1" />
+                   <title>console.log(cache.put(4, 4))</title>
+            <text x="65" y="1411.5"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="65" y="1411.5">console.log(cache.put(4, 4))</tspan>
+            </text>
+                   
+                   
+                </g>
+                <g>
+                   <rect x="50" y="1440"
+            width="225" height="30"
+            rx="2" ry="2"
+            style="fill:#C5E1A5; stroke:#444; stroke-width:1" />
+                   <title>console.log(cache.get(1))</title>
+            <text x="65" y="1460"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="65" y="1460">console.log(cache.get(1))</tspan>
+            </text>
+                   
+                   
+                </g>
+                <g>
+                   <rect x="50" y="1488.5"
+            width="225" height="30"
+            rx="2" ry="2"
+            style="fill:#C5E1A5; stroke:#444; stroke-width:1" />
+                   <title>console.log(cache.get(3))</title>
+            <text x="65" y="1508.5"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="65" y="1508.5">console.log(cache.get(3))</tspan>
+            </text>
+                   
+                   
+                </g>
+                <g>
+                   <rect x="50" y="1537"
+            width="225" height="30"
+            rx="2" ry="2"
+            style="fill:#C5E1A5; stroke:#444; stroke-width:1" />
+                   <title>console.log(cache.get(4))</title>
+            <text x="65" y="1557"
+                font-family="monospace" font-size="13" fill="#222">
+                <tspan x="65" y="1557">console.log(cache.get(4))</tspan>
+            </text>
+                   
+                   
+                </g>
             <g>
                <rect x="25" y="13.75"
             width="216.6" height="24"
@@ -455,6 +585,86 @@
                 L166 1065.5 "
         style="fill:none; stroke:#444; stroke-width:1" />
                <path d="M166, 1062.5 L174, 1065.5 L166, 1068.5 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M25, 40 L25 1111.5 Q25 1115.5
+                29 1115.5
+                L42 1115.5 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M42, 1112.5 L50, 1115.5 L42, 1118.5 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M25, 40 L25 1160 Q25 1164
+                29 1164
+                L42 1164 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M42, 1161 L50, 1164 L42, 1167 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M25, 40 L25 1208.5 Q25 1212.5
+                29 1212.5
+                L42 1212.5 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M42, 1209.5 L50, 1212.5 L42, 1215.5 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M25, 40 L25 1257 Q25 1261
+                29 1261
+                L42 1261 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M42, 1258 L50, 1261 L42, 1264 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M25, 40 L25 1305.5 Q25 1309.5
+                29 1309.5
+                L42 1309.5 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M42, 1306.5 L50, 1309.5 L42, 1312.5 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M25, 40 L25 1354 Q25 1358
+                29 1358
+                L42 1358 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M42, 1355 L50, 1358 L42, 1361 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M25, 40 L25 1402.5 Q25 1406.5
+                29 1406.5
+                L42 1406.5 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M42, 1403.5 L50, 1406.5 L42, 1409.5 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M25, 40 L25 1451 Q25 1455
+                29 1455
+                L42 1455 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M42, 1452 L50, 1455 L42, 1458 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M25, 40 L25 1499.5 Q25 1503.5
+                29 1503.5
+                L42 1503.5 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M42, 1500.5 L50, 1503.5 L42, 1506.5 Z" 
+        fill="#333" />
+            </g>
+            <g>
+               <path d="M25, 40 L25 1548 Q25 1552
+                29 1552
+                L42 1552 "
+        style="fill:none; stroke:#444; stroke-width:1" />
+               <path d="M42, 1549 L50, 1552 L42, 1555 Z" 
         fill="#333" />
             </g>
             </svg>
