@@ -20,7 +20,7 @@ var groupAnagrams = function (strs) {
             locations[alph[i]].push(i);
         }
     }
-    console.log(locations);
+   
 
     // 3 transform groups of indices into groups of original words
     // e.g. for 'aet', map [0, 1, 3] to words at those indices in strs
@@ -30,9 +30,11 @@ var groupAnagrams = function (strs) {
     }
     return output;
 };
+console.time('groupAnagrams')
 console.log(
     groupAnagrams(["eat", "tea", "tan", "ate", "nat", "bat"])
 )
+console.timeEnd('groupAnagrams')
 
 
 /**
@@ -50,7 +52,7 @@ var groupAnagrams2 = function (strs) {
         } else {
             locations[s1].push(i);
         }
-        console.log(s1);
+       // console.log(s1);
     }
 
     for (let w in locations) {
@@ -60,24 +62,29 @@ var groupAnagrams2 = function (strs) {
     //If match is not the same, check again.
     return out;
 };
+console.time('groupAnagrams2')
 console.log(
     groupAnagrams2(["eat", "tea", "tan", "ate", "nat", "bat"])
 )
+console.timeEnd('groupAnagrams2')
 
+/**
+ * Fastest implementation.
+ * @param {Array} strs 
+ */
 var groupAnagrams3 = function (strs) {
     if (strs.length === 0) return [];
     if (strs.length === 1) return [strs];
-
     const groups = {};
-
     for (const word of strs) {
         let sum = 0;
         for (let i = 0; i < word.length; i++) sum += (word.charCodeAt(i) ** 4);
         groups[sum] ? groups[sum].push(word) : groups[sum] = [word];
     }
-
     return Object.values(groups);
 };
+console.time('groupAnagrams3')
 console.log(
     groupAnagrams3(["eat", "tea", "tan", "ate", "nat", "bat"])
 )
+console.timeEnd('groupAnagrams3')

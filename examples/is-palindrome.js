@@ -11,33 +11,30 @@
 //
 // Input: "race a car"
 // Output: false
- /**
+/**
  * @param {string} s
  * @return {boolean}
  */
 function isPalindrome(s) {
   const s2 = s.replace(/\W/g, '').toLowerCase();
-   for (let i = 0; i < s2.length / 2; i++) {
+  for (let i = 0; i < s2.length / 2; i++) {
     if (s2[i] !== s2[s2.length - i - 1]) return false
   }
-   return true;
+  return true;
 }
 
 function isPalindrome(word) {
-    var s = new Stack();
-    for (var i = 0; i < word.length; ++i) {
-       s.push(word[i]);
-    }
-    var rword = "";
-    while (s.length() > 0) {
-       rword += s.pop();
-    }
-    if (word == rword) {
-       return true;
-     }
-    else {
-       return false;
-    }
- }
- 
- 
+  var s = [];
+  for (var i = 0; i < word.length; ++i) {
+    s.push(word[i]);
+  }
+  var rword = "";
+  while (s.length() > 0) {
+    rword += s.pop();
+  }
+  if (word == rword) {
+    return true;
+  } else {
+    return false;
+  }
+}

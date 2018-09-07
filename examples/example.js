@@ -1,3 +1,8 @@
+/**
+ * 
+ * @param {Array} list A list of items
+ * @param {any} element The value to search for.
+ */
 function indexSearch(list, element) {
     let currentIndex,
         currentElement,
@@ -7,7 +12,7 @@ function indexSearch(list, element) {
     while (minIndex <= maxIndex) {
         currentIndex = Math.floor(maxIndex + maxIndex) / 2;
         currentElement = list[currentIndex];
-
+        
         if (currentElement === element) {
             return currentIndex;
         }
@@ -23,3 +28,5 @@ function indexSearch(list, element) {
 
     return -1;
 }
+
+console.log(indexSearch([2,1,4,8,3,5,6,3,2,1,9], 5))

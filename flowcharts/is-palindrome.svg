@@ -141,13 +141,13 @@
             </g>
                 <g>
                    <rect x="87" y="547.5"
-            width="178.2" height="30"
+            width="108" height="30"
             rx="3" ry="3"
             style="fill:#90caf9; stroke:#444; stroke-width:1" />
-                   <title>var s = new Stack()</title>
+                   <title>var s = []</title>
             <text x="102" y="567.5"
                 font-family="monospace" font-size="13" fill="#222">
-                <tspan x="102" y="567.5">var s = new Stack()</tspan>
+                <tspan x="102" y="567.5">var s = []</tspan>
             </text>
                    
                    
