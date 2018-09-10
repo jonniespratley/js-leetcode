@@ -1,0 +1,973 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>front-end-interview.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: "Segoe WPC", "Segoe UI", "SFUIText-Light", "HelveticaNeue-Light", sans-serif, "Droid Sans Fallback";
+	font-size: 14px;
+	padding: 0 12px;
+	line-height: 22px;
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	color: #4080D0;
+	text-decoration: none;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+h1 code,
+h2 code,
+h3 code,
+h4 code,
+h5 code,
+h6 code {
+	font-size: inherit;
+	line-height: auto;
+}
+
+a:hover {
+	color: #4080D0;
+	text-decoration: underline;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left: 5px solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 14px;
+	line-height: 19px;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+.mac code {
+	font-size: 12px;
+	line-height: 18px;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+/** Theming */
+
+.vscode-light,
+.vscode-light pre code {
+	color: rgb(30, 30, 30);
+}
+
+.vscode-dark,
+.vscode-dark pre code {
+	color: #DDD;
+}
+
+.vscode-high-contrast,
+.vscode-high-contrast pre code {
+	color: white;
+}
+
+.vscode-light code {
+	color: #A31515;
+}
+
+.vscode-dark code {
+	color: #D7BA7D;
+}
+
+.vscode-light pre:not(.hljs),
+.vscode-light code > div {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre:not(.hljs),
+.vscode-dark code > div {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre:not(.hljs),
+.vscode-high-contrast code > div {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+.vscode-light blockquote,
+.vscode-dark blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.vscode-high-contrast blockquote {
+	background: transparent;
+	border-color: #fff;
+}
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family:  "Meiryo", "Segoe WPC", "Segoe UI", "SFUIText-Light", "HelveticaNeue-Light", sans-serif, "Droid Sans Fallback";
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+</head>
+<body>
+<h1 id="1-front-end-interview">1. Front End Interview</h1>
+<p>Here are some stuff you should know about.</p>
+<blockquote>
+<p>https://medium.freecodecamp.org/cracking-the-front-end-interview-9a34cd46237</p>
+</blockquote>
+<!-- TOC -->
+<ul>
+<li><a href="#1-front-end-interview">1. Front End Interview</a>
+<ul>
+<li><a href="#11-front-end-concepts">1.1. Front End Concepts</a>
+<ul>
+<li><a href="#111-css-animations">1.1.1. CSS animations</a></li>
+<li><a href="#112-css-sprites">1.1.2. CSS sprites</a></li>
+<li><a href="#113-pseudo-classes">1.1.3. Pseudo classes</a></li>
+<li><a href="#114-grid-systems">1.1.4. Grid systems</a></li>
+<li><a href="#115-semantic-markup">1.1.5. Semantic markup</a>
+<ul>
+<li><a href="#1151-what-are-semantic-elements">1.1.5.1. What are Semantic Elements?</a></li>
+<li><a href="#1152-example-a-semantic-outline">1.1.5.2. Example: A Semantic Outline</a></li>
+</ul>
+</li>
+<li><a href="#116-css-pre-processors">1.1.6. CSS pre-processors</a></li>
+</ul>
+</li>
+<li><a href="#12-javascript-concepts">1.2. JavaScript Concepts</a>
+<ul>
+<li><a href="#121-data-types">1.2.1. Data types</a></li>
+<li><a href="#122-prototypal-inheritance">1.2.2. Prototypal inheritance</a></li>
+<li><a href="#1221-how-prototypal-inheritance-works">1.2.2.1. How prototypal inheritance works</a></li>
+<li><a href="#133-scoping">1.3.3. Scoping</a>
+<ul>
+<li><a href="#1331-what-is-this-context">1.3.3.1. What is &quot;this&quot; Context</a></li>
+</ul>
+</li>
+<li><a href="#134-closures">1.3.4. Closures</a>
+<ul>
+<li><a href="#1341-what-is-a-closure-and-howwhy-would-you-use-one">1.3.4.1. What is a closure, and how/why would you use one?</a></li>
+</ul>
+</li>
+<li><a href="#135-the-event-loop">1.3.5. The event loop</a></li>
+<li><a href="#136-event-bubbling">1.3.6. Event bubbling</a>
+<ul>
+<li><a href="#1361-bubbling-and-capturing-explained">1.3.6.1. Bubbling and capturing explained</a></li>
+</ul>
+</li>
+<li><a href="#137-apply-call-and-bind">1.3.7. Apply, call, and bind</a>
+<ul>
+<li><a href="#1371-explain-bind">1.3.7.1. Explain Bind</a></li>
+</ul>
+</li>
+<li><a href="#138-callbacks-and-promises">1.3.8. Callbacks and promises</a>
+<ul>
+<li><a href="#what-are-the-pros-and-cons-of-using-promises-instead-of-callbacks">What are the pros and cons of using Promises instead of callbacks?</a></li>
+</ul>
+</li>
+<li><a href="#139-variable-and-function-hoisting">1.3.9. Variable and function hoisting</a>
+<ul>
+<li><a href="#1391-only-declarations-are-hoisted">1.3.9.1. Only declarations are hoisted</a></li>
+</ul>
+</li>
+<li><a href="#1310-currying">1.3.10. Currying</a></li>
+</ul>
+</li>
+<li><a href="#14-design-patterns">1.4. Design Patterns</a></li>
+<li><a href="#15-computer-science-concepts">1.5. Computer Science Concepts</a>
+<ul>
+<li><a href="#151-data-structures">1.5.1. Data Structures</a></li>
+<li><a href="#152-sorting">1.5.2. Sorting</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<!-- /TOC -->
+<h2 id="11-front-end-concepts">1.1. Front End Concepts</h2>
+<ul>
+<li>CSS animations</li>
+<li>CSS sprites</li>
+<li>Pseudo classes</li>
+<li>Grid systems</li>
+<li>Semantic markup</li>
+<li>CSS Pre-processors</li>
+</ul>
+<h3 id="111-css-animations">1.1.1. CSS animations</h3>
+<p>The animation property in CSS can be used to animate many other CSS properties such as <code>color</code>, <code>background-color</code>, <code>height</code>, or <code>width</code>. Each animation needs to be defined with the <code>@keyframes</code> <code>at-rule</code> which is then called with the <code>animation</code> property, like so:</p>
+<pre class="hljs"><code><div><span class="hljs-selector-class">.element</span> {
+  <span class="hljs-attribute">animation</span>: pulse <span class="hljs-number">5s</span> infinite;
+}
+
+@<span class="hljs-keyword">keyframes</span> pulse {
+  0% {
+    <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#001F3F</span>;
+  }
+  100% {
+    <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#FF4136</span>;
+  }
+}
+</div></code></pre>
+<blockquote>
+<p>Reference: https://css-tricks.com/almanac/properties/a/animation/</p>
+</blockquote>
+<p><a href="#contents">Back to top</a></p>
+<h3 id="112-css-sprites">1.1.2. CSS sprites</h3>
+<p>CSS Sprites are a means of combining multiple images into a single image file for use on a website, to help with performance.</p>
+<pre class="hljs"><code><div><span class="hljs-selector-class">.flags-canada</span>, <span class="hljs-selector-class">.flags-mexico</span>, <span class="hljs-selector-class">.flags-usa</span> {
+  <span class="hljs-attribute">background-image</span>: <span class="hljs-built_in">url</span>(<span class="hljs-string">'../images/flags.png'</span>);
+  <span class="hljs-attribute">background-repeat</span>: no-repeat;
+}
+
+<span class="hljs-selector-class">.flags-canada</span> {
+  <span class="hljs-attribute">height</span>: <span class="hljs-number">128px</span>;
+  <span class="hljs-attribute">background-position</span>: -<span class="hljs-number">5px</span> -<span class="hljs-number">5px</span>;
+}
+
+<span class="hljs-selector-class">.flags-usa</span> {
+  <span class="hljs-attribute">height</span>: <span class="hljs-number">135px</span>;
+  <span class="hljs-attribute">background-position</span>: -<span class="hljs-number">5px</span> -<span class="hljs-number">143px</span>;
+}
+
+<span class="hljs-selector-class">.flags-mexico</span> {
+  <span class="hljs-attribute">height</span>: <span class="hljs-number">147px</span>;
+  <span class="hljs-attribute">background-position</span>: -<span class="hljs-number">5px</span> -<span class="hljs-number">288px</span>;
+}
+</div></code></pre>
+<blockquote>
+<p>Reference: https://css-tricks.com/css-sprites/</p>
+</blockquote>
+<p><a href="#contents">Back to top</a></p>
+<h3 id="113-pseudo-classes">1.1.3. Pseudo classes</h3>
+<p>A CSS pseudo-class is a keyword added to a selector that specifies a special state of the selected element(s). For example, :hover can be used to change a button's color when the user hovers over it.</p>
+<pre class="hljs"><code><div><span class="hljs-comment">/* syntax */</span>
+<span class="hljs-selector-tag">selector</span><span class="hljs-selector-pseudo">:pseudo-class</span> {
+  <span class="hljs-attribute">property</span>: value;
+}
+
+<span class="hljs-comment">/* example */</span>
+<span class="hljs-selector-tag">div</span><span class="hljs-selector-pseudo">:hover</span> {
+  <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#F89B4D</span>;
+}
+</div></code></pre>
+<blockquote>
+<p>Reference: https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes</p>
+</blockquote>
+<p><a href="#contents">Back to top</a></p>
+<h3 id="114-grid-systems">1.1.4. Grid systems</h3>
+<p>Description</p>
+<pre class="hljs"><code><div>// Example code
+</div></code></pre>
+<blockquote>
+<p>Reference: https://www.sitepoint.com/understanding-css-grid-systems/</p>
+</blockquote>
+<p><a href="#contents">Back to top</a></p>
+<h3 id="115-semantic-markup">1.1.5. Semantic markup</h3>
+<p>Semantics is the study of the meanings of words and phrases in a language.</p>
+<blockquote>
+<p>Semantic elements = elements with a meaning.</p>
+</blockquote>
+<h4 id="1151-what-are-semantic-elements">1.1.5.1. What are Semantic Elements?</h4>
+<p>A semantic element clearly describes its meaning to both the browser and the developer.</p>
+<ul>
+<li>Examples of non-semantic elements: <code>&lt;div&gt;</code> and <code>&lt;span&gt;</code> - Tells nothing about its content.</li>
+<li>Examples of semantic elements: <code>&lt;form&gt;</code>, <code>&lt;table&gt;</code>, and <code>&lt;article&gt;</code> - Clearly defines its content.</li>
+</ul>
+<p><img src="https://www.w3schools.com/html/img_sem_elements.gif" alt=""></p>
+<blockquote>
+<p>Reference: https://www.w3schools.com/html/html5_semantic_elements.asp</p>
+</blockquote>
+<h4 id="1152-example-a-semantic-outline">1.1.5.2. Example: A Semantic Outline</h4>
+<p>Let’s see an example for a semantic document outline to see clearer how it works.</p>
+<p><img src="https://assets.hongkiat.com/uploads/html-5-semantics/document-outline-example.jpg" alt=""></p>
+<p>Our example code will result in the following document structure:</p>
+<pre class="hljs"><code><div><span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">header</span>&gt;</span>...<span class="hljs-tag">&lt;/<span class="hljs-name">header</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">nav</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">header</span>&gt;</span>...<span class="hljs-tag">&lt;/<span class="hljs-name">header</span>&gt;</span>
+    ...
+  <span class="hljs-tag">&lt;/<span class="hljs-name">nav</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">article</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">header</span>&gt;</span>...<span class="hljs-tag">&lt;/<span class="hljs-name">header</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">section</span>&gt;</span>...<span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">footer</span>&gt;</span>...<span class="hljs-tag">&lt;/<span class="hljs-name">footer</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">article</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">aside</span>&gt;</span>
+     <span class="hljs-tag">&lt;<span class="hljs-name">section</span>&gt;</span>...<span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
+     <span class="hljs-tag">&lt;<span class="hljs-name">section</span>&gt;</span>...<span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
+     <span class="hljs-tag">&lt;<span class="hljs-name">section</span>&gt;</span>...<span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">aside</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">footer</span>&gt;</span>...<span class="hljs-tag">&lt;/<span class="hljs-name">footer</span>&gt;</span> 
+<span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+</div></code></pre>
+<blockquote>
+<p>Reference: https://www.hongkiat.com/blog/html-5-semantics/</p>
+</blockquote>
+<p><a href="#contents">Back to top</a></p>
+<h3 id="116-css-pre-processors">1.1.6. CSS pre-processors</h3>
+<p>Description</p>
+<pre class="hljs"><code><div>// Example code
+</div></code></pre>
+<blockquote>
+<p>Reference: URL</p>
+</blockquote>
+<p><a href="#contents">Back to top</a></p>
+<hr>
+<h2 id="12-javascript-concepts">1.2. JavaScript Concepts</h2>
+<ul>
+<li>Data types</li>
+<li>Prototypal inheritance</li>
+<li>Scoping</li>
+<li>Closures</li>
+<li>The event loop</li>
+<li>Event bubbling</li>
+<li>Apply, call, and bind</li>
+<li>Callbacks and promises</li>
+<li>Variable and function hoisting</li>
+<li>Currying</li>
+</ul>
+<h3 id="121-data-types">1.2.1. Data types</h3>
+<p>The latest ECMAScript standard defines seven data types:</p>
+<p>Six data types that are primitives:</p>
+<ul>
+<li>Boolean</li>
+<li>Null</li>
+<li>Undefined</li>
+<li>Number</li>
+<li>String</li>
+<li>Symbol (new in ECMAScript 6)</li>
+<li>and Object</li>
+</ul>
+<blockquote>
+<p>Reference: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures</p>
+</blockquote>
+<h3 id="122-prototypal-inheritance">1.2.2. Prototypal inheritance</h3>
+<p>When it comes to inheritance, JavaScript only has one construct: objects.</p>
+<p>Each object has a private property which holds a link to another object called its <code>prototype</code>. That <code>prototype</code> object has a <code>prototype</code> of its own, and so on until an object is reached with null as its <code>prototype</code>.</p>
+<p>By definition, <code>null</code> has no <code>prototype</code>, and acts as the final link in this prototype chain.</p>
+<p>When trying to access a property of an object, the property will not only be sought on the object but on the <code>prototype</code> of the object, the prototype of the prototype, and so on until either a property with a matching name is found or the end of the prototype chain is reached.</p>
+<p>In JavaScript, any function can be added to an object in the form of a property. An inherited function acts just as any other property, including property shadowing as shown above (in this case, a form of method overriding).</p>
+<p>When an inherited function is executed, the value of <code>this</code> points to the inheriting object, not to the <code>prototype</code> object where the function is an own property.</p>
+<h3 id="1221-how-prototypal-inheritance-works">1.2.2.1. How prototypal inheritance works</h3>
+<p>All JavaScript objects have a prototype property, that is a reference to another object. When a property is accessed on an object and if the property is not found on that object, the JavaScript engine looks at the object's prototype, and the prototype's prototype and so on, until it finds the property defined on one of the prototypes or until it reaches the end of the prototype chain.
+This behavior simulates classical inheritance, but it is really more of delegation than inheritance.</p>
+<p>When creating a new object/class, methods should normally be associated to the object's prototype rather than defined into the object constructor. The reason is that whenever the constructor is called, the methods would get reassigned (that is, for every object creation).</p>
+<pre class="hljs"><code><div><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">MyObject</span>(<span class="hljs-params">name, message</span>) </span>{
+  <span class="hljs-keyword">this</span>.name = name.toString();
+  <span class="hljs-keyword">this</span>.message = message.toString();
+
+  <span class="hljs-keyword">this</span>.getName = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.name;
+  };
+
+  <span class="hljs-keyword">this</span>.getMessage = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.message;
+  };
+}
+</div></code></pre>
+<p>Because the previous code does not take advantage of the benefits of using closures in this particular instance, we could instead rewrite it to avoid using closure as follows</p>
+<pre class="hljs"><code><div><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">MyObject</span>(<span class="hljs-params">name, message</span>) </span>{
+  <span class="hljs-keyword">this</span>.name = name.toString();
+  <span class="hljs-keyword">this</span>.message = message.toString();
+}
+
+MyObject.prototype.getName = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.name;
+};
+
+MyObject.prototype.getMessage = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.message;
+};
+</div></code></pre>
+<p>In the two previous examples, the inherited prototype can be shared by all objects and the method definitions need not occur at every object creation.</p>
+<blockquote>
+<p>Reference: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain</p>
+</blockquote>
+<h3 id="133-scoping">1.3.3. Scoping</h3>
+<p>JavaScript has two scopes – global and local. Any variable declared outside of a function belongs to the global scope, and is therefore accessible from anywhere in your code. Each function has its own scope, and any variable declared within that function is only accessible from that function and any nested functions.</p>
+<pre class="hljs"><code><div><span class="hljs-comment">//code</span>
+</div></code></pre>
+<h4 id="1331-what-is-this-context">1.3.3.1. What is &quot;this&quot; Context</h4>
+<p>Context is most often determined by how a function is invoked. When a function is called as a method of an object, <code>this</code> is set to the object the method is called on:</p>
+<pre class="hljs"><code><div><span class="hljs-keyword">var</span> obj = {
+    <span class="hljs-attr">foo</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>;
+    }
+};
+
+obj.foo() === obj; <span class="hljs-comment">// true</span>
+</div></code></pre>
+<h3 id="134-closures">1.3.4. Closures</h3>
+<p>A closure is an inner function that has access to the outer (enclosing) function's variables—scope chain.</p>
+<p>The closure has three scope chains: it has access to its own scope (variables defined between its curly brackets), it has access to the outer function's variables, and it has access to the global variables.</p>
+<blockquote>
+<p>A closure is the combination of a function and the lexical environment within which that function was declared.</p>
+</blockquote>
+<pre class="hljs"><code><div><span class="hljs-keyword">var</span> Module = (<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">var</span> privateProperty = <span class="hljs-string">'foo'</span>;
+
+    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">privateMethod</span>(<span class="hljs-params">args</span>) </span>{
+        <span class="hljs-comment">// do something</span>
+    }
+
+    <span class="hljs-keyword">return</span> {
+
+        <span class="hljs-attr">publicProperty</span>: <span class="hljs-string">''</span>,
+
+        <span class="hljs-attr">publicMethod</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">args</span>) </span>{
+            <span class="hljs-comment">// do something</span>
+        },
+
+        <span class="hljs-attr">privilegedMethod</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">args</span>) </span>{
+            <span class="hljs-keyword">return</span> privateMethod(args);
+        }
+    };
+})();
+</div></code></pre>
+<h4 id="1341-what-is-a-closure-and-howwhy-would-you-use-one">1.3.4.1. What is a closure, and how/why would you use one?</h4>
+<p>A closure is the combination of a function and the lexical environment within which that function was declared. The word &quot;lexical&quot; refers to the fact that lexical scoping uses the location where a variable is declared within the source code to determine where that variable is available. Closures are functions that have access to the outer (enclosing) function's variables—scope chain even after the outer function has returned.</p>
+<p>Why would you use one?</p>
+<ul>
+<li>Data privacy / emulating private methods with closures. Commonly used in the module pattern.</li>
+<li>Partial applications or currying.</li>
+</ul>
+<blockquote>
+<p>Reference: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures</p>
+</blockquote>
+<h3 id="135-the-event-loop">1.3.5. The event loop</h3>
+<p>The event loop is a single-threaded loop that monitors the call stack and checks if there is any work to be done in the task queue. If the call stack is empty and there are callback functions in the task queue, a function is dequeued and pushed onto the call stack to be executed.</p>
+<p>JavaScript has a concurrency model based on an &quot;event loop&quot;. This model is quite different from models in other languages like C and Java.</p>
+<p>The event loop got its name because of how it's usually implemented, which usually resembles:</p>
+<pre class="hljs"><code><div><span class="hljs-keyword">while</span> (queue.waitForMessage()) {
+  queue.processNextMessage();
+}
+</div></code></pre>
+<p><code>queue.waitForMessage()</code> waits synchronously for a message to arrive if there is none currently</p>
+<p>Function calls form a stack of frames.</p>
+<pre class="hljs"><code><div><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">foo</span>(<span class="hljs-params">b</span>) </span>{
+  <span class="hljs-keyword">var</span> a = <span class="hljs-number">10</span>;
+  <span class="hljs-keyword">return</span> a + b + <span class="hljs-number">11</span>;
+}
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">bar</span>(<span class="hljs-params">x</span>) </span>{
+  <span class="hljs-keyword">var</span> y = <span class="hljs-number">3</span>;
+  <span class="hljs-keyword">return</span> foo(x * y);
+}
+
+<span class="hljs-built_in">console</span>.log(bar(<span class="hljs-number">7</span>)); <span class="hljs-comment">//returns 42</span>
+</div></code></pre>
+<p><img src="https://mdn.mozillademos.org/files/4617/default.svg" alt="event-loop"></p>
+<blockquote>
+<p>Reference: https://developer.mozilla.org/en-US/docs/Web/JavaScript/EventLoop</p>
+</blockquote>
+<h3 id="136-event-bubbling">1.3.6. Event bubbling</h3>
+<h4 id="1361-bubbling-and-capturing-explained">1.3.6.1. Bubbling and capturing explained</h4>
+<p>When an event is fired on an element that has parent elements (e.g. the <code>&lt;video&gt;</code> in our case), modern browsers run two different phases — the capturing phase and the bubbling phase.</p>
+<p>In the capturing phase:</p>
+<ul>
+<li>The browser checks to see if the element's outer-most ancestor (<code>&lt;html&gt;</code>) has an onclick event handler registered on it in the capturing phase, and runs it if so.</li>
+<li>Then it moves on to the next element inside <code>&lt;html&gt;</code> and does the same thing, then the next one, and so on until it reaches the element that was actually clicked on.</li>
+</ul>
+<p>In the bubbling phase, the exact opposite occurs:</p>
+<ul>
+<li>The browser checks to see if the element that was actually clicked on has an onclick event handler registered on it in the bubbling phase, and runs it if so.</li>
+<li>Then it moves on to the next immediate ancestor element and does the same thing, then the next one, and so on until it reaches the <code>&lt;html&gt;</code> element.</li>
+</ul>
+<pre class="hljs"><code><div><span class="hljs-comment">//code</span>
+</div></code></pre>
+<p><img src="https://mdn.mozillademos.org/files/14075/bubbling-capturing.png" alt="bubbling-capturing"></p>
+<blockquote>
+<p>Reference: https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events#Event_bubbling_and_capture</p>
+</blockquote>
+<h3 id="137-apply-call-and-bind">1.3.7. Apply, call, and bind</h3>
+<p>These two methods inherent to all functions allow you to execute any function in any desired context. This makes for incredibly powerful capabilities.</p>
+<ul>
+<li>The <code>call</code> function requires the arguments as a comma seperated list.</li>
+<li>The <code>apply</code> function requires the arguments as an array.</li>
+</ul>
+<pre class="hljs"><code><div><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">user</span>(<span class="hljs-params">firstName, lastName, age</span>) </span>{
+    <span class="hljs-comment">// do something </span>
+    <span class="hljs-built_in">console</span>.log(firstName, lastName, age);
+}
+
+user.call(<span class="hljs-built_in">window</span>, <span class="hljs-string">'John'</span>, <span class="hljs-string">'Doe'</span>, <span class="hljs-number">30</span>);
+user.apply(<span class="hljs-built_in">window</span>, [<span class="hljs-string">'John'</span>, <span class="hljs-string">'Doe'</span>, <span class="hljs-number">30</span>]);
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">add</span>(<span class="hljs-params">a, b</span>) </span>{
+  <span class="hljs-keyword">return</span> a + b;
+}
+<span class="hljs-built_in">console</span>.log(add.call(<span class="hljs-literal">null</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>)); <span class="hljs-comment">// 3</span>
+<span class="hljs-built_in">console</span>.log(add.apply(<span class="hljs-literal">null</span>, [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>])); <span class="hljs-comment">// 3</span>
+</div></code></pre>
+<blockquote>
+<p>An easy way to remember this is C for <code>call</code> and comma-separated and A for <code>apply</code> and an array of arguments.</p>
+</blockquote>
+<p>The result of both calls is exactly the same, the <code>user</code> function is invoked in the context of the window and provided the same three arguments.</p>
+<h4 id="1371-explain-bind">1.3.7.1. Explain Bind</h4>
+<p>ECMAScript 5 (ES5) introduced the <code>Function.prototype.bind</code> method that is used for manipulating context. It returns a new function which is permanently bound to the first argument of <code>bind</code> regardless of how the function is being used.</p>
+<p>For example:</p>
+<pre class="hljs"><code><div><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Widget</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">this</span>.element = <span class="hljs-built_in">document</span>.createElement(<span class="hljs-string">'div'</span>);
+    <span class="hljs-keyword">this</span>.element.addEventListener(<span class="hljs-string">'click'</span>, <span class="hljs-keyword">this</span>.onClick.bind(<span class="hljs-keyword">this</span>), <span class="hljs-literal">false</span>);
+}
+
+Widget.prototype.onClick = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">e</span>) </span>{
+    <span class="hljs-comment">// do something</span>
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'onClick'</span>, e);
+};
+</div></code></pre>
+<h3 id="138-callbacks-and-promises">1.3.8. Callbacks and promises</h3>
+<p>The <code>Promise</code> object represents the eventual completion (or failure) of an asynchronous operation, and its resulting value.</p>
+<p>A Promise is in one of these states:</p>
+<ul>
+<li><code>pending</code>: initial state, neither fulfilled nor rejected.</li>
+<li><code>fulfilled</code>: meaning that the operation completed successfully.</li>
+<li><code>rejected</code>: meaning that the operation failed.</li>
+</ul>
+<pre class="hljs"><code><div><span class="hljs-keyword">var</span> promise1 = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Promise</span>(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">resolve, reject</span>) </span>{
+  setTimeout(resolve, <span class="hljs-number">100</span>, <span class="hljs-string">'foo'</span>);
+});
+
+<span class="hljs-built_in">console</span>.log(promise1);
+</div></code></pre>
+<h4 id="what-are-the-pros-and-cons-of-using-promises-instead-of-callbacks">What are the pros and cons of using Promises instead of callbacks?</h4>
+<p>Pros:</p>
+<ul>
+<li>Avoid callback hell which can be unreadable.</li>
+<li>Makes it easy to write sequential asynchronous code that is readable with .then().</li>
+<li>Makes it easy to write parallel asynchronous code with Promise.all().</li>
+</ul>
+<p>Cons:</p>
+<ul>
+<li>Slightly more complex code (debatable).</li>
+<li>In older browsers where ES2015 is not supported, you need to load a polyfill in order to use it.</li>
+</ul>
+<blockquote>
+<p>Reference: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise</p>
+</blockquote>
+<h3 id="139-variable-and-function-hoisting">1.3.9. Variable and function hoisting</h3>
+<p>Hoisting is JavaScript's default behavior of moving all declarations to the top of the current scope (to the top of the current script or the current function).</p>
+<ul>
+<li>In JavaScript, a variable can be declared after it has been used.</li>
+<li>In other words; a variable can be used before it has been declared.</li>
+</ul>
+<blockquote>
+<p>Variables and constants declared with let or const are not hoisted!</p>
+</blockquote>
+<pre class="hljs"><code><div>myFunction();
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">myFunction</span>(<span class="hljs-params"></span>) </span>{
+    y = <span class="hljs-number">3.14</span>;   <span class="hljs-comment">// This will also cause an error because y is not declared</span>
+}
+</div></code></pre>
+<p>Function declarations have the body hoisted while the function expressions (written in the form of variable declarations) only has the variable declaration hoisted.</p>
+<blockquote>
+<p><code>&quot;use strict&quot;;</code> https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode</p>
+</blockquote>
+<p>One of the advantages of JavaScript putting function declarations into memory before it executes any code segment is that it allows you to use a function before you declare it in your code. For example:</p>
+<pre class="hljs"><code><div><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">catName</span>(<span class="hljs-params">name</span>) </span>{
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"My cat's name is "</span> + name);
+}
+catName(<span class="hljs-string">"Tigger"</span>);
+<span class="hljs-comment">/* The result of the code above is: "My cat's name is Tigger" */</span>
+</div></code></pre>
+<p>The above code snippet is how you would expect to write the code for it to work. Now, let's see what happens when we call the function before we write it:</p>
+<pre class="hljs"><code><div>catName(<span class="hljs-string">"Chloe"</span>);
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">catName</span>(<span class="hljs-params">name</span>) </span>{
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"My cat's name is "</span> + name);
+}
+<span class="hljs-comment">/* The result of the code above is: "My cat's name is Chloe" */</span>
+</div></code></pre>
+<p>Even though we call the function in our code first, before the function is written, the code still works. This is because of how context execution works in JavaScript.</p>
+<p>Hoisting works well with other data types and variables. The variables can be initialized and used before they are declared.</p>
+<h4 id="1391-only-declarations-are-hoisted">1.3.9.1. Only declarations are hoisted</h4>
+<p>JavaScript only hoists declarations, not initializations. If a variable is declared and initialized after using it, the value will be undefined.</p>
+<p>For example:</p>
+<pre class="hljs"><code><div><span class="hljs-built_in">console</span>.log(num); <span class="hljs-comment">// Returns undefined </span>
+<span class="hljs-keyword">var</span> num;
+num = <span class="hljs-number">6</span>;
+</div></code></pre>
+<p>If you declare the variable after it is used, but initialize it beforehand, it will return the value:</p>
+<pre class="hljs"><code><div>num = <span class="hljs-number">6</span>;
+<span class="hljs-built_in">console</span>.log(num); <span class="hljs-comment">// returns 6</span>
+<span class="hljs-keyword">var</span> num;
+</div></code></pre>
+<p>The below two examples demonstrate the same behavior.</p>
+<pre class="hljs"><code><div><span class="hljs-keyword">var</span> x = <span class="hljs-number">1</span>; <span class="hljs-comment">// Initialize x</span>
+<span class="hljs-built_in">console</span>.log(x + <span class="hljs-string">" "</span> + y); <span class="hljs-comment">// '1 undefined'</span>
+<span class="hljs-keyword">var</span> y = <span class="hljs-number">2</span>; <span class="hljs-comment">// Initialize y</span>
+
+<span class="hljs-comment">// The above example is implicitly understood as this: </span>
+<span class="hljs-keyword">var</span> x; <span class="hljs-comment">// Declare x</span>
+<span class="hljs-keyword">var</span> y; <span class="hljs-comment">// Declare y</span>
+<span class="hljs-comment">// End of the hoisting.</span>
+
+x = <span class="hljs-number">1</span>; <span class="hljs-comment">// Initialize x</span>
+<span class="hljs-built_in">console</span>.log(x + <span class="hljs-string">" "</span> + y); <span class="hljs-comment">// '1 undefined'</span>
+y = <span class="hljs-number">2</span>; <span class="hljs-comment">// Initialize y</span>
+</div></code></pre>
+<p>Function declarations have the body hoisted while the function expressions (written in the form of variable declarations) only has the variable declaration hoisted.</p>
+<pre class="hljs"><code><div><span class="hljs-comment">// Function Declaration</span>
+<span class="hljs-built_in">console</span>.log(foo); <span class="hljs-comment">// [Function: foo]</span>
+foo(); <span class="hljs-comment">// 'FOOOOO'</span>
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">foo</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'FOOOOO'</span>);
+}
+<span class="hljs-built_in">console</span>.log(foo); <span class="hljs-comment">// [Function: foo]</span>
+
+<span class="hljs-comment">// Function Expression</span>
+<span class="hljs-built_in">console</span>.log(bar); <span class="hljs-comment">// undefined</span>
+bar(); <span class="hljs-comment">// Uncaught TypeError: bar is not a function</span>
+
+<span class="hljs-keyword">var</span> bar = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'BARRRR'</span>);
+};
+<span class="hljs-built_in">console</span>.log(bar); <span class="hljs-comment">// [Function: bar]</span>
+</div></code></pre>
+<blockquote>
+<p>Reference: https://developer.mozilla.org/en-US/docs/Glossary/Hoisting</p>
+</blockquote>
+<h3 id="1310-currying">1.3.10. Currying</h3>
+<p>Currying is a pattern where a function with more than one parameter is broken into multiple functions that, when called in series, will accumulate all of the required parameters one at a time.</p>
+<p>This technique can be useful for making code written in a functional style easier to read and compose. It's important to note that for a function to be curried, it needs to start out as one function, then broken out into a sequence of functions that each accepts one parameter.</p>
+<pre class="hljs"><code><div><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">curry</span>(<span class="hljs-params">fn</span>) </span>{
+  <span class="hljs-keyword">if</span> (fn.length === <span class="hljs-number">0</span>) 
+    <span class="hljs-keyword">return</span> fn;
+  
+  <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">_curried</span>(<span class="hljs-params">depth, args</span>) </span>{
+    <span class="hljs-keyword">return</span> <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">newArgument</span>) </span>{
+      <span class="hljs-keyword">if</span> (depth - <span class="hljs-number">1</span> === <span class="hljs-number">0</span>) 
+        <span class="hljs-keyword">return</span> fn(...args, newArgument);
+      <span class="hljs-keyword">return</span> _curried(depth - <span class="hljs-number">1</span>, [...args, newArgument]);
+    };
+  }
+
+  <span class="hljs-keyword">return</span> _curried(fn.length, []);
+}
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">add</span>(<span class="hljs-params">a, b</span>) </span>{
+  <span class="hljs-keyword">return</span> a + b;
+}
+
+<span class="hljs-keyword">var</span> curriedAdd = curry(add);
+<span class="hljs-keyword">var</span> addFive = curriedAdd(<span class="hljs-number">5</span>);
+<span class="hljs-keyword">var</span> result = [<span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>].map(addFive); <span class="hljs-comment">// [5, 6, 7, 8, 9, 10]</span>
+</div></code></pre>
+<blockquote>
+<p>Reference: https://www.sitepoint.com/currying-in-functional-javascript/</p>
+</blockquote>
+<hr>
+<h2 id="14-design-patterns">1.4. Design Patterns</h2>
+<ul>
+<li>Decorator</li>
+<li>Factory</li>
+<li>Singleton</li>
+<li>Revealing module</li>
+<li>Facade</li>
+<li>Observer</li>
+<li>MVC, MVP, MVVM</li>
+</ul>
+<hr>
+<h2 id="15-computer-science-concepts">1.5. Computer Science Concepts</h2>
+<p>The following concepts should be understood in JavaScript.</p>
+<h3 id="151-data-structures">1.5.1. Data Structures</h3>
+<ul>
+<li>Linked lists</li>
+<li>Hashtables</li>
+<li>Stacks and queues</li>
+<li>Trees (binary trees and heaps)</li>
+<li>Graphs</li>
+</ul>
+<h3 id="152-sorting">1.5.2. Sorting</h3>
+<ul>
+<li>Binary search</li>
+<li>Bubble sort</li>
+<li>Insertion sort</li>
+<li>Merge sort</li>
+<li>Quick sort</li>
+<li>Selection sort</li>
+</ul>
+
+</body>
+</html>
