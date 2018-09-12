@@ -49,7 +49,71 @@ function cleanSvgs() {
         });
 
     });
+
 }
+
+
+const codeCommentsRegEx = /(\/\*([^*]|[\r\n]|(\*+([^*/]|[\r\n])))*\*+\/)|(\/\/.*)/gm
+
+
+function saveFile(filename, contents){
+    //let contents = fs.readFileSync('README.md');
+    fs.writeFileSync(filename, [contents].join(''), 'utf8');
+    return Promise.resolve(filename);
+}
+
+
+
+function writeFileToMarkdown(file){
+    return new Promise((resolve, reject) => {
+        
+        let filename = file;
+        let newFilename = path.basename(filename).replace('.js', '.md');
+
+        console.log('writeFileToMarkdown', file, '=>', newFilename);
+        
+        let contents = fs.readFileSync(filename);
+        
+        let result;
+        let readme = '';
+        let codeComments = '';
+        while(result = codeCommentsRegEx.exec(contents)){
+            codeComments += result[1]
+        }
+        //console.log(codeComments);
+
+        readme += `
+# ${path.basename(filename)}
+
+${codeComments}
+
+**Solution:**
+
+<!-- js-console -->
+\`\`\`javascript
+${contents}
+\`\`\`
+
+> Reference: ..
+
+`;
+
+        saveFile(path.join(__dirname, '../out', newFilename), readme);
+    });
+}
+
+async function writeAllFiles(){
+    let files = await getExampleJSFiles();
+    files.forEach((file, index) => {
+        console.log(index, file);
+        writeFileToMarkdown(file);
+    })
+}
+
+
+
+
+
 
 function createReadme(){
     let readme = '';
@@ -66,31 +130,37 @@ function createReadme(){
         files.forEach((file, index) => {
             let filename = file;
             let contents = fs.readFileSync(filename);
+
+            //TODO - extract code comments.
+
+            let codeComments = '';
             console.log('reading', filename);
-
             readme += `
-## ${index} - ${filename}
+# ${filename}
+${codeComments}
 
+**Solution:**
+
+<!-- js-console -->
 \`\`\`javascript
     ${contents}
 \`\`\`
 
-### Flowchart
-![${filename}-svg image][${filename}-svg]
-
-[${filename}-svg]: https://raw.githubusercontent.com/jonniespratley/js-leetcode/master/flowcharts/${filename.replace('./examples/', '').replace('.js', '.svg')} "Logo Title Text 2"
-
+> Reference: ..
 
 ---
 `;
         })
         saveReadme(readme);
     });
-
-    //concact into template
-
-    //write to file
 }
+
+
+
+
+
+
+
 
 const action = process.argv[2];
 switch (action) {
@@ -99,6 +169,9 @@ switch (action) {
         break;
     case 'svg':
         generateSvgs();
+        break;
+    case 'writeAll':
+        writeAllFiles();
         break;
     case 'readme':
         createReadme();

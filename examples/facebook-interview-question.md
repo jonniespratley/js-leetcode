@@ -1,4 +1,22 @@
-/**
+
+        # facebook-interview-question.js
+        /**
+ * Determine if any 3 integers in an array sum to zero.
+ *
+ * [ 2, 3, 1, -6 ]
+ * [ 2, 1, -1, -1]
+ *
+ * Time: O(n2)
+ * Space: O(1)
+ *
+ * @param {*} arr
+ */undefinedundefined
+        
+        **Solution:**
+        
+        <!-- js-console -->
+        ```javascript
+            /**
  * Determine if any 3 integers in an array sum to zero.
  *
  * [ 2, 3, 1, -6 ]
@@ -39,3 +57,8 @@ function sumToZero(arr) {
 }
 console.log(sumToZero([2, 3, 1, -6]))
 console.log(sumToZero([2, 1, -1, -1]))
+        ```
+        
+        > Reference: ..
+        
+        

@@ -1,0 +1,25 @@
+
+        # add-binary.js
+        
+        
+        **Solution:**
+        
+        <!-- js-console -->
+        ```javascript
+            var addBinary = function(a, b) {
+    var [carry, i, j, res] = [0, a.length - 1, b.length - 1, ""];
+    while(i >= 0 || j >= 0 || carry > 0) {
+        const bita = i >= 0 ? Number(a[i]) : 0;
+        const bitb = j >= 0 ? Number(b[j]) : 0;
+        const sum = bita + bitb + carry;
+        res = `${sum%2}${res}`;
+        carry = Math.floor(sum / 2);
+        i--; j--;
+    }
+    return res;
+  };
+        ```
+        
+        > Reference: ..
+        
+        

@@ -1,4 +1,15 @@
-// Given an array nums of n integers, are there elements a, b, c in nums such that a + b + c = 0? 
+
+        # three-sum.js
+        undefinedundefinedundefinedundefinedundefinedundefinedundefinedundefinedundefinedundefinedundefinedundefinedundefinedundefinedundefinedundefined/**
+ * @param {number[]} nums
+ * @return {number[][]}
+ *//** Two pointers */undefinedundefinedundefinedundefinedundefinedundefinedundefinedundefinedundefinedundefinedundefinedundefinedundefinedundefinedundefinedundefined
+        
+        **Solution:**
+        
+        <!-- js-console -->
+        ```javascript
+            // Given an array nums of n integers, are there elements a, b, c in nums such that a + b + c = 0? 
 // Find all unique triplets in the array which gives the sum of zero.
 //
 // Note:
@@ -92,3 +103,8 @@ function threeSum(nums) {
     return res;
 }
 console.log(threeSum([-1, 0, 1, 2, -1, -4]));
+        ```
+        
+        > Reference: ..
+        
+        
