@@ -1,35 +1,33 @@
+/*
+Given an array, rotate the array to the right by k steps, where k is non-negative.
+
+Example 1:
+
+Input: [1,2,3,4,5,6,7] and k = 3
+Output: [5,6,7,1,2,3,4]
+Explanation:
+rotate 1 steps to the right: [7,1,2,3,4,5,6]
+rotate 2 steps to the right: [6,7,1,2,3,4,5]
+rotate 3 steps to the right: [5,6,7,1,2,3,4]
+Example 2:
+
+Input: [-1,-100,3,99] and k = 2
+Output: [3,99,-1,-100]
+Explanation: 
+rotate 1 steps to the right: [99,-1,-100,3]
+rotate 2 steps to the right: [3,99,-1,-100]
+Note:
+
+Try to come up as many solutions as you can, there are at least 3 different ways to solve this problem.
+Could you do it in-place with O(1) extra space?
+*/
 var rotate = function (nums, k) {
     nums.unshift.apply(nums, nums.splice(nums.length - k, k))
 
 };
-//console.log(rotate([-1], 2))
-//console.log(rotate([1,2,3], 4))
+console.log(rotate([1,2,3,4,5,6,7], 3))
+console.log(rotate([1,2,3], 4))
 
-
-
-
-
-
-/**
- * Input: "Let's take LeetCode contest"
-Output: "s'teL ekat edoCteeL tsetnoc"
-*/
-
-
-let n = 0;
-let d = 0;
-let data = [];
-//console.log(reverseWords2("Let's take LeetCode contest"));
-
-//Solution using array.shift()
-function getResultsUsingArrayShift(data, d) {
-    let temp = data.slice(0);
-    for (let i = 0; i < d - 1; i++) {
-        let first = temp.shift();
-        temp.push(first);
-    }
-    return temp;
-}
 
 function rotateArray(a, d) {
     let i = 0;
@@ -41,5 +39,6 @@ function rotateArray(a, d) {
         return arr;
     }, [])
 }
-console.log(rotateArray([1, 2, 3, 4, 5], 5));
+
+console.log(rotateArray([1,2,3,4,5,6,7], 3))
 console.log(rotateArray([1, 2], 2));
