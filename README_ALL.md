@@ -36,8 +36,12 @@ function magicFunc() {
 ---
 
 
-## 0 - ./examples/add-binary.js
+# ./examples/add-binary.js
 
+
+**Solution:**
+
+<!-- js-console -->
 ```javascript
     var addBinary = function(a, b) {
     var [carry, i, j, res] = [0, a.length - 1, b.length - 1, ""];
@@ -53,16 +57,16 @@ function magicFunc() {
   };
 ```
 
-### Flowchart
-![./examples/add-binary.js-svg image][./examples/add-binary.js-svg]
-
-[./examples/add-binary.js-svg]: https://raw.githubusercontent.com/jonniespratley/js-leetcode/master/flowcharts/add-binary.svg "Logo Title Text 2"
-
+> Reference: ..
 
 ---
 
-## 1 - ./examples/array-3-sum-equal-zero.js
+# ./examples/array-3-sum-equal-zero.js
 
+
+**Solution:**
+
+<!-- js-console -->
 ```javascript
     function sumToZero(arr) {
     if (!arr) return false
@@ -123,16 +127,16 @@ function threeSum(arr) {
 console.log(threeSum([2, 1, -3, 3]));
 ```
 
-### Flowchart
-![./examples/array-3-sum-equal-zero.js-svg image][./examples/array-3-sum-equal-zero.js-svg]
-
-[./examples/array-3-sum-equal-zero.js-svg]: https://raw.githubusercontent.com/jonniespratley/js-leetcode/master/flowcharts/array-3-sum-equal-zero.svg "Logo Title Text 2"
-
+> Reference: ..
 
 ---
 
-## 2 - ./examples/array-pair-sum.js
+# ./examples/array-pair-sum.js
 
+
+**Solution:**
+
+<!-- js-console -->
 ```javascript
     var arrayPairSum = function (nums) {
     let hash = [];
@@ -162,16 +166,16 @@ console.log(threeSum([2, 1, -3, 3]));
 };
 ```
 
-### Flowchart
-![./examples/array-pair-sum.js-svg image][./examples/array-pair-sum.js-svg]
-
-[./examples/array-pair-sum.js-svg]: https://raw.githubusercontent.com/jonniespratley/js-leetcode/master/flowcharts/array-pair-sum.svg "Logo Title Text 2"
-
+> Reference: ..
 
 ---
 
-## 3 - ./examples/array-shuffle.js
+# ./examples/array-shuffle.js
 
+
+**Solution:**
+
+<!-- js-console -->
 ```javascript
     /**
  * @param {number[]} nums
@@ -232,16 +236,16 @@ Solution.prototype.shuffle = function() {
  */
 ```
 
-### Flowchart
-![./examples/array-shuffle.js-svg image][./examples/array-shuffle.js-svg]
-
-[./examples/array-shuffle.js-svg]: https://raw.githubusercontent.com/jonniespratley/js-leetcode/master/flowcharts/array-shuffle.svg "Logo Title Text 2"
-
+> Reference: ..
 
 ---
 
-## 4 - ./examples/basic-calculator-ii.js
+# ./examples/basic-calculator-ii.js
 
+
+**Solution:**
+
+<!-- js-console -->
 ```javascript
     /**
 
@@ -323,16 +327,16 @@ console.log(calculate('3/2'));
 console.log(calculate(' 3+5 / 2 '));
 ```
 
-### Flowchart
-![./examples/basic-calculator-ii.js-svg image][./examples/basic-calculator-ii.js-svg]
-
-[./examples/basic-calculator-ii.js-svg]: https://raw.githubusercontent.com/jonniespratley/js-leetcode/master/flowcharts/basic-calculator-ii.svg "Logo Title Text 2"
-
+> Reference: ..
 
 ---
 
-## 5 - ./examples/best-time-to-buy-sell-stock-2.js
+# ./examples/best-time-to-buy-sell-stock-2.js
 
+
+**Solution:**
+
+<!-- js-console -->
 ```javascript
     // Say you have an array for which the ith element is the price of a given stock on day i.
 //
@@ -380,16 +384,16 @@ function maxProfit(prices) {
 }
 ```
 
-### Flowchart
-![./examples/best-time-to-buy-sell-stock-2.js-svg image][./examples/best-time-to-buy-sell-stock-2.js-svg]
-
-[./examples/best-time-to-buy-sell-stock-2.js-svg]: https://raw.githubusercontent.com/jonniespratley/js-leetcode/master/flowcharts/best-time-to-buy-sell-stock-2.svg "Logo Title Text 2"
-
+> Reference: ..
 
 ---
 
-## 6 - ./examples/best-time-to-buy-sell-stock.js
+# ./examples/best-time-to-buy-sell-stock.js
 
+
+**Solution:**
+
+<!-- js-console -->
 ```javascript
     // Say you have an array for which the ith element is the price of a given stock on day i.
 //
@@ -430,16 +434,16 @@ function maxProfit(prices) {
 }
 ```
 
-### Flowchart
-![./examples/best-time-to-buy-sell-stock.js-svg image][./examples/best-time-to-buy-sell-stock.js-svg]
-
-[./examples/best-time-to-buy-sell-stock.js-svg]: https://raw.githubusercontent.com/jonniespratley/js-leetcode/master/flowcharts/best-time-to-buy-sell-stock.svg "Logo Title Text 2"
-
+> Reference: ..
 
 ---
 
-## 7 - ./examples/big-o.js
+# ./examples/big-o.js
 
+
+**Solution:**
+
+<!-- js-console -->
 ```javascript
     /**
 @description
@@ -597,16 +601,16 @@ function bubbleSort(array) {
 console.log(bubbleSort(input1));
 ```
 
-### Flowchart
-![./examples/big-o.js-svg image][./examples/big-o.js-svg]
-
-[./examples/big-o.js-svg]: https://raw.githubusercontent.com/jonniespratley/js-leetcode/master/flowcharts/big-o.svg "Logo Title Text 2"
-
+> Reference: ..
 
 ---
 
-## 8 - ./examples/binary-search-tree-iterator.js
+# ./examples/binary-search-tree-iterator.js
 
+
+**Solution:**
+
+<!-- js-console -->
 ```javascript
     /*
 ## Binary Search Tree Iterator
@@ -715,16 +719,16 @@ console.log(bst.findNode(t, 5));
 console.log(bst.findNode(t, 2));
 ```
 
-### Flowchart
-![./examples/binary-search-tree-iterator.js-svg image][./examples/binary-search-tree-iterator.js-svg]
-
-[./examples/binary-search-tree-iterator.js-svg]: https://raw.githubusercontent.com/jonniespratley/js-leetcode/master/flowcharts/binary-search-tree-iterator.svg "Logo Title Text 2"
-
+> Reference: ..
 
 ---
 
-## 9 - ./examples/binary-search.js
+# ./examples/binary-search.js
 
+
+**Solution:**
+
+<!-- js-console -->
 ```javascript
     function binarySearch(arr, val) {
     let lower_bound = 0;
@@ -772,16 +776,16 @@ function findPairs(arr1, arr2, x) {
 console.log(findPairs([1, 0, -4, 7, 6, 4], [0, 2, 4, -3, 2, 1], 8))
 ```
 
-### Flowchart
-![./examples/binary-search.js-svg image][./examples/binary-search.js-svg]
-
-[./examples/binary-search.js-svg]: https://raw.githubusercontent.com/jonniespratley/js-leetcode/master/flowcharts/binary-search.svg "Logo Title Text 2"
-
+> Reference: ..
 
 ---
 
-## 10 - ./examples/binary-tree-in-order-traversal.js
+# ./examples/binary-tree-in-order-traversal.js
 
+
+**Solution:**
+
+<!-- js-console -->
 ```javascript
     // Given a binary tree, return the inorder traversal of its nodes' values.
 //
@@ -851,16 +855,16 @@ function inorderTraversal(node) {
 }
 ```
 
-### Flowchart
-![./examples/binary-tree-in-order-traversal.js-svg image][./examples/binary-tree-in-order-traversal.js-svg]
-
-[./examples/binary-tree-in-order-traversal.js-svg]: https://raw.githubusercontent.com/jonniespratley/js-leetcode/master/flowcharts/binary-tree-in-order-traversal.svg "Logo Title Text 2"
-
+> Reference: ..
 
 ---
 
-## 11 - ./examples/binary-tree-inorder-successor.js
+# ./examples/binary-tree-inorder-successor.js
 
+
+**Solution:**
+
+<!-- js-console -->
 ```javascript
     /*
 ## Inorder Successor in BST
@@ -1024,16 +1028,16 @@ console.log(inorderTraversal3(t));
 console.log(inorderTraversal(t));
 ```
 
-### Flowchart
-![./examples/binary-tree-inorder-successor.js-svg image][./examples/binary-tree-inorder-successor.js-svg]
-
-[./examples/binary-tree-inorder-successor.js-svg]: https://raw.githubusercontent.com/jonniespratley/js-leetcode/master/flowcharts/binary-tree-inorder-successor.svg "Logo Title Text 2"
-
+> Reference: ..
 
 ---
 
-## 12 - ./examples/binary-tree-post-order-traversal.js
+# ./examples/binary-tree-post-order-traversal.js
 
+
+**Solution:**
+
+<!-- js-console -->
 ```javascript
     // Given a binary tree, return the postorder traversal of its nodes' res.
 //
@@ -1101,16 +1105,16 @@ function levelOrderTraversal(node) {
 }
 ```
 
-### Flowchart
-![./examples/binary-tree-post-order-traversal.js-svg image][./examples/binary-tree-post-order-traversal.js-svg]
-
-[./examples/binary-tree-post-order-traversal.js-svg]: https://raw.githubusercontent.com/jonniespratley/js-leetcode/master/flowcharts/binary-tree-post-order-traversal.svg "Logo Title Text 2"
-
+> Reference: ..
 
 ---
 
-## 13 - ./examples/binary-tree-pre-order-traversal.js
+# ./examples/binary-tree-pre-order-traversal.js
 
+
+**Solution:**
+
+<!-- js-console -->
 ```javascript
     // Given a binary tree, return the preorder traversal of its nodes' values.
 //
@@ -1213,16 +1217,16 @@ console.log(inorderTraversal(t));
 console.log(inorderTraversalRecur(t));
 ```
 
-### Flowchart
-![./examples/binary-tree-pre-order-traversal.js-svg image][./examples/binary-tree-pre-order-traversal.js-svg]
-
-[./examples/binary-tree-pre-order-traversal.js-svg]: https://raw.githubusercontent.com/jonniespratley/js-leetcode/master/flowcharts/binary-tree-pre-order-traversal.svg "Logo Title Text 2"
-
+> Reference: ..
 
 ---
 
-## 14 - ./examples/bubble-sort.js
+# ./examples/bubble-sort.js
 
+
+**Solution:**
+
+<!-- js-console -->
 ```javascript
     
 function swap(array, index1, index2) {
@@ -1246,16 +1250,16 @@ function bubbleSort(array) {
 console.log(bubbleSort([5,4,3,2,1]));
 ```
 
-### Flowchart
-![./examples/bubble-sort.js-svg image][./examples/bubble-sort.js-svg]
-
-[./examples/bubble-sort.js-svg]: https://raw.githubusercontent.com/jonniespratley/js-leetcode/master/flowcharts/bubble-sort.svg "Logo Title Text 2"
-
+> Reference: ..
 
 ---
 
-## 15 - ./examples/climb-stairs.js
+# ./examples/climb-stairs.js
 
+
+**Solution:**
+
+<!-- js-console -->
 ```javascript
     /*
 You are climbing a stair case. It takes n steps to reach to the top.
@@ -1302,16 +1306,16 @@ var climbStairs = function (n) {
 };
 ```
 
-### Flowchart
-![./examples/climb-stairs.js-svg image][./examples/climb-stairs.js-svg]
-
-[./examples/climb-stairs.js-svg]: https://raw.githubusercontent.com/jonniespratley/js-leetcode/master/flowcharts/climb-stairs.svg "Logo Title Text 2"
-
+> Reference: ..
 
 ---
 
-## 16 - ./examples/coin-change.js
+# ./examples/coin-change.js
 
+
+**Solution:**
+
+<!-- js-console -->
 ```javascript
     const print = console.log.apply;
 function makeChange(origAmt, coins) {
@@ -1356,16 +1360,16 @@ function makeChange(origAmt, coins) {
  
 ```
 
-### Flowchart
-![./examples/coin-change.js-svg image][./examples/coin-change.js-svg]
-
-[./examples/coin-change.js-svg]: https://raw.githubusercontent.com/jonniespratley/js-leetcode/master/flowcharts/coin-change.svg "Logo Title Text 2"
-
+> Reference: ..
 
 ---
 
-## 17 - ./examples/contains-duplicate.js
+# ./examples/contains-duplicate.js
 
+
+**Solution:**
+
+<!-- js-console -->
 ```javascript
     /**
  * Given an array of integers, find if the array contains any duplicates.
@@ -1430,16 +1434,16 @@ console.log(containsDuplicate2([1, 2, 3]));
 console.timeEnd('containsDuplicate2');
 ```
 
-### Flowchart
-![./examples/contains-duplicate.js-svg image][./examples/contains-duplicate.js-svg]
-
-[./examples/contains-duplicate.js-svg]: https://raw.githubusercontent.com/jonniespratley/js-leetcode/master/flowcharts/contains-duplicate.svg "Logo Title Text 2"
-
+> Reference: ..
 
 ---
 
-## 18 - ./examples/count-and-say.js
+# ./examples/count-and-say.js
 
+
+**Solution:**
+
+<!-- js-console -->
 ```javascript
     // The count-and-say sequence is the sequence of integers with the first five terms as following:
 //
@@ -1499,16 +1503,16 @@ function say(str) {
 }
 ```
 
-### Flowchart
-![./examples/count-and-say.js-svg image][./examples/count-and-say.js-svg]
-
-[./examples/count-and-say.js-svg]: https://raw.githubusercontent.com/jonniespratley/js-leetcode/master/flowcharts/count-and-say.svg "Logo Title Text 2"
-
+> Reference: ..
 
 ---
 
-## 19 - ./examples/delete-nth-linked-list.js
+# ./examples/delete-nth-linked-list.js
 
+
+**Solution:**
+
+<!-- js-console -->
 ```javascript
     /*
 ## Delete Node in a Linked List
@@ -1541,16 +1545,16 @@ var deleteNode = function (node) {
 };
 ```
 
-### Flowchart
-![./examples/delete-nth-linked-list.js-svg image][./examples/delete-nth-linked-list.js-svg]
-
-[./examples/delete-nth-linked-list.js-svg]: https://raw.githubusercontent.com/jonniespratley/js-leetcode/master/flowcharts/delete-nth-linked-list.svg "Logo Title Text 2"
-
+> Reference: ..
 
 ---
 
-## 20 - ./examples/design-hit-counter.js
+# ./examples/design-hit-counter.js
 
+
+**Solution:**
+
+<!-- js-console -->
 ```javascript
     /*
 ## Design Hit Counter
@@ -1659,16 +1663,16 @@ console.log(counter.getHits(301));
 
 ```
 
-### Flowchart
-![./examples/design-hit-counter.js-svg image][./examples/design-hit-counter.js-svg]
-
-[./examples/design-hit-counter.js-svg]: https://raw.githubusercontent.com/jonniespratley/js-leetcode/master/flowcharts/design-hit-counter.svg "Logo Title Text 2"
-
+> Reference: ..
 
 ---
 
-## 21 - ./examples/design-linked-list.js
+# ./examples/design-linked-list.js
 
+
+**Solution:**
+
+<!-- js-console -->
 ```javascript
     /**
  * Initialize your data structure here.
@@ -1741,16 +1745,16 @@ linkedList.deleteAtIndex(1);  // now the linked list is 1->3
 linkedList.get(1);            // returns 3
 ```
 
-### Flowchart
-![./examples/design-linked-list.js-svg image][./examples/design-linked-list.js-svg]
-
-[./examples/design-linked-list.js-svg]: https://raw.githubusercontent.com/jonniespratley/js-leetcode/master/flowcharts/design-linked-list.svg "Logo Title Text 2"
-
+> Reference: ..
 
 ---
 
-## 22 - ./examples/diagonal-traverse.js
+# ./examples/diagonal-traverse.js
 
+
+**Solution:**
+
+<!-- js-console -->
 ```javascript
     /**
  * Diagonal Traverse
@@ -1799,16 +1803,16 @@ var findDiagonalOrder = function (matrix) {
 };
 ```
 
-### Flowchart
-![./examples/diagonal-traverse.js-svg image][./examples/diagonal-traverse.js-svg]
-
-[./examples/diagonal-traverse.js-svg]: https://raw.githubusercontent.com/jonniespratley/js-leetcode/master/flowcharts/diagonal-traverse.svg "Logo Title Text 2"
-
+> Reference: ..
 
 ---
 
-## 23 - ./examples/example.js
+# ./examples/example.js
 
+
+**Solution:**
+
+<!-- js-console -->
 ```javascript
     /**
  * 
@@ -1844,40 +1848,40 @@ function indexSearch(list, element) {
 console.log(indexSearch([2,1,4,8,3,5,6,3,2,1,9], 5))
 ```
 
-### Flowchart
-![./examples/example.js-svg image][./examples/example.js-svg]
-
-[./examples/example.js-svg]: https://raw.githubusercontent.com/jonniespratley/js-leetcode/master/flowcharts/example.svg "Logo Title Text 2"
-
+> Reference: ..
 
 ---
 
-## 24 - ./examples/facebook-interview-question.js
+# ./examples/facebook-interview-question.js
 
+
+**Solution:**
+
+<!-- js-console -->
 ```javascript
     /**
- * question: determine if any 3 integers in an array sum to zero.
- * 
+ * Determine if any 3 integers in an array sum to zero.
+ *
  * [ 2, 3, 1, -6 ]
  * [ 2, 1, -1, -1]
- * 
+ *
  * Time: O(n2)
  * Space: O(1)
- * 
- * @param {*} arr 
+ *
+ * @param {*} arr
  */
 function sumToZero(arr) {
-    if (!arr) return false
-    arr.sort();
+    if (!arr) 
+        return false
+    arr.sort((a, b) => a - b);
 
     let i = 0;
-    let j = 0;
     let k = arr.length - 1;
     let sum = 0;
 
     //loop each item
     for (; i < arr.length; i++) {
-        j = i + 1;
+        let j = i + 1;
 
         while (k > j) {
             sum = arr[i] + arr[j] + arr[k];
@@ -1887,23 +1891,27 @@ function sumToZero(arr) {
                 return true;
             }
 
-            sum > 0 ? k-- : j++;
+            sum > 0
+                ? k--
+                : j++;
         }
     }
     return false;
 }
+console.log(sumToZero([2, 3, 1, -6]))
+console.log(sumToZero([2, 1, -1, -1]))
 ```
 
-### Flowchart
-![./examples/facebook-interview-question.js-svg image][./examples/facebook-interview-question.js-svg]
-
-[./examples/facebook-interview-question.js-svg]: https://raw.githubusercontent.com/jonniespratley/js-leetcode/master/flowcharts/facebook-interview-question.svg "Logo Title Text 2"
-
+> Reference: ..
 
 ---
 
-## 25 - ./examples/fib.js
+# ./examples/fib.js
 
+
+**Solution:**
+
+<!-- js-console -->
 ```javascript
     function fib(n){
     if(n === 1 || n === 2){
@@ -1916,16 +1924,16 @@ console.log(fib(5));
 
 ```
 
-### Flowchart
-![./examples/fib.js-svg image][./examples/fib.js-svg]
-
-[./examples/fib.js-svg]: https://raw.githubusercontent.com/jonniespratley/js-leetcode/master/flowcharts/fib.svg "Logo Title Text 2"
-
+> Reference: ..
 
 ---
 
-## 26 - ./examples/find-all-anagrams-in-a-string.js
+# ./examples/find-all-anagrams-in-a-string.js
 
+
+**Solution:**
+
+<!-- js-console -->
 ```javascript
     /*
 ## Find All Anagrams in a String
@@ -2001,16 +2009,16 @@ var findAnagrams = function (s, p) {
 console.log(findAnagrams('abab', 'ab'));
 ```
 
-### Flowchart
-![./examples/find-all-anagrams-in-a-string.js-svg image][./examples/find-all-anagrams-in-a-string.js-svg]
-
-[./examples/find-all-anagrams-in-a-string.js-svg]: https://raw.githubusercontent.com/jonniespratley/js-leetcode/master/flowcharts/find-all-anagrams-in-a-string.svg "Logo Title Text 2"
-
+> Reference: ..
 
 ---
 
-## 27 - ./examples/find-min-in-rotated-sorted-array.js
+# ./examples/find-min-in-rotated-sorted-array.js
 
+
+**Solution:**
+
+<!-- js-console -->
 ```javascript
     /**
 # Find Minimum in Rotated Sorted Array
@@ -2070,16 +2078,16 @@ var findMin = function (nums) {
 }
 ```
 
-### Flowchart
-![./examples/find-min-in-rotated-sorted-array.js-svg image][./examples/find-min-in-rotated-sorted-array.js-svg]
-
-[./examples/find-min-in-rotated-sorted-array.js-svg]: https://raw.githubusercontent.com/jonniespratley/js-leetcode/master/flowcharts/find-min-in-rotated-sorted-array.svg "Logo Title Text 2"
-
+> Reference: ..
 
 ---
 
-## 28 - ./examples/first-bad-version.js
+# ./examples/first-bad-version.js
 
+
+**Solution:**
+
+<!-- js-console -->
 ```javascript
     // You are a product manager and currently leading a team to develop a new product. Unfortunately, the latest version of your product fails the quality check. Since each version is developed based on the previous version, all the versions after a bad version are also bad.
 //
@@ -2131,16 +2139,16 @@ function solution(isBadVersion) {
 }
 ```
 
-### Flowchart
-![./examples/first-bad-version.js-svg image][./examples/first-bad-version.js-svg]
-
-[./examples/first-bad-version.js-svg]: https://raw.githubusercontent.com/jonniespratley/js-leetcode/master/flowcharts/first-bad-version.svg "Logo Title Text 2"
-
+> Reference: ..
 
 ---
 
-## 29 - ./examples/first-uniq-char.js
+# ./examples/first-uniq-char.js
 
+
+**Solution:**
+
+<!-- js-console -->
 ```javascript
     /*
 ## First Unique Character in a String
@@ -2188,16 +2196,16 @@ console.log(firstUniqChar('loveleetcode'));
 
 ```
 
-### Flowchart
-![./examples/first-uniq-char.js-svg image][./examples/first-uniq-char.js-svg]
-
-[./examples/first-uniq-char.js-svg]: https://raw.githubusercontent.com/jonniespratley/js-leetcode/master/flowcharts/first-uniq-char.svg "Logo Title Text 2"
-
+> Reference: ..
 
 ---
 
-## 30 - ./examples/fizz-buzz.js
+# ./examples/fizz-buzz.js
 
+
+**Solution:**
+
+<!-- js-console -->
 ```javascript
     /*
 ## Fizz Buzz
@@ -2247,16 +2255,16 @@ function fizzBuzz(n) {
 }
 ```
 
-### Flowchart
-![./examples/fizz-buzz.js-svg image][./examples/fizz-buzz.js-svg]
-
-[./examples/fizz-buzz.js-svg]: https://raw.githubusercontent.com/jonniespratley/js-leetcode/master/flowcharts/fizz-buzz.svg "Logo Title Text 2"
-
+> Reference: ..
 
 ---
 
-## 31 - ./examples/flatten-2d-vector.js
+# ./examples/flatten-2d-vector.js
 
+
+**Solution:**
+
+<!-- js-console -->
 ```javascript
     /*
 ## Flatten 2D Vector
@@ -2334,16 +2342,16 @@ while (i.hasNext()) a.push(i.next());
 console.log(a);
 ```
 
-### Flowchart
-![./examples/flatten-2d-vector.js-svg image][./examples/flatten-2d-vector.js-svg]
-
-[./examples/flatten-2d-vector.js-svg]: https://raw.githubusercontent.com/jonniespratley/js-leetcode/master/flowcharts/flatten-2d-vector.svg "Logo Title Text 2"
-
+> Reference: ..
 
 ---
 
-## 32 - ./examples/flatten-nested-list-iterator.js
+# ./examples/flatten-nested-list-iterator.js
 
+
+**Solution:**
+
+<!-- js-console -->
 ```javascript
     /*
 Given a nested list of integers, implement an iterator to flatten it.
@@ -2493,16 +2501,16 @@ while (i.hasNext()) a.push(i.next());
 console.log(a);
 ```
 
-### Flowchart
-![./examples/flatten-nested-list-iterator.js-svg image][./examples/flatten-nested-list-iterator.js-svg]
-
-[./examples/flatten-nested-list-iterator.js-svg]: https://raw.githubusercontent.com/jonniespratley/js-leetcode/master/flowcharts/flatten-nested-list-iterator.svg "Logo Title Text 2"
-
+> Reference: ..
 
 ---
 
-## 33 - ./examples/generate-paranthesis.js
+# ./examples/generate-paranthesis.js
 
+
+**Solution:**
+
+<!-- js-console -->
 ```javascript
     // Given n pairs of parentheses, write a function to generate all combinations of well-formed parentheses.
 //
@@ -2519,33 +2527,36 @@ console.log(a);
  * @param {number} n
  * @return {string[]}
  */
-function generateParenthesis(n) {
-    let res = [];
-    compose(n, n, '', res);
-    return res;
-}
-// backtracking
-function compose(left, right, s, res) { // left: left remaining, right: right remaining
-    if (left > right) return; // e.g. ))(
-    if (!left && !right) {
-        res.push(s);
+var generateParenthesis = function (n) {
+    let result = [];
+    createParenthesis(result, "", 0, 0, n);
+    return result
+};
+
+var createParenthesis = function (array, string, open, close, n) {
+    if (n === 0) return;
+    if (string.length == n * 2) {
+        array.push(string);
         return;
     }
-    if (left) compose(left - 1, right, s + '(', res);
-    if (right) compose(left, right - 1, s + ')', res);
-}
+
+    if (open < n) createParenthesis(array, `${string}(`, open + 1, close, n)
+    if (close < open) createParenthesis(array, `${string})`, open, close + 1, n)
+};
+
+console.log(generateParenthesis(3));
 ```
 
-### Flowchart
-![./examples/generate-paranthesis.js-svg image][./examples/generate-paranthesis.js-svg]
-
-[./examples/generate-paranthesis.js-svg]: https://raw.githubusercontent.com/jonniespratley/js-leetcode/master/flowcharts/generate-paranthesis.svg "Logo Title Text 2"
-
+> Reference: ..
 
 ---
 
-## 34 - ./examples/group-anagrams.js
+# ./examples/group-anagrams.js
 
+
+**Solution:**
+
+<!-- js-console -->
 ```javascript
     /**
  * @param {string[]} strs
@@ -2639,16 +2650,16 @@ console.log(
 console.timeEnd('groupAnagrams3')
 ```
 
-### Flowchart
-![./examples/group-anagrams.js-svg image][./examples/group-anagrams.js-svg]
-
-[./examples/group-anagrams.js-svg]: https://raw.githubusercontent.com/jonniespratley/js-leetcode/master/flowcharts/group-anagrams.svg "Logo Title Text 2"
-
+> Reference: ..
 
 ---
 
-## 35 - ./examples/hammering-distance.js
+# ./examples/hammering-distance.js
 
+
+**Solution:**
+
+<!-- js-console -->
 ```javascript
     // The Hamming distance between two integers is the number of positions at which the corresponding bits are different.
 //
@@ -2680,16 +2691,16 @@ function hammingDistance(x, y) {
 }
 ```
 
-### Flowchart
-![./examples/hammering-distance.js-svg image][./examples/hammering-distance.js-svg]
-
-[./examples/hammering-distance.js-svg]: https://raw.githubusercontent.com/jonniespratley/js-leetcode/master/flowcharts/hammering-distance.svg "Logo Title Text 2"
-
+> Reference: ..
 
 ---
 
-## 36 - ./examples/has-path-sum.js
+# ./examples/has-path-sum.js
 
+
+**Solution:**
+
+<!-- js-console -->
 ```javascript
     var hasPathSum = function(root, sum) {
     let node = root;
@@ -2714,16 +2725,16 @@ function hammingDistance(x, y) {
 };
 ```
 
-### Flowchart
-![./examples/has-path-sum.js-svg image][./examples/has-path-sum.js-svg]
-
-[./examples/has-path-sum.js-svg]: https://raw.githubusercontent.com/jonniespratley/js-leetcode/master/flowcharts/has-path-sum.svg "Logo Title Text 2"
-
+> Reference: ..
 
 ---
 
-## 37 - ./examples/hour-glass.js
+# ./examples/hour-glass.js
 
+
+**Solution:**
+
+<!-- js-console -->
 ```javascript
     let input = [
     [1, 1, 1, 0, 0, 0],
@@ -2772,16 +2783,16 @@ console.log(hourglassSum(input));
 console.log(hourglassSum(input2));
 ```
 
-### Flowchart
-![./examples/hour-glass.js-svg image][./examples/hour-glass.js-svg]
-
-[./examples/hour-glass.js-svg]: https://raw.githubusercontent.com/jonniespratley/js-leetcode/master/flowcharts/hour-glass.svg "Logo Title Text 2"
-
+> Reference: ..
 
 ---
 
-## 38 - ./examples/house-robber.js
+# ./examples/house-robber.js
 
+
+**Solution:**
+
+<!-- js-console -->
 ```javascript
     // You are a professional robber planning to rob houses along a street. Each house has a certain amount of money stashed, the only constraint stopping you from robbing each of them is that adjacent houses have security system connected and it will automatically contact the police if two adjacent houses were broken into on the same night.
 //
@@ -2894,16 +2905,16 @@ function rob4(nums){
 }
 ```
 
-### Flowchart
-![./examples/house-robber.js-svg image][./examples/house-robber.js-svg]
-
-[./examples/house-robber.js-svg]: https://raw.githubusercontent.com/jonniespratley/js-leetcode/master/flowcharts/house-robber.svg "Logo Title Text 2"
-
+> Reference: ..
 
 ---
 
-## 39 - ./examples/increasing-triplet-subsequence.js
+# ./examples/increasing-triplet-subsequence.js
 
+
+**Solution:**
+
+<!-- js-console -->
 ```javascript
     /*
 ## Increasing Triplet Subsequence
@@ -2954,16 +2965,16 @@ console.log(increasingTriplet([5, 4, 3, 2, 1]));
 console.log(increasingTriplet([2, 1, 5, 0, 4, 6]));
 ```
 
-### Flowchart
-![./examples/increasing-triplet-subsequence.js-svg image][./examples/increasing-triplet-subsequence.js-svg]
-
-[./examples/increasing-triplet-subsequence.js-svg]: https://raw.githubusercontent.com/jonniespratley/js-leetcode/master/flowcharts/increasing-triplet-subsequence.svg "Logo Title Text 2"
-
+> Reference: ..
 
 ---
 
-## 40 - ./examples/increasing-triplet.js
+# ./examples/increasing-triplet.js
 
+
+**Solution:**
+
+<!-- js-console -->
 ```javascript
     /*
 
@@ -3014,16 +3025,16 @@ console.log(increasingTriplet([1, 2, 3, 4, 5]));
 console.log(increasingTriplet([5, 4, 3, 2, 1]));
 ```
 
-### Flowchart
-![./examples/increasing-triplet.js-svg image][./examples/increasing-triplet.js-svg]
-
-[./examples/increasing-triplet.js-svg]: https://raw.githubusercontent.com/jonniespratley/js-leetcode/master/flowcharts/increasing-triplet.svg "Logo Title Text 2"
-
+> Reference: ..
 
 ---
 
-## 41 - ./examples/insert-into-a-binary-search-tree.js
+# ./examples/insert-into-a-binary-search-tree.js
 
+
+**Solution:**
+
+<!-- js-console -->
 ```javascript
     /*
 ## Insert into a Binary Search Tree
@@ -3084,16 +3095,16 @@ var insertIntoBST = function (root, val) {
 };
 ```
 
-### Flowchart
-![./examples/insert-into-a-binary-search-tree.js-svg image][./examples/insert-into-a-binary-search-tree.js-svg]
-
-[./examples/insert-into-a-binary-search-tree.js-svg]: https://raw.githubusercontent.com/jonniespratley/js-leetcode/master/flowcharts/insert-into-a-binary-search-tree.svg "Logo Title Text 2"
-
+> Reference: ..
 
 ---
 
-## 42 - ./examples/intersection-two-linked-lists.js
+# ./examples/intersection-two-linked-lists.js
 
+
+**Solution:**
+
+<!-- js-console -->
 ```javascript
     // Write a program to find the node at which the intersection of two singly linked lists begins.
 //
@@ -3158,16 +3169,16 @@ function getIntersectionNode(headA, headB) {
 }
 ```
 
-### Flowchart
-![./examples/intersection-two-linked-lists.js-svg image][./examples/intersection-two-linked-lists.js-svg]
-
-[./examples/intersection-two-linked-lists.js-svg]: https://raw.githubusercontent.com/jonniespratley/js-leetcode/master/flowcharts/intersection-two-linked-lists.svg "Logo Title Text 2"
-
+> Reference: ..
 
 ---
 
-## 43 - ./examples/invert-tree.js
+# ./examples/invert-tree.js
 
+
+**Solution:**
+
+<!-- js-console -->
 ```javascript
     /*
 ## 226. Invert Binary Tree
@@ -3234,16 +3245,16 @@ root.right.right = new TreeNode(9);
 console.log(invertTree(root));
 ```
 
-### Flowchart
-![./examples/invert-tree.js-svg image][./examples/invert-tree.js-svg]
-
-[./examples/invert-tree.js-svg]: https://raw.githubusercontent.com/jonniespratley/js-leetcode/master/flowcharts/invert-tree.svg "Logo Title Text 2"
-
+> Reference: ..
 
 ---
 
-## 44 - ./examples/is-palindrome.js
+# ./examples/is-palindrome.js
 
+
+**Solution:**
+
+<!-- js-console -->
 ```javascript
     // Given a string, determine if it is a palindrome, considering only alphanumeric characters and ignoring cases.
 //
@@ -3287,16 +3298,16 @@ function isPalindrome(word) {
 }
 ```
 
-### Flowchart
-![./examples/is-palindrome.js-svg image][./examples/is-palindrome.js-svg]
-
-[./examples/is-palindrome.js-svg]: https://raw.githubusercontent.com/jonniespratley/js-leetcode/master/flowcharts/is-palindrome.svg "Logo Title Text 2"
-
+> Reference: ..
 
 ---
 
-## 45 - ./examples/is-valid-bst.js
+# ./examples/is-valid-bst.js
 
+
+**Solution:**
+
+<!-- js-console -->
 ```javascript
     /*
 ## Validate Binary Search Tree
@@ -3372,16 +3383,16 @@ var isValidBST = function(root) {
   };
 ```
 
-### Flowchart
-![./examples/is-valid-bst.js-svg image][./examples/is-valid-bst.js-svg]
-
-[./examples/is-valid-bst.js-svg]: https://raw.githubusercontent.com/jonniespratley/js-leetcode/master/flowcharts/is-valid-bst.svg "Logo Title Text 2"
-
+> Reference: ..
 
 ---
 
-## 46 - ./examples/is-valid-params.js
+# ./examples/is-valid-params.js
 
+
+**Solution:**
+
+<!-- js-console -->
 ```javascript
     /**
  * @param {string} s
@@ -3410,16 +3421,16 @@ function isValid(s) {
   };
 ```
 
-### Flowchart
-![./examples/is-valid-params.js-svg image][./examples/is-valid-params.js-svg]
-
-[./examples/is-valid-params.js-svg]: https://raw.githubusercontent.com/jonniespratley/js-leetcode/master/flowcharts/is-valid-params.svg "Logo Title Text 2"
-
+> Reference: ..
 
 ---
 
-## 47 - ./examples/knapsack.js
+# ./examples/knapsack.js
 
+
+**Solution:**
+
+<!-- js-console -->
 ```javascript
     function max(a, b) {
     return (a > b) ? a : b;
@@ -3445,16 +3456,16 @@ function isValid(s) {
  var n = 5;
 ```
 
-### Flowchart
-![./examples/knapsack.js-svg image][./examples/knapsack.js-svg]
-
-[./examples/knapsack.js-svg]: https://raw.githubusercontent.com/jonniespratley/js-leetcode/master/flowcharts/knapsack.svg "Logo Title Text 2"
-
+> Reference: ..
 
 ---
 
-## 48 - ./examples/kth-largest-element.js
+# ./examples/kth-largest-element.js
 
+
+**Solution:**
+
+<!-- js-console -->
 ```javascript
     /*
 ## Kth Largest Element in an Array
@@ -3502,16 +3513,16 @@ function findKthLargest(nums, k) {
 }
 ```
 
-### Flowchart
-![./examples/kth-largest-element.js-svg image][./examples/kth-largest-element.js-svg]
-
-[./examples/kth-largest-element.js-svg]: https://raw.githubusercontent.com/jonniespratley/js-leetcode/master/flowcharts/kth-largest-element.svg "Logo Title Text 2"
-
+> Reference: ..
 
 ---
 
-## 49 - ./examples/length-of-longest-substring-without-repeating.js
+# ./examples/length-of-longest-substring-without-repeating.js
 
+
+**Solution:**
+
+<!-- js-console -->
 ```javascript
     // Given a string, find the length of the longest substring without repeating characters.
 //
@@ -3561,16 +3572,16 @@ console.log(lengthOfLongestSubstring2('bbbbb'));
 console.log(lengthOfLongestSubstring2('pwwkew'));
 ```
 
-### Flowchart
-![./examples/length-of-longest-substring-without-repeating.js-svg image][./examples/length-of-longest-substring-without-repeating.js-svg]
-
-[./examples/length-of-longest-substring-without-repeating.js-svg]: https://raw.githubusercontent.com/jonniespratley/js-leetcode/master/flowcharts/length-of-longest-substring-without-repeating.svg "Logo Title Text 2"
-
+> Reference: ..
 
 ---
 
-## 50 - ./examples/length-of-longest-substring.js
+# ./examples/length-of-longest-substring.js
 
+
+**Solution:**
+
+<!-- js-console -->
 ```javascript
     /**
  * 
@@ -3604,16 +3615,16 @@ const lengthOfLongestSubstring = function (str) {
 console.log(lengthOfLongestSubstring("pwwkew"));
 ```
 
-### Flowchart
-![./examples/length-of-longest-substring.js-svg image][./examples/length-of-longest-substring.js-svg]
-
-[./examples/length-of-longest-substring.js-svg]: https://raw.githubusercontent.com/jonniespratley/js-leetcode/master/flowcharts/length-of-longest-substring.svg "Logo Title Text 2"
-
+> Reference: ..
 
 ---
 
-## 51 - ./examples/letter-combinations.js
+# ./examples/letter-combinations.js
 
+
+**Solution:**
+
+<!-- js-console -->
 ```javascript
     // Given a string containing digits from 2-9 inclusive, return all possible letter combinations that the number could represent.
 //
@@ -3670,16 +3681,16 @@ console.log(letterCombinations('123'));
 //console.log(letterCombinations('789'));
 ```
 
-### Flowchart
-![./examples/letter-combinations.js-svg image][./examples/letter-combinations.js-svg]
-
-[./examples/letter-combinations.js-svg]: https://raw.githubusercontent.com/jonniespratley/js-leetcode/master/flowcharts/letter-combinations.svg "Logo Title Text 2"
-
+> Reference: ..
 
 ---
 
-## 52 - ./examples/level-order.js
+# ./examples/level-order.js
 
+
+**Solution:**
+
+<!-- js-console -->
 ```javascript
     var levelOrder = function (root) {
     if (root === null) {
@@ -3709,16 +3720,16 @@ console.log(letterCombinations('123'));
 };
 ```
 
-### Flowchart
-![./examples/level-order.js-svg image][./examples/level-order.js-svg]
-
-[./examples/level-order.js-svg]: https://raw.githubusercontent.com/jonniespratley/js-leetcode/master/flowcharts/level-order.svg "Logo Title Text 2"
-
+> Reference: ..
 
 ---
 
-## 53 - ./examples/linked-list-cycle.js
+# ./examples/linked-list-cycle.js
 
+
+**Solution:**
+
+<!-- js-console -->
 ```javascript
     // Given a linked list, determine if it has a cycle in it.
 //
@@ -3749,16 +3760,16 @@ function hasCycle(head) {
   }
 ```
 
-### Flowchart
-![./examples/linked-list-cycle.js-svg image][./examples/linked-list-cycle.js-svg]
-
-[./examples/linked-list-cycle.js-svg]: https://raw.githubusercontent.com/jonniespratley/js-leetcode/master/flowcharts/linked-list-cycle.svg "Logo Title Text 2"
-
+> Reference: ..
 
 ---
 
-## 54 - ./examples/linkedin-interview-question.js
+# ./examples/linkedin-interview-question.js
 
+
+**Solution:**
+
+<!-- js-console -->
 ```javascript
     const foo = function () {
     this.bar();
@@ -3857,16 +3868,16 @@ const obj = {
 baz(); // ?
 ```
 
-### Flowchart
-![./examples/linkedin-interview-question.js-svg image][./examples/linkedin-interview-question.js-svg]
-
-[./examples/linkedin-interview-question.js-svg]: https://raw.githubusercontent.com/jonniespratley/js-leetcode/master/flowcharts/linkedin-interview-question.svg "Logo Title Text 2"
-
+> Reference: ..
 
 ---
 
-## 55 - ./examples/logger-rate-limiter.js
+# ./examples/logger-rate-limiter.js
 
+
+**Solution:**
+
+<!-- js-console -->
 ```javascript
     /*
 ## Logger Rate Limiter
@@ -3968,16 +3979,16 @@ console.log(logger.shouldPrintMessage(110, "bug")); // returns true;
 console.log(logger);
 ```
 
-### Flowchart
-![./examples/logger-rate-limiter.js-svg image][./examples/logger-rate-limiter.js-svg]
-
-[./examples/logger-rate-limiter.js-svg]: https://raw.githubusercontent.com/jonniespratley/js-leetcode/master/flowcharts/logger-rate-limiter.svg "Logo Title Text 2"
-
+> Reference: ..
 
 ---
 
-## 56 - ./examples/longest-common-prefix.js
+# ./examples/longest-common-prefix.js
 
+
+**Solution:**
+
+<!-- js-console -->
 ```javascript
     // ## Longest Common Prefix
 // Write a function to find the longest common prefix string amongst an array of strings.
@@ -4035,16 +4046,16 @@ function longestCommonPrefix(strs) {
   }
 ```
 
-### Flowchart
-![./examples/longest-common-prefix.js-svg image][./examples/longest-common-prefix.js-svg]
-
-[./examples/longest-common-prefix.js-svg]: https://raw.githubusercontent.com/jonniespratley/js-leetcode/master/flowcharts/longest-common-prefix.svg "Logo Title Text 2"
-
+> Reference: ..
 
 ---
 
-## 57 - ./examples/longest-palindromic-substring.js
+# ./examples/longest-palindromic-substring.js
 
+
+**Solution:**
+
+<!-- js-console -->
 ```javascript
     /*
 ## Longest Palindromic Substring
@@ -4114,16 +4125,16 @@ let isOdd = (n) => n % 2 === 1;
 console.log(longestPalindrome('babad'));
 ```
 
-### Flowchart
-![./examples/longest-palindromic-substring.js-svg image][./examples/longest-palindromic-substring.js-svg]
-
-[./examples/longest-palindromic-substring.js-svg]: https://raw.githubusercontent.com/jonniespratley/js-leetcode/master/flowcharts/longest-palindromic-substring.svg "Logo Title Text 2"
-
+> Reference: ..
 
 ---
 
-## 58 - ./examples/lru-cache.js
+# ./examples/lru-cache.js
 
+
+**Solution:**
+
+<!-- js-console -->
 ```javascript
     // Design and implement a data structure for Least Recently Used (LRU) cache. It should support the following operations: get and put.
 //
@@ -4202,16 +4213,16 @@ console.log(cache.get(3)); // returns 3
 console.log(cache.get(4)); // returns 4
 ```
 
-### Flowchart
-![./examples/lru-cache.js-svg image][./examples/lru-cache.js-svg]
-
-[./examples/lru-cache.js-svg]: https://raw.githubusercontent.com/jonniespratley/js-leetcode/master/flowcharts/lru-cache.svg "Logo Title Text 2"
-
+> Reference: ..
 
 ---
 
-## 59 - ./examples/max-depth-of-binary-tree.js
+# ./examples/max-depth-of-binary-tree.js
 
+
+**Solution:**
+
+<!-- js-console -->
 ```javascript
     /*
 ## Maximum Depth of Binary Tree
@@ -4256,16 +4267,16 @@ var maxDepth = function(root) {
 };
 ```
 
-### Flowchart
-![./examples/max-depth-of-binary-tree.js-svg image][./examples/max-depth-of-binary-tree.js-svg]
-
-[./examples/max-depth-of-binary-tree.js-svg]: https://raw.githubusercontent.com/jonniespratley/js-leetcode/master/flowcharts/max-depth-of-binary-tree.svg "Logo Title Text 2"
-
+> Reference: ..
 
 ---
 
-## 60 - ./examples/max-sub-array-len.js
+# ./examples/max-sub-array-len.js
 
+
+**Solution:**
+
+<!-- js-console -->
 ```javascript
     var maxSubArrayLen = function (nums, k) {
     let subarrayLength = 0;
@@ -4288,16 +4299,16 @@ var maxDepth = function(root) {
 console.log(maxSubArrayLen([1, -1, 5, -2, 3], 3));
 ```
 
-### Flowchart
-![./examples/max-sub-array-len.js-svg image][./examples/max-sub-array-len.js-svg]
-
-[./examples/max-sub-array-len.js-svg]: https://raw.githubusercontent.com/jonniespratley/js-leetcode/master/flowcharts/max-sub-array-len.svg "Logo Title Text 2"
-
+> Reference: ..
 
 ---
 
-## 61 - ./examples/max-sub-array.js
+# ./examples/max-sub-array.js
 
+
+**Solution:**
+
+<!-- js-console -->
 ```javascript
     
 /*
@@ -4327,16 +4338,16 @@ var maxSubArray = function(nums) {
 console.log(maxSubArray([-2,1,-3,4,-1,2,1,-5,4]));
 ```
 
-### Flowchart
-![./examples/max-sub-array.js-svg image][./examples/max-sub-array.js-svg]
-
-[./examples/max-sub-array.js-svg]: https://raw.githubusercontent.com/jonniespratley/js-leetcode/master/flowcharts/max-sub-array.svg "Logo Title Text 2"
-
+> Reference: ..
 
 ---
 
-## 62 - ./examples/maximum-sub-array.js
+# ./examples/maximum-sub-array.js
 
+
+**Solution:**
+
+<!-- js-console -->
 ```javascript
     /*
 # Maximum Subarray
@@ -4415,16 +4426,16 @@ console.log(maxSubArray2([-2, -1]));
 
 ```
 
-### Flowchart
-![./examples/maximum-sub-array.js-svg image][./examples/maximum-sub-array.js-svg]
-
-[./examples/maximum-sub-array.js-svg]: https://raw.githubusercontent.com/jonniespratley/js-leetcode/master/flowcharts/maximum-sub-array.svg "Logo Title Text 2"
-
+> Reference: ..
 
 ---
 
-## 63 - ./examples/merge-arrays.js
+# ./examples/merge-arrays.js
 
+
+**Solution:**
+
+<!-- js-console -->
 ```javascript
     //imperative:
 const mergeArrays_ = function (arrays) {
@@ -4449,16 +4460,16 @@ const mergeArrays = (...arrays) => [].concat(...arrays);
 console.log(mergeArrays([1, 2, 3], [4, 5], [6])); 
 ```
 
-### Flowchart
-![./examples/merge-arrays.js-svg image][./examples/merge-arrays.js-svg]
-
-[./examples/merge-arrays.js-svg]: https://raw.githubusercontent.com/jonniespratley/js-leetcode/master/flowcharts/merge-arrays.svg "Logo Title Text 2"
-
+> Reference: ..
 
 ---
 
-## 64 - ./examples/merge-two-linked-lists.js
+# ./examples/merge-two-linked-lists.js
 
+
+**Solution:**
+
+<!-- js-console -->
 ```javascript
     /*
 ## Merge Two Sorted Lists
@@ -4512,16 +4523,16 @@ function mergeTwoLists(l1, l2) {
 }
 ```
 
-### Flowchart
-![./examples/merge-two-linked-lists.js-svg image][./examples/merge-two-linked-lists.js-svg]
-
-[./examples/merge-two-linked-lists.js-svg]: https://raw.githubusercontent.com/jonniespratley/js-leetcode/master/flowcharts/merge-two-linked-lists.svg "Logo Title Text 2"
-
+> Reference: ..
 
 ---
 
-## 65 - ./examples/min-sub-array-len.js
+# ./examples/min-sub-array-len.js
 
+
+**Solution:**
+
+<!-- js-console -->
 ```javascript
     var minSubArrayLen = function(s, nums) {
     let ret = Infinity;
@@ -4538,16 +4549,16 @@ function mergeTwoLists(l1, l2) {
 //minSubArrayLen(7, [2,3,1,2,4,3]);
 ```
 
-### Flowchart
-![./examples/min-sub-array-len.js-svg image][./examples/min-sub-array-len.js-svg]
-
-[./examples/min-sub-array-len.js-svg]: https://raw.githubusercontent.com/jonniespratley/js-leetcode/master/flowcharts/min-sub-array-len.svg "Logo Title Text 2"
-
+> Reference: ..
 
 ---
 
-## 66 - ./examples/min-swaps.js
+# ./examples/min-swaps.js
 
+
+**Solution:**
+
+<!-- js-console -->
 ```javascript
     
 function minSwaps2(arr) {
@@ -4632,16 +4643,16 @@ function minimumSwaps(arr) {
 console.log(minimumSwaps([4, 3, 1, 2]));
 ```
 
-### Flowchart
-![./examples/min-swaps.js-svg image][./examples/min-swaps.js-svg]
-
-[./examples/min-swaps.js-svg]: https://raw.githubusercontent.com/jonniespratley/js-leetcode/master/flowcharts/min-swaps.svg "Logo Title Text 2"
-
+> Reference: ..
 
 ---
 
-## 67 - ./examples/missing-number.js
+# ./examples/missing-number.js
 
+
+**Solution:**
+
+<!-- js-console -->
 ```javascript
     /*
 ## Missing Number
@@ -4706,16 +4717,16 @@ console.log(missingNumber([9, 6, 4, 2, 3, 5, 7, 0, 1]));
 console.log(missingNumber([45, 35, 38, 13, 12, 23, 48, 15, 44, 21, 43, 26, 6, 37, 1, 19, 22, 3, 11, 32, 4, 16, 28, 49, 29, 36, 33, 8, 9, 39, 46, 17, 41, 7, 2, 5, 27, 20, 40, 34, 30, 25, 47, 0, 31, 42, 24, 10, 14]));
 ```
 
-### Flowchart
-![./examples/missing-number.js-svg image][./examples/missing-number.js-svg]
-
-[./examples/missing-number.js-svg]: https://raw.githubusercontent.com/jonniespratley/js-leetcode/master/flowcharts/missing-number.svg "Logo Title Text 2"
-
+> Reference: ..
 
 ---
 
-## 68 - ./examples/move-zeros.js
+# ./examples/move-zeros.js
 
+
+**Solution:**
+
+<!-- js-console -->
 ```javascript
     /**
  * Given an array nums, write a function to move all 0's to the end of it while maintaining the relative order of the non-zero elements.
@@ -4969,16 +4980,16 @@ console.log(removeInvalidParentheses("(a)())()"))
 console.log(removeInvalidParentheses("()()(())"))
 ```
 
-### Flowchart
-![./examples/move-zeros.js-svg image][./examples/move-zeros.js-svg]
-
-[./examples/move-zeros.js-svg]: https://raw.githubusercontent.com/jonniespratley/js-leetcode/master/flowcharts/move-zeros.svg "Logo Title Text 2"
-
+> Reference: ..
 
 ---
 
-## 69 - ./examples/nested-list-weight-sum.js
+# ./examples/nested-list-weight-sum.js
 
+
+**Solution:**
+
+<!-- js-console -->
 ```javascript
     function depthSumHelper(list, depth) {
     let sum = 0;
@@ -5041,16 +5052,16 @@ function bubbleSort2(array) {
 
 ```
 
-### Flowchart
-![./examples/nested-list-weight-sum.js-svg image][./examples/nested-list-weight-sum.js-svg]
-
-[./examples/nested-list-weight-sum.js-svg]: https://raw.githubusercontent.com/jonniespratley/js-leetcode/master/flowcharts/nested-list-weight-sum.svg "Logo Title Text 2"
-
+> Reference: ..
 
 ---
 
-## 70 - ./examples/number-1-bits.js
+# ./examples/number-1-bits.js
 
+
+**Solution:**
+
+<!-- js-console -->
 ```javascript
     // Write a function that takes an unsigned integer and returns the number of '1' bits it has (also known as the Hamming weight).
 //
@@ -5075,16 +5086,16 @@ function hammingWeight(n) {
   }
 ```
 
-### Flowchart
-![./examples/number-1-bits.js-svg image][./examples/number-1-bits.js-svg]
-
-[./examples/number-1-bits.js-svg]: https://raw.githubusercontent.com/jonniespratley/js-leetcode/master/flowcharts/number-1-bits.svg "Logo Title Text 2"
-
+> Reference: ..
 
 ---
 
-## 71 - ./examples/number-of-islands.js
+# ./examples/number-of-islands.js
 
+
+**Solution:**
+
+<!-- js-console -->
 ```javascript
     // Given a 2d grid map of '1's (land) and '0's (water), count the number of islands. An island is surrounded by water and is formed by connecting adjacent lands horizontally or vertically. You may assume all four edges of the grid are all surrounded by water.
 //
@@ -5145,30 +5156,30 @@ console.log(numIslands([
 ]));
 ```
 
-### Flowchart
-![./examples/number-of-islands.js-svg image][./examples/number-of-islands.js-svg]
-
-[./examples/number-of-islands.js-svg]: https://raw.githubusercontent.com/jonniespratley/js-leetcode/master/flowcharts/number-of-islands.svg "Logo Title Text 2"
-
+> Reference: ..
 
 ---
 
-## 72 - ./examples/one-edit-away.js
+# ./examples/one-edit-away.js
 
+
+**Solution:**
+
+<!-- js-console -->
 ```javascript
     
 ```
 
-### Flowchart
-![./examples/one-edit-away.js-svg image][./examples/one-edit-away.js-svg]
-
-[./examples/one-edit-away.js-svg]: https://raw.githubusercontent.com/jonniespratley/js-leetcode/master/flowcharts/one-edit-away.svg "Logo Title Text 2"
-
+> Reference: ..
 
 ---
 
-## 73 - ./examples/palindrome-linked-list.js
+# ./examples/palindrome-linked-list.js
 
+
+**Solution:**
+
+<!-- js-console -->
 ```javascript
     /*
 ## Palindrome Linked List
@@ -5242,16 +5253,16 @@ var isPalindrome2 = function (head) {
 };
 ```
 
-### Flowchart
-![./examples/palindrome-linked-list.js-svg image][./examples/palindrome-linked-list.js-svg]
-
-[./examples/palindrome-linked-list.js-svg]: https://raw.githubusercontent.com/jonniespratley/js-leetcode/master/flowcharts/palindrome-linked-list.svg "Logo Title Text 2"
-
+> Reference: ..
 
 ---
 
-## 74 - ./examples/palindrome-permutation.js
+# ./examples/palindrome-permutation.js
 
+
+**Solution:**
+
+<!-- js-console -->
 ```javascript
     /*
 ## Palindrome Permutation
@@ -5332,16 +5343,16 @@ console.log(canPermutePalindrome('carerac')); //true
 console.log(canPermutePalindrome('aab')); //true
 ```
 
-### Flowchart
-![./examples/palindrome-permutation.js-svg image][./examples/palindrome-permutation.js-svg]
-
-[./examples/palindrome-permutation.js-svg]: https://raw.githubusercontent.com/jonniespratley/js-leetcode/master/flowcharts/palindrome-permutation.svg "Logo Title Text 2"
-
+> Reference: ..
 
 ---
 
-## 75 - ./examples/pascal-triangle-2.js
+# ./examples/pascal-triangle-2.js
 
+
+**Solution:**
+
+<!-- js-console -->
 ```javascript
     function pascalTriangle(lineNumber) {
     const currentLine = [1];
@@ -5361,16 +5372,16 @@ console.log(canPermutePalindrome('aab')); //true
   
 ```
 
-### Flowchart
-![./examples/pascal-triangle-2.js-svg image][./examples/pascal-triangle-2.js-svg]
-
-[./examples/pascal-triangle-2.js-svg]: https://raw.githubusercontent.com/jonniespratley/js-leetcode/master/flowcharts/pascal-triangle-2.svg "Logo Title Text 2"
-
+> Reference: ..
 
 ---
 
-## 76 - ./examples/path-sum.js
+# ./examples/path-sum.js
 
+
+**Solution:**
+
+<!-- js-console -->
 ```javascript
     /*
 ## Path Sum
@@ -5430,16 +5441,16 @@ var hasPathSum = function(root, sum) {
 };
 ```
 
-### Flowchart
-![./examples/path-sum.js-svg image][./examples/path-sum.js-svg]
-
-[./examples/path-sum.js-svg]: https://raw.githubusercontent.com/jonniespratley/js-leetcode/master/flowcharts/path-sum.svg "Logo Title Text 2"
-
+> Reference: ..
 
 ---
 
-## 77 - ./examples/permutations.js
+# ./examples/permutations.js
 
+
+**Solution:**
+
+<!-- js-console -->
 ```javascript
     /*
 # Permutations
@@ -5500,16 +5511,16 @@ function permute(nums) {
 }
 ```
 
-### Flowchart
-![./examples/permutations.js-svg image][./examples/permutations.js-svg]
-
-[./examples/permutations.js-svg]: https://raw.githubusercontent.com/jonniespratley/js-leetcode/master/flowcharts/permutations.svg "Logo Title Text 2"
-
+> Reference: ..
 
 ---
 
-## 78 - ./examples/pivot-index.js
+# ./examples/pivot-index.js
 
+
+**Solution:**
+
+<!-- js-console -->
 ```javascript
     var pivotIndex = function(nums) {
     let i = 0;
@@ -5531,16 +5542,16 @@ function permute(nums) {
 console.log(pivotIndex([1,7,3,6,5,6]));
 ```
 
-### Flowchart
-![./examples/pivot-index.js-svg image][./examples/pivot-index.js-svg]
-
-[./examples/pivot-index.js-svg]: https://raw.githubusercontent.com/jonniespratley/js-leetcode/master/flowcharts/pivot-index.svg "Logo Title Text 2"
-
+> Reference: ..
 
 ---
 
-## 79 - ./examples/plus-one.js
+# ./examples/plus-one.js
 
+
+**Solution:**
+
+<!-- js-console -->
 ```javascript
     /**
  * ## Plus One
@@ -5559,16 +5570,16 @@ var plusOne = function(digits) {
   };
 ```
 
-### Flowchart
-![./examples/plus-one.js-svg image][./examples/plus-one.js-svg]
-
-[./examples/plus-one.js-svg]: https://raw.githubusercontent.com/jonniespratley/js-leetcode/master/flowcharts/plus-one.svg "Logo Title Text 2"
-
+> Reference: ..
 
 ---
 
-## 80 - ./examples/power-of-three.js
+# ./examples/power-of-three.js
 
+
+**Solution:**
+
+<!-- js-console -->
 ```javascript
     /*
 ## Power Three
@@ -5585,16 +5596,94 @@ var plusOne = function(digits) {
 
 ```
 
-### Flowchart
-![./examples/power-of-three.js-svg image][./examples/power-of-three.js-svg]
-
-[./examples/power-of-three.js-svg]: https://raw.githubusercontent.com/jonniespratley/js-leetcode/master/flowcharts/power-of-three.svg "Logo Title Text 2"
-
+> Reference: ..
 
 ---
 
-## 81 - ./examples/randomized-set.js
+# ./examples/print-permutations.js
 
+
+**Solution:**
+
+<!-- js-console -->
+```javascript
+    var count = 0;
+
+function printPermutations(s, openCnt, closeCnt) {
+    count++;
+    // console.log(count, s);
+    if (openCnt === 0 && closeCnt === 0) {
+        console.log(s);
+        return;
+    }
+
+    if (openCnt > 0) {
+        printPermutations(s + "(", openCnt - 1, closeCnt);
+    }
+
+    if (openCnt < closeCnt) {
+        printPermutations(s + ")", openCnt, closeCnt - 1);
+    }
+}
+
+/**
+ * @param {number} n
+ * @return {string[]}
+ */
+var generateParenthesis2 = function (n) {
+    let res = [];
+    compose(n, n, '', res);
+    return res;
+}
+// backtracking
+function compose(left, right, s, res) { // left: left remaining, right: right remaining
+    if (left > right) return; // e.g. ))(
+    if (!left && !right) {
+        res.push(s);
+        return;
+    }
+    if (left) compose(left - 1, right, s + '(', res);
+    if (right) compose(left, right - 1, s + ')', res);
+}
+
+
+var generateParenthesis = function (n) {
+    let result = [];
+    createParenthesis(result, "", 0, 0, n);
+    return result
+};
+
+var createParenthesis = function (array, string, open, close, n) {
+    if (n === 0) return;
+    if (string.length == n * 2) {
+        array.push(string);
+        return;
+    }
+
+    if (open < n) {
+        createParenthesis(array, string + "(", open + 1, close, n)
+    }
+    if (close < open) {
+        createParenthesis(array, string + ")", open, close + 1, n)
+    }
+};
+
+//let num = 1 * 2;
+var num = 1 * 2;
+printPermutations('', num, num)
+console.log(generateParenthesis(num));
+```
+
+> Reference: ..
+
+---
+
+# ./examples/randomized-set.js
+
+
+**Solution:**
+
+<!-- js-console -->
 ```javascript
     /*
 ## Insert Delete GetRandom O(1)
@@ -5748,16 +5837,16 @@ console.log(rand2.remove(0));
 console.log(rand2.insert(0));
 ```
 
-### Flowchart
-![./examples/randomized-set.js-svg image][./examples/randomized-set.js-svg]
-
-[./examples/randomized-set.js-svg]: https://raw.githubusercontent.com/jonniespratley/js-leetcode/master/flowcharts/randomized-set.svg "Logo Title Text 2"
-
+> Reference: ..
 
 ---
 
-## 82 - ./examples/read-n-characters-given-read4.js
+# ./examples/read-n-characters-given-read4.js
 
+
+**Solution:**
+
+<!-- js-console -->
 ```javascript
     /**
  * Definition for read4()
@@ -5799,16 +5888,16 @@ var solution = function (read4) {
 };
 ```
 
-### Flowchart
-![./examples/read-n-characters-given-read4.js-svg image][./examples/read-n-characters-given-read4.js-svg]
-
-[./examples/read-n-characters-given-read4.js-svg]: https://raw.githubusercontent.com/jonniespratley/js-leetcode/master/flowcharts/read-n-characters-given-read4.svg "Logo Title Text 2"
-
+> Reference: ..
 
 ---
 
-## 83 - ./examples/remove-duplicates.js
+# ./examples/remove-duplicates.js
 
+
+**Solution:**
+
+<!-- js-console -->
 ```javascript
     // Given a sorted array nums, remove the duplicates in-place such that each element appear only once and return the new length.
 //
@@ -5866,16 +5955,16 @@ function removeDuplicates(nums) {
 }
 ```
 
-### Flowchart
-![./examples/remove-duplicates.js-svg image][./examples/remove-duplicates.js-svg]
-
-[./examples/remove-duplicates.js-svg]: https://raw.githubusercontent.com/jonniespratley/js-leetcode/master/flowcharts/remove-duplicates.svg "Logo Title Text 2"
-
+> Reference: ..
 
 ---
 
-## 84 - ./examples/remove-element.js
+# ./examples/remove-element.js
 
+
+**Solution:**
+
+<!-- js-console -->
 ```javascript
     var removeElement = function (nums, val) {
     for (var i = 0; i < nums.length; i++) {
@@ -5889,16 +5978,16 @@ function removeDuplicates(nums) {
 };
 ```
 
-### Flowchart
-![./examples/remove-element.js-svg image][./examples/remove-element.js-svg]
-
-[./examples/remove-element.js-svg]: https://raw.githubusercontent.com/jonniespratley/js-leetcode/master/flowcharts/remove-element.svg "Logo Title Text 2"
-
+> Reference: ..
 
 ---
 
-## 85 - ./examples/remove-invalid-parentheses.js
+# ./examples/remove-invalid-parentheses.js
 
+
+**Solution:**
+
+<!-- js-console -->
 ```javascript
     function openBrace(s) {
     return ['('].includes(s)
@@ -5989,16 +6078,16 @@ console.log(removeInvalidParentheses2("(b)(c))"));
 //console.log(removeInvalidParentheses("()())()"));
 ```
 
-### Flowchart
-![./examples/remove-invalid-parentheses.js-svg image][./examples/remove-invalid-parentheses.js-svg]
-
-[./examples/remove-invalid-parentheses.js-svg]: https://raw.githubusercontent.com/jonniespratley/js-leetcode/master/flowcharts/remove-invalid-parentheses.svg "Logo Title Text 2"
-
+> Reference: ..
 
 ---
 
-## 86 - ./examples/remove-nth-node-from-end-of-list.js
+# ./examples/remove-nth-node-from-end-of-list.js
 
+
+**Solution:**
+
+<!-- js-console -->
 ```javascript
     // Given a linked list, remove the n-th node from the end of list and return its head.
 //
@@ -6040,16 +6129,16 @@ function removeNthFromEnd(head, n) {
 }
 ```
 
-### Flowchart
-![./examples/remove-nth-node-from-end-of-list.js-svg image][./examples/remove-nth-node-from-end-of-list.js-svg]
-
-[./examples/remove-nth-node-from-end-of-list.js-svg]: https://raw.githubusercontent.com/jonniespratley/js-leetcode/master/flowcharts/remove-nth-node-from-end-of-list.svg "Logo Title Text 2"
-
+> Reference: ..
 
 ---
 
-## 87 - ./examples/reverse-bits.js
+# ./examples/reverse-bits.js
 
+
+**Solution:**
+
+<!-- js-console -->
 ```javascript
     // Reverse bits of a given 32 bits unsigned integer.
 //
@@ -6072,16 +6161,16 @@ function reverseBits(n) {
 }
 ```
 
-### Flowchart
-![./examples/reverse-bits.js-svg image][./examples/reverse-bits.js-svg]
-
-[./examples/reverse-bits.js-svg]: https://raw.githubusercontent.com/jonniespratley/js-leetcode/master/flowcharts/reverse-bits.svg "Logo Title Text 2"
-
+> Reference: ..
 
 ---
 
-## 88 - ./examples/reverse-words-2.js
+# ./examples/reverse-words-2.js
 
+
+**Solution:**
+
+<!-- js-console -->
 ```javascript
     /**
  
@@ -6111,16 +6200,16 @@ var reverseWords2 = function (str) {
 console.log(reverseWords2("Let's take LeetCode contest") === "s'teL ekat edoCteeL tsetnoc");
 ```
 
-### Flowchart
-![./examples/reverse-words-2.js-svg image][./examples/reverse-words-2.js-svg]
-
-[./examples/reverse-words-2.js-svg]: https://raw.githubusercontent.com/jonniespratley/js-leetcode/master/flowcharts/reverse-words-2.svg "Logo Title Text 2"
-
+> Reference: ..
 
 ---
 
-## 89 - ./examples/reverse-words.js
+# ./examples/reverse-words.js
 
+
+**Solution:**
+
+<!-- js-console -->
 ```javascript
     /**
  * Given an input string, reverse the string word by word.
@@ -6152,16 +6241,16 @@ console.log(reverseWords('the sky is blue'));
 console.log(reverseWords(' the sky is blue '));
 ```
 
-### Flowchart
-![./examples/reverse-words.js-svg image][./examples/reverse-words.js-svg]
-
-[./examples/reverse-words.js-svg]: https://raw.githubusercontent.com/jonniespratley/js-leetcode/master/flowcharts/reverse-words.svg "Logo Title Text 2"
-
+> Reference: ..
 
 ---
 
-## 90 - ./examples/roman-to-integer.js
+# ./examples/roman-to-integer.js
 
+
+**Solution:**
+
+<!-- js-console -->
 ```javascript
     // Roman numerals are represented by seven different symbols: I, V, X, L, C, D and M.
 //
@@ -6243,16 +6332,16 @@ function romanToInt(s) {
 }
 ```
 
-### Flowchart
-![./examples/roman-to-integer.js-svg image][./examples/roman-to-integer.js-svg]
-
-[./examples/roman-to-integer.js-svg]: https://raw.githubusercontent.com/jonniespratley/js-leetcode/master/flowcharts/roman-to-integer.svg "Logo Title Text 2"
-
+> Reference: ..
 
 ---
 
-## 91 - ./examples/rotate-array.js
+# ./examples/rotate-array.js
 
+
+**Solution:**
+
+<!-- js-console -->
 ```javascript
     var rotate = function (nums, k) {
     nums.unshift.apply(nums, nums.splice(nums.length - k, k))
@@ -6301,16 +6390,16 @@ console.log(rotateArray([1, 2, 3, 4, 5], 5));
 console.log(rotateArray([1, 2], 2));
 ```
 
-### Flowchart
-![./examples/rotate-array.js-svg image][./examples/rotate-array.js-svg]
-
-[./examples/rotate-array.js-svg]: https://raw.githubusercontent.com/jonniespratley/js-leetcode/master/flowcharts/rotate-array.svg "Logo Title Text 2"
-
+> Reference: ..
 
 ---
 
-## 92 - ./examples/rotate-image.js
+# ./examples/rotate-image.js
 
+
+**Solution:**
+
+<!-- js-console -->
 ```javascript
     // You are given an n x n 2D matrix representing an image.
 //
@@ -6404,16 +6493,16 @@ function rotate(matrix) {
 }
 ```
 
-### Flowchart
-![./examples/rotate-image.js-svg image][./examples/rotate-image.js-svg]
-
-[./examples/rotate-image.js-svg]: https://raw.githubusercontent.com/jonniespratley/js-leetcode/master/flowcharts/rotate-image.svg "Logo Title Text 2"
-
+> Reference: ..
 
 ---
 
-## 93 - ./examples/search-in-a-binary-search-tree.js
+# ./examples/search-in-a-binary-search-tree.js
 
+
+**Solution:**
+
+<!-- js-console -->
 ```javascript
     /*
 ## Search in a Binary Search Tree
@@ -6512,16 +6601,16 @@ console.log(bst.findNode(t, 2));
 console.log(searchBST(t, 2));
 ```
 
-### Flowchart
-![./examples/search-in-a-binary-search-tree.js-svg image][./examples/search-in-a-binary-search-tree.js-svg]
-
-[./examples/search-in-a-binary-search-tree.js-svg]: https://raw.githubusercontent.com/jonniespratley/js-leetcode/master/flowcharts/search-in-a-binary-search-tree.svg "Logo Title Text 2"
-
+> Reference: ..
 
 ---
 
-## 94 - ./examples/search-matrix.js
+# ./examples/search-matrix.js
 
+
+**Solution:**
+
+<!-- js-console -->
 ```javascript
     // Write an efficient algorithm that searches for a value in an m x n matrix. This matrix has the following properties:
 //
@@ -6569,16 +6658,16 @@ function searchMatrix(matrix, target) {
 }
 ```
 
-### Flowchart
-![./examples/search-matrix.js-svg image][./examples/search-matrix.js-svg]
-
-[./examples/search-matrix.js-svg]: https://raw.githubusercontent.com/jonniespratley/js-leetcode/master/flowcharts/search-matrix.svg "Logo Title Text 2"
-
+> Reference: ..
 
 ---
 
-## 95 - ./examples/serialize-and-deserialize-binary-tree.js
+# ./examples/serialize-and-deserialize-binary-tree.js
 
+
+**Solution:**
+
+<!-- js-console -->
 ```javascript
     /*
 ## Serialize and Deserialize Binary Tree
@@ -6664,16 +6753,16 @@ var deserialize = function(data) {
  */
 ```
 
-### Flowchart
-![./examples/serialize-and-deserialize-binary-tree.js-svg image][./examples/serialize-and-deserialize-binary-tree.js-svg]
-
-[./examples/serialize-and-deserialize-binary-tree.js-svg]: https://raw.githubusercontent.com/jonniespratley/js-leetcode/master/flowcharts/serialize-and-deserialize-binary-tree.svg "Logo Title Text 2"
-
+> Reference: ..
 
 ---
 
-## 96 - ./examples/set-matrix-zeros.js
+# ./examples/set-matrix-zeros.js
 
+
+**Solution:**
+
+<!-- js-console -->
 ```javascript
     /*
 ## Set Matrix Zeroes
@@ -6808,16 +6897,16 @@ var solution = function(isBadVersion) {
  console.log(solution(5)())
 ```
 
-### Flowchart
-![./examples/set-matrix-zeros.js-svg image][./examples/set-matrix-zeros.js-svg]
-
-[./examples/set-matrix-zeros.js-svg]: https://raw.githubusercontent.com/jonniespratley/js-leetcode/master/flowcharts/set-matrix-zeros.svg "Logo Title Text 2"
-
+> Reference: ..
 
 ---
 
-## 97 - ./examples/single-number.js
+# ./examples/single-number.js
 
+
+**Solution:**
+
+<!-- js-console -->
 ```javascript
     /**
  * 
@@ -6865,16 +6954,16 @@ console.log(singleNumber([1, 1, 1, 1, 1, 5]));
 console.log(singleNumber2([1, 1, 1, 1, 1, 5]));
 ```
 
-### Flowchart
-![./examples/single-number.js-svg image][./examples/single-number.js-svg]
-
-[./examples/single-number.js-svg]: https://raw.githubusercontent.com/jonniespratley/js-leetcode/master/flowcharts/single-number.svg "Logo Title Text 2"
-
+> Reference: ..
 
 ---
 
-## 98 - ./examples/sort-colors.js
+# ./examples/sort-colors.js
 
+
+**Solution:**
+
+<!-- js-console -->
 ```javascript
     /*
 ## Sort Colors
@@ -6953,16 +7042,16 @@ console.log(sortColors([2, 0, 2, 1, 1, 0]));
 console.log(sortColors2([2, 0, 2, 1, 1, 0]));
 ```
 
-### Flowchart
-![./examples/sort-colors.js-svg image][./examples/sort-colors.js-svg]
-
-[./examples/sort-colors.js-svg]: https://raw.githubusercontent.com/jonniespratley/js-leetcode/master/flowcharts/sort-colors.svg "Logo Title Text 2"
-
+> Reference: ..
 
 ---
 
-## 99 - ./examples/sorted-array-to-bst.js
+# ./examples/sorted-array-to-bst.js
 
+
+**Solution:**
+
+<!-- js-console -->
 ```javascript
     // Given an array where elements are sorted in ascending order, convert it to a height balanced BST.
 //
@@ -7004,16 +7093,16 @@ function sortedArrayToBST(nums) {
 }
 ```
 
-### Flowchart
-![./examples/sorted-array-to-bst.js-svg image][./examples/sorted-array-to-bst.js-svg]
-
-[./examples/sorted-array-to-bst.js-svg]: https://raw.githubusercontent.com/jonniespratley/js-leetcode/master/flowcharts/sorted-array-to-bst.svg "Logo Title Text 2"
-
+> Reference: ..
 
 ---
 
-## 100 - ./examples/spiral-order.js
+# ./examples/spiral-order.js
 
+
+**Solution:**
+
+<!-- js-console -->
 ```javascript
     
 /*  
@@ -7121,16 +7210,16 @@ function spiralOrder(matrix) {
 }
 ```
 
-### Flowchart
-![./examples/spiral-order.js-svg image][./examples/spiral-order.js-svg]
-
-[./examples/spiral-order.js-svg]: https://raw.githubusercontent.com/jonniespratley/js-leetcode/master/flowcharts/spiral-order.svg "Logo Title Text 2"
-
+> Reference: ..
 
 ---
 
-## 101 - ./examples/sqrt.js
+# ./examples/sqrt.js
 
+
+**Solution:**
+
+<!-- js-console -->
 ```javascript
     // Implement int sqrt(int x).
 //
@@ -7202,16 +7291,16 @@ function mySqrt(x) {
 }
 ```
 
-### Flowchart
-![./examples/sqrt.js-svg image][./examples/sqrt.js-svg]
-
-[./examples/sqrt.js-svg]: https://raw.githubusercontent.com/jonniespratley/js-leetcode/master/flowcharts/sqrt.svg "Logo Title Text 2"
-
+> Reference: ..
 
 ---
 
-## 102 - ./examples/str-str.js
+# ./examples/str-str.js
 
+
+**Solution:**
+
+<!-- js-console -->
 ```javascript
     // Implement strStr().
 //
@@ -7263,16 +7352,16 @@ function strStr2(haystack, needle) {
 }
 ```
 
-### Flowchart
-![./examples/str-str.js-svg image][./examples/str-str.js-svg]
-
-[./examples/str-str.js-svg]: https://raw.githubusercontent.com/jonniespratley/js-leetcode/master/flowcharts/str-str.svg "Logo Title Text 2"
-
+> Reference: ..
 
 ---
 
-## 103 - ./examples/sub-sets.js
+# ./examples/sub-sets.js
 
+
+**Solution:**
+
+<!-- js-console -->
 ```javascript
     /**
 Given a set of distinct integers, nums, return all possible subsets (the power set).
@@ -7354,16 +7443,16 @@ console.log(subsets2(['a', 'b', 'c']));
 
 ```
 
-### Flowchart
-![./examples/sub-sets.js-svg image][./examples/sub-sets.js-svg]
-
-[./examples/sub-sets.js-svg]: https://raw.githubusercontent.com/jonniespratley/js-leetcode/master/flowcharts/sub-sets.svg "Logo Title Text 2"
-
+> Reference: ..
 
 ---
 
-## 104 - ./examples/substring-problem-template.js
+# ./examples/substring-problem-template.js
 
+
+**Solution:**
+
+<!-- js-console -->
 ```javascript
     function findSubstring(s) {
     let map = new Array(256).fill(0);
@@ -7394,18 +7483,19 @@ console.log(subsets2(['a', 'b', 'c']));
 }
 ```
 
-### Flowchart
-![./examples/substring-problem-template.js-svg image][./examples/substring-problem-template.js-svg]
-
-[./examples/substring-problem-template.js-svg]: https://raw.githubusercontent.com/jonniespratley/js-leetcode/master/flowcharts/substring-problem-template.svg "Logo Title Text 2"
-
+> Reference: ..
 
 ---
 
-## 105 - ./examples/three-sum.js
+# ./examples/three-sum.js
 
+
+**Solution:**
+
+<!-- js-console -->
 ```javascript
-    // Given an array nums of n integers, are there elements a, b, c in nums such that a + b + c = 0? Find all unique triplets in the array which gives the sum of zero.
+    // Given an array nums of n integers, are there elements a, b, c in nums such that a + b + c = 0? 
+// Find all unique triplets in the array which gives the sum of zero.
 //
 // Note:
 //
@@ -7415,7 +7505,7 @@ console.log(subsets2(['a', 'b', 'c']));
 //
 // Given array nums = [-1, 0, 1, 2, -1, -4],
 //
-//   A solution set is:
+// A solution set is:
 //   [
 //     [-1, 0, 1],
 //     [-1, -1, 2]
@@ -7500,16 +7590,16 @@ function threeSum(nums) {
 console.log(threeSum([-1, 0, 1, 2, -1, -4]));
 ```
 
-### Flowchart
-![./examples/three-sum.js-svg image][./examples/three-sum.js-svg]
-
-[./examples/three-sum.js-svg]: https://raw.githubusercontent.com/jonniespratley/js-leetcode/master/flowcharts/three-sum.svg "Logo Title Text 2"
-
+> Reference: ..
 
 ---
 
-## 106 - ./examples/tree-populate-next-pointer.js
+# ./examples/tree-populate-next-pointer.js
 
+
+**Solution:**
+
+<!-- js-console -->
 ```javascript
     /*
 ## Populating Next Right Pointers in Each Node
@@ -7586,16 +7676,16 @@ var connect = function(root) {
 };
 ```
 
-### Flowchart
-![./examples/tree-populate-next-pointer.js-svg image][./examples/tree-populate-next-pointer.js-svg]
-
-[./examples/tree-populate-next-pointer.js-svg]: https://raw.githubusercontent.com/jonniespratley/js-leetcode/master/flowcharts/tree-populate-next-pointer.svg "Logo Title Text 2"
-
+> Reference: ..
 
 ---
 
-## 107 - ./examples/tree-preorder-traversal.js
+# ./examples/tree-preorder-traversal.js
 
+
+**Solution:**
+
+<!-- js-console -->
 ```javascript
     function TreeNode(val) {
     this.val = val;
@@ -7765,16 +7855,16 @@ console.log(firstUniqChar('aba'));
 console.log(firstUniqChar('loveleetcode'));
 ```
 
-### Flowchart
-![./examples/tree-preorder-traversal.js-svg image][./examples/tree-preorder-traversal.js-svg]
-
-[./examples/tree-preorder-traversal.js-svg]: https://raw.githubusercontent.com/jonniespratley/js-leetcode/master/flowcharts/tree-preorder-traversal.svg "Logo Title Text 2"
-
+> Reference: ..
 
 ---
 
-## 108 - ./examples/two-sum.js
+# ./examples/two-sum.js
 
+
+**Solution:**
+
+<!-- js-console -->
 ```javascript
     /**
 
@@ -7786,51 +7876,43 @@ You may assume that each input would have exactly one solution, and you may not 
 
 Example:
 
+```
 Given nums = [2, 7, 11, 15], target = 9,
 
 Because nums[0] + nums[1] = 2 + 7 = 9,
 return [0, 1].
-
- * @param {number[]} nums
- * @param {number} target
- * @return {number[]}
+```
  */
 /**
-
-## Two Sum
-
-Given an array of integers, return indices of the two numbers such that they add up to a specific target.
-
-You may assume that each input would have exactly one solution, and you may not use the same element twice.
-
-Example:
-
-Given nums = [2, 7, 11, 15], target = 9,
-
-Because nums[0] + nums[1] = 2 + 7 = 9,
-return [0, 1].
-
  * @param {number[]} nums
  * @param {number} target
  * @return {number[]}
  */
-var twoSum = function(nums, target) {
-  let values = {};
-  for(let i = 0; i < nums.length; i++){
-    let diff = target - nums[i];
-    if(values[diff] !== undefined) return [values[diff], i]
-    values[nums[i]] = i;
-  }
+var twoSum = function (nums, target) {
+    let values = {};
+    for (let i = 0; i < nums.length; i++) {
+        let diff = target - nums[i];
+        if (values[diff] !== undefined) 
+            return [values[diff], i]
+        values[nums[i]] = i;
+    }
 };
-
-
-
-
-
 
 //
 
-const input = [0, 1, 2, 5, 11, 15, 8, 23, 13, 7, 8];
+const input = [
+    0,
+    1,
+    2,
+    5,
+    11,
+    15,
+    8,
+    23,
+    13,
+    7,
+    8
+];
 /**
  * @param {number[]} numbers
  * @param {number} target
@@ -7840,7 +7922,10 @@ var twoSum = function (numbers, target) {
     let dict = {};
     for (i in numbers) {
         if (target - numbers[i] in dict) {
-            return [dict[target - numbers[i]] + 1, Number(i) + 1];
+            return [
+                dict[target - numbers[i]] + 1,
+                Number(i) + 1
+            ];
         }
         dict[numbers[i]] = Number(i);
     }
@@ -7852,11 +7937,13 @@ console.timeEnd('twoSum')
 function twoSum2(nums, target) {
     for (let i = 0; i < nums.length; i++) {
         for (let j = 0; j < nums.length; j++) {
-            if (i === j) continue;
-
-            if (nums[i] + nums[j] === target) return [i, j];
+            if (i === j) 
+                continue;
+            
+            if (nums[i] + nums[j] === target) 
+                return [i, j];
+            }
         }
-    }
 }
 console.time('twoSum2')
 console.log(twoSum2(input, 9));
@@ -7869,30 +7956,158 @@ function twoSum3(nums, target) {
         let num = nums[i];
         let diff = target - num;
         console.log(`[target] ${target} - ${num} = ${diff}`)
-        
-       // console.log(diff, map, map[diff]);
+
+        // console.log(diff, map, map[diff]);
         if (map[diff] !== undefined) {
             return [map[diff], i];
         }
         map[num] = i;
     }
-    
+
 }
 console.time('twoSum3')
 console.log(twoSum3(input, 9));
 console.timeEnd('twoSum3')
 ```
 
-### Flowchart
-![./examples/two-sum.js-svg image][./examples/two-sum.js-svg]
-
-[./examples/two-sum.js-svg]: https://raw.githubusercontent.com/jonniespratley/js-leetcode/master/flowcharts/two-sum.svg "Logo Title Text 2"
-
+> Reference: ..
 
 ---
 
-## 109 - ./examples/valid-params.js
+# ./examples/Untitled-1.js
 
+
+**Solution:**
+
+<!-- js-console -->
+```javascript
+    /**
+ * @param {string} str
+ * @return {number}
+ */
+var myAtoi = function(str) {
+    const match = str.match(/^ *([+-]{0,1}[0-9]+)/);
+    return match ? Math.min(2147483647, Math.max(-2147483648, match[1])) : 0;
+};
+
+var myAtoi2 = function(str) { 
+  const match = str.match(/^ *([+-]{0,1}[0-9]+)/);
+  return match ? Math.min(2147483647, Math.max(-2147483648, match[1])) : 0;
+};
+
+console.log(Number.MAX_SAFE_INTEGER);
+console.log(Number.MIN_SAFE_INTEGER);
+
+console.log(myAtoi("42"));
+console.log(myAtoi("    -42"));
+console.log(myAtoi("4193 with words"));
+console.log(myAtoi("words and 987"));
+
+
+const CircularQueue = function(items) {
+  this.items = [items];
+
+  this.nextIndex = 0;
+
+  return {
+    getAll: () => this.items,
+
+    add: (item) => {
+      this.items.push(item);
+      return this;
+    },
+
+    nextElement: () => {
+      const element = this.items[this.nextIndex];
+
+      if (this.nextIndex === this.items.length - 1) {
+        this.nextIndex = 0; // back to begins
+      } else {
+        this.nextIndex = this.nextIndex + 1;
+      }
+
+      return element;
+    }
+  };
+};
+
+const q = new CircularQueue(4);
+q.add(1);
+
+
+console.log(q.getAll());
+console.log(q);
+
+const foo = function () { 
+  console.log('foo');
+}
+
+const MyClass = function () { 
+  this.foo = foo;
+}
+
+const MyOtherClass = function () { 
+
+}
+
+MyOtherClass.prototype.bar = function () { 
+
+}
+
+const myInstance = new MyOtherClass();
+
+console.log(MyClass);
+console.log(myInstance);
+console.log(myInstance.__proto__);
+
+
+
+const parent = function (){
+  const a = 'Hi!';
+
+  const foo = function() {
+      console.log(a);
+  }
+  foo();
+}
+
+parent();
+
+function deepIterator(arr, callback) {
+  if (arr instanceof Array) {
+      for (let i = 0; i < arr.length; i++) {
+          deepIterator(arr[i], callback);
+      }
+  } else {
+      callback(arr);
+  }
+  
+  
+}
+function flattenArray(arr) {
+  // Logic
+  let result = [];
+
+  deepIterator(arr, (item) => {
+      result.push(item);
+  });
+
+  // logic
+  return result;
+}
+console.log(flattenArray([[1, 3, 5], [4, 7, 3], [[2, 3], 4]]))
+```
+
+> Reference: ..
+
+---
+
+# ./examples/valid-params.js
+
+
+**Solution:**
+
+<!-- js-console -->
 ```javascript
     // Given a string containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.
 //
@@ -7975,10 +8190,6 @@ function isValid(s) {
 };
 ```
 
-### Flowchart
-![./examples/valid-params.js-svg image][./examples/valid-params.js-svg]
-
-[./examples/valid-params.js-svg]: https://raw.githubusercontent.com/jonniespratley/js-leetcode/master/flowcharts/valid-params.svg "Logo Title Text 2"
-
+> Reference: ..
 
 ---
