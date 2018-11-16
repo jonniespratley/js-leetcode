@@ -2,12 +2,12 @@
  * @param {string} str
  * @return {number}
  */
-var myAtoi = function(str) {
-    const match = str.match(/^ *([+-]{0,1}[0-9]+)/);
-    return match ? Math.min(2147483647, Math.max(-2147483648, match[1])) : 0;
+var myAtoi = function (str) {
+  const match = str.match(/^ *([+-]{0,1}[0-9]+)/);
+  return match ? Math.min(2147483647, Math.max(-2147483648, match[1])) : 0;
 };
 
-var myAtoi2 = function(str) { 
+var myAtoi2 = function (str) {
   const match = str.match(/^ *([+-]{0,1}[0-9]+)/);
   return match ? Math.min(2147483647, Math.max(-2147483648, match[1])) : 0;
 };
@@ -21,7 +21,7 @@ console.log(myAtoi("4193 with words"));
 console.log(myAtoi("words and 987"));
 
 
-const CircularQueue = function(items) {
+const CircularQueue = function (items) {
   this.items = [items];
 
   this.nextIndex = 0;
@@ -55,19 +55,19 @@ q.add(1);
 console.log(q.getAll());
 console.log(q);
 
-const foo = function () { 
+const foo = function () {
   console.log('foo');
 }
 
-const MyClass = function () { 
+const MyClass = function () {
   this.foo = foo;
 }
 
-const MyOtherClass = function () { 
+const MyOtherClass = function () {
 
 }
 
-MyOtherClass.prototype.bar = function () { 
+MyOtherClass.prototype.bar = function () {
 
 }
 
@@ -79,11 +79,11 @@ console.log(myInstance.__proto__);
 
 
 
-const parent = function (){
+const parent = function () {
   const a = 'Hi!';
 
-  const foo = function() {
-      console.log(a);
+  const foo = function () {
+    console.log(a);
   }
   foo();
 }
@@ -92,24 +92,33 @@ parent();
 
 function deepIterator(arr, callback) {
   if (arr instanceof Array) {
-      for (let i = 0; i < arr.length; i++) {
-          deepIterator(arr[i], callback);
-      }
+    for (let i = 0; i < arr.length; i++) {
+      deepIterator(arr[i], callback);
+    }
   } else {
-      callback(arr);
+    callback(arr);
   }
-  
-  
+
+
 }
+
 function flattenArray(arr) {
   // Logic
   let result = [];
 
   deepIterator(arr, (item) => {
-      result.push(item);
+    result.push(item);
   });
 
   // logic
   return result;
 }
-console.log(flattenArray([[1, 3, 5], [4, 7, 3], [[2, 3], 4]]))
+console.log(flattenArray([
+  [1, 3, 5],
+  [4, 7, 3],
+  [
+    [2, 3], 4
+  ]
+]))
+
+

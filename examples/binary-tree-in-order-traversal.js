@@ -30,17 +30,19 @@
 // space O(log n), n is number of nodes. The worst case space is O(n)
 function inorderTraversal1(node) {
     let res = [];
-    go(node, res);
+    
+    function traverse(node) {
+        if (!node) return;
+        traverse(node.left);
+        res.push(node.val);
+        traverse(node.right);
+    }
+
+    traverse(node);
     return res;
 }
 
-function go(node, res) {
-    if (!node) return;
 
-    go(node.left, res);
-    res.push(node.val);
-    go(node.right, res);
-}
 
 /** 2) Iteration using stack */
 // time O(n)

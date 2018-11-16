@@ -44,3 +44,8 @@ var lengthOfLongestSubstring2 = function (s) {
 console.log(lengthOfLongestSubstring2('abcabcbb'));
 console.log(lengthOfLongestSubstring2('bbbbb'));
 console.log(lengthOfLongestSubstring2('pwwkew'));
+
+
+var getSum = function(a, b) {
+    
+};
