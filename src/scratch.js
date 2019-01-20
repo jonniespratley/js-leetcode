@@ -263,9 +263,6 @@ console.log(obj.enQueue(3));
 console.assert(obj.Rear() === 3, 'returns last item');
 console.log(obj.data);
 
-
-
-
 console.assert(obj.enQueue(4));
 console.assert(obj.enQueue(5));
 obj.print();
@@ -273,9 +270,6 @@ obj.print();
 console.assert(!obj.isEmpty());
 console.assert(obj.isFull());
 
-
-//console.assert(obj.Rear() === 4, 'returns last item');
-console.log(obj.data);
 
 obj.deQueue();
 obj.deQueue();
@@ -459,3 +453,46 @@ console.log(average);
 console.log(testArray.length);
 console.log(testArray);
 //console.log(reverseArray2([1, 2, 3]));
+var numJewelsInStones = (J, S) => S.split('').filter(char => J.indexOf(char) !== -1).length;
+
+/**
+1. Keep track of the count.
+2. For each J (jewel) check if it is in the stone.
+*/
+
+console.log(numJewelsInStones('aA', 'aAAbbbbb'));
+
+/**
+ * 
+ * Example looping 2-d array and getting the values from 
+ * Top, Bottom, Left, Right, Diagonal
+ */
+
+(function () {
+    let matrix = [
+        [1, 2, 3],
+        [4, 5, 6],
+        [7, 8, 9]
+    ];
+
+    let j = matrix.length - 1;
+
+    for (let i = 0; i < matrix.length; i++, j--) {
+
+        //First row
+        console.log(matrix[0][i]); // 1, 2, 3
+
+        //Last row
+        console.log(matrix[matrix.length - 1][i]); // 7, 8, 9
+
+        //Diag row
+        console.log(matrix[i][j]); // 3, 5, 7
+
+        //First col
+        console.log(matrix[i][0]); // 1, 4, 7
+
+        //Last col
+        console.log(matrix[i][matrix.length - 1]); // 3, 6, 9
+
+    }
+})()
