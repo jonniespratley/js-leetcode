@@ -18,7 +18,9 @@ function findSubstring(s) {
         while ( counter/* counter condition */ ) {
             /* update d here if finding minimum*/
             //increase begin to make it invalid/valid again
-            //if (map[s[begin++]]++ ?) { /*modify counter here*/ }
+            if (map[s[begin++]]++ ?) {
+
+            }
         }
         /* update d here if finding maximum*/
     }

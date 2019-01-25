@@ -42,7 +42,7 @@ console.log(sumToZero([3, 2, 1, 7, 9, 0, -4, 6]));
 
 
 function threeSum(arr) {
-    arr.sort();
+    arr.sort((a, b) => a - b);
     let k = arr.length - 1;
     for (let i = 0; i < arr.length; i++) {
         const a = arr[i];

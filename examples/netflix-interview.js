@@ -68,3 +68,88 @@ console.assert(flip2(0))
 
 console.log(Boolean(0)) // false
 console.log(Boolean(1)) // true
+
+let list = {
+  value: 1
+};
+list.next = {
+  value: 2
+};
+list.next.next = {
+  value: 3
+};
+list.next.next.next = {
+  value: 4,
+  next: null
+};
+
+let current = list;
+let tail = null;
+while (current) {
+  console.log(current.value);
+  current = current.next;
+  if (current && current.next) {
+    tail = current.next;
+  }
+}
+console.log(tail);
+
+
+function findLast(head) {
+  var currNode = head;
+  while (!(currNode.next == null)) {
+    currNode = currNode.next;
+  }
+  return currNode;
+}
+
+function insert(val, head){
+  let last = findLast(head);
+  let item = {
+    value: val,
+    next: null
+  };
+  last.next = item;
+  return last;
+}
+
+//console.log(insert(5, list));
+console.log(findLast(list));
+
+
+function appendToTail(head, data){
+  let tail = {
+    next: null,
+    value: data
+  };
+  let n = head;
+  while(n.next !== null){
+    n = n.next;
+  }
+  n.next = tail;
+  return head;
+}
+console.log(appendToTail(list, 5))
+
+// prepend the new value to the list
+list = {
+  value: "new item",
+  next: list
+};
+
+// Complete the reverseArray function below.
+function reverseArray(a) {
+  let len = a.length - 1;
+  let res = [];
+  for (let i = len; i >= 0; i--) {
+    res.push(a[i]);
+  }
+  return res;
+}
+
+let a = [1, 2, 3, 4, 5];
+console.log(reverseArray(a))
+
+let seqList = new Array(2).fill([]);
+console.log(seqList);
+console.log(2 ^ 5 % 3);
